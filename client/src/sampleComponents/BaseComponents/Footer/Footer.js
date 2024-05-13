@@ -2,14 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import styles from './DevDesign.module.scss';
-
-const DevDesign = () => {
+const Footer = () => {
   return (
     <>
-      <Div>DevDesign</Div>
+      <Div className="bgGreen p2">Footer</Div>
     </>
   );
 };
 
-export default DevDesign;
+export default Footer;

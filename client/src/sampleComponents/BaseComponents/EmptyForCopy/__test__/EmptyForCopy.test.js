@@ -1,6 +1,6 @@
 import React from "react";
 import { render as renderRTL, screen, fireEvent } from "@testing-library/react";
-import Header from "../Header";
+import EmptyForCopy from "../EmptyForCopy";
 import * as reactRedux from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
@@ -12,7 +12,7 @@ jest.mock("react-redux", () => ({
   useDispatch: jest.fn(),
 }));
 
-describe("Test Header Component", () => {
+describe("Test EmptyForCopy Component", () => {
   const useSelectorMock = reactRedux.useSelector;
   const useDispatchMock = reactRedux.useDispatch;
 
@@ -27,8 +27,8 @@ describe("Test Header Component", () => {
   });
 
   test("", () => {
-    render(<Header />);
+    render(<EmptyForCopy />);
 
-    expect(screen.getByText(/Header/i)).toBeInTheDocument();
+    expect(screen.getByText(/EmptyForCopy/i)).toBeInTheDocument();
   });
 });
