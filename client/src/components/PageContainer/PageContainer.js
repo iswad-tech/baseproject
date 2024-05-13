@@ -64,9 +64,7 @@ const PageContainer = ({
         ) : (
           ''
         )}
-        <DivMinFullHeight className="">
-          <Div>{children}</Div>
-        </DivMinFullHeight>
+        <DivMinFullHeight className="flex flex--dir--col">{children}</DivMinFullHeight>
         <Div ref={(el) => (footerRef.current = el)}>{hasFooter && <Footer />}</Div>
       </Div>
     </>
