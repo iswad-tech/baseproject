@@ -9,8 +9,6 @@ import PageContainer from '@/components/PageContainer';
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV } from 'config';
 
-import styles from './index.module.scss';
-
 const Index = () => {
   return (
     <PublicRoute>
