@@ -1,10 +1,33 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
-import { Div } from 'basedesign-iswad';
+import { Div, Heading } from 'basedesign-iswad';
+
+import DisplayHeadings from './subs/DisplayHeadings';
+import DisplayColors from './subs/DisplayColors';
+import DisplayIcons from './subs/DisplayIcons';
+import DisplayAnchor from './subs/DisplayAnchor';
+import DisplayButton from './subs/DisplayButton';
+import DisplayForm from './subs/DisplayForm';
+import DisplayAlert from './subs/DisplayAlert';
+import DisplayModals from './subs/DisplayModals';
+import DisplayLoading from './subs/DisplayLoading';
+import DisplayCards from './subs/DisplayCards';
+import DisplayPagination from './subs/DisplayPagination';
+import DisplayTable from './subs/DisplayTable';
+import DisplayText from './subs/DisplayText';
+import DisplayParagraph from './subs/DisplayParagraph';
+import DisplayDraggableFileUploader from './subs/DisplayDraggableFileUploader';
+import DisplayChart from './subs/DisplayChart';
+import DisplayList from './subs/DisplayList';
+import DisplayEmailTemplates from './subs/DisplayEmailTemplates';
+import DisplayAnimationOnScroll from './subs/DisplayAnimationOnScroll';
+import DisplayResponsiveSwipeableSlider from './subs/DisplayResponsiveSwipeableSlider';
+import DisplayUserEvent from './subs/DisplayUserEvent';
+import DisplayLimitedSwipeableSlider from './subs/DisplayLimitedSwipeableSlider';
+import DisplayPngIcon from './subs/DevPngIcon';
+import DisplaySlider from './subs/DisplaySlider';
 
 import DevSection from './subs/DevSection';
-import DisplaySurface from './subs/DisplaySurface';
-import DisplayButton from './subs/DisplayButton';
 import styles from './DevDesign.module.scss';
 
 const DevDesign = () => {
@@ -13,17 +36,172 @@ const DevDesign = () => {
   return (
     <>
       <DevSection
-        title="Surface"
+        title="Alerts"
         activeElements={activeElements}
         setActiveElements={setActiveElements}>
-        <DisplaySurface />
+        <DisplayAlert />
       </DevSection>
 
       <DevSection
-        title="Button"
+        title="Anchors"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayAnchor />
+      </DevSection>
+
+      <DevSection
+        title="Buttons"
         activeElements={activeElements}
         setActiveElements={setActiveElements}>
         <DisplayButton />
+      </DevSection>
+
+      <DevSection
+        title="Cards"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayCards />
+      </DevSection>
+
+      <DevSection
+        title="Charts"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayChart />
+      </DevSection>
+
+      <DevSection
+        title="Colors"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayColors />
+      </DevSection>
+
+      <DevSection
+        title="Draggable File Uploader"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayDraggableFileUploader />
+      </DevSection>
+
+      <DevSection
+        title="Email Templates"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayEmailTemplates />
+      </DevSection>
+
+      <DevSection
+        title="Form Components"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayForm />
+      </DevSection>
+
+      <DevSection
+        title="Headings"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayHeadings />
+      </DevSection>
+
+      <DevSection
+        title="Icons"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayIcons />
+      </DevSection>
+
+      <DevSection
+        title="List"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayList />
+      </DevSection>
+
+      <DevSection
+        title="Loadings"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayLoading />
+      </DevSection>
+
+      <DevSection
+        title="Modals"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayModals />
+      </DevSection>
+
+      <DevSection
+        title="Pagination"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayPagination />
+      </DevSection>
+
+      <DevSection
+        title="Paragraphs"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayParagraph />
+      </DevSection>
+
+      <DevSection
+        title="PNG Icons"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayPngIcon />
+      </DevSection>
+
+      <DevSection
+        title="Slider"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplaySlider />
+      </DevSection>
+
+      <DevSection
+        title="Table"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayTable />
+      </DevSection>
+
+      <DevSection
+        title="Text"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayText />
+      </DevSection>
+
+      <DevSection
+        title="Animate on scroll"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}
+        isAlwaysActive={true}>
+        <DisplayAnimationOnScroll />
+      </DevSection>
+
+      <DevSection
+        title="Responsive Swaipeable Slider"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayResponsiveSwipeableSlider />
+      </DevSection>
+
+      <DevSection
+        title="User Event"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayUserEvent />
+      </DevSection>
+
+      <DevSection
+        title="Limited Swipeable Slider"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayLimitedSwipeableSlider />
       </DevSection>
     </>
   );

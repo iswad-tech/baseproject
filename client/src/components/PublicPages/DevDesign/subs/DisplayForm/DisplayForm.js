@@ -117,13 +117,14 @@ const DisplayForm = () => {
           id="testForm">
           <TextBox
             isRequired
-            type="password"
-            labelText="Password"
+            type="text"
+            labelText="Email"
             val={password}
             setVal={setPassword}
             errorMessage={passwordErrorMessage}
             errorHandler={setPasswordErrorMessage}
             name="password"
+            placeHolder="Email"
             id="passwordFieldHomePage"
           />
           <Select

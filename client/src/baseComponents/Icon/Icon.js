@@ -8,7 +8,7 @@ import { faAnglesUp, faSearch, faClose, faUpload } from '@fortawesome/free-solid
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
 
-import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
+// import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
 // library.add(fab);
 
 import { LIST_OF_ICONS } from '@/constants/devDesignVars';
@@ -41,9 +41,9 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
     )
   };
 
-  iconTypes['dashboard'] = (
-    <Dashboard fill={color} stroke={color} style={{ transform: `scale(${scale})` }} />
-  );
+  // iconTypes['dashboard'] = (
+  //   <Dashboard fill={color} stroke={color} style={{ transform: `scale(${scale})` }} />
+  // );
 
   return (
     <>

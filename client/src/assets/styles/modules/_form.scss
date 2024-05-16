@@ -65,8 +65,21 @@
   }
 
   &::placeholder {
+    color: $textTertiary;
+
     font-size: 12px;
-    color: grey;
+
+    @include atSmall {
+      font-size: 12px;
+    }
+
+    @include atMedium {
+      font-size: 14px;
+    }
+
+    @include atLarge {
+      font-size: $small;
+    }
   }
 }
 
@@ -76,7 +89,7 @@
     width: 100%;
     padding: 8px 1rem;
     height: 40px;
-    background-color: white;
+    background-color: $bgTertiary;
 
     &Container {
       position: relative;

@@ -81,3 +81,25 @@ export const BUTTON_TYPES = {
   secondary: 'secondary',
   tertiary: 'tertiary'
 };
+
+// -------------------------
+
+export const LIST_OF_ICONS = [];
+
+export const ANCHOR_TYPES = [0, 1, 2, 3];
+
+export const ALERT_TYPES = ['success', 'error', 'warning'];
+
+export const MODAL_TYPES = ['data-submitted-successfully'];
+
+export const CARD_TYPES = ['service'];
+
+export const POLYGON_TYPES = [
+  'service-card-head',
+  'service-card-tail-left',
+  'service-card-tail-right'
+];
+
+export const EMAIL_TEMPLATES = ['contact_form_sent', 'contact_form_received'];
+
+export const PNG_ICON_TYPES = ['linkedin', 'instagram', 'twitter', 'facebook', 'slack', 'teams'];
