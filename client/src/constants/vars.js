@@ -46,7 +46,6 @@ export const COLORS = {
   faded: '#f3f3f3',
   info: '#5bc0de',
   inverse: '#292b2c',
-  warning: '#f0ad4e',
   success: '#5cb85c',
   danger: '#d9534f',
   grayBright: '#737373',
@@ -56,7 +55,14 @@ export const COLORS = {
   themeThree: '#00ff7f',
   themeFour: '#26335d',
   themeFive: '#ffe5d0',
-  themeSix: '#FEBA13'
+  themeSix: '#FEBA13',
+  tertiary: '#f1f1f1',
+  success2: '#effcf5',
+  warning: '#fcfcf2',
+  primary: '#ffffff',
+  secondary: '#e2ecf6',
+  brand: '#16c5fe',
+  brandSecondary: '#0392dd'
 };
 
 export const PAGE_ROUTES = {

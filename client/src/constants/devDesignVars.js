@@ -1,3 +1,29 @@
+export const LIST_OF_ICONS = [
+  'angles-up',
+  'check-mark',
+  'close',
+  'dashboard',
+  'eye',
+  'instagram-fill',
+  'plus-circle',
+  'search',
+  'upload'
+];
+
+export const ANCHOR_TYPES = [1];
+
+export const ALERT_TYPES = ['success', 'error', 'warning'];
+
+export const MODAL_TYPES = ['data-submitted-successfully'];
+
+export const CARD_TYPES = ['service'];
+
+export const EMAIL_TEMPLATES = ['contact_form_sent', 'contact_form_received'];
+
+export const PNG_ICON_TYPES = ['linkedin', 'instagram', 'twitter', 'facebook', 'slack', 'teams'];
+
+// --------------------------------
+
 export const SURFACE_COLOR_TYPES = {
   primary: 'Primary',
   secondary: 'Secondary',
@@ -81,25 +107,3 @@ export const BUTTON_TYPES = {
   secondary: 'secondary',
   tertiary: 'tertiary'
 };
-
-// -------------------------
-
-export const LIST_OF_ICONS = [];
-
-export const ANCHOR_TYPES = [0, 1, 2, 3];
-
-export const ALERT_TYPES = ['success', 'error', 'warning'];
-
-export const MODAL_TYPES = ['data-submitted-successfully'];
-
-export const CARD_TYPES = ['service'];
-
-export const POLYGON_TYPES = [
-  'service-card-head',
-  'service-card-tail-left',
-  'service-card-tail-right'
-];
-
-export const EMAIL_TEMPLATES = ['contact_form_sent', 'contact_form_received'];
-
-export const PNG_ICON_TYPES = ['linkedin', 'instagram', 'twitter', 'facebook', 'slack', 'teams'];

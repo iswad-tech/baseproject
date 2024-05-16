@@ -11,7 +11,7 @@ const DraggableFileUploader = ({
   acceptableFileType,
   inputId = 'draggableFileUploaderId',
   acceptableFileString = '.csv',
-  iconType = 'angles-right',
+  iconType = 'dashboard',
   type = 'default'
 }) => {
   const [openFileBrowser, setOpenFileBrowser] = useState();

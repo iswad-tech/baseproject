@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import Accordion from '@/baseComponents/Accordion';
+import HeightTransitionEffect from '@/baseComponents/HeightTransitionEffect';
 
 import styles from '../DevDesign.module.scss';
 
@@ -25,23 +25,14 @@ const DevSection = ({
 
   return (
     <>
-      <Div className="my1">
-        <Div
-          className="flex flex--jc--center flex--ai--center mouse-hand bgBlue p2 textBlack fs-r-2"
-          onClick={headingOnClick}>
-          {title}
-        </Div>
-        <Accordion isActive={isAlwaysActive || activeElements.includes(title)}>
-          <Div
-            type="flex"
-            direction="vertical"
-            hAlign="center"
-            vAlign="center"
-            className={cx('p1 w-per-100 flex--wrap bgGreen')}>
-            {children || ''}
-          </Div>
-        </Accordion>
+      <Div
+        className="flex flex--jc--center flex--ai--center my1 mouse-hand bgGrayBright p2 textBlack fs-r-2"
+        onClick={headingOnClick}>
+        {title}
       </Div>
+      <HeightTransitionEffect isActive={isAlwaysActive || activeElements.includes(title)}>
+        {children || ''}
+      </HeightTransitionEffect>
     </>
   );
 };

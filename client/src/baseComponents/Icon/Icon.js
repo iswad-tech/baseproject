@@ -4,11 +4,19 @@ import PropTypes from 'prop-types';
 import { Div } from 'basedesign-iswad';
 // import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAnglesUp, faSearch, faClose, faUpload } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAnglesUp,
+  faSearch,
+  faClose,
+  faUpload,
+  faEye,
+  faCheck,
+  faPlusCircle
+} from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
 
-// import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
+import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
 // library.add(fab);
 
 import { LIST_OF_ICONS } from '@/constants/devDesignVars';
@@ -32,18 +40,26 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
     upload: (
       <FontAwesomeIcon icon={faUpload} style={{ color, width, transform: `scale(${scale})` }} />
     ),
+    eye: <FontAwesomeIcon icon={faEye} style={{ color, width, transform: `scale(${scale})` }} />,
+    'check-mark': (
+      <FontAwesomeIcon icon={faCheck} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
 
     'instagram-fill': (
       <FontAwesomeIcon
         icon={faSquareInstagram}
         style={{ color, width, transform: `scale(${scale})` }}
       />
+    ),
+
+    'plus-circle': (
+      <FontAwesomeIcon icon={faPlusCircle} style={{ color, width, transform: `scale(${scale})` }} />
     )
   };
 
-  // iconTypes['dashboard'] = (
-  //   <Dashboard fill={color} stroke={color} style={{ transform: `scale(${scale})` }} />
-  // );
+  iconTypes['dashboard'] = (
+    <Dashboard fill={color} stroke={color} style={{ transform: `scale(${scale})` }} />
+  );
 
   return (
     <>

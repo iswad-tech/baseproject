@@ -6,7 +6,7 @@ import DisplayHeadings from './subs/DisplayHeadings';
 import DisplayColors from './subs/DisplayColors';
 import DisplayIcons from './subs/DisplayIcons';
 import DisplayAnchor from './subs/DisplayAnchor';
-import DisplayButton from './subs/DisplayButton';
+import DisplayButtons from './subs/DisplayButtons';
 import DisplayForm from './subs/DisplayForm';
 import DisplayAlert from './subs/DisplayAlert';
 import DisplayModals from './subs/DisplayModals';
@@ -53,7 +53,7 @@ const DevDesign = () => {
         title="Buttons"
         activeElements={activeElements}
         setActiveElements={setActiveElements}>
-        <DisplayButton />
+        <DisplayButtons />
       </DevSection>
 
       <DevSection

@@ -9,10 +9,10 @@ import { COLORS } from '@/constants/vars';
 import styles from './Pagination.module.scss';
 
 const Pagination = ({ currentPage, setCurrentPage, numberOfTotalPages, ...props }) => {
-  const firstPageComp = () => <Icon type="angleDoubleLeft" color={COLORS.themeTwo} />;
-  const lastPageComp = () => <Icon type="angleDoubleRight" color={COLORS.themeTwo} />;
-  const prevComp = () => <Icon type="angleLeft" scale={0.9} color={COLORS.themeTwo} />;
-  const nextComp = () => <Icon type="angleRight" scale={0.9} color={COLORS.themeTwo} />;
+  const firstPageComp = () => <Icon type="dashboard" color={COLORS.themeTwo} />;
+  const lastPageComp = () => <Icon type="dashboard" color={COLORS.themeTwo} />;
+  const prevComp = () => <Icon type="dashboard" scale={0.9} color={COLORS.themeTwo} />;
+  const nextComp = () => <Icon type="dashboard" scale={0.9} color={COLORS.themeTwo} />;
   return (
     <>
       {numberOfTotalPages > 1 && (

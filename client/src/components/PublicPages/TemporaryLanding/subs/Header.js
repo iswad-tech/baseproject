@@ -21,19 +21,24 @@ const Header = () => {
     <>
       <Surface
         bgColor={SURFACE_COLOR_TYPES.gradient1}
-        paddings={{ x: SPACINGS.md, y: SPACINGS.xxl }}
+        paddings={{ x: SPACINGS.md, bottom: SPACINGS.md }}
         type="flex"
         hAlign="center"
-        direction="vertical">
+        vAlign="center"
+        direction="vertical"
+        className="w-per-100">
         <Surface
-          textColorType={TEXT_COLOR_TYPES.secondary}
-          textFontType={TEXT_FONT_TYPES.title}
           textSizeType={TEXT_SIZE_TYPES.xxxLarge}
-          margins={{ bottom: SPACINGS.xxl }}>
-          We're Coming Soon
+          textFontType={TEXT_FONT_TYPES.title}
+          textColorType={TEXT_COLOR_TYPES.secondary}
+          margins={{ y: SPACINGS.xxl }}>
+          We’re Coming Soon
         </Surface>
 
-        <Surface className="max-w-px-500 text-center">
+        <Surface
+          textColorType={TEXT_COLOR_TYPES.primary}
+          className="text-center"
+          style={{ maxWidth: '700px' }}>
           Our website is currently undergoing exciting renovations to enhance your browsing
           experience. In the meantime, feel free to reach out to us via email at admin@iswad.tech
           for any inquiries or assistance. Thank you for visiting, and we look forward to unveiling

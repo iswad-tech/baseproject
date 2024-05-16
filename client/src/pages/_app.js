@@ -3,7 +3,8 @@ import { Provider } from 'react-redux';
 
 import { store } from '@/root/src/store';
 
-import BaseTemplate from '@/baseComponents/BaseTemplate';
+// import BaseTemplate from '@/baseComponents/BaseTemplate';
+import BaseTemplateSimple from '@/baseComponents/BaseTemplateSimple';
 
 import 'basedesign-iswad/dist/styles.min.css';
 import '@/styles/main.scss';
@@ -11,9 +12,9 @@ import '@/styles/main.scss';
 const MyApp = ({ Component, pageProps }) => {
   return (
     <Provider store={store}>
-      <BaseTemplate>
+      <BaseTemplateSimple>
         <Component {...pageProps} />
-      </BaseTemplate>
+      </BaseTemplateSimple>
     </Provider>
   );
 };

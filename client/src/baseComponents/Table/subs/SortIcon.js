@@ -13,12 +13,12 @@ const SortIcon = ({ isAsc, isDesc, notSorted, className }) => {
     <>
       {isAsc && (
         <Div className={cx('mr2', styles.downIcon, className)}>
-          <Icon type="angleLeft" />
+          <Icon type="angles-up" />
         </Div>
       )}
       {isDesc && (
         <Div className={cx('mr2', styles.upIcon, className)}>
-          <Icon type="angleLeft" />
+          <Icon type="angles-up" />
         </Div>
       )}
       {notSorted && (
@@ -28,8 +28,8 @@ const SortIcon = ({ isAsc, isDesc, notSorted, className }) => {
           vAlign="center"
           hAlign="center"
           className={cx('mr2', className)}>
-          <Icon type="angleUp" color={COLORS.inverse} />
-          <Icon type="angleDown" color={COLORS.inverse} />
+          <Icon type="angles-up" color={COLORS.inverse} />
+          <Icon type="angles-up" color={COLORS.inverse} />
         </Div>
       )}
     </>
