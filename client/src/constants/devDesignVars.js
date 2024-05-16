@@ -4,7 +4,10 @@ export const LIST_OF_ICONS = [
   'close',
   'dashboard',
   'eye',
+  'facebook',
+  'instagram',
   'instagram-fill',
+  'linkedin',
   'plus-circle',
   'search',
   'upload'

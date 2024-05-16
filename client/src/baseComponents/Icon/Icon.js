@@ -13,7 +13,12 @@ import {
   faCheck,
   faPlusCircle
 } from '@fortawesome/free-solid-svg-icons';
-import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  faSquareInstagram,
+  faLinkedin,
+  faFacebook,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
 
 import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
@@ -40,6 +45,12 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
     upload: (
       <FontAwesomeIcon icon={faUpload} style={{ color, width, transform: `scale(${scale})` }} />
     ),
+    linkedin: (
+      <FontAwesomeIcon icon={faLinkedin} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    facebook: (
+      <FontAwesomeIcon icon={faFacebook} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
     eye: <FontAwesomeIcon icon={faEye} style={{ color, width, transform: `scale(${scale})` }} />,
     'check-mark': (
       <FontAwesomeIcon icon={faCheck} style={{ color, width, transform: `scale(${scale})` }} />
@@ -50,6 +61,9 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
         icon={faSquareInstagram}
         style={{ color, width, transform: `scale(${scale})` }}
       />
+    ),
+    instagram: (
+      <FontAwesomeIcon icon={faInstagram} style={{ color, width, transform: `scale(${scale})` }} />
     ),
 
     'plus-circle': (
