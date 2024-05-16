@@ -26,9 +26,11 @@ import DisplayUserEvent from './subs/DisplayUserEvent';
 import DisplayLimitedSwipeableSlider from './subs/DisplayLimitedSwipeableSlider';
 import DisplayPngIcon from './subs/DevPngIcon';
 import DisplaySlider from './subs/DisplaySlider';
+import DisplayInputWithButton from './subs/DisplayInputWithButton';
 
 import DevSection from './subs/DevSection';
 import styles from './DevDesign.module.scss';
+import InputWithButton from '@/baseComponents/InputWithButton';
 
 const DevDesign = () => {
   const [activeElements, setActiveElements] = useState('');
@@ -110,6 +112,13 @@ const DevDesign = () => {
         activeElements={activeElements}
         setActiveElements={setActiveElements}>
         <DisplayIcons />
+      </DevSection>
+
+      <DevSection
+        title="InputWithButton"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayInputWithButton />
       </DevSection>
 
       <DevSection

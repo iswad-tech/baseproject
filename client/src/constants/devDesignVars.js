@@ -74,6 +74,7 @@ export const SPACINGS = {
 export const BORDER_RADIUS_TYPES = {
   minimal: 'Minimal',
   rounded: 'Rounded',
+  xxl: '2XL',
   full: 'Full'
 };
 

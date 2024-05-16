@@ -42,7 +42,6 @@ export const smDesignSize = ['xs', 'sm'];
 // ---------------------------------------------------------------------------
 
 export const COLORS = {
-  primary: '#0a2647',
   faded: '#f3f3f3',
   info: '#5bc0de',
   inverse: '#292b2c',

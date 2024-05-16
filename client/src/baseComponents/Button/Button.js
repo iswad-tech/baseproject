@@ -15,7 +15,7 @@ const Button = ({ btnType = BUTTON_TYPES.primary, btnText, className, children, 
       {btnType === BUTTON_TYPES.primary ? (
         <BaseButton
           className={cx(
-            'w-per-100 pX8 pY2 bgBrand bgBrandSecondaryOnHover textPrimary textSecondaryOnHover br-none brRadiusRounded f-b',
+            'w-per-100 pX8 pY2 bgBrand bgBrandSecondaryOnHover textWhite textSecondaryOnHover br-none brRadiusRounded f-b',
             className
           )}
           {...props}>

@@ -23,6 +23,7 @@ const TextBox = ({
   labelType = 'normal',
   inputFieldClassName = '',
   hasDefaultPadding = true,
+  hasBorder = true,
   ...props
 }) => {
   const [curType, setCurType] = useState(type);
@@ -49,6 +50,7 @@ const TextBox = ({
             className={cx(
               '',
               hasDefaultClass && 'inputField inputText',
+              hasBorder ? 'br-all-solid-1 br-color-silver boxShadowType1' : 'br-none',
               type === 'password' && 'inputWithIcon',
               inputFieldClassName,
               !hasDefaultPadding && 'inputwithLessPadding'
