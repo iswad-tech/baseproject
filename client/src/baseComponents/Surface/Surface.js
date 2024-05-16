@@ -15,16 +15,16 @@ import {
 import styles from './Surface.module.scss';
 
 const Surface = ({
-  bgColor = SURFACE_COLOR_TYPES.primary,
+  bgColor = '',
   bgColorOnHover = '',
   brColor = '',
   brColorOnHover = '',
   margins = {},
   paddings = {},
   brRadiusType = '',
-  textSizeType = TEXT_SIZE_TYPES.regular,
-  textFontType = TEXT_FONT_TYPES.regular,
-  textColorType = TEXT_COLOR_TYPES.primary,
+  textSizeType = '',
+  textFontType = '',
+  textColorType = '',
   textColorOnHover = '',
   children,
   className,

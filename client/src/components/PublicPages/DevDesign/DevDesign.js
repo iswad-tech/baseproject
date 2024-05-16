@@ -4,6 +4,7 @@ import { Div } from 'basedesign-iswad';
 
 import DevSection from './subs/DevSection';
 import DisplaySurface from './subs/DisplaySurface';
+import DisplayButton from './subs/DisplayButton';
 import styles from './DevDesign.module.scss';
 
 const DevDesign = () => {
@@ -16,6 +17,13 @@ const DevDesign = () => {
         activeElements={activeElements}
         setActiveElements={setActiveElements}>
         <DisplaySurface />
+      </DevSection>
+
+      <DevSection
+        title="Button"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayButton />
       </DevSection>
     </>
   );

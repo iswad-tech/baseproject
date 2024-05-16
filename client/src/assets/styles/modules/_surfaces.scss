@@ -54,4 +54,12 @@
       background-color: $bgBrandSecondary;
     }
   }
+
+  &Gradient1 {
+    background: $gradient1;
+
+    &OnHover:hover {
+      background: $gradient1;
+    }
+  }
 }

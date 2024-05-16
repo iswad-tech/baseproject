@@ -1,26 +1,45 @@
-import React from "react";
-import cx from "classnames";
-import { Div } from "basedesign-iswad";
+import React from 'react';
+import cx from 'classnames';
+import { Div, Button as BaseButton } from 'basedesign-iswad';
 
 import Surface from '@/baseComponents/Surface';
 
-import {
-  SURFACE_COLOR_TYPES,
-  BORDER_COLOR_TYPES,
-  BORDER_RADIUS_TYPES,
-  TEXT_COLOR_TYPES,
-  TEXT_SIZE_TYPES,
-  TEXT_FONT_TYPES,
-  SPACINGS
-} from '@/constants/devDesignVars';
+import { BUTTON_TYPES } from '@/constants/devDesignVars';
 
+import styles from './Button.module.scss';
 
-import styles from "./Button.module.scss";
-
-const Button = () => {
+const Button = ({ btnType = BUTTON_TYPES.primary, ...props }) => {
   return (
     <>
-      <Surface>Button</Surface>
+      {btnType === BUTTON_TYPES.primary ? (
+        <BaseButton
+          className="w-per-100 pX8 pY2 bgBrand bgBrandSecondaryOnHover textPrimary textSecondaryOnHover br-none brRadiusRounded f-b"
+          {...props}>
+          Button Primary
+        </BaseButton>
+      ) : (
+        ''
+      )}
+
+      {btnType === BUTTON_TYPES.secondary ? (
+        <BaseButton
+          className="w-per-100 pX8 pY2 bgPrimary brBrandSecondaryOnHover textBrand textSecondaryBrandOnHover brBrand brSecondaryBrandOnHover brRadiusRounded f-b br-all-solid-3"
+          {...props}>
+          Button Primary
+        </BaseButton>
+      ) : (
+        ''
+      )}
+
+      {btnType === BUTTON_TYPES.tertiary ? (
+        <BaseButton
+          className="w-per-100 pX8 pY2 bgPrimary bgBrandOnHover textBrand textPrimaryOnHover br-none brRadiusRounded f-b"
+          {...props}>
+          Button Primary
+        </BaseButton>
+      ) : (
+        ''
+      )}
     </>
   );
 };

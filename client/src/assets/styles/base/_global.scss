@@ -86,6 +86,7 @@ textarea,
 button {
   font-family: $fontFamilyRegular;
 
+  outline: none;
   font-size: 14px;
 
   @include atSmall {

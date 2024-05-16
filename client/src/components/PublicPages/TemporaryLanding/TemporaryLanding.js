@@ -14,14 +14,15 @@ import {
   SPACINGS
 } from '@/constants/devDesignVars';
 
-import styles from './EmptyForCopy.module.scss';
+import Header from './subs/Header';
+import styles from './TemporaryLanding.module.scss';
 
-const EmptyForCopy = () => {
+const TemporaryLanding = () => {
   return (
     <>
-      <Div>EmptyForCopy</Div>
+      <Header />
     </>
   );
 };
 
-export default EmptyForCopy;
+export default TemporaryLanding;

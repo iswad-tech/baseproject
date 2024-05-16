@@ -1,6 +1,6 @@
 import React from "react";
 import { render as renderRTL, screen, fireEvent } from "@testing-library/react";
-import DisplaySurface from "../DisplaySurface";
+import TemporaryLanding from "../TemporaryLanding";
 import * as reactRedux from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
@@ -12,7 +12,7 @@ jest.mock("react-redux", () => ({
   useDispatch: jest.fn(),
 }));
 
-describe("Test DisplaySurface Component", () => {
+describe("Test TemporaryLanding Component", () => {
   const useSelectorMock = reactRedux.useSelector;
   const useDispatchMock = reactRedux.useDispatch;
 
@@ -27,8 +27,8 @@ describe("Test DisplaySurface Component", () => {
   });
 
   test("", () => {
-    render(<DisplaySurface />);
+    render(<TemporaryLanding />);
 
-    expect(screen.getByText(/DisplaySurface/i)).toBeInTheDocument();
+    expect(screen.getByText(/TemporaryLanding/i)).toBeInTheDocument();
   });
 });

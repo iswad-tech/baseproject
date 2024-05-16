@@ -14,13 +14,13 @@ import {
   SPACINGS
 } from '@/constants/devDesignVars';
 
-import styles from './DisplaySurface.module.scss';
+import styles from '../../DevDesign.module.scss';
 
 const DisplaySurface = () => {
   return (
     <>
       <Surface
-        bgColor={SURFACE_COLOR_TYPES.brand}
+        bgColor={SURFACE_COLOR_TYPES.gradient1}
         bgColorOnHover={SURFACE_COLOR_TYPES.brandSecondary}
         brColor={BORDER_COLOR_TYPES.gray}
         brColorOnHover={BORDER_COLOR_TYPES.success2}

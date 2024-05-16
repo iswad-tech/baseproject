@@ -5,7 +5,8 @@ export const SURFACE_COLOR_TYPES = {
   success2: 'Success2',
   warning: 'Warning',
   brand: 'Brand',
-  brandSecondary: 'BrandSecondary'
+  brandSecondary: 'BrandSecondary',
+  gradient1: 'Gradient1'
 };
 
 export const BORDER_COLOR_TYPES = {
@@ -73,4 +74,10 @@ export const TEXT_SIZE_TYPES = {
 export const TEXT_FONT_TYPES = {
   regular: 'FontRegular',
   title: 'FontTitle'
+};
+
+export const BUTTON_TYPES = {
+  primary: 'primary',
+  secondary: 'secondary',
+  tertiary: 'tertiary'
 };
