@@ -36,7 +36,6 @@ const Header = () => {
           margins={{ y: SPACINGS[12] }}>
           We’re Coming Soon
         </Surface>
-
         <Surface
           textColorType={TEXT_COLOR_TYPES.primary}
           className="text-center"

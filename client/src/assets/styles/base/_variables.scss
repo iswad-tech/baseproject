@@ -48,13 +48,15 @@ $boxShadow2: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 $appGrayBrightColor: #9a9a9a;
 $appGrayDarkColor: #5c5c5c;
 $appBrightOrangeColor: rgb(255, 246, 228);
-$themeOne: #666dff;
-$themeTwo: #f5891f;
-$themeThree: #00ff7f;
-$themeFour: #26335d;
-$themeFive: #ffe5d0;
-$themeSix: #feba13;
+$themeOne: #ffffff;
+$themeTwo: hsl(210, 53%, 93%);
+$themeThree: #f1f1f1;
+$themeFour: #fcf2f2;
+$themeFive: #effcf5;
+$themeSix: #16c5fe;
 
+$gradient1: linear-gradient(to bottom right, #16c5fe, #ffffff),
+  linear-gradient(to top right, #8dc6ff, #0392dd);
 // Heights
 $HeaderHeight: 60px;
 $appHeaderHeight: 60px;
