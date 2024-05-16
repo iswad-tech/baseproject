@@ -16,7 +16,10 @@ export const ALERT_TYPES = ['success', 'error', 'warning'];
 
 export const MODAL_TYPES = ['data-submitted-successfully'];
 
-export const CARD_TYPES = ['service'];
+export const CARD_TYPES = {
+  service: 'service', // This is just a test sample
+  temporaryService: 'temporaryService' // This is used in our temporary landing page
+};
 
 export const EMAIL_TEMPLATES = ['contact_form_sent', 'contact_form_received'];
 

@@ -4,6 +4,8 @@ import { Div } from 'basedesign-iswad';
 
 import Card from '@/baseComponents/Card';
 
+import { CARD_TYPES } from '@/constants/devDesignVars';
+
 import styles from '../../../DevDesign.module.scss';
 
 const ServiceCard = ({ ...props }) => {
@@ -16,8 +18,8 @@ const ServiceCard = ({ ...props }) => {
         vAlign="center"
         className="mb4"
         {...props}>
-        <Div className="mb1">Type: service</Div>
-        <Card type="service" />
+        <Div className="mb1">Type: {CARD_TYPES.service}</Div>
+        <Card type={CARD_TYPES.service} />
       </Div>
     </>
   );
