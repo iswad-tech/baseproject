@@ -11,7 +11,10 @@ import {
   faUpload,
   faEye,
   faCheck,
-  faPlusCircle
+  faPlusCircle,
+  faMinusCircle,
+  faAngleLeft,
+  faAngleRight
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faSquareInstagram,
@@ -52,8 +55,23 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
       <FontAwesomeIcon icon={faFacebook} style={{ color, width, transform: `scale(${scale})` }} />
     ),
     eye: <FontAwesomeIcon icon={faEye} style={{ color, width, transform: `scale(${scale})` }} />,
-    'check-mark': (
-      <FontAwesomeIcon icon={faCheck} style={{ color, width, transform: `scale(${scale})` }} />
+    'minus-circle': (
+      <FontAwesomeIcon
+        icon={faMinusCircle}
+        style={{ color, width, transform: `scale(${scale})` }}
+      />
+    ),
+    'minus-circle': (
+      <FontAwesomeIcon
+        icon={faMinusCircle}
+        style={{ color, width, transform: `scale(${scale})` }}
+      />
+    ),
+    'angle-left': (
+      <FontAwesomeIcon icon={faAngleLeft} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'angle-right': (
+      <FontAwesomeIcon icon={faAngleRight} style={{ color, width, transform: `scale(${scale})` }} />
     ),
 
     'instagram-fill': (
@@ -64,6 +82,9 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
     ),
     instagram: (
       <FontAwesomeIcon icon={faInstagram} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'check-mark': (
+      <FontAwesomeIcon icon={faCheck} style={{ color, width, transform: `scale(${scale})` }} />
     ),
 
     'plus-circle': (

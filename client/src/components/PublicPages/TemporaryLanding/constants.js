@@ -1,6 +1,7 @@
 export const SERVICES = [
   {
     title: 'MVP Development',
+    describtion: 'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
     explanations: [
       'We offer comprehensive MVP development services, guiding you from ideation to product launch.',
       'With a focus on clear milestones and agile methodology, we ensure efficient and scalable development.',
@@ -10,6 +11,7 @@ export const SERVICES = [
   },
   {
     title: 'Customized Web/Mobile App Development',
+    describtion: 'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
     explanations: [
       'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
       'Clients can track progress and integrate third-party services seamlessly.',
@@ -19,6 +21,8 @@ export const SERVICES = [
   },
   {
     title: 'Team Augmentation',
+    describtion:
+      'Collaborate with our skilled developers on an hourly/monthly basis to augment your in-house team.',
     explanations: [
       'Collaborate with our skilled developers on an hourly/monthly basis to augment your in-house team.',
       'Our team includes front-end and back-end developers, AI engineers, and UI/UX designers.',
@@ -27,6 +31,8 @@ export const SERVICES = [
   },
   {
     title: 'Counselling & Coaching',
+    describtion:
+      'We offer consultancy and coaching services to entrepreneurs, assisting them in refining their SaaS ideas.',
     explanations: [
       'We offer consultancy and coaching services to entrepreneurs, assisting them in refining their SaaS ideas.',
       'Our experts provide guidance on transforming ideas into actionable solutions.',
@@ -35,6 +41,8 @@ export const SERVICES = [
   },
   {
     title: 'Website Development & Branding',
+    describtion:
+      'From UI/UX research to website development, we offer end-to-end branding solutions',
     explanations: [
       'From UI/UX research to website development, we offer end-to-end branding solutions.',
       'Services include On-Page SEO strategies, Off-Page SEO strategies, Google Analytics integration, and scalable website development.',
