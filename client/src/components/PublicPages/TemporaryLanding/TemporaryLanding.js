@@ -12,12 +12,16 @@ import Footer from './subs/Footer';
 const TemporaryLanding = () => {
   return (
     <>
-      <Header />
-      <Services />
-      <Surface className="w-per-100 ml-auto mr-auto" style={{ maxWidth: '1300px' }}>
-        <WhoWeAre />
-      </Surface>
-      {/* <Footer /> */}
+      <Div type="flex" direction="vertical" distributedBetween className="height-vh-full">
+        <Div>
+          <Header />
+          <Services />
+          <Surface className="w-per-100 ml-auto mr-auto" style={{ maxWidth: '1500px' }}>
+            <WhoWeAre />
+          </Surface>
+        </Div>
+        <Footer />
+      </Div>
     </>
   );
 };

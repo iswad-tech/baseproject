@@ -55,7 +55,7 @@ const Services = () => {
           type="flex"
           hAlign="center"
           vAlign="center"
-          className="px4"
+          className="px2"
           ref={(el) => (parentRef.current = el)}>
           <Div
             type="flex"
@@ -82,8 +82,13 @@ const Services = () => {
                 isSwipeable={true}
                 isDraggable={true}>
                 {SERVICES?.map((item, idx) => (
-                  <ResponsiveSwipeableSliderItem key={idx} className="pos-rel w-px-350">
-                    <Div type="flex" hAlign="center" vAlign="center" className={cx('w-px-300')}>
+                  <ResponsiveSwipeableSliderItem key={idx} className="pos-rel w-px-300">
+                    <Div
+                      type="flex"
+                      hAlign="center"
+                      vAlign="center"
+                      className={cx('')}
+                      style={{ width: '275px' }}>
                       <Card
                         type={CARD_TYPES.temporaryService}
                         describtion={item.describtion}
@@ -103,7 +108,7 @@ const Services = () => {
             hAlign="center"
             vAlign="center"
             onClick={() => setMoveLeft(true)}
-            className="w-px-30 height-px-30 p1 bgRed br-rad-px-20 bgThemeTwo m1">
+            className="w-px-30 height-px-30 p1 br-rad-px-20 bgThemeTwo m1">
             {' '}
             <Icon type="angle-right" color={COLORS.brandSecondary} />
           </Div>

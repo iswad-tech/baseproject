@@ -16,7 +16,7 @@ import styles from './index.module.scss';
 const Index = () => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
-      <Seo title="Mohammad Mohajer">
+      <Seo>
         <PageContainer hasHeader={false} hasFooter={false}>
           <TemporaryLanding />
         </PageContainer>

@@ -19,7 +19,7 @@ import styles from '../Card.module.scss';
 import Icon from '@/baseComponents/Icon';
 
 const TemporaryServiceCard = ({ title, explanations, describtion }) => {
-  const [isBack, setIsBack] = useState(true);
+  const [isBack, setIsBack] = useState(false);
   return (
     <>
       <Surface
@@ -29,7 +29,7 @@ const TemporaryServiceCard = ({ title, explanations, describtion }) => {
         bgColor={isBack ? 'white' : SURFACE_COLOR_TYPES.gradient1}
         textColorType={TEXT_COLOR_TYPES.primary}
         paddings={{ all: SPACINGS[4] }}
-        className="br-rad-px-30 height-px-350 w-per-100 boxShadowType2 mb8">
+        className="br-rad-px-30 height-px-350 w-per-100 boxShadowType1 mb8">
         <Div>
           {isBack ? (
             ''

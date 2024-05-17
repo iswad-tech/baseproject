@@ -27,17 +27,17 @@ const Footer = () => {
         <Div className="text-center textWhite mb2">Find Us Here</Div>
         <Div type="flex" hAlign="center">
           <Div className="w-px-30 height-px-30 mr1 mouse-hand">
-            <Anchor to={'https://www.instagram.com/iswad.tech/'}>
+            <Anchor to={'https://www.instagram.com/iswad.tech/'} internal={false}>
               <Icon type="instagram" color={COLORS.primary} scale={2} />
             </Anchor>
           </Div>
           <Div className="w-px-30 height-px-30 mr1 mouse-hand">
-            <Anchor to={'https://ca.linkedin.com/company/iswadtech'}>
+            <Anchor to={'https://ca.linkedin.com/company/iswadtech'} internal={false}>
               <Icon type="linkedin" color={COLORS.primary} scale={2} />
             </Anchor>
           </Div>
           <Div className="w-px-30 height-px-30 mr1 mouse-hand">
-            <Anchor>
+            <Anchor to={'https://www.facebook.com/iswad.tech/'} internal={false}>
               <Icon type="facebook" color={COLORS.primary} scale={2} />
             </Anchor>
           </Div>
