@@ -60,13 +60,13 @@ const WhoWeAre = () => {
       {/* Mobile */}
 
       <Div className="w-px-350 mY5 ml-auto mr-auto" showIn={smDesignSize}>
-        <Div type="flex" hAlign="center" className="mb4 br-rad-px-10 w-px-350 of-hidden">
+        <Div type="flex" hAlign="center" className="w-px-350 of-hidden">
           <AppImage src={RobotImage} width={350} height={250} />
         </Div>
         <Surface
           bgColor={SURFACE_COLOR_TYPES.secondary}
           paddings={{ all: SPACINGS[8] }}
-          brRadiusType={BORDER_RADIUS_TYPES.full}
+          // brRadiusType={BORDER_RADIUS_TYPES.full}
           className="z-10">
           <Surface
             textColorType={TEXT_COLOR_TYPES.primary}

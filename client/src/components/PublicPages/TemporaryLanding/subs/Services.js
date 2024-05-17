@@ -62,7 +62,7 @@ const Services = () => {
             hAlign="center"
             vAlign="center"
             onClick={() => setMoveRight(true)}
-            className="w-px-30 height-px-30 p1 bgRed br-rad-px-20 bgThemeTwo m1">
+            className="w-px-30 height-px-30 p1 br-rad-px-20 bgThemeTwo m1">
             {' '}
             <Icon type="angle-left" color={COLORS.brandSecondary} />
           </Div>

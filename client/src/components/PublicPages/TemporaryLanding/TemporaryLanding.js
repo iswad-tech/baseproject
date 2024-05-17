@@ -15,7 +15,10 @@ const TemporaryLanding = () => {
       <Div type="flex" direction="vertical" distributedBetween className="height-vh-full">
         <Div>
           <Header />
-          <Services />
+          <Div className="">
+            <Services />
+          </Div>
+          <Div></Div>
           <Surface className="w-per-100 ml-auto mr-auto" style={{ maxWidth: '1500px' }}>
             <WhoWeAre />
           </Surface>
