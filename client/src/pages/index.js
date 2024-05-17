@@ -11,8 +11,6 @@ import TemporaryLanding from '@/components/PublicPages/TemporaryLanding';
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV } from 'config';
 
-import styles from './index.module.scss';
-
 const Index = () => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
