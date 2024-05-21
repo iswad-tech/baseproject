@@ -123,8 +123,8 @@ const PageContainer = ({
       <Div className={cx(isAppPage ? 'bgCyan' : 'bgWhite')}>
         <Div
           type="flex"
-          className={cx(hasSideBarDashboard && 'maxContainerWidthForApp pos-rel bgFaded')}>
-          {hasSideBarDashboard && profile?.id ? (
+          className={cx(hasSideBarDashboard && 'global-container-for-app pos-rel bgFaded')}>
+          {hasSideBarDashboard ? (
             <Div
               showIn={lgDesignSize}
               className={cx('pos-abs pos-abs--lt', styles.sideBarContainer)}>
@@ -135,7 +135,7 @@ const PageContainer = ({
           )}
           <DivMinFullHeight
             className={cx(
-              'flex flex--dir--col min-height-vh-full flex--jc--between w-per-100',
+              'flex flex--dir--col min-height-vh-full flex--jc--between width-per-100',
               hasSideBarDashboard && styles.headerAndBodyContianer
             )}>
             <Div className="flex--gr--1">
@@ -177,15 +177,15 @@ const PageContainer = ({
                 )}
                 <Div
                   className={cx(
-                    hasSideBarDashboard && profile?.id ? styles.container : '',
-                    hasSideBarDashboard && sideBarDashboardIsActive && profile?.id
+                    hasSideBarDashboard ? styles.container : '',
+                    hasSideBarDashboard && sideBarDashboardIsActive
                       ? styles.containerWhenDashboardIsActive
                       : ''
                   )}>
                   <Div
                     className={cx(
                       hasSideBarDashboard && styles.bodyContainer,
-                      hasSideBarDashboard && 'p2 of-x-hidden'
+                      hasSideBarDashboard && 'p-all-16 of-x-hidden'
                     )}>
                     {children}
                   </Div>
@@ -206,7 +206,7 @@ const PageContainer = ({
           </DivMinFullHeight>
 
           {hasScrollToTop && scrollPosition > 0 ? (
-            <Div className={cx('pos-fix', styles.scrollToTopContainer)}>
+            <Div className={cx('pos-fix z-1000', styles.scrollToTopContainer)}>
               <ScrollToTop />
             </Div>
           ) : (

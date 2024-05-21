@@ -11,7 +11,7 @@ import styles from './Card.module.scss';
 const Card = ({ type, ...props }) => {
   return (
     <>
-      {type === CARD_TYPES.service && <ServiceCard {...props} />}
+      {type === CARD_TYPES.serviceTest && <ServiceCard {...props} />}
       {type === CARD_TYPES.temporaryService && <TemporaryServiceCard {...props} />}
     </>
   );

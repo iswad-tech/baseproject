@@ -5,8 +5,8 @@ import { Div } from 'basedesign-iswad';
 import PublicRoute from '@/components/PublicRoute';
 import RoleBasedRoute from '@/components/RoleBasedRoute';
 import Seo from '@/components/Seo';
+import DevDesign from '@/components/DevDesign';
 import PageContainer from '@/components/PageContainer';
-import DevDesign from '@/components/PublicPages/DevDesign';
 
 import { USER_GROUPS } from '@/constants/userGroups';
 import { PRODUCTION } from 'config';

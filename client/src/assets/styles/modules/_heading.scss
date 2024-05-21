@@ -1,112 +1,19 @@
-%headingText {
-  font-family: $fontFamilyTitle;
-  font-weight: bold;
-}
+@each $header in (1, 2, 3, 4, 5, 6) {
+  h#{$header} {
+    font-family: 'Poppins', sans-serif;
 
-h1 {
-  @extend %headingText;
+    font-size: map-get($headingFontSizes, 'h#{$header}-xs');
 
-  font-size: 38px;
+    @include atSmall {
+      font-size: map-get($headingFontSizes, 'h#{$header}-sm');
+    }
 
-  @include atSmall {
-    font-size: 38px;
-  }
+    @include atMedium {
+      font-size: map-get($headingFontSizes, 'h#{$header}-md');
+    }
 
-  @include atMedium {
-    font-size: 48px;
-  }
-
-  @include atLarge {
-    font-size: $xxxLarge;
-  }
-}
-
-h2 {
-  @extend %headingText;
-
-  font-size: 32px;
-
-  @include atSmall {
-    font-size: 32px;
-  }
-
-  @include atMedium {
-    font-size: 40px;
-  }
-
-  @include atLarge {
-    font-size: $xxLarge;
-  }
-}
-
-h3 {
-  @extend %headingText;
-
-  font-size: 26px;
-
-  @include atSmall {
-    font-size: 26px;
-  }
-
-  @include atMedium {
-    font-size: 32px;
-  }
-
-  @include atLarge {
-    font-size: $xLarge;
-  }
-}
-
-h4 {
-  @extend %headingText;
-
-  font-size: 18px;
-
-  @include atSmall {
-    font-size: 18px;
-  }
-
-  @include atMedium {
-    font-size: 26px;
-  }
-
-  @include atLarge {
-    font-size: $large;
-  }
-}
-
-h5 {
-  @extend %headingText;
-
-  font-size: 18px;
-
-  @include atSmall {
-    font-size: 18px;
-  }
-
-  @include atMedium {
-    font-size: 20px;
-  }
-
-  @include atLarge {
-    font-size: $medium;
-  }
-}
-
-h6 {
-  @extend %headingText;
-
-  font-size: 16px;
-
-  @include atSmall {
-    font-size: 16px;
-  }
-
-  @include atMedium {
-    font-size: 18px;
-  }
-
-  @include atLarge {
-    font-size: $base;
+    @include atLarge {
+      font-size: map-get($headingFontSizes, 'h#{$header}-lg');
+    }
   }
 }

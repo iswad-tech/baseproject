@@ -6,16 +6,23 @@ import PublicRoute from '@/components/PublicRoute';
 import RoleBasedRoute from '@/components/RoleBasedRoute';
 import Seo from '@/components/Seo';
 import PageContainer from '@/components/PageContainer';
-import TemporaryLanding from '@/components/PublicPages/TemporaryLanding';
+import TemporaryLanding from '@/components/PublicWebPages/TemporaryLanding';
 
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV } from 'config';
+
+import styles from './index.module.scss';
 
 const Index = () => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
       <Seo>
-        <PageContainer hasHeader={false} hasFooter={false}>
+        <PageContainer
+          pageIdentifier="home"
+          hasHeader={false}
+          hasFooter={false}
+          hasStickyHeader={false}
+          hasStickyFooter={false}>
           <TemporaryLanding />
         </PageContainer>
       </Seo>

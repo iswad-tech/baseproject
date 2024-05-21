@@ -1,130 +1,185 @@
-// Colors
-$primaryColor: #0a2647;
-$fadedColor: #f3f3f3;
-$infoColor: #5bc0de;
-$inverseColor: #292b2c;
-$warningColor: #fcf2f2;
-$successColor: #5cb85c;
-$dangerColor: #f14c4c;
+// Functions
 
-// Fonts
-$fontFamily: 'Poppins', sans-serif;
-$fontSize: 16px;
-$fontSmallSize: 16px;
-$fontMediumSize: 16px;
-$fontLargeSize: 18px;
-$fontColor: black;
+@function capitalize($string) {
+  @if type-of($string) != 'string' {
+    @return $string;
+  }
+  $first-letter: str-slice($string, 1, 1);
+  $rest: str-slice($string, 2);
+  @return to-upper-case($first-letter) + $rest;
+}
+
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+
+// Colors
+$colors: (
+  'primary': black,
+  'secondary': white,
+  'warning-one': #fcf2f2,
+  'warning-two': #e56964,
+  'success-one': #effcf5,
+  'success-two': #74c59f,
+  'theme-one': #16c5fe,
+  'theme-two': #0392dd,
+  'theme-three': #e2ecf6,
+  'gray-bright': #f1f1f1,
+  'gray-dark': #6a6a6a,
+  'off-black': #28282b
+);
+
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+
+// Box Shadows
+$boxShadows: (
+  'type-one': (
+    'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px',
+    'rgba(0, 0, 0, 0.3) 0px 1px 3px -1px'
+  ),
+  'type-two': 'rgba(0, 0, 0, 0.2) 0px 60px 40px -7px'
+);
+
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+
+// Font Types
+$fontTypes: (
+  'regular': 'Poppins'
+);
+
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+
+// Font Sizes
+$fontSizes: (
+  'small-xs': 12px,
+  'small-sm': 14px,
+  'small-md': 16px,
+  'small-lg': 18px,
+  'regular-xs': 14px,
+  'regular-sm': 16px,
+  'regular-md': 18px,
+  'regular-lg': 20px,
+  'large-xs': 16px,
+  'large-sm': 18px,
+  'large-md': 20px,
+  'large-lg': 22px
+);
+
+$fontCategories: (
+  'small': 'small',
+  'regular': 'regular',
+  'large': 'large'
+);
+
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
 
 // Headings
 $fontHeadingWeight: bold;
+$headingFontSizes: (
+  'h1-xs': 24px,
+  'h1-sm': 28px,
+  'h1-md': 32px,
+  'h1-lg': 36px,
+  'h2-xs': 22px,
+  'h2-sm': 26px,
+  'h2-md': 30px,
+  'h2-lg': 34px,
+  'h3-xs': 20px,
+  'h3-sm': 24px,
+  'h3-md': 28px,
+  'h3-lg': 32px,
+  'h4-xs': 18px,
+  'h4-sm': 22px,
+  'h4-md': 26px,
+  'h4-lg': 30px,
+  'h5-xs': 16px,
+  'h5-sm': 20px,
+  'h5-md': 24px,
+  'h5-lg': 28px,
+  'h6-xs': 14px,
+  'h6-sm': 18px,
+  'h6-md': 22px,
+  'h6-lg': 26px
+);
 
-$fontH1Size: 32px;
-$fontH1SmallSize: 32px;
-$fontH1MediumSize: 40px;
-$fontH1LargeSize: 50px;
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
 
-$fontH2Size: 28px;
-$fontH2SmallSize: 28px;
-$fontH2MediumSize: 28px;
-$fontH2LargeSize: 28px;
-
-$fontH3Size: 30px;
-$fontH3SmallSize: 30px;
-$fontH3MediumSize: 40px;
-$fontH3LargeSize: 40px;
-
-// Sizes
+// Device Sizes
 $atSmall: 400px;
 $atMedium: 1100px;
 $atLarge: 1400px;
 $maxContainerWidth: 1500px;
 $maxContainerWidthForApp: 2000px;
 
-// Box Shadows
-$boxShadow1: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-$boxShadow2: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
 
-// Theme Colors
-$appGrayBrightColor: #9a9a9a;
-$appGrayDarkColor: #5c5c5c;
-$appBrightOrangeColor: rgb(255, 246, 228);
-$themeOne: #ffffff;
-$themeTwo: hsl(210, 53%, 93%);
-$themeThree: #f1f1f1;
-$themeFour: #fcf2f2;
-$themeFive: #effcf5;
-$themeSix: #16c5fe;
+// Transitions
+$transitions: (
+  'type-1': all 0.3s ease-in-out
+);
 
-$gradient1: linear-gradient(to bottom right, #16c5fe, #ffffff),
-  linear-gradient(to top right, #8dc6ff, #0392dd);
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+
 // Heights
-$HeaderHeight: 60px;
-$appHeaderHeight: 60px;
+$heights: (
+  'header': 60px,
+  'app-header': 60px
+);
 
-// Generals
-$transition1: all 0.3s ease-in-out;
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
 
-//
-$sideBarClosedWidth: 60px;
-$sideBarOpenedWidth: 180px;
+// Widths
+$widths: (
+  'side-bar-closed': 60px,
+  'side-bar-opened': 180px
+);
 
-// -------------------------------
-// Project Colours
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
 
-// Text Colours
-$textPrimary: #28282b;
-$textSecondary: #faf9f6;
-$textTertiary: #6a6a6a;
-$textBrand: #16c5fe;
-$textSecondaryBrand: #0392dd;
+// Spacings
+$spacings: (
+  'normal': 20px
+);
 
-// Bg Colours
-$bgTertiary: #f1f1f1;
-$bgSuccess2: #effcf5;
-$bgWarning: #fcf2f2;
-$bgPrimary: #ffffff;
-$bgSecondary: hsl(210, 53%, 93%);
-$bgBrand: #16c5fe;
-$bgBrandSecondary: #0392dd;
-$gradient1: linear-gradient(to bottom right, #16c5fe, #ffffff),
-  linear-gradient(to top right, #8dc6ff, #0392dd);
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
 
-// Border Colours
-$borderLightGray: #f1f1f1;
-$borderSuccess2: #74c59f;
-$borderWarning: #e56964;
-$borderGray: #6a6a6a;
-$borderOffBlack: #28282b;
-$borderBrand: #16c5fe;
-$borderSecondaryBrand: #0392dd;
+// Border Radius
+$borderRads: (
+  'normal': 10px
+);
 
-// Spacings:
-$spaceamounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
-$spacingNone: 0;
-$spacingXs: 4px;
-$spacingSm: 8px;
-$spacingMd: 16px;
-$spacingLr: 20px;
-$spacingXL: 28px;
-$spacing2XL: 56px;
-
-// Border Radius:
-$radiusMinimal: 4px;
-$radiusRounded: 8px;
-$radius2XL: 20px;
-$radiusFull: 24px;
-
-// fontSizes:
-$xxxLarge: 52px;
-$xxLarge: 42px;
-$xLarge: 34px;
-$large: 28px;
-$medium: 22px;
-$base: 18px;
-$regular: 16px;
-$small: 14px;
-$xxsmall: 10px;
-
-// Fonts
-$fontFamilyTitle: 'Poppins', sans-serif;
-$fontFamilyRegular: 'Manrope', sans-serif;
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------

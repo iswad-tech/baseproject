@@ -28,7 +28,7 @@ const AppImage = ({
 
   return (
     <>
-      <Div type="flex" className="pos-rel">
+      <DivWidthDynamic setContainerWidth={setContainerWidth} type="flex" className="pos-rel">
         <Image
           width={width ? width : containerWidth}
           height={height ? height : containerWidth * heightOverWidthAsprctRatio}
@@ -36,13 +36,13 @@ const AppImage = ({
           {...props}
           onLoad={() => setLoading(false)}
         />
-      </Div>
+      </DivWidthDynamic>
       {loading && (
         <Div
           type="flex"
           hAlign="center"
           vAlign="center"
-          className={cx('pos-abs pos-abs--center w-per-100 height-per-100', styles.spinner)}>
+          className={cx('pos-abs pos-abs--center width-per-100 height-per-100', styles.spinner)}>
           <ImageLoader type={type} />
         </Div>
       )}

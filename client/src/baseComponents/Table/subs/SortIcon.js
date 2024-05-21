@@ -12,13 +12,13 @@ const SortIcon = ({ isAsc, isDesc, notSorted, className }) => {
   return (
     <>
       {isAsc && (
-        <Div className={cx('mr2', styles.downIcon, className)}>
-          <Icon type="angles-up" />
+        <Div className={cx('m-r-16', styles.downIcon, className)}>
+          <Icon type="dashboard" />
         </Div>
       )}
       {isDesc && (
-        <Div className={cx('mr2', styles.upIcon, className)}>
-          <Icon type="angles-up" />
+        <Div className={cx('m-r-16', styles.upIcon, className)}>
+          <Icon type="dashboard" />
         </Div>
       )}
       {notSorted && (
@@ -27,9 +27,9 @@ const SortIcon = ({ isAsc, isDesc, notSorted, className }) => {
           direction="vertical"
           vAlign="center"
           hAlign="center"
-          className={cx('mr2', className)}>
-          <Icon type="angles-up" color={COLORS.inverse} />
-          <Icon type="angles-up" color={COLORS.inverse} />
+          className={cx('m-r-16', className)}>
+          <Icon type="dashboard" color={COLORS.inverse} />
+          <Icon type="dashboard" color={COLORS.inverse} />
         </Div>
       )}
     </>

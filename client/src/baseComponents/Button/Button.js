@@ -2,48 +2,49 @@ import React from 'react';
 import cx from 'classnames';
 import { Div, Button as BaseButton } from 'basedesign-iswad';
 
-import Surface from '@/baseComponents/Surface';
-
-import { BUTTON_TYPES } from '@/constants/devDesignVars';
+import Icon from '@/baseComponents/Icon';
 
 import styles from './Button.module.scss';
-import classNames from 'classnames';
 
-const Button = ({ btnType = BUTTON_TYPES.primary, btnText, className, children, ...props }) => {
+const Button = ({
+  btnType = 1,
+  iconType,
+  iconColor,
+  iconScale,
+  isDisabled,
+  hasBorderRadius = true,
+  className,
+  children,
+  ...props
+}) => {
   return (
     <>
-      {btnType === BUTTON_TYPES.primary ? (
-        <BaseButton
-          className={cx(
-            'w-per-100 pX8 pY2 bgBrand bgBrandSecondaryOnHover textWhite textSecondaryOnHover br-none brRadiusRounded f-b',
-            className
+      <BaseButton
+        className={cx(
+          hasBorderRadius && 'br-rad-px-8',
+          isDisabled && '',
+          btnType === 1 && !isDisabled
+            ? 'bg-theme-one p-y-8 p-x-32 bg-theme-two-on-hover width-per-100 br-none box-shadow-type-one text-black'
+            : '',
+          btnType === 2 && !isDisabled
+            ? 'bg-white p-y-8 p-x-32 br-theme-one br-theme-two-on-hover br-all-solid-2 width-per-100 text-black'
+            : '',
+          btnType === 3 && !isDisabled
+            ? 'bg-white p-y-8 p-x-32 bg-theme-one-on-hover width-per-100 br-none text-black box-shadow-type-one'
+            : '',
+          className
+        )}
+        {...props}
+        disabled={isDisabled}>
+        <Div type="flex" hAlign="center">
+          {iconType && (
+            <Div type="flex" hAlign="center" vAlign="center" className="mr1">
+              <Icon type={iconType} color={iconColor} scale={iconScale} />
+            </Div>
           )}
-          {...props}>
-          {children}
-        </BaseButton>
-      ) : (
-        ''
-      )}
-
-      {btnType === BUTTON_TYPES.secondary ? (
-        <BaseButton
-          className="w-per-100 pX8 pY2 bgPrimary brBrandSecondaryOnHover textBrand textSecondaryBrandOnHover brBrand brSecondaryBrandOnHover brRadiusRounded f-b br-all-solid-3"
-          {...props}>
-          {children}
-        </BaseButton>
-      ) : (
-        ''
-      )}
-
-      {btnType === BUTTON_TYPES.tertiary ? (
-        <BaseButton
-          className="w-per-100 pX8 pY2 bgPrimary bgBrandOnHover textBrand textPrimaryOnHover br-none brRadiusRounded f-b"
-          {...props}>
-          {children}
-        </BaseButton>
-      ) : (
-        ''
-      )}
+          <Div>{children}</Div>
+        </Div>
+      </BaseButton>
     </>
   );
 };
