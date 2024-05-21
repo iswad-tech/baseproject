@@ -13,7 +13,8 @@ import {
   faCircleMinus,
   faCircleCheck,
   faAngleLeft,
-  faAngleRight
+  faAngleRight,
+  faCheck
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
@@ -74,7 +75,8 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
 
     'angle-right': (
       <FontAwesomeIcon icon={faAngleRight} style={{ color, width, transform: `scale(${scale})` }} />
-    )
+    ),
+    check: <FontAwesomeIcon icon={faCheck} style={{ color, width, transform: `scale(${scale})` }} />
   };
 
   iconTypes['dashboard'] = (

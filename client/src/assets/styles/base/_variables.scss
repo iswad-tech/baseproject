@@ -51,7 +51,8 @@ $boxShadows: (
 
 // Font Types
 $fontTypes: (
-  'regular': 'Poppins'
+  'regular': 'Poppins',
+  'title': 'Poppins'
 );
 
 // ----------------------------------------------
@@ -134,7 +135,7 @@ $maxContainerWidthForApp: 2000px;
 
 // Transitions
 $transitions: (
-  'type-1': all 0.3s ease-in-out
+  'type-one': all 0.3s ease-in-out
 );
 
 // ----------------------------------------------

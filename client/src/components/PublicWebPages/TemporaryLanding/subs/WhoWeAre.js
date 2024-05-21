@@ -4,11 +4,11 @@ import { Div } from 'basedesign-iswad';
 
 import AppImage from '@/baseComponents/AppImage';
 import DivWidthDynamic from '@/baseComponents/DivWidthDynamic';
+import Paragraph from '@/baseComponents/Paragraph';
 
 import whoWeAreImg from '@/images/js-Images/general/TemporaryPage/WhoWeAre.png';
 
 import styles from '../TemporaryLanding.module.scss';
-import Paragraph from '@/baseComponents/Paragraph';
 
 const WhoWeAre = () => {
   const [containerWidth, setContainerWidth] = useState(0);

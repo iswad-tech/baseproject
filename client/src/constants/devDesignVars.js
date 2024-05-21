@@ -2,10 +2,11 @@ export const LIST_OF_ICONS = {
   'angle-left': 'angle-left',
   'angle-right': 'angle-right',
   anglesUp: 'angles-up',
-  close: 'close',
+  check: 'check',
   'circle-check': 'circle-check',
   'circle-minus': 'circle-minus',
   'circle-plus': 'circle-plus',
+  close: 'close',
   dashboard: 'dashboard',
   instagramFill: 'instagram-fill',
   search: 'search',
@@ -29,7 +30,8 @@ export const ALERT_TYPES = {
 };
 
 export const MODAL_TYPES = {
-  dataSubmittedSuccessfully: 'data-submitted-successfully'
+  dataSubmittedSuccessfully: 'data-submitted-successfully',
+  'prompt-message': 'prompt-message'
 };
 
 export const CARD_TYPES = {

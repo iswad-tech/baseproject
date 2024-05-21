@@ -2,16 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
+import DivWidthDynamic from '@/baseComponents/DivWidthDynamic';
 import Card from '@/baseComponents/Card';
 import ResponsiveSwipeableSlider from '@/baseComponents/ResponsiveSwipeableSlider';
-import ResponsiveSwipeableSliderItem from '@/baseComponents/ResponsiveSwipeableSlider/subs/ResponsiveSwipeableSliderItem';
+import Icon from '@/baseComponents/Icon';
 
 import { CARD_TYPES, LIST_OF_ICONS } from '@/constants/devDesignVars';
 
-import styles from '../TemporaryLanding.module.scss';
 import { SERVICES } from '../constants';
-import DivWidthDynamic from '@/baseComponents/DivWidthDynamic';
-import Icon from '@/baseComponents/Icon';
+import styles from '../TemporaryLanding.module.scss';
 
 const Services = () => {
   const parentRef = useRef();

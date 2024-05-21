@@ -8,7 +8,7 @@ import DivWidthDynamic from '../DivWidthDynamic';
 
 import styles from './InputWithButton.module.scss';
 
-const InputWithButton = ({ val, setVal, placeHolder, name, id, btnText }) => {
+const InputWithButton = ({ val, setVal, placeHolder, name, id, btnText, onBtnClick }) => {
   const [containerWidth, setContainerWidth] = useState(0);
   return (
     <>
@@ -38,7 +38,8 @@ const InputWithButton = ({ val, setVal, placeHolder, name, id, btnText }) => {
           <Div type="flex" className="height-px-45 height-per-100">
             <Button
               className={cx(containerWidth < 600 ? 'width-per-100' : 'width-px-175')}
-              hasBorderRadius={false}>
+              hasBorderRadius={false}
+              onClick={onBtnClick}>
               {' '}
               {btnText}
             </Button>
