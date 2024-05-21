@@ -51,9 +51,9 @@ const TemporaryServiceCard = ({ title, explanations, describtion }) => {
             type="flex"
             direction="vertical"
             distributedBetween
-            className="global-bg-grad-one p-all-16 text-white f-s-small br-rad-px-8 of-y-auto scroll-type-one">
+            className="bg-gray-bright p-all-16 text-black f-s-small br-rad-px-8 of-y-auto scroll-type-one">
             <Div>
-              <List type={1} list={explanations} isIconWhite />
+              <List type={1} list={explanations} />
             </Div>
             <Div type="flex" hAlign="end" vAlign="end" className="w-per-100">
               <Div className="" onClick={() => setIsFlipped(!isFlipped)}>

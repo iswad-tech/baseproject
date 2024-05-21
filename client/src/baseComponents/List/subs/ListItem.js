@@ -9,7 +9,7 @@ import { LIST_OF_ICONS } from '@/constants/devDesignVars';
 
 import styles from '../List.module.scss';
 
-const ListItem = ({ item, isIconWhite, ...props }) => {
+const ListItem = ({ item, isIconWhite = false, ...props }) => {
   return (
     <>
       <Div type="flex" vAlign="start" className="m-b-8" {...props}>

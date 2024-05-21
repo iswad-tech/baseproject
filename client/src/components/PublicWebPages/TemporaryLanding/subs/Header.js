@@ -26,9 +26,9 @@ const Header = () => {
         </Heading>
         <Paragraph isCentralized className="text-black m-b-48 max-width-px-700">
           Our website is currently undergoing exciting renovations to enhance your browsing
-          experience. In the meantime, feel free to reach out to us via email at admin@iswad.tech
-          for any inquiries or assistance. Thank you for visiting, and we look forward to unveiling
-          our revamped site soon!
+          experience. In the meantime, feel free to reach out to us via email at info@iswad.tech for
+          any inquiries or assistance. Thank you for visiting, and we look forward to unveiling our
+          revamped site soon!
         </Paragraph>
         <Div className="width-per-100 max-width-px-700">
           <InputWithButton
