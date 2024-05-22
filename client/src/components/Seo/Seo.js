@@ -23,7 +23,7 @@ const Seo = ({ title, keywords, description, children }) => {
 
 Seo.defaultProps = {
   title: 'ISWAD',
-  description: `Example of meta description: Empower your business with ISWAD's cutting-edge AI focused development services. Our software solutions, including MVP development, web and app development, team augmentation, coaching, and advisory services, are designed to transform your vision into reality. Explore how ISWAD can elevate your business with quality content and a user-friendly experience.`,
+  description: `Empower your business with ISWAD's cutting-edge AI focused development services. Our software solutions, including MVP development, web and app development, team augmentation, coaching, and advisory services, are designed to transform your vision into reality. Explore how ISWAD can elevate your business with quality content and a user-friendly experience.`,
   keywords: 'develop, app, ai, mobile, service, company, business'
 };
 
