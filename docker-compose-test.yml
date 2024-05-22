@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  db:
+    restart: always
+    image: postgres:13-alpine
+    env_file:
+      - ./config/envFiles/postgres/prod/.env
+    ports:
+      - "${SERVER_PORT}:${DB_PORT}"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db_backups:/db_backups
+
+volumes:
+  pgdata:
