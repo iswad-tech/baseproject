@@ -18,7 +18,7 @@ const Index = () => {
         <PageContainer
           pageIdentifier="home"
           hasHeader={true}
-          hasFooter={false}
+          hasFooter={true}
           hasStickyHeader={false}
           hasStickyFooter={false}>
           <TemporaryLanding />

@@ -10,13 +10,18 @@ export const LIST_OF_ICONS = {
   'circle-plus': 'circle-plus',
   close: 'close',
   dashboard: 'dashboard',
+  envelope: 'envelope',
   instagramFill: 'instagram-fill',
+  phone: 'phone',
   search: 'search',
   upload: 'upload'
 };
 
 export const ANCHOR_TYPES = {
-  primary: 1
+  primary: 1,
+  secondary: 2,
+  tertiary: 3,
+  noEffect: 4
 };
 
 export const BUTTON_TYPES = {

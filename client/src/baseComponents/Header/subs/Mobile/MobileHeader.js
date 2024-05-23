@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { Div, HamburgerIcon } from 'basedesign-iswad';
 
 import AppImage from '@/baseComponents/AppImage';
+import Button from '@/baseComponents/Button';
 
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
@@ -30,39 +31,46 @@ const MobileHeader = ({ changesThePage, headerColorType, isAppPage }) => {
 
   return (
     <>
-      <Div type="flex" vAlign="center">
-        {showHamburgerIcon && (
+      <Div type="flex" vAlign="center" distributedBetween className="width-per-100">
+        <Div type="flex" vAlign="center">
+          {' '}
+          {showHamburgerIcon && (
+            <Div>
+              <HamburgerIcon
+                cssConfig={HAMBURGER_CONFIG}
+                onClick={() => dispatch(toggleMobileNav())}
+                closeIcon={mobileNavIsActive}
+                openIcon={!mobileNavIsActive}
+                containerUID="HamburgerInHeaderID"
+              />
+            </Div>
+          )}
           <Div>
-            <HamburgerIcon
-              cssConfig={HAMBURGER_CONFIG}
-              onClick={() => dispatch(toggleMobileNav())}
-              closeIcon={mobileNavIsActive}
-              openIcon={!mobileNavIsActive}
-              containerUID="HamburgerInHeaderID"
-            />
+            <MobileNav changesThePage={changesThePage} isAppPage={isAppPage} />
           </Div>
-        )}
-        <Div>
-          <MobileNav changesThePage={changesThePage} isAppPage={isAppPage} />
-        </Div>
-        <Div
-          className="mouse-hand"
-          onClick={() => {
-            dispatch(setActiveMenu('/home'));
-            dispatch(setActiveSubMenu(''));
-            if (changesThePage) {
-              router.push('/');
-            } else {
-              window.scrollTo(0, 0);
-            }
-          }}>
           <Div
-            type="flex"
-            hAlign="center"
-            vAlign="center"
-            className={cx('pos-rel height-header width-px-60 m-l-16')}>
-            <AppImage src={Logo} objectFit="contain" width={60} />
+            className="mouse-hand"
+            onClick={() => {
+              dispatch(setActiveMenu('/home'));
+              dispatch(setActiveSubMenu(''));
+              if (changesThePage) {
+                router.push('/');
+              } else {
+                window.scrollTo(0, 0);
+              }
+            }}>
+            <Div
+              type="flex"
+              hAlign="center"
+              vAlign="center"
+              className={cx('pos-rel height-header width-px-60 m-l-16')}>
+              <AppImage src={Logo} objectFit="contain" width={60} />
+            </Div>
           </Div>
+        </Div>
+
+        <Div className="width-px-175">
+          <Button>Book a Meeting</Button>
         </Div>
       </Div>
     </>

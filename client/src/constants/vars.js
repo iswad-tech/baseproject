@@ -67,6 +67,10 @@ export const PAGE_ROUTES = {
   OUR_SERVICES_MVP_DEVELOPMENT: '/our-services/mvp-development',
   OUR_SERVICES_TEAM_AUGMENTATION: '/our-services/team-augmentation',
   OUR_SERVICES_WEB_APP_DEVELOPMENT: '/our-services/web-app-development',
+  OUR_MISSION: 'our-mission',
+  CAREERS: 'careers',
+  FAQ: 'faq',
+  TERMS: 'terms-and-conditions',
   DASHBOARD: '/test-pages/sample-of-admin-route'
 };
 

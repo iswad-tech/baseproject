@@ -4,13 +4,15 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Div, MobNav, MobNavItem, MobSubNavItem } from 'basedesign-iswad';
 
+import HeightTransitionEffect from '@/baseComponents/HeightTransitionEffect';
+import Icon from '@/baseComponents/Icon';
+
 import { MENU_ITEMS, SUB_MENU_ITEMS } from '@/constants/menuItems';
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
 import { hideMobileNav } from '@/reducers/general/mobileNavIsActive';
-import { AUTO_SCROLL_BEHAVIOR } from '@/constants/vars';
-
-import HeightTransitionEffect from '@/baseComponents/HeightTransitionEffect';
+import { AUTO_SCROLL_BEHAVIOR, COLORS } from '@/constants/vars';
+import { LIST_OF_ICONS } from '@/constants/devDesignVars';
 
 import AllPageClickable from '@/baseComponents/AllPageClickable';
 
@@ -74,7 +76,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                     setHoveredSubMenu(localHoveredSubMenu);
                   }
                 }}>
-                <Div type="flex">
+                <Div type="flex" vAlign="center">
                   <Div
                     className={cx(
                       styles.mobNavItemTitle,
@@ -82,14 +84,29 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                     )}>
                     {item.title}
                   </Div>
+                  {item?.hasSubMenu ? (
+                    <Div
+                      type="flex"
+                      hAlign="center"
+                      vAlign="center"
+                      className="bg-theme-three br-rad-per-50 width-px-20 height-px-20 m-l-8">
+                      <Icon
+                        type={LIST_OF_ICONS.angleDown}
+                        scale={0.7}
+                        color={COLORS['theme-one']}
+                      />
+                    </Div>
+                  ) : (
+                    ''
+                  )}
                 </Div>
                 {item?.hasSubMenu && (
                   <HeightTransitionEffect
                     isActive={hoveredSubMenu?.includes(item.identifier)}
-                    className={cx('m-t-16', styles.mobNavItemSubNavContainer)}>
+                    className={cx('', styles.mobNavItemSubNavContainer)}>
                     {SUB_MENU_ITEMS[item.identifier]?.map((subItem, subIdx) => (
                       <MobSubNavItem
-                        className=""
+                        className="m-t-16"
                         activeClassName={cx('text-theme-two')}
                         isActive={
                           activeMenu === item.identifier && activeSubMenu === subItem.identifier

@@ -37,7 +37,7 @@ const Header = ({ hasStickyHeader, changesThePage = true, headerColorType, isApp
           type="flex"
           vAlign="center"
           distributedBetween
-          showIn={smDesignSize}
+          showIn={['xs', 'sm', 'md']}
           className="width-per-100">
           <MobileHeader changesThePage={changesThePage} isAppPage={isAppPage} />
         </Div>
@@ -46,7 +46,7 @@ const Header = ({ hasStickyHeader, changesThePage = true, headerColorType, isApp
           type="flex"
           vAlign="center"
           distributedBetween
-          showIn={lgDesignSize}
+          showIn={['lg']}
           className={cx(
             'width-per-100 m-l-auto m-r-auto',
             isAppPage ? 'global-app-container' : 'global-container'

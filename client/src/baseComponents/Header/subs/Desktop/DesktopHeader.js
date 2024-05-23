@@ -42,7 +42,7 @@ const DesktopHeader = ({ changesThePage, isAppPage }) => {
       </Div>
       <Div type="flex" vAlign="center" className="m-l-32">
         <DesktopNav changesThePage={changesThePage} isAppPage={isAppPage} />
-        <Div className="width-px-250">
+        <Div className="width-px-300">
           <Button>Book a Meeting</Button>
         </Div>
       </Div>
