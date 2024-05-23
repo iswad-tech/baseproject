@@ -34,7 +34,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
       <MobNav
         type="flex"
         className={cx(
-          'width-px-300 transition-one HeaderMobNavContainerZIndex',
+          'width-px-300 transition-one bg-white box-shadow-type-one p-all-16 text-theme-one HeaderMobNavContainerZIndex',
           styles.mobNavContainer
         )}
         activeClassName={styles.mobNavContainerIsActive}
@@ -49,7 +49,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
               <MobNavItem
                 key={idx}
                 isActive={activeMenu === item.identifier}
-                className={cx('mouse-hand', styles.mobNavItem)}
+                className={cx('mouse-hand')}
                 activeClassName={cx('nothing')}
                 onClick={() => {
                   if (!item?.hasSubMenu) {
@@ -86,11 +86,11 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                 {item?.hasSubMenu && (
                   <HeightTransitionEffect
                     isActive={hoveredSubMenu?.includes(item.identifier)}
-                    className={cx(styles.mobNavItemSubNavContainer)}>
+                    className={cx('m-t-16', styles.mobNavItemSubNavContainer)}>
                     {SUB_MENU_ITEMS[item.identifier]?.map((subItem, subIdx) => (
                       <MobSubNavItem
                         className=""
-                        activeClassName={cx('f-b')}
+                        activeClassName={cx('text-theme-two')}
                         isActive={
                           activeMenu === item.identifier && activeSubMenu === subItem.identifier
                         }
@@ -109,9 +109,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                           }
                         }}>
                         <Div type="flex">
-                          <Div className={cx(styles.mobNavItemSubNavItemTitle)}>
-                            {subItem.title}
-                          </Div>
+                          <Div className={cx('m-b-16')}>{subItem.title}</Div>
                         </Div>
                       </MobSubNavItem>
                     ))}

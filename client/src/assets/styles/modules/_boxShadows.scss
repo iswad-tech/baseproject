@@ -1,20 +1,10 @@
-@each $name, $vals in $boxShadows {
-  $box-shadow-val: '';
-
-  // Check if $vals is a list or a single string
-  @if type-of($vals) == 'list' {
-    @each $val in $vals {
-      $box-shadow-val: if($box-shadow-val == '', $val, $box-shadow-val + ', ' + $val);
-    }
-  } @else {
-    $box-shadow-val: $vals;
+.box-shadow-type- {
+  &one {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
-  .box-shadow-#{$name} {
-    box-shadow: #{$box-shadow-val};
-  }
-
-  .box-shadow-#{$name}-on-hover:hover {
-    box-shadow: #{$box-shadow-val};
+  &two {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
 }

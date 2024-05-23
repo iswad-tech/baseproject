@@ -29,8 +29,8 @@ const Header = ({ hasStickyHeader, changesThePage = true, headerColorType, isApp
         distributedBetween
         vAlign="center"
         className={cx(
-          'width-per-100 height-header',
-          styles.headerContainer,
+          'width-per-100 height-header p-x-16',
+          // styles.headerContainer,
           hasStickyHeader && 'pos-fix pos-fix--lt headerZIndex'
         )}>
         <Div

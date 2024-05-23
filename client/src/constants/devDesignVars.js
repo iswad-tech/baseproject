@@ -1,6 +1,8 @@
 export const LIST_OF_ICONS = {
+  angleDown: 'angle-down',
   'angle-left': 'angle-left',
   'angle-right': 'angle-right',
+  angleUp: 'angle-up',
   anglesUp: 'angles-up',
   check: 'check',
   'circle-check': 'circle-check',

@@ -9,10 +9,11 @@ import AppImage from '@/baseComponents/AppImage/AppImage';
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
 
-import Logo from '@/images/js-Images/general/Header/Header-Logo.png';
+import Logo from '@/images/js-Images/general/Header/WideLogo.png';
 
 import DesktopNav from './DesktopNav';
 import styles from '../../Header.module.scss';
+import Button from '@/baseComponents/Button';
 
 const DesktopHeader = ({ changesThePage, isAppPage }) => {
   const router = useRouter();
@@ -35,12 +36,15 @@ const DesktopHeader = ({ changesThePage, isAppPage }) => {
           type="flex"
           hAlign="center"
           vAlign="center"
-          className={cx('pos-rel height-header of-hidden', styles.desktopHeaderLogoContainer)}>
-          <AppImage src={Logo} objectFit="cover" />
+          className={cx('pos-rel height-header width-px-100')}>
+          <AppImage src={Logo} objectFit="contain" width={100} />
         </Div>
       </Div>
-      <Div className="m-l-32">
+      <Div type="flex" vAlign="center" className="m-l-32">
         <DesktopNav changesThePage={changesThePage} isAppPage={isAppPage} />
+        <Div className="width-px-250">
+          <Button>Book a Meeting</Button>
+        </Div>
       </Div>
     </>
   );

@@ -6,6 +6,8 @@ import { Div } from 'basedesign-iswad';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAnglesUp,
+  faAngleDown,
+  faAngleUp,
   faSearch,
   faClose,
   faUpload,
@@ -33,6 +35,12 @@ function Icon({ type, color, width, scale, isBlock = true, className, ...props }
   let iconTypes = {
     'angles-up': (
       <FontAwesomeIcon icon={faAnglesUp} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'angle-down': (
+      <FontAwesomeIcon icon={faAngleDown} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'angle-up': (
+      <FontAwesomeIcon icon={faAngleUp} style={{ color, width, transform: `scale(${scale})` }} />
     ),
     search: (
       <FontAwesomeIcon icon={faSearch} style={{ color, width, transform: `scale(${scale})` }} />

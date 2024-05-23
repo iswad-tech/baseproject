@@ -10,7 +10,7 @@ import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
 import { toggleMobileNav } from '@/reducers/general/mobileNavIsActive';
 
-import Logo from '@/images/js-Images/general/Header/Header-Logo.png';
+import Logo from '@/images/js-Images/general/Header/WideLogo.png';
 
 import { HAMBURGER_CONFIG } from '../../constants';
 import MobileNav from './MobileNav';
@@ -60,8 +60,8 @@ const MobileHeader = ({ changesThePage, headerColorType, isAppPage }) => {
             type="flex"
             hAlign="center"
             vAlign="center"
-            className={cx('pos-rel height-header m-l-16', styles.mobileHeaderLogoContainer)}>
-            <AppImage src={Logo} />
+            className={cx('pos-rel height-header width-px-60 m-l-16')}>
+            <AppImage src={Logo} objectFit="contain" width={60} />
           </Div>
         </Div>
       </Div>

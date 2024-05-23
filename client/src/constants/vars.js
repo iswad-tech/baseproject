@@ -58,6 +58,15 @@ export const COLORS = {
 
 export const PAGE_ROUTES = {
   HOME: '/',
+  OUR_SERVICES: '/our-services',
+  ABOUT_US: '/about-us',
+  CASE_STUDIES: '/case-studies',
+  BLOG: '/blog',
+  OUR_SERVICES_BRANDING: '/our-services/branding',
+  OUR_SERVICES_COUNSELLING: '/our-services/counselling',
+  OUR_SERVICES_MVP_DEVELOPMENT: '/our-services/mvp-development',
+  OUR_SERVICES_TEAM_AUGMENTATION: '/our-services/team-augmentation',
+  OUR_SERVICES_WEB_APP_DEVELOPMENT: '/our-services/web-app-development',
   DASHBOARD: '/test-pages/sample-of-admin-route'
 };
 
