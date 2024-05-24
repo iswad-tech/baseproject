@@ -22,7 +22,7 @@ const ListItem = ({ item, isIconWhite = false, ...props }) => {
         </Div>
 
         <Div className="m-l-8">
-          <Div className={'fs-px-12'}>{item}</Div>
+          <Div className={'f-s-px-13'}>{item}</Div>
         </Div>
       </Div>
     </>

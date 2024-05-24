@@ -6,7 +6,8 @@ import PublicRoute from '@/components/PublicRoute';
 import RoleBasedRoute from '@/components/RoleBasedRoute';
 import Seo from '@/components/Seo';
 import PageContainer from '@/components/PageContainer';
-import TemporaryLanding from '@/components/PublicWebPages/TemporaryLanding';
+// import TemporaryLanding from '@/components/PublicWebPages/TemporaryLanding';
+import Home from '@/components/PublicWebPages/Home';
 
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV } from 'config';
@@ -21,7 +22,7 @@ const Index = () => {
           hasFooter={true}
           hasStickyHeader={false}
           hasStickyFooter={false}>
-          <TemporaryLanding />
+          <Home />
         </PageContainer>
       </Seo>
     </RoleBasedRoute>

@@ -42,8 +42,11 @@ export const MODAL_TYPES = {
 };
 
 export const CARD_TYPES = {
-  serviceTest: 'service',
-  temporaryService: 'temporary-service'
+  serviceTest: 'service', // This is just a sample test card
+  temporaryService: 'temporary-service', // It is used in temporary page of website in services section
+  homeService: 'home-service', // It is used in home page of website in services section
+  homeAdvantage: 'home-advantage', // It is used in home page of website in what make us unique section
+  homeInsight: 'home-insight' // It is used in home page of website in insight section
 };
 
 export const EMAIL_TEMPLATES = {

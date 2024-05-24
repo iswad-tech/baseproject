@@ -69,7 +69,7 @@ const MobileHeader = ({ changesThePage, headerColorType, isAppPage }) => {
           </Div>
         </Div>
 
-        <Div className="width-px-175">
+        <Div className="width-px-200">
           <Button>Book a Meeting</Button>
         </Div>
       </Div>

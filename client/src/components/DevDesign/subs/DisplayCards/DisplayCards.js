@@ -6,6 +6,9 @@ import { CARD_TYPES } from '@/constants/devDesignVars';
 
 import ServiceCard from './subs/ServiceCard';
 import TemporaryServiceCard from './subs/TemporaryServiceCard';
+import HomeServiceCard from './subs/HomeServiceCard';
+import HomeAdvantageCard from './subs/HomeAdvantage';
+import HomeInsightCard from './subs/HomeInsightCard';
 import styles from '../../DevDesign.module.scss';
 
 function DisplayCards() {
@@ -24,6 +27,18 @@ function DisplayCards() {
 
           if (CARD_TYPES[item] === CARD_TYPES.temporaryService) {
             return <TemporaryServiceCard key={idx} />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.homeService) {
+            return <HomeServiceCard key={idx} />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.homeAdvantage) {
+            return <HomeAdvantageCard key={idx} />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.homeInsight) {
+            return <HomeInsightCard key={idx} />;
           }
         })}
       </Div>
