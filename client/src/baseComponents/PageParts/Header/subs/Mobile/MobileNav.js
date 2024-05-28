@@ -5,13 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Div, MobNav, MobNavItem, MobSubNavItem } from 'basedesign-iswad';
 
 import HeightTransitionEffect from '@/baseComponents/ReusableComps/HeightTransitionEffect';
+import Icon from '@/baseComponents/ReusableComps/Icon';
 import AllPageClickable from '@/baseComponents/ReusableComps/AllPageClickable';
 
 import { MENU_ITEMS, SUB_MENU_ITEMS } from '@/constants/menuItems';
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
 import { hideMobileNav } from '@/reducers/general/mobileNavIsActive';
-import { AUTO_SCROLL_BEHAVIOR } from '@/constants/vars';
+import { AUTO_SCROLL_BEHAVIOR, COLORS } from '@/constants/vars';
+import { LIST_OF_ICONS } from '@/constants/devDesignVars';
 
 import styles from '../../Header.module.scss';
 
@@ -33,7 +35,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
       <MobNav
         type="flex"
         className={cx(
-          'width-px-300 transition-one HeaderMobNavContainerZIndex',
+          'width-px-300 transition-one bg-white box-shadow-type-one p-all-16 text-theme-one HeaderMobNavContainerZIndex',
           styles.mobNavContainer
         )}
         activeClassName={styles.mobNavContainerIsActive}
@@ -48,7 +50,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
               <MobNavItem
                 key={idx}
                 isActive={activeMenu === item.identifier}
-                className={cx('mouse-hand', styles.mobNavItem)}
+                className={cx('mouse-hand')}
                 activeClassName={cx('nothing')}
                 onClick={() => {
                   if (!item?.hasSubMenu) {
@@ -73,7 +75,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                     setHoveredSubMenu(localHoveredSubMenu);
                   }
                 }}>
-                <Div type="flex">
+                <Div type="flex" vAlign="center">
                   <Div
                     className={cx(
                       styles.mobNavItemTitle,
@@ -81,15 +83,30 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                     )}>
                     {item.title}
                   </Div>
+                  {item?.hasSubMenu ? (
+                    <Div
+                      type="flex"
+                      hAlign="center"
+                      vAlign="center"
+                      className="bg-theme-three br-rad-per-50 width-px-20 height-px-20 m-l-8">
+                      <Icon
+                        type={LIST_OF_ICONS.angleDown}
+                        scale={0.7}
+                        color={COLORS['theme-one']}
+                      />
+                    </Div>
+                  ) : (
+                    ''
+                  )}
                 </Div>
                 {item?.hasSubMenu && (
                   <HeightTransitionEffect
                     isActive={hoveredSubMenu?.includes(item.identifier)}
-                    className={cx(styles.mobNavItemSubNavContainer)}>
+                    className={cx('', styles.mobNavItemSubNavContainer)}>
                     {SUB_MENU_ITEMS[item.identifier]?.map((subItem, subIdx) => (
                       <MobSubNavItem
-                        className=""
-                        activeClassName={cx('f-b')}
+                        className="m-t-16"
+                        activeClassName={cx('text-theme-two')}
                         isActive={
                           activeMenu === item.identifier && activeSubMenu === subItem.identifier
                         }
@@ -108,9 +125,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                           }
                         }}>
                         <Div type="flex">
-                          <Div className={cx(styles.mobNavItemSubNavItemTitle)}>
-                            {subItem.title}
-                          </Div>
+                          <Div className={cx('m-b-16')}>{subItem.title}</Div>
                         </Div>
                       </MobSubNavItem>
                     ))}
