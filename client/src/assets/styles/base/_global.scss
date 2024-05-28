@@ -181,22 +181,4 @@ button {
       );
     }
   }
-
-  &sm-ver-lg-hor {
-    display: flex;
-    flex-direction: column;
-
-    @include atMedium {
-      flex-direction: row;
-    }
-  }
-
-  &mob-ver-desk-hor {
-    display: flex;
-    flex-direction: column;
-
-    @include atLarge {
-      flex-direction: row;
-    }
-  }
 }

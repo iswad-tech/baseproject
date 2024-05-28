@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import AppImage from '@/baseComponents/AppImage';
-import DivWidthDynamic from '@/baseComponents/DivWidthDynamic';
-import Paragraph from '@/baseComponents/Paragraph';
+import AppImage from '@/baseComponents/ReusableComps/AppImage';
+import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
+import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 
 import whoWeAreImg from '@/images/js-Images/general/TemporaryPage/WhoWeAre.png';
 

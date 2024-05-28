@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import PngIcon from '@/baseComponents/PngIcon';
-import Anchor from '@/baseComponents/Anchor';
+import PngIcon from '@/baseComponents/ReusableComps/PngIcon';
+import Anchor from '@/baseComponents/ReusableComps/Anchor';
 
 import { COLORS } from '@/constants/vars';
 import { PNG_ICON_TYPES } from '@/constants/devDesignVars';

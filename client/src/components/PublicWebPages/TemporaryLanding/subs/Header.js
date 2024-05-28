@@ -3,9 +3,9 @@ import cx from 'classnames';
 import { useDispatch } from 'react-redux';
 import { Div, Heading } from 'basedesign-iswad';
 
-import Paragraph from '@/baseComponents/Paragraph';
-import InputWithButton from '@/baseComponents/InputWithButton';
-import AppImage from '@/baseComponents/AppImage';
+import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
+import AppImage from '@/baseComponents/ReusableComps/AppImage';
+import InputWithButton from '@/baseComponents/FormComps/InputWithButton';
 
 import useApiCalls from '@/hooks/useApiCalls';
 import { WEB_SUBSCRIBER_API_ROUTE } from '@/constants/apiRoutes';

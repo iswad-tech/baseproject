@@ -2,12 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import PublicRoute from '@/components/PublicRoute';
-import RoleBasedRoute from '@/components/RoleBasedRoute';
-import Seo from '@/components/Seo';
-import PageContainer from '@/components/PageContainer';
-// import TemporaryLanding from '@/components/PublicWebPages/TemporaryLanding';
+import PublicRoute from '@/components/RouteHandlers/PublicRoute';
+import RoleBasedRoute from '@/components/RouteHandlers/RoleBasedRoute';
+import Seo from '@/components/PageWrappers/Seo';
+import PageContainer from '@/components/PageWrappers/PageContainer';
 import Home from '@/components/PublicWebPages/Home';
+import TemporaryLanding from '@/components/PublicWebPages/TemporaryLanding';
 
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV } from 'config';
@@ -18,11 +18,11 @@ const Index = () => {
       <Seo>
         <PageContainer
           pageIdentifier="home"
-          hasHeader={true}
-          hasFooter={true}
+          hasHeader={false}
+          hasFooter={false}
           hasStickyHeader={false}
           hasStickyFooter={false}>
-          <Home />
+          <TemporaryLanding />
         </PageContainer>
       </Seo>
     </RoleBasedRoute>

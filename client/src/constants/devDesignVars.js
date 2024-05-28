@@ -1,8 +1,6 @@
 export const LIST_OF_ICONS = {
-  angleDown: 'angle-down',
   'angle-left': 'angle-left',
   'angle-right': 'angle-right',
-  angleUp: 'angle-up',
   anglesUp: 'angles-up',
   check: 'check',
   'circle-check': 'circle-check',
@@ -10,18 +8,13 @@ export const LIST_OF_ICONS = {
   'circle-plus': 'circle-plus',
   close: 'close',
   dashboard: 'dashboard',
-  envelope: 'envelope',
   instagramFill: 'instagram-fill',
-  phone: 'phone',
   search: 'search',
   upload: 'upload'
 };
 
 export const ANCHOR_TYPES = {
-  primary: 1,
-  secondary: 2,
-  tertiary: 3,
-  noEffect: 4
+  primary: 1
 };
 
 export const BUTTON_TYPES = {
@@ -42,11 +35,8 @@ export const MODAL_TYPES = {
 };
 
 export const CARD_TYPES = {
-  serviceTest: 'service', // This is just a sample test card
-  temporaryService: 'temporary-service', // It is used in temporary page of website in services section
-  homeService: 'home-service', // It is used in home page of website in services section
-  homeAdvantage: 'home-advantage', // It is used in home page of website in what make us unique section
-  homeInsight: 'home-insight' // It is used in home page of website in insight section
+  serviceTest: 'service', // This is a sample of test card
+  temporaryService: 'temporary-service' //This is shown in the tempory page of iswad for the services section
 };
 
 export const EMAIL_TEMPLATES = {

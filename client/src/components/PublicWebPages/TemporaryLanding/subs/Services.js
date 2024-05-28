@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import DivWidthDynamic from '@/baseComponents/DivWidthDynamic';
-import Card from '@/baseComponents/Card';
-import ResponsiveSwipeableSlider from '@/baseComponents/ResponsiveSwipeableSlider';
-import Icon from '@/baseComponents/Icon';
+import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
+import Card from '@/baseComponents/ReusableComps/Card';
+import ResponsiveSwipeableSlider from '@/baseComponents/ReusableComps/ResponsiveSwipeableSlider';
+import Icon from '@/baseComponents/ReusableComps/Icon';
 
 import { CARD_TYPES, LIST_OF_ICONS } from '@/constants/devDesignVars';
 
