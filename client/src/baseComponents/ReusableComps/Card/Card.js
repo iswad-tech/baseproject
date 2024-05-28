@@ -6,6 +6,8 @@ import { CARD_TYPES } from '@/constants/devDesignVars';
 
 import ServiceCard from './subs/ServiceCard';
 import TemporaryService from './subs/TemporaryService';
+import CaseStudy from './subs/CaseStudy';
+import CaseStudyInfo from './subs/CaseStudyInfo';
 import styles from './Card.module.scss';
 
 const Card = ({ type, ...props }) => {
@@ -13,6 +15,8 @@ const Card = ({ type, ...props }) => {
     <>
       {type === CARD_TYPES.serviceTest && <ServiceCard {...props} />}
       {type === CARD_TYPES.temporaryService && <TemporaryService {...props} />}
+      {type === CARD_TYPES.caseStudy && <CaseStudy {...props} />}
+      {type === CARD_TYPES.caseStudyInfo && <CaseStudyInfo {...props} />}
     </>
   );
 };

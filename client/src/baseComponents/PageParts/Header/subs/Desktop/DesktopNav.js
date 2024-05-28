@@ -98,7 +98,7 @@ const DesktopNav = ({ changesThePage = true, isAppPage }) => {
                     {/* ------------------------------------------------- */}
                     <Div
                       className={cx(
-                        'bg-white box-shadow-type-two p-x-16 p-b-20 text-theme-one br-rad-px-10'
+                        'bg-off-white box-shadow-type-two p-x-16 p-b-20 text-theme-one br-rad-px-10'
                       )}>
                       {SUB_MENU_ITEMS[item.identifier]?.map((subItem, subIdx) => (
                         <SubNavItem

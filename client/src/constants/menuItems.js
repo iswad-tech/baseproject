@@ -13,7 +13,7 @@ const generalItems = [
   {
     identifier: 'our-services',
     title: 'Our Services',
-    to: PAGE_ROUTES.OUR_SERVICES,
+    to: '/',
     hasSubMenu: true,
     showInDesktop: true,
     showInMobile: true,

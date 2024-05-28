@@ -6,6 +6,8 @@ import { CARD_TYPES } from '@/constants/devDesignVars';
 
 import ServiceCard from './subs/ServiceCard';
 import TemporaryService from './subs/TemporaryService';
+import CaseStudy from './subs/CaseStudy';
+import CaseStudyInfo from './subs/CaseStudyInfo';
 import styles from '../../DevDesign.module.scss';
 
 function DisplayCards() {
@@ -24,6 +26,14 @@ function DisplayCards() {
 
           if (CARD_TYPES[item] === CARD_TYPES.temporaryService) {
             return <TemporaryService />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.caseStudy) {
+            return <CaseStudy />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.caseStudyInfo) {
+            return <CaseStudyInfo />;
           }
         })}
       </Div>

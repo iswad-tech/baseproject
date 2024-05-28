@@ -39,8 +39,10 @@ export const MODAL_TYPES = {
 };
 
 export const CARD_TYPES = {
-  serviceTest: 'service', // This is a sample of test card
-  temporaryService: 'temporary-service' //This is shown in the tempory page of iswad for the services section
+  serviceTest: 'service', // This is a sample of test card.
+  temporaryService: 'temporary-service', //This is shown in the tempory page of iswad for the services section.
+  caseStudy: 'case-study', //This is shown in the caseStudy pasge as the template card for each project.
+  caseStudyInfo: 'case-study-info' //This is shown in the caseStudy pasge to guide user for more information to make a decision.
 };
 
 export const EMAIL_TEMPLATES = {
