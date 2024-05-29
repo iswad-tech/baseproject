@@ -63,8 +63,9 @@ const DesktopNav = ({ changesThePage = true, isAppPage }) => {
                 onMouseLeave={() => setHoveredSubMenu('')}>
                 <Div
                   className={cx(
-                    'text-theme-one text-theme-two-on-hover',
-                    activeMenu === item.identifier ? 'text-theme-two' : ''
+                    'text-black',
+                    styles.desktopNavItemTitle,
+                    activeMenu === item.identifier ? 'f-b' : ''
                   )}>
                   {item.title}
                 </Div>
@@ -74,7 +75,7 @@ const DesktopNav = ({ changesThePage = true, isAppPage }) => {
                     hAlign="center"
                     vAlign="center"
                     className="bg-theme-three br-rad-per-50 width-px-20 height-px-20 m-l-8">
-                    <Icon type={LIST_OF_ICONS.angleDown} scale={0.7} color={COLORS['theme-one']} />
+                    <Icon type={LIST_OF_ICONS.angleDown} scale={0.7} color={'black'} />
                   </Div>
                 ) : (
                   ''
@@ -97,15 +98,14 @@ const DesktopNav = ({ changesThePage = true, isAppPage }) => {
                     <Div style={{ height: '5px' }} />
                     {/* ------------------------------------------------- */}
                     <Div
-                      className={cx(
-                        'bg-off-white box-shadow-type-two p-x-16 p-b-20 text-theme-one br-rad-px-10'
-                      )}>
+                      className={cx('bg-off-white box-shadow-type-two p-x-16 p-b-20 br-rad-px-10')}>
                       {SUB_MENU_ITEMS[item.identifier]?.map((subItem, subIdx) => (
                         <SubNavItem
                           className={cx(
-                            'mouse-hand flex flex--jc--center',
+                            'mouse-hand flex flex--jc--center text-black',
+
                             activeMenu === item.identifier && activeSubMenu === subItem.identifier
-                              ? 'text-theme-two'
+                              ? 'f-b'
                               : ''
                           )}
                           key={subIdx}
@@ -113,7 +113,7 @@ const DesktopNav = ({ changesThePage = true, isAppPage }) => {
                             activeMenu === item.identifier && activeSubMenu === subItem.identifier
                           }>
                           <Div
-                            className={cx('m-t-20 text-theme-two-on-hover')}
+                            className={cx('m-t-20', styles.desktopNavItemTitle)}
                             onClick={() => {
                               dispatch(setActiveMenu(item.identifier));
                               dispatch(setActiveSubMenu(subItem.identifier));

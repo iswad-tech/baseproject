@@ -35,7 +35,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
       <MobNav
         type="flex"
         className={cx(
-          'width-px-300 transition-one bg-white box-shadow-type-one p-all-16 text-theme-one HeaderMobNavContainerZIndex',
+          'width-px-300 transition-one bg-white box-shadow-type-one p-all-16 text-black HeaderMobNavContainerZIndex',
           styles.mobNavContainer
         )}
         activeClassName={styles.mobNavContainerIsActive}
@@ -50,7 +50,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
               <MobNavItem
                 key={idx}
                 isActive={activeMenu === item.identifier}
-                className={cx('mouse-hand')}
+                className={cx('mouse-hand m-b-10')}
                 activeClassName={cx('nothing')}
                 onClick={() => {
                   if (!item?.hasSubMenu) {
@@ -89,11 +89,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                       hAlign="center"
                       vAlign="center"
                       className="bg-theme-three br-rad-per-50 width-px-20 height-px-20 m-l-8">
-                      <Icon
-                        type={LIST_OF_ICONS.angleDown}
-                        scale={0.7}
-                        color={COLORS['theme-one']}
-                      />
+                      <Icon type={LIST_OF_ICONS.angleDown} scale={0.7} color={'black'} />
                     </Div>
                   ) : (
                     ''
@@ -106,7 +102,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                     {SUB_MENU_ITEMS[item.identifier]?.map((subItem, subIdx) => (
                       <MobSubNavItem
                         className="m-t-16"
-                        activeClassName={cx('text-theme-two')}
+                        activeClassName={cx('text-black f-b')}
                         isActive={
                           activeMenu === item.identifier && activeSubMenu === subItem.identifier
                         }
@@ -125,7 +121,9 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                           }
                         }}>
                         <Div type="flex">
-                          <Div className={cx('m-b-16')}>{subItem.title}</Div>
+                          <Div className={cx('m-b-16', styles.mobNavItemTitle)}>
+                            {subItem.title}
+                          </Div>
                         </Div>
                       </MobSubNavItem>
                     ))}

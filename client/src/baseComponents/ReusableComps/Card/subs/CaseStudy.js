@@ -10,8 +10,8 @@ import styles from '../Card.module.scss';
 const CaseStudy = ({ title = '', src = '' }) => {
   return (
     <>
-      <Div className="width-per-100 bg-white br-rad-3xl of-hidden p-all-temp-7">
-        <Heading type={4} className="text-black m-b-temp-7">
+      <Div className="width-per-100 bg-white br-rad-3xl of-hidden p-all-temp-7 box-shadow-type-one">
+        <Heading type={4} className="text-black m-b-temp-7 two-lines">
           {title}
         </Heading>
         <Div className="br-rad-3xl of-hidden m-b-temp-7">

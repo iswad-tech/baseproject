@@ -21,15 +21,20 @@ const CaseStudyInfo = ({ title = '', description = '', src = '' }) => {
         direction={containerWidth < 800 ? 'vertical' : 'horizontal'}
         vAlign={containerWidth < 800 ? 'start' : 'center'}
         className={cx(
-          'width-per-100 bg-white br-rad-3xl',
+          'width-per-100 bg-white br-rad-3xl box-shadow-type-one',
           containerWidth < 800 ? 'p-all-temp-7' : 'p-all-temp-14'
         )}>
         <Div
           className={cx(
-            'width-per-100 max-width-px-400 br-rad-3xl of-hidden',
-            containerWidth < 800 ? 'm-b-temp-7' : 'm-r-temp-7'
+            'max-width-px-800 br-rad-3xl of-hidden',
+            containerWidth < 800 ? 'm-b-temp-7 width-per-100' : 'm-r-temp-7 width-per-60'
           )}>
-          <AppImage src={src} />
+          <AppImage
+            src={src}
+            width={containerWidth < 800 ? containerWidth : (containerWidth * 60) / 100}
+            heightOverWidthAsprctRatio={0.7}
+            objectFit="cover"
+          />
         </Div>
         <Div>
           <Heading type={4} className="text-black m-b-temp-7">
