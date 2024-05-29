@@ -57,7 +57,7 @@ const Select = ({
             selectIntialShownText={selectIntialShownText}
             placeholder={placeHolder || ''}
             defaultViewClassName={cx(
-              'width-per-100 p-l-16 p-r-16 mouse-hand br-all-solid-1 br-theme-one br-rad-px-4 box-shadow-type-one height-px-40 f-s-px-12 flex flex--ai--center'
+              'width-per-100 bg-white p-l-16 p-r-16 mouse-hand br-all-solid-1 br-theme-one br-rad-px-4 box-shadow-type-one height-px-40 f-s-px-12 flex flex--ai--center'
             )}
             SelectClickableClassName="width-per-100 height-vh-full pos-fix pos-fix--lt mouse-hand"
             className={cx('width-per-100 br-none height-px-40')}
@@ -86,7 +86,7 @@ const Select = ({
               type="flex"
               hAlign="center"
               vAlign="center"
-              className="pos-abs bg-theme-three br-rad-per-50 width-px-20 height-px-20 box-shadow-type-one"
+              className="pos-abs bg-theme-three br-rad-per-50 width-px-20 height-px-20 box-shadow-type-one z-100"
               style={{ top: '50%', right: '8px', transform: 'translateY(-50%)' }}>
               <Icon type={LIST_OF_ICONS.angleDown} color={COLORS['theme-one']} scale={0.8} />
             </Div>

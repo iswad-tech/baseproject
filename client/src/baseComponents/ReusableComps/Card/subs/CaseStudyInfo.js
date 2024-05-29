@@ -27,16 +27,16 @@ const CaseStudyInfo = ({ title = '', description = '', src = '' }) => {
         <Div
           className={cx(
             'max-width-px-800 br-rad-3xl of-hidden',
-            containerWidth < 800 ? 'm-b-temp-7 width-per-100' : 'm-r-temp-7 width-per-60'
+            containerWidth < 800 ? 'm-b-temp-7 width-per-100' : 'width-per-50'
           )}>
           <AppImage
             src={src}
-            width={containerWidth < 800 ? containerWidth : (containerWidth * 60) / 100}
+            width={containerWidth < 800 ? containerWidth : (containerWidth * 50) / 100}
             heightOverWidthAsprctRatio={0.7}
             objectFit="cover"
           />
         </Div>
-        <Div>
+        <Div className={cx(containerWidth < 800 ? 'width-per-100' : 'p-l-temp-7 width-per-50')}>
           <Heading type={4} className="text-black m-b-temp-7">
             {title}
           </Heading>

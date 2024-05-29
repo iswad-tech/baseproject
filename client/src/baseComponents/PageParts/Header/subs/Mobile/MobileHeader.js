@@ -33,18 +33,6 @@ const MobileHeader = ({ changesThePage, headerColorType, isAppPage }) => {
     <>
       <Div type="flex" vAlign="center" distributedBetween className="width-per-100">
         <Div type="flex" vAlign="center">
-          {' '}
-          {showHamburgerIcon && (
-            <Div>
-              <HamburgerIcon
-                cssConfig={HAMBURGER_CONFIG}
-                onClick={() => dispatch(toggleMobileNav())}
-                closeIcon={mobileNavIsActive}
-                openIcon={!mobileNavIsActive}
-                containerUID="HamburgerInHeaderID"
-              />
-            </Div>
-          )}
           <Div>
             <MobileNav changesThePage={changesThePage} isAppPage={isAppPage} />
           </Div>
@@ -63,14 +51,27 @@ const MobileHeader = ({ changesThePage, headerColorType, isAppPage }) => {
               type="flex"
               hAlign="center"
               vAlign="center"
-              className={cx('pos-rel height-header width-px-60 m-l-16')}>
-              <AppImage src={Logo} objectFit="contain" width={60} />
+              className={cx('pos-rel height-header width-px-100 m-l-16')}>
+              <AppImage src={Logo} objectFit="contain" width={100} />
             </Div>
           </Div>
         </Div>
 
-        <Div className="width-px-200">
-          <Button>Book a Meeting</Button>
+        <Div type="flex" vAlign="center">
+          {/* <Div className="width-px-175 m-r-temp-3">
+            <Button>Book a Meeting</Button>
+          </Div> */}
+          {showHamburgerIcon && (
+            <Div>
+              <HamburgerIcon
+                cssConfig={HAMBURGER_CONFIG}
+                onClick={() => dispatch(toggleMobileNav())}
+                closeIcon={mobileNavIsActive}
+                openIcon={!mobileNavIsActive}
+                containerUID="HamburgerInHeaderID"
+              />
+            </Div>
+          )}
         </Div>
       </Div>
     </>

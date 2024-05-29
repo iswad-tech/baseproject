@@ -101,11 +101,11 @@ $BORDER_BTM_THICKNESS: 2px;
     overflow: hidden;
     position: fixed;
     top: calc(map-get($heights, 'header') + 2px);
-    left: 0.5rem;
+    right: 0.5rem;
     transition: all 0.3s ease-in-out;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-    transform: translateX(-150%);
+    transform: translateX(150%);
 
     &IsActive {
       transform: translateX(0);
