@@ -21,19 +21,19 @@ function DisplayCards() {
         className={cx('p-all-8 width-per-90 flex--wrap', styles.card)}>
         {Object.keys(CARD_TYPES)?.map((item, idx) => {
           if (CARD_TYPES[item] === CARD_TYPES.serviceTest) {
-            return <ServiceCard />;
+            return <ServiceCard key={idx} />;
           }
 
           if (CARD_TYPES[item] === CARD_TYPES.temporaryService) {
-            return <TemporaryService />;
+            return <TemporaryService key={idx} />;
           }
 
           if (CARD_TYPES[item] === CARD_TYPES.caseStudy) {
-            return <CaseStudy />;
+            return <CaseStudy key={idx} />;
           }
 
           if (CARD_TYPES[item] === CARD_TYPES.caseStudyInfo) {
-            return <CaseStudyInfo />;
+            return <CaseStudyInfo key={idx} />;
           }
         })}
       </Div>

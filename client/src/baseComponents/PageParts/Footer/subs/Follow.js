@@ -16,7 +16,12 @@ const Follow = () => {
       <Div className="global-font-title f-b height-px-30">Follow</Div>
       <Div type="flex" vAlign="start" className={cx(styles.heightForText, '')}>
         {FOLLOW?.map((item, idx) => (
-          <Anchor to={item?.url} internal anchorType={ANCHOR_TYPES.noEffect} className="m-r-8">
+          <Anchor
+            key={idx}
+            to={item?.url}
+            internal
+            anchorType={ANCHOR_TYPES.noEffect}
+            className="m-r-8">
             <Div type="flex" vAlign="start" key={idx} className="m-b-8">
               <Div
                 type="flex"
