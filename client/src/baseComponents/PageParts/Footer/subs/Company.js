@@ -11,8 +11,8 @@ import { ANCHOR_TYPES } from '@/constants/devDesignVars';
 const Company = () => {
   return (
     <>
-      <Div className="global-font-title f-b m-b-16 height-px-30">Company</Div>
-      <Div className={cx(styles.heightForText)}>
+      <Div className="global-font-title f-b height-px-30">Company</Div>
+      <Div className={cx('', styles.heightForText)}>
         {COMPANY_LINKS?.map((item, idx) => (
           <Div key={idx} className="m-b-8">
             <Anchor

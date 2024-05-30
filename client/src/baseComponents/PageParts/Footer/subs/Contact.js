@@ -11,7 +11,7 @@ import styles from '../Footer.module.scss';
 const Contact = () => {
   return (
     <>
-      <Div className="global-font-title f-b m-b-16 height-px-30">Contact</Div>
+      <Div className="global-font-title f-b height-px-30">Contact</Div>
       <Div className={cx(styles.heightForText, '')}>
         {CONTACT?.map((item, idx) => (
           <Div type="flex" vAlign="center" key={idx} className="m-b-8">

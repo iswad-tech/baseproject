@@ -11,7 +11,7 @@ import { ANCHOR_TYPES } from '@/constants/devDesignVars';
 const LearnMore = () => {
   return (
     <>
-      <Div className="global-font-title f-b m-b-16 height-px-30">Learn More</Div>
+      <Div className="global-font-title f-b height-px-30">Learn More</Div>
       <Div className={cx(styles.heightForText)}>
         {LEARN_MORE_LINKS?.map((item, idx) => (
           <Div key={idx} className="m-b-8">
