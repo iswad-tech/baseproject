@@ -23,7 +23,11 @@ const Index = ({ caseStudy }) => {
           hasFooter={true}
           hasStickyHeader={false}
           hasStickyFooter={false}>
-          <CaseStudyDetail caseStudy={caseStudy} />
+          {Object.keys(caseStudy)?.length ? (
+            <CaseStudyDetail caseStudy={caseStudy} />
+          ) : (
+            <Div>Not Found</Div>
+          )}
         </PageContainer>
       </Seo>
     </RoleBasedRoute>
@@ -33,7 +37,6 @@ const Index = ({ caseStudy }) => {
 export async function getServerSideProps(context) {
   const { params } = context;
   const { slug } = params;
-  let caseStudy = {};
   const foundRes = CASE_STUDIES?.filter((item) => item?.slug === slug)?.[0];
   if (foundRes) {
     return { props: { caseStudy: foundRes } };
