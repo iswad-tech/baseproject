@@ -8,6 +8,7 @@ import ServiceCard from './subs/ServiceCard';
 import TemporaryService from './subs/TemporaryService';
 import CaseStudy from './subs/CaseStudy';
 import CaseStudyInfo from './subs/CaseStudyInfo';
+import BlogInfo from './subs/BlogInfo';
 import styles from '../../DevDesign.module.scss';
 
 function DisplayCards() {
@@ -35,6 +36,10 @@ function DisplayCards() {
           if (CARD_TYPES[item] === CARD_TYPES.caseStudyInfo) {
             return <CaseStudyInfo key={idx} />;
           }
+          if (CARD_TYPES[item] === CARD_TYPES.blogInfo) {
+            return <BlogInfo key={idx} />;
+          }
+
         })}
       </Div>
     </>
