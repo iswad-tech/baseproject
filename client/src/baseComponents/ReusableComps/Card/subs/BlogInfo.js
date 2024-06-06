@@ -8,18 +8,21 @@ import styles from "../Card.module.scss";
 const BlogInfo = () => {
   return (
     <>
-    <Card>
-      <Div>
-      <div className="p-all-temp-7 width-per-100 bg-white br-rad-3xl of-hidden box-shadow-type-one">
-        <p>John Smith | June 1, 2024</p>
-        <Heading className="p-all-temp-7 text-primary f-s-px-20">Title of Blog Post Goes Here.</Heading>
+    <Div className="width-per-100 bg-white br-rad-3xl of-hidden p-all-temp-7 box-shadow-type-one">
+    <p>John Smith | June 1, 2024</p>
+        <Heading type={4} className="text-black m-b-temp-7 two-lines">
+        Title of Blog goes Here.
+        </Heading>
+        <Div className="br-rad-3xl of-hidden m-b-temp-7">
         <p className="p-all-temp-7">Description of blog post will go here. Description of blog post will go here. Description of blog post will go here.</p>
+        </Div>
+        <Div>
         <Anchor anchorType="primary" className="mx2 p-all-temp-7" to="/">
         Read More
         </Anchor>
-        </div>
+        </Div>
       </Div>
-      </Card>
+   
     
     </>
   );
