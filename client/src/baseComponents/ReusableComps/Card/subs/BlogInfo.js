@@ -18,7 +18,7 @@ const BlogInfo = ({ src, writer, postDate, title, description, moreInfoUrl }) =>
           <Div>
             {writer} | {postDate}
           </Div>
-          <Heading type={4} className="text-black m-y-temp-7 two-lines">
+          <Heading type={5} className="text-black m-y-temp-7 one-line">
             {title}
           </Heading>
 
