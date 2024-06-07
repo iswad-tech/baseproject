@@ -18,12 +18,25 @@ const Anchor = ({
     <>
       {internal && (
         <Link href={to} {...props}>
-          <a className={cx(anchorType === 1 && 'text-red', className)}>{children}</a>
+          <a
+            className={cx(
+              anchorType === 1 && 'text-theme-one underline',
+              anchorType === 2 && 'text-black underline',
+              anchorType === 3 && 'text-off-black underline text-black-on-hover',
+              className
+            )}>
+            {children}
+          </a>
         </Link>
       )}
       {!internal && (
         <a
-          className={cx(anchorType === 1 && 'text-red', className)}
+          className={cx(
+            anchorType === 1 && 'text-theme-one underline',
+            anchorType === 2 && 'text-black underline',
+            anchorType === 3 && 'text-black underline text-off-black-on-hover',
+            className
+          )}
           href={to}
           target={target}
           {...props}>
