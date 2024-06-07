@@ -6,6 +6,7 @@ import LatestRead from './Subs/LatestRead/LatestRead';
 import StayInTheLoop from './Subs/StayInTheLoop/StayInTheLoop';
 import BlogPostInformation from './Subs/BlogPostInformation/BlogPostInformation';
 import styles from './Blog.module.scss';
+import FilterBlog from './Subs/FilterBlog/FilterBlog';
 
 const Blog = () => {
   return (
@@ -19,6 +20,9 @@ const Blog = () => {
         </Div>
         <Div className="m-t-100">
           <StayInTheLoop />
+        </Div>
+        <Div className="m-t-20">
+          <FilterBlog/>
         </Div>
       </Div>
     </>

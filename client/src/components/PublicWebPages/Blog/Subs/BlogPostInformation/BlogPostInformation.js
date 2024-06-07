@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { Div, Heading } from 'basedesign-iswad';
+import { Div, Heading, Paragraph, Search } from 'basedesign-iswad';
 import Anchor from "@/baseComponents/ReusableComps/Anchor";
 import styles from './BlogPostInformation.module.scss';
 
@@ -13,11 +13,11 @@ const BlogPostInformation = () => {
         <p>John Smith | June 1, 2024</p>
         </div>
         <Heading className="p-all-temp-7 text-primary f-s-px-20">Title of Blog Post Goes Here.</Heading>
-        <p className="p-all-temp-7">Description of blog post will go here. Description of blog post will go here. Description of blog post will go here.</p>
+        <Paragraph className="p-all-temp-7">Description of blog post will go here. Description of blog post will go here.
+        </Paragraph>
         <Anchor anchorType="primary" className="mx2 p-all-temp-7" to="/">
         Read More
         </Anchor>
-         
         </Div>
     </>
   );
