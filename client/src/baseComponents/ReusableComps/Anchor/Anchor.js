@@ -20,9 +20,11 @@ const Anchor = ({
         <Link href={to} {...props}>
           <a
             className={cx(
+              'mouse-hand',
               anchorType === 1 && 'text-theme-one underline',
               anchorType === 2 && 'text-black underline',
               anchorType === 3 && 'text-off-black underline text-black-on-hover',
+              anchorType === 4 && '',
               className
             )}>
             {children}
@@ -32,9 +34,11 @@ const Anchor = ({
       {!internal && (
         <a
           className={cx(
+            'mouse-hand',
             anchorType === 1 && 'text-theme-one underline',
             anchorType === 2 && 'text-black underline',
             anchorType === 3 && 'text-black underline text-off-black-on-hover',
+            anchorType === 4 && '',
             className
           )}
           href={to}

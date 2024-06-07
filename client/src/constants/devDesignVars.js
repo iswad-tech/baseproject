@@ -20,7 +20,8 @@ export const LIST_OF_ICONS = {
 export const ANCHOR_TYPES = {
   primary: 1,
   secondary: 2,
-  tertiary: 3
+  tertiary: 3,
+  noEffect: 4
 };
 
 export const BUTTON_TYPES = {
