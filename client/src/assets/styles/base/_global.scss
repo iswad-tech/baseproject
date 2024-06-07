@@ -181,4 +181,58 @@ button {
       );
     }
   }
+
+  &column-reverse {
+    flex-direction: column-reverse;
+
+    &-in-desktop {
+      @include atMedium {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &row-reverse {
+    flex-direction: row-reverse;
+
+    &-in-desktop {
+      @include atMedium {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &add-margin-bottom-in-mobile {
+    margin-bottom: #{map-get($spacings, 'temp-7')};
+    @include atMedium {
+      margin-bottom: 0;
+    }
+  }
+
+  &add-p-x-in-desktop {
+    padding-left: 0;
+    padding-right: 0;
+    @include atMedium {
+      padding-left: #{map-get($spacings, 'temp-7')};
+      padding-right: #{map-get($spacings, 'temp-7')};
+    }
+  }
+
+  &add-br-rad-in-desktop {
+    border-radius: 0;
+    @include atMedium {
+      border-radius: #{map-get($borderRads, '3xl')};
+    }
+  }
+
+  &grid {
+    display: grid;
+    width: 100%;
+    gap: #{map-get($spacings, 'temp-7')};
+    place-items: center;
+
+    &--cols--auto {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
 }

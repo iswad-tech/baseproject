@@ -1,0 +1,11 @@
+@import '@/styles/base/_variables';
+@import '@/styles/base/_mixins';
+
+.container {
+  @include atMedium {
+    margin-left: 56px;
+    margin-right: 56px;
+    border-radius: 24px;
+    transform: translateY(-50px);
+  }
+}

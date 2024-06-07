@@ -2,27 +2,27 @@ import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import LatestRead from './Subs/LatestRead/LatestRead';
-import StayInTheLoop from './Subs/StayInTheLoop/StayInTheLoop';
-import BlogPostInformation from './Subs/BlogPostInformation/BlogPostInformation';
+import LatestRead from './subs/LatestRead/LatestRead';
+import StayInTheLoop from './subs/StayInTheLoop/StayInTheLoop';
+import FilterBlog from './subs/FilterBlog/FilterBlog';
+import Posts from './subs/Posts';
 import styles from './Blog.module.scss';
-import FilterBlog from './Subs/FilterBlog/FilterBlog';
 
 const Blog = () => {
   return (
     <>
       <Div>
-        <Div className="m-y-100 global-container p-x-temp-7">
+        <Div className="m-y-100 global-container add-p-x-in-desktop">
           <LatestRead />
         </Div>
-        <Div className="m-y-100 m-t-100 global-container p-x-temp-7">
-          <BlogPostInformation />
-        </Div>
-        <Div className="m-t-100">
+        <Div className="">
           <StayInTheLoop />
         </Div>
-        <Div className="m-t-20">
-          <FilterBlog/>
+        <Div className="global-container">
+          <FilterBlog />
+        </Div>
+        <Div className="global-container add-p-x-in-desktop m-y-100">
+          <Posts />
         </Div>
       </Div>
     </>

@@ -1,29 +1,36 @@
-import React from "react";
-import cx from "classnames";
-import { Card, Div,Heading } from "basedesign-iswad";
-import Anchor from "../../Anchor";
+import React from 'react';
+import cx from 'classnames';
+import { Div, Heading } from 'basedesign-iswad';
 
-import styles from "../Card.module.scss";
+import Anchor from '@/baseComponents/ReusableComps/Anchor';
+import AppImage from '@/baseComponents/ReusableComps/AppImage';
+import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 
-const BlogInfo = () => {
+import styles from '../Card.module.scss';
+import { ANCHOR_TYPES } from '@/constants/devDesignVars';
+
+const BlogInfo = ({ src, writer, postDate, title, description, moreInfoUrl }) => {
   return (
     <>
-    <Div className="width-per-100 bg-white br-rad-3xl of-hidden p-all-temp-7 box-shadow-type-one">
-    <p>John Smith | June 1, 2024</p>
-        <Heading type={4} className="text-black m-b-temp-7 two-lines">
-        Title of Blog goes Here.
-        </Heading>
-        <Div className="br-rad-3xl of-hidden m-b-temp-7">
-        <p className="p-all-temp-7">Description of blog post will go here. Description of blog post will go here. Description of blog post will go here.</p>
-        </Div>
-        <Div>
-        <Anchor anchorType="primary" className="mx2 p-all-temp-7" to="/">
-        Read More
-        </Anchor>
+      <Div className="width-per-100 bg-white br-rad-3xl of-hidden box-shadow-type-one">
+        <AppImage src={src} heightOverWidthAsprctRatio={0.7} />
+        <Div className="p-all-temp-7">
+          <Div>
+            {writer} | {postDate}
+          </Div>
+          <Heading type={4} className="text-black m-y-temp-7 two-lines">
+            {title}
+          </Heading>
+
+          <Paragraph className="m-b-temp-7 three-lines">{description}</Paragraph>
+
+          <Div>
+            <Anchor anchorType={ANCHOR_TYPES.tertiary} internal className="f-b" to={moreInfoUrl}>
+              Read More
+            </Anchor>
+          </Div>
         </Div>
       </Div>
-   
-    
     </>
   );
 };

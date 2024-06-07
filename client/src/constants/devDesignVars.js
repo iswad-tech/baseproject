@@ -18,7 +18,9 @@ export const LIST_OF_ICONS = {
 };
 
 export const ANCHOR_TYPES = {
-  primary: 1
+  primary: 1,
+  secondary: 2,
+  tertiary: 3
 };
 
 export const BUTTON_TYPES = {

@@ -1,0 +1,9 @@
+@import '@/styles/base/_variables';
+@import '@/styles/base/_mixins';
+
+.container {
+  padding-bottom: 28px;
+  @include atMedium {
+    padding-bottom: 100px;
+  }
+}
