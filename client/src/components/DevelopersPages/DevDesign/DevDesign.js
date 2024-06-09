@@ -28,6 +28,7 @@ import DisplayPngIcon from './subs/DisplayPngIcon';
 import DisplaySlider from './subs/DisplaySlider';
 import DisplayFlipDiv from './subs/DisplayFlipDiv';
 import DisplayInputWithButton from './subs/DisplayInputWithButton';
+import DisplayPercentageBar from './subs/DisplayPercentageBar';
 
 import DevSection from './subs/DevSection';
 import styles from './DevDesign.module.scss';
@@ -161,6 +162,13 @@ const DevDesign = () => {
         activeElements={activeElements}
         setActiveElements={setActiveElements}>
         <DisplayParagraph />
+      </DevSection>
+
+      <DevSection
+        title="Percentage Bar"
+        activeElements={activeElements}
+        setActiveElements={setActiveElements}>
+        <DisplayPercentageBar />
       </DevSection>
 
       <DevSection

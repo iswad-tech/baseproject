@@ -46,7 +46,9 @@ export const CARD_TYPES = {
   temporaryService: 'temporary-service', //This is shown in the tempory page of iswad for the services section.
   caseStudy: 'case-study', //This is shown in the caseStudy pasge as the template card for each project.
   caseStudyInfo: 'case-study-info', //This is shown in the caseStudy pasge to guide user for more information to make a decision.
-  blogInfo: 'blog-Info' //This is shown in the Blog page for blog information.
+  blogInfo: 'blog-Info', //This is shown in the Blog page for blog information.
+  homeService: 'home-service', //This is shown in the Home page for Services section.
+  homeUnique: 'home-unique' //This is shown in the Home page for Makes us Unique section.
 };
 
 export const EMAIL_TEMPLATES = {
@@ -57,5 +59,9 @@ export const EMAIL_TEMPLATES = {
 export const PNG_ICON_TYPES = {
   facebook: 'facebook',
   instagram: 'instagram',
-  linkedIn: 'linkedIn'
+  linkedIn: 'linkedIn',
+  unique1: 'Unique1',
+  unique2: 'Unique2',
+  unique3: 'Unique3',
+  unique4: 'Unique4'
 };

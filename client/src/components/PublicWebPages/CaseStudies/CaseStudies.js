@@ -2,9 +2,10 @@ import React from 'react';
 import cx from 'classnames';
 import { Div, Heading } from 'basedesign-iswad';
 
+import Contact from '@/components/Shared/Contact';
+
 import MostPopular from './subs/MostPopular';
 import NeedHelp from './subs/NeedHelp';
-import Contact from './subs/Contact';
 import styles from './CaseStudies.module.scss';
 
 const CaseStudies = () => {

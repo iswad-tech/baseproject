@@ -9,6 +9,8 @@ import TemporaryService from './subs/TemporaryService';
 import CaseStudy from './subs/CaseStudy';
 import CaseStudyInfo from './subs/CaseStudyInfo';
 import BlogInfo from './subs/BlogInfo';
+import HomeService from './subs/HomeService';
+import HomeUnique from './subs/HomeUnique';
 import styles from '../../DevDesign.module.scss';
 
 function DisplayCards() {
@@ -40,6 +42,13 @@ function DisplayCards() {
             return <BlogInfo key={idx} />;
           }
 
+          if (CARD_TYPES[item] === CARD_TYPES.homeService) {
+            return <HomeService key={idx} />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.homeUnique) {
+            return <HomeUnique key={idx} />;
+          }
         })}
       </Div>
     </>

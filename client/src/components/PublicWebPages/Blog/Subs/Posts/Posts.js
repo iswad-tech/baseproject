@@ -16,7 +16,7 @@ const Posts = () => {
     <>
       <Div className="global-grid global-grid--cols--auto p-x-temp-7">
         {BLOG_POSTS?.map((item, idx) => (
-          <Div key={idx} className="width-px-300 m-x">
+          <Div key={idx} className="width-px-300">
             <Card
               type={CARD_TYPES.blogInfo}
               src={item?.src}
