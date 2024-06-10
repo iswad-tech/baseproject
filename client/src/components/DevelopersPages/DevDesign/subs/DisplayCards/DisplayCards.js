@@ -11,6 +11,8 @@ import CaseStudyInfo from './subs/CaseStudyInfo';
 import BlogInfo from './subs/BlogInfo';
 import HomeService from './subs/HomeService';
 import HomeUnique from './subs/HomeUnique';
+import AboutQulity from './subs/AboutQulity';
+import AboutTeam from './subs/AboutTeam';
 import styles from '../../DevDesign.module.scss';
 
 function DisplayCards() {
@@ -48,6 +50,14 @@ function DisplayCards() {
 
           if (CARD_TYPES[item] === CARD_TYPES.homeUnique) {
             return <HomeUnique key={idx} />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.aboutQuality) {
+            return <AboutQulity key={idx} />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.aboutTeam) {
+            return <AboutTeam key={idx} />;
           }
         })}
       </Div>

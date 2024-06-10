@@ -48,7 +48,9 @@ export const CARD_TYPES = {
   caseStudyInfo: 'case-study-info', //This is shown in the caseStudy pasge to guide user for more information to make a decision.
   blogInfo: 'blog-Info', //This is shown in the Blog page for blog information.
   homeService: 'home-service', //This is shown in the Home page for Services section.
-  homeUnique: 'home-unique' //This is shown in the Home page for Makes us Unique section.
+  homeUnique: 'home-unique', //This is shown in the Home page for Makes us Unique section.
+  aboutQuality: 'about-quality', //This is shown in the About page for Our Qulities section.
+  aboutTeam: 'about-team' //This is shown in the About page for Our Team section.
 };
 
 export const EMAIL_TEMPLATES = {
@@ -63,5 +65,9 @@ export const PNG_ICON_TYPES = {
   unique1: 'Unique1',
   unique2: 'Unique2',
   unique3: 'Unique3',
-  unique4: 'Unique4'
+  unique4: 'Unique4',
+  quality1: 'Quality1',
+  quality2: 'Quality2',
+  quality3: 'Quality3',
+  quality4: 'Quality4'
 };

@@ -235,4 +235,14 @@ button {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
   }
+
+  &paragraph {
+    line-height: 2rem;
+
+    &-justified {
+      text-align: justify;
+      text-justify: distribute;
+      hyphens: auto;
+    }
+  }
 }

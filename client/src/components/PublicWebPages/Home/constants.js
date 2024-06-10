@@ -49,13 +49,6 @@ export const HERO_ITEMS = [
   }
 ];
 
-export const ABOUT_ACHIEVEMENTS = [
-  { label: 'Achievements', value: '2021' },
-  { label: 'Achievements', value: '2021' },
-  { label: 'Achievements', value: '2021' },
-  { label: 'Achievements', value: '2021' }
-];
-
 export const SERVICES = [
   {
     id: 0,

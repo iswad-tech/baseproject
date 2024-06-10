@@ -13,8 +13,8 @@ import { LIST_OF_ICONS } from '@/constants/devDesignVars';
 const Pagination = ({ type = 1, currentPage, setCurrentPage, numberOfTotalPages, ...props }) => {
   const firstPageComp = () => <Icon type="angleDoubleLeft" color={COLORS['theme-two']} />;
   const lastPageComp = () => <Icon type="angleDoubleRight" color={COLORS['theme-two']} />;
-  const prevComp = () => <Icon type="angleLeft" scale={0.9} color={COLORS['theme-two']} />;
-  const nextComp = () => <Icon type="angleRight" scale={0.9} color={COLORS['theme-two']} />;
+  const prevComp = () => <Icon type="angleLeft" scale={0.7} color={COLORS['theme-two']} />;
+  const nextComp = () => <Icon type="angleRight" scale={0.7} color={COLORS['theme-two']} />;
 
   const [options, setOptions] = useState([]);
 
@@ -42,7 +42,7 @@ const Pagination = ({ type = 1, currentPage, setCurrentPage, numberOfTotalPages,
                 setCurrentPage(numberOfTotalPages);
               }
             }}>
-            <Icon type={LIST_OF_ICONS['angle-left']} color={'black'} scale={0.9} />
+            <Icon type={LIST_OF_ICONS['angle-left']} color={'black'} scale={0.7} />
           </Div>
           <Div className="text-off-black">Page </Div>
           <Div className="width-px-80 m-l-temp-2 m-r-temp-2">
@@ -69,7 +69,7 @@ const Pagination = ({ type = 1, currentPage, setCurrentPage, numberOfTotalPages,
                 setCurrentPage(1);
               }
             }}>
-            <Icon type={LIST_OF_ICONS['angle-right']} color={'black'} scale={0.9} />
+            <Icon type={LIST_OF_ICONS['angle-right']} color={'black'} scale={0.7} />
           </Div>
         </Div>
       ) : (

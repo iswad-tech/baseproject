@@ -7,7 +7,7 @@ import AppImage from '@/baseComponents/ReusableComps/AppImage';
 
 import AboutImg from '@/images/js-Images/general/HomePage/About.png';
 
-import { ABOUT_ACHIEVEMENTS } from '../../constants';
+import { ABOUT_ACHIEVEMENTS } from '@/constants/vars';
 import styles from './About.module.scss';
 
 const About = () => {
