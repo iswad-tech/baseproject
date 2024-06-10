@@ -23,10 +23,15 @@ const Cases = () => {
   return (
     <>
       <Div className="f-s-large global-font-title text-center f-b m-b-temp-14">All Projects</Div>
-      <Div className="global-grid global-grid--cols--auto">
+      <Div className="global-grid global-grid--cols--auto--2">
         {pageProjects?.map((item, idx) => (
-          <Div key={idx} className="max-width-px-350 m-b-temp-7 m-r-temp-7 m-l-temp-7">
-            <Card type={CARD_TYPES.caseStudy} title={item?.title} src={item?.src} />
+          <Div key={idx} className="width-px-350 m-b-temp-7 m-r-temp-7 m-l-temp-7">
+            <Card
+              type={CARD_TYPES.caseStudy}
+              title={item?.title}
+              src={item?.src}
+              slug={item?.slug}
+            />
           </Div>
         ))}
       </Div>

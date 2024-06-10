@@ -234,6 +234,10 @@ button {
     &--cols--auto {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
+
+    &--cols--auto--2 {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
   }
 
   &paragraph {

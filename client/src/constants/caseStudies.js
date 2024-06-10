@@ -9,7 +9,7 @@ export const CASE_STUDIES = [
       {
         scopeNumber: 1,
         scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeDescription: `<div class="f-b">Overview</div>
 
 The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
 
