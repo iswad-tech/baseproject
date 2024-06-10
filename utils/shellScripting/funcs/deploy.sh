@@ -118,9 +118,9 @@ deployToStagingWithSwarm() {
 local script=$( cat << EOF
 cd /var/www/app;
 git pull origin staging;
-export NGINX_REPO=$NGINX_REPO
-export CLIENT_REPO=$CLIENT_REPO
-export API_REPO=$API_REPO
+export NGINX_REPO=$NGINX_REPO_STAGING
+export CLIENT_REPO=$CLIENT_REPO_STAGING
+export API_REPO=$API_REPO_STAGING
 export NGINX_VERSION="staging-$nginx_ver"
 export CLIENT_VERSION="staging-$client_ver"
 export API_VERSION="staging-$api_ver"
