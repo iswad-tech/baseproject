@@ -23,7 +23,6 @@ const Pagination = ({ type = 1, currentPage, setCurrentPage, numberOfTotalPages,
     for (let i = 1; i <= numberOfTotalPages; i++) {
       localOptions.push({ value: i, shownText: `${i}` });
     }
-    console.log(localOptions);
     setOptions([...localOptions]);
   }, [numberOfTotalPages]);
   return (
@@ -51,7 +50,6 @@ const Pagination = ({ type = 1, currentPage, setCurrentPage, numberOfTotalPages,
               val={currentPage}
               setVal={setCurrentPage}
               selectIntialShownText={''}
-              placeHolder=""
               labelText=""
               hasMarginBottom={false}
             />

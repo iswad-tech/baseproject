@@ -4,6 +4,7 @@ import { Div, Heading } from 'basedesign-iswad';
 
 import Contact from '@/components/Shared/Contact';
 
+import Cases from './subs/Cases';
 import MostPopular from './subs/MostPopular';
 import NeedHelp from './subs/NeedHelp';
 import styles from './CaseStudies.module.scss';
@@ -16,7 +17,7 @@ const CaseStudies = () => {
           Find a Project That Suits Your Needs
         </Heading>
         <Div className="m-y-100 global-container p-x-temp-7">
-          <MostPopular />
+          <Cases />
         </Div>
         <Div className="m-y-100 m-t-100 global-container p-x-temp-7">
           <NeedHelp />
