@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   nginx:
+    container_name: app_nginx
     image: ${NGINX_REPO}:${NGINX_VERSION}
     ports:
       - "80:80"
@@ -18,6 +19,7 @@ services:
         condition: on-failure
 
   certbot:
+    container_name: app_certbot
     image: certbot/certbot
     volumes:
       - ./nginx/certbot/conf:/etc/letsencrypt
@@ -30,6 +32,7 @@ services:
         condition: on-failure
 
   client:
+    container_name: app_client
     image: ${CLIENT_REPO}:${CLIENT_VERSION}
     command: npm start
     environment:
@@ -41,6 +44,7 @@ services:
         condition: on-failure
 
   api:
+    container_name: app_api
     image: ${API_REPO}:${API_VERSION}
     env_file:
       - ./config/envFiles/django/prod/.env
@@ -54,6 +58,7 @@ services:
         condition: on-failure
 
   celery:
+    container_name: app_celery
     image: ${API_REPO}:${API_VERSION}
     env_file:
       - ./config/envFiles/django/prod/.env
@@ -67,6 +72,7 @@ services:
         condition: on-failure
 
   celery-beat:
+    container_name: app_celery_beat
     image: ${API_REPO}:${API_VERSION}
     env_file:
       - ./config/envFiles/django/prod/.env
@@ -80,6 +86,7 @@ services:
         condition: on-failure
 
   celery-flower:
+    container_name: app_celery_flower
     image: ${API_REPO}:${API_VERSION}
     env_file:
       - ./config/envFiles/django/prod/.env
@@ -93,6 +100,7 @@ services:
         condition: on-failure
 
   channels:
+    container_name: app_channels
     image: ${API_REPO}:${API_VERSION}
     env_file:
       - ./config/envFiles/django/prod/.env
@@ -104,6 +112,7 @@ services:
         condition: on-failure
 
   db:
+    container_name: app_db
     image: postgres:13-alpine
     env_file:
       - ./config/envFiles/postgres/prod/.env
@@ -119,6 +128,7 @@ services:
         condition: on-failure
 
   redis:
+    container_name: app_redis
     image: redis:7.0.4-alpine3.16
     volumes:
       - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
