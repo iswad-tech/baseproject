@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 source ./utils/shellScripting/constants/constants.sh
 source ./utils/shellScripting/constants/versioning.sh
