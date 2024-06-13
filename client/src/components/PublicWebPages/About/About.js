@@ -24,7 +24,7 @@ const About = () => {
       <Div>
         <Team />
       </Div>
-      <Div className="widht-per-100 global-container m-y-100">
+      <Div className="widht-per-100 global-container ">
         <Insights />
       </Div>
       <Div>

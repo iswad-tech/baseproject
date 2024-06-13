@@ -13,7 +13,7 @@ const CaseStudyDetail = ({ caseStudy }) => {
 
   return (
     <>
-      {caseStudy?.detailSrc ? <Hero src={caseStudy?.detailSrc} /> : ''}
+      {caseStudy?.detailSrc ? <Hero src={caseStudy?.detailSrc} title={caseStudy?.title} /> : ''}
       <Description scopes={caseStudy?.scopes} />
     </>
   );

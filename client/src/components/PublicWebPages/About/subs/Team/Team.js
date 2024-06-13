@@ -14,7 +14,7 @@ const Team = () => {
     <>
       <Div className="bg-gray-bright p-all-temp-7">
         <Div className="global-container">
-          <Heading type={4} className="text-center">
+          <Heading type={4} className="text-center p-y-temp-10">
             Meet The Team
           </Heading>
           <Div type="flex" hAlign="center" className="flex--wrap">

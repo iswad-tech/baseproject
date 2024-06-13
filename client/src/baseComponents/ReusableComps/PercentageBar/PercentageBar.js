@@ -7,8 +7,8 @@ import styles from './PercentageBar.module.scss';
 const PercentageBar = ({ percentage = 0 }) => {
   return (
     <>
-      <Div className="width-per-100 bg-white box-shadow-type-one height-px-10">
-        <Div className="bg-theme-one height-px-10" style={{ width: `${percentage}%` }} />
+      <Div className="width-per-100 bg-silver height-px-10">
+        <Div className={cx('height-px-10', styles.bar)} style={{ width: `${percentage}%` }} />
       </Div>
     </>
   );

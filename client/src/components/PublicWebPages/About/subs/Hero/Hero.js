@@ -35,8 +35,8 @@ const Hero = () => {
             <Div
               type="flex"
               hAlign="center"
+              vAlign="center"
               direction="vertical"
-              distributedBetween
               className="max-width-px-700 width-per-100">
               <Heading className="text-theme-one">About Us</Heading>
               <Paragraph className="text-center m-y-temp-7">
@@ -45,7 +45,7 @@ const Hero = () => {
                 guidance to empower both startups and established businesses.{' '}
               </Paragraph>
               <Div className="width-px-250">
-                <Button>Contact Us</Button>
+                <Button className="height-px-50 f-b f-s-px-18">Contact Us</Button>
               </Div>
             </Div>
           </Div>

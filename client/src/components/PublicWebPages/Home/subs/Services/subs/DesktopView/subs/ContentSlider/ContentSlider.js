@@ -6,6 +6,7 @@ import HeightTransitionEffect from '@/baseComponents/ReusableComps/HeightTransit
 import List from '@/baseComponents/ReusableComps/List';
 import Icon from '@/baseComponents/ReusableComps/Icon';
 import PercentageBar from '@/baseComponents/ReusableComps/PercentageBar';
+import PngIcon from '@/baseComponents/ReusableComps/PngIcon';
 
 import { SERVICES } from '@/components/PublicWebPages/Home/constants';
 import styles from './ContentSlider.module.scss';
@@ -25,8 +26,8 @@ const ContentSlider = ({
         <Div
           key={idx}
           className={cx(
-            'm-b-40 mouse-hand p-all-temp-7 m-x-temp-7 pos-rel',
-            compActiveIdx === item?.id ? 'bg-theme-three' : ''
+            'm-b-40 mouse-hand  m-x-temp-7 pos-rel br-all-solid-hidden br-rad-px-10 of-hidden',
+            compActiveIdx === item?.id ? 'bg-gray-bright p-all-temp-7' : ''
           )}
           onClick={() => {
             setHandleMoveOnClick(true);
@@ -38,7 +39,7 @@ const ContentSlider = ({
               hAlign="center"
               vAlign="center"
               className="width-px-20 height-px-20 m-r-8">
-              <Icon type={item?.icon} />
+              <PngIcon type={item?.icon} />
             </Div>
             <Div className="f-b">{item?.title}</Div>
           </Div>

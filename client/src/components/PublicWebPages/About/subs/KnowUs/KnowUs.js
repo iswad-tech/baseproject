@@ -13,9 +13,9 @@ const KnowUs = () => {
   const [containerWidth, setContainerWidth] = useState(0);
   return (
     <>
-      <Div className="bg-gray-bright width-per-100">
+      <Div className="bg-gray-bright width-per-100 p-t-temp-10">
         <DivWidthDynamic setContainerWidth={setContainerWidth} className="global-container">
-          <Heading type={4} className="text-center p-all-temp-7">
+          <Heading type={3} className="text-center p-x-temp-7 p-b-temp-10">
             Get To Know Us
           </Heading>
           <Row>
@@ -60,7 +60,7 @@ const KnowUs = () => {
           <Div
             type="flex"
             distributedBetween
-            className="flex--wrap width-per-100 max-width-px-700 m-l-auto m-r-auto">
+            className="flex--wrap width-per-100 max-width-px-700 m-l-auto m-r-auto p-y-temp-10">
             {ABOUT_ACHIEVEMENTS?.map((item, idx) => (
               <Div key={idx} className="m-all-temp-7">
                 <Div className="f-s-large f-b">{item?.value}</Div>
