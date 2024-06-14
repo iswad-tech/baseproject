@@ -17,7 +17,7 @@ const Paragraph = ({
       {type === 1 && (
         <BaseParagraph
           className={cx(
-            'f-s-px-18',
+            '',
             styles.paragraphOne,
             isJustified && styles.paragraphOneJustified,
             isCentralized && styles.paragraphOneCenteralized,

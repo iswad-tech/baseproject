@@ -23,7 +23,7 @@ const Scope = ({ scopeNumber, scopeTitle, scopeDescription }) => {
           <Heading className="m-r-temp-7 text-theme-one">{scopeNumber}</Heading>
           <Heading type={5}>{scopeTitle}</Heading>
         </Div>
-        <Div className="bg-white box-shadow-type-one br-rad-3xl p-all-temp-7">
+        <Div className="bg-white box-shadow-type-one br-rad-3xl p-all-temp-7 width-per-100">
           <DivConvertTextToHtml text={scopeDescription} />
         </Div>
       </DivWidthDynamic>

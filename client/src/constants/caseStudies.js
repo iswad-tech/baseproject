@@ -1093,108 +1093,208 @@ export const CASE_STUDIES = [
   {
     title: 'API Integration Services',
     slug: 'api-integration-services',
-    src: api_integration_CARD_IMG,
+    src: api_integration_IMG,
     isMostPopular: false,
     detailSrc: api_integration_IMG,
     scopes: [
       {
         scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeTitle: 'Project Scope',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Overview</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+<div>
+<p class="three-lines m-b-temp-7">The scope of the API Integration Services project includes developing a detailed strategy for API integration and performing initial integration tests. This initial phase, referred to as Milestone 1, focuses on evaluating the APIs, preparing comprehensive documentation, and conducting basic integration tests to ensure seamless communication between systems.</p>
 
-Key Objectives
+<div class="text-primary f-b m-b-temp-4">Key Objectives</div>
+<ol style="list-style-type: decimal; padding-left: 20px;" class="three-lines m-b-temp-7">
+<li>API Strategy Development: Formulate a comprehensive API integration strategy to guide the project.</li>
+<li>API Evaluation: Assess the selected APIs for suitability and compatibility.</li>
+<li>Initial Integrations: Perform basic integration tests to validate the API functionality and communication.</li>
+</ol>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
-
-Deliverables
-
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+<div class="text-primary f-b m-b-temp-4">Deliverables</div>
+<ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+<li>Detailed API integration strategy document.</li>
+<li>Comprehensive API documentation.</li>
+<li>Basic integration test results and reports.</li>
+</ul>
+</div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 2,
+        scopeTitle: 'Milestones',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Milestone 1: Detailed API Strategy and Initial Integrations</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">Objective: To develop a detailed API integration strategy, evaluate the APIs, and perform initial integration tests.</p>
+        <div class="text-primary f-b m-b-temp-4">Key Activities:</div>
+        
+        <ol style="list-style-type: decimal; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li><strong>API Strategy Development</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Identify project requirements and objectives for API integration.</li>
+        <li>Develop a detailed strategy outlining the integration approach, tools, and best practices.</li>
+        <li>Create a roadmap with key milestones and deliverables.</li>
+        </ul>
+        </li>
+        
+        <li><strong>API Evaluation</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Identify and select the APIs to be integrated based on project requirements.</li>
+        <li>Evaluate the APIs for functionality, reliability, and compatibility with existing systems.</li>
+        <li>Review API documentation and perform preliminary assessments.</li>
+        </ul>
+        </li>
 
-Key Objectives
+        <li><strong>Initial Integrations</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Set up the development environment for API integration.</li>
+        <li>Implement basic integration tests to validate API functionality.</li>
+        <li>Document test results and identify any issues or challenges.</li>
+        </ul>
+        </li>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
+        </ol>
 
-Deliverables
+        <div class="text-primary f-b m-b-temp-4">Deliverables:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Detailed API integration strategy document.</li>
+        <li>Comprehensive API documentation.</li>
+        <li>Results from initial integration tests, including any identified issues and recommendations.</li>
+        </ul>
+        </li>
 
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        </div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 3,
+        scopeTitle: 'Duration',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Duration:</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">2 Weeks</P>
 
-Key Objectives
-
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
-
-Deliverables
-
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        <div class="text-primary f-b m-b-temp-2">Week 1:</div>
+        
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines">
+        <li>API Strategy Development
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Identify project requiremnts and objectives.</li>
+        <li>Develop the integration strategy and roadmap.</li>
+        </ul>
+        </li>
+        </ul>
+        
+        
+        <div class="text-primary f-b m-b-temp-4">Week 2:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines">
+        <li>API Evaluation and initial integrations
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Select and evaluate APIs.</li>
+        <li>Set up the development environment.</li>
+        <li>COnduct initial integration tests and document results.
+        </ul>
+        </li>
+        </ul>
+        </div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 4,
+        scopeTitle: 'Customization Capabilities',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Customization Capabilities</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">The API Integration Services project offers various customization options to meet specific client needs and preferences. These customizations can include, but are not limited to:</p>
+        
+        <ol style="list-style-type: decimal; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li><strong>Extended API Evaluations</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li> In-depth evaluation of additional APIs as requested by the client.</li>
+        <li>Performance benchmarking and stress testing of selected APIs.</li>
+        <li>Custom compatibility assessments with client's existing systems.</li>
+        
+        </ul>
+        </li>
+        
+        <li><strong>Advanced Integration Features</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Implementation of advanced features such as rate limiting, caching, and error handling.</li>
+        <li>Custom middleware development for enhanced security and data processing.</li>
+        <li>Integration with additional third-party services and platforms.</li>
+        
+        </ul>
+        </li>
 
-Key Objectives
+        
+        <li><strong>Detailed Documentation and Training</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Creation of detailed API integration guides and best practices.</li>
+        <li>Development of custom documentation tailored to client-specific use cases.</li>
+        <li>Training sessions for client teams on API usage and integration techniques.</li>
+        </ul>
+        </li>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
+        <li><strong>Comprehensive Testing and Quality Assurance</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Development of automated testing frameworks for continuous integration and testing.</li>
+        <li>Extensive functional, performance, and security testing.</li>
+        <li>Iterative testing and feedback loops to ensure integration quality and reliability.</li>
+        </ul>
+        </li>
+        </ol>
 
-Deliverables
+        <div class="text-primary f-b m-b-temp-4">Implementation of Customizations</div>
+        <p class="three-lines m-b-temp-7">Customizations will be implemented through a collaborative process with the client, ensuring that the API Integration Services meet their specific needs and preferences. Regular feedback sessions and iterative refinements will ensure alignment with client goals and satisfaction with the final product.</p>
 
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        <p class"three-lines m-b-temp-7">By detailing the customization options, we ensure that the API Integration Services project remains flexible and adaptable, catering to a wide range of client requirements while maintaining a strong focus on detailed API strategy and initial integrations.</p> 
+        </div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 5,
+        scopeTitle: 'Cost',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Estimated Cost:</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">$5,000 - $7,000</p>
+        <div class="text-primary f-b m-b-temp-4">Breakdown:</div>
 
-Key Objectives
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li><strong>API Strategy Development: $2,000 - $2,500</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Identification of Project requiremnts and objectives.</li>
+        <li>Development of a detailed Strategy and roadmap.</li>
+        
+        </ul>
+        </li>
+        
+        <li><strong>API Evaluation: $1,500 - $2,000</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Selection and evaluation of APIs.</li>
+        <li>Review of API documentation and preliminary assessments.</li>
+        
+        </ul>
+        </li>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
+        <li><strong>Initial Integrations: $1,500 - $2,500</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Setup of the development environment.</li>
+        <li>Implementation and documentation of basic integration tests.</li>
+        
+        </ul>
+        </li>
 
-Deliverables
-
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        </ul>
+        
+        </div>`
       }
     ]
   },
@@ -1202,108 +1302,230 @@ Initial design concepts for the MVP, including wireframes and mockups.`
   {
     title: 'Data Analysis and Machine Learning',
     slug: 'data-analysis-and-machine-learning',
-    src: data_analysis_machine_learning_CARD_IMG,
+    src: data_analysis_machine_learning_IMG,
     isMostPopular: false,
     detailSrc: data_analysis_machine_learning_IMG,
     scopes: [
       {
         scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeTitle: 'Project Scope',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Overview</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+<div>
+<p class="three-lines m-b-temp-7">The scope of the Data Analysis and Machine Learning project involves setting up the data infrastructure and developing preliminary machine learning models. This initial phase, known as Milestone 1, aims to establish robust data gathering protocols and create initial models that lay the groundwork for advanced data analysis and machine learning applications.</p>
 
-Key Objectives
+<div class="text-primary f-b m-b-temp-4">Key Objectives</div>
+<ol style="list-style-type: decimal; padding-left: 20px;" class="three-lines m-b-temp-7">
+<li>Data Infrastructure Setup: Establish a reliable and scalable data infrastructure for collecting and managing data.</li>
+<li>Preliminary Machine Learning Models: Develop and validate initial machine learning models using collected data.</li>
+</ol>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
-
-Deliverables
-
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+<div class="text-primary f-b m-b-temp-4">Deliverables</div>
+<ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+<li>Established data gathering protocols and infrastructure.</li>
+<li>Initial machine learning models with basic validation.</li>
+<li>Documentation of setup and modeling processes.</li>
+</ul>
+</div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 2,
+        scopeTitle: 'Milestones',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Milestone 1: Data Infrastructure Setup and Preliminary Modeling</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">Objective: To set up the data infrastructure and develop preliminary machine learning models.</p>
+        <div class="text-primary f-b m-b-temp-4">Key Activities:</div>
+        
+        <ol style="list-style-type: decimal; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li><strong>Data Gathering Protocols</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Identify data sources and types of data required for the project.</li>
+        <li>Develop protocols for data collection, storage, and preprocessing.</li>
+        <li>Set up data pipelines to ensure continuous data flow and integrity.</li>
+        </ul>
+        </li>
+        
+        <li><strong>Data Infrastructure Setup</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Choose appropriate data storage solutions (e.g., databases, data lakes).</li>
+        <li>Implement data storage and management systems.</li>
+        <li>Ensure data security and compliance with relevant regulations.</li>
+        </ul>
+        </li>
 
-Key Objectives
+        <li><strong>Preliminary Machine Learning Models</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Select initial machine learning algorithms suitable for the project.</li>
+        <li>Develop and train initial models using collected data.</li>
+        <li>Perform basic validation and testing to assess model performance.</li>
+        </ul>
+        </li>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
+        </ol>
 
-Deliverables
+        <div class="text-primary f-b m-b-temp-4">Deliverables:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Documented data gathering protocols and infrastructure setup.</li>
+        <li>Initial machine learning models with performance metrics.</li>
+        <li>Documentation of the modeling process and initial results.</li>
+        </ul>
+        </li>
 
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        </div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 3,
+        scopeTitle: 'Duration',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Duration:</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">4 Weeks</P>
 
-Key Objectives
+        <div class="text-primary f-b m-b-temp-2">Week 1:</div>
+        
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines">
+        <li>Data Gathering Protocols
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Identify data sources and types of data needed.</li>
+        <li>Develop protocols for data collection and preprocessing.</li>
+        </ul>
+        </li>
+        </ul>
+        
+        
+        <div class="text-primary f-b m-b-temp-4">Week 2:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines">
+        <li>Data Infrastructure Setup
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Select and implement data storage solutions.</li>
+        <li>Set up data management systems and ensure data security.</li>
+        </ul>
+        </li>
+        </ul>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
+        <div class="text-primary f-b m-b-temp-4">Week 3:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines">
+        <li>Preliminary Machine Learning Models
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Select suitable machine learning algorithms.</li>
+        <li>Begin development and training of initial models.</li>
+        </ul>
+        </li>
+        </ul>
 
-Deliverables
-
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        <div class="text-primary f-b m-b-temp-4">Week 4:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines">
+        <li>Preliminary Machine Learning Models (cont.)
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Continue model training.</li>
+        <li>Perform basic validation and testing.</li>
+        <li>Document the modeling process and results.</li>
+        </ul>
+        </li>
+        </ul>
+        </div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 4,
+        scopeTitle: 'Customization Capabilities',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Customization Capabilities</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">The Data Analysis and Machine Learning project offers various customization options to meet specific client needs and preferences. These customizations can include, but are not limited to:</p>
+        
+        <ol style="list-style-type: decimal; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li><strong>Extended Data Sources and Integration</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Integration with additional data sources such as external APIs, third-party databases, and loT devices.</li>
+        <li>Custom data ingestion pipelines for real-time data processing.</li>
+        </ul>
+        </li>
+        
+        <li><strong>Advanced Machine Learning Models</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Development of advanced machine learning models including deep learning, natural language processing, and computer vision.</li>
+        <li>Custom feature engineering and selection techniques to improve model accuracy.</li>
+        
+        </ul>
+        </li>
 
-Key Objectives
+        
+        <li><strong>Enhanced Data Management and Security</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Implementation of advanced data governance and compliance measures.</li>
+        <li>Integration of data anonymization and encryption techniques to ensure data privacy.</li>
+        </ul>
+        </li>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
+        <li><strong>Comprehensive Testing and Validation</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Development of extensive testing frameworks for model validation and performance monitoring.</li>
+        <li>Setup of automated testing pipelines for continuous model evaluation and improvement.</li>
+        </ul>
+        </li>
 
-Deliverables
+        <li><strong>Scalability and Performance Optimization</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li>Optimization of data infrastructure for scalability and high performance.</li>
+        <li>Implementation of distributed computing frameworks for handling large-scale data processing and model training.</li>
+        </ul>
+        </li>
+        </ol>
 
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        <div class="text-primary f-b m-b-temp-4">Implementation of Customizations</div>
+        <p class="three-lines m-b-temp-7">Customizations will be implemented through a collaborative process with the client, ensuring that the data analysis and machine learning solutions meet their specific needs and preferences. Regular feedback sessions and iterative refinements will ensure alignment with client goals and satisfaction with the final product.</p>
+
+        <p class"three-lines m-b-temp-7">By detailing the customization options, we ensure that the Data Analysis and Machine Learning project remains flexible and adaptable, catering to a wide range of client requirements while maintaining a strong focus on data infrastructure setup and preliminary modeling.</p> 
+        </div>`
       },
 
       {
-        scopeNumber: 1,
-        scopeTitle: 'Title',
-        scopeDescription: `Overview
+        scopeNumber: 5,
+        scopeTitle: 'Cost',
+        scopeDescription: `<div class="text-primary f-b m-b-temp-4">Estimated Cost:</div>
 
-The scope of the MVP Consultancy Services project includes conducting a comprehensive feasibility analysis and developing a strategic plan for the Minimum Viable Product (MVP). This initial phase, designated as Milestone 1, aims to provide a clear understanding of market opportunities, strategic direction, and preliminary designs for the MVP.
+        <div>
+        <p class="three-lines m-b-temp-7">$10,000 - $12,000</p>
+        <div class="text-primary f-b m-b-temp-4">Breakdown:</div>
 
-Key Objectives
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        <li><strong>Data Gathering Protocols: $2,500-$3,000</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Identification of data sources and development of collection protocols.</li>
+        <li>Initial setup of data pipelines and preprocessing routines.Development of a detailed Strategy and roadmap.</li>
+        <li>Responsive design implementation.</li>
+        
+        </ul>
+        </li>
+        
+        <li><strong>Data Infrastructure Setup: $4,000-$5,000</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Selection and implementation of data storage solutions.</li>
+        <li>Setup of data management systems and security measures.</li>
+        
+        </ul>
+        </li>
 
-Feasibility Analysis: Assess the viability of the MVP concept through detailed market research and analysis.
-Strategic Development: Formulate a strategic plan that outlines the key features and development roadmap for the MVP.
-Initial MVP Designs: Create initial design concepts for the MVP to visualize the proposed solution.
+        <li><strong>Preliminary Machine Learning Models: $3,500 - $4,000</strong>
+        <ul style="list-style-type: disc; padding-left: 20px;" class="three-lines m-b-temp-7">
+        
+        <li>Selection and development of initial machine learning models.</li>
+        <li>Training, validation, and documentation of models.</li>
+        
+        </ul>
+        </li>
 
-Deliverables
-
-Detailed market research report identifying opportunities and challenges.
-Strategic feature plan and development roadmap.
-Initial design concepts for the MVP, including wireframes and mockups.`
+        </ul>
+        
+        </div>`
       }
     ]
   }
