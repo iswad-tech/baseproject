@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { Div, Heading } from 'basedesign-iswad';
 
@@ -7,9 +7,11 @@ import Icon from '@/baseComponents/ReusableComps/Icon';
 import TextBox from '@/baseComponents/FormComps/TextBox';
 import Select from '@/baseComponents/FormComps/Select';
 import TextArea from '@/baseComponents/FormComps/TextArea';
+import Button from '@/baseComponents/ReusableComps/Button';
 
 import { LIST_OF_ICONS } from '@/constants/devDesignVars';
 
+import { SUBJECTS } from './constants';
 import styles from './Contact.module.scss';
 
 const Contact = () => {
@@ -19,6 +21,12 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    if (SUBJECTS?.[0]?.value) {
+      setSubject(SUBJECTS[0].value);
+    }
+  }, [SUBJECTS]);
 
   return (
     <>
@@ -93,8 +101,8 @@ const Contact = () => {
                 </Div>
                 <Div className={cx(containerWidth < 800 ? 'width-per-100' : 'width-per-50')}>
                   <TextBox
-                    val={firstName}
-                    setVal={setFirstName}
+                    val={lastName}
+                    setVal={setLastName}
                     placeHolder="Last Name"
                     hasMarginBottom={false}
                   />
@@ -115,7 +123,12 @@ const Contact = () => {
                   'm-b-temp-7',
                   containerWidth < 800 ? 'width-per-100' : 'width-per-50'
                 )}>
-                <Select val={subject} setVal={setSubject} labelText={'I would like help with...'} />
+                <Select
+                  options={SUBJECTS}
+                  val={subject}
+                  setVal={setSubject}
+                  labelText={'I would like help with...'}
+                />
               </Div>
 
               <Div className={cx('width-per-100')}>
@@ -125,6 +138,10 @@ const Contact = () => {
                   hasMarginBottom={false}
                   placeHolder="Message"
                 />
+              </Div>
+
+              <Div className="m-t-temp-7 width-px-200">
+                <Button>Submit</Button>
               </Div>
             </Div>
             {/* End */}
