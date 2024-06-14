@@ -12,7 +12,7 @@ import styles from './NeedHelp.module.scss';
 const NeedHelp = () => {
   return (
     <>
-      <Heading type={2} className="text-center m-b-temp-14">
+      <Heading type={2} className="text-center m-b-temp-10">
         Need Help Deciding?
       </Heading>
       <Div className="">

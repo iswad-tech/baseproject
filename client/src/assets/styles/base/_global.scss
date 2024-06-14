@@ -1,8 +1,8 @@
 %fontclass {
   font-family: 'Manrope', sans-serif;
+  letter-spacing: 1px;
   color: black;
   font-size: map-get($fontSizes, 'regular-xs');
-
   @include atSmall {
     font-size: map-get($fontSizes, 'regular-sm');
   }

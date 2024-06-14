@@ -59,9 +59,14 @@ export const EMAIL_TEMPLATES = {
 };
 
 export const PNG_ICON_TYPES = {
+  bracket: 'bracket',
+  cup: 'cup',
   facebook: 'facebook',
+  gear: 'gear',
   instagram: 'instagram',
+  laptop: 'laptop',
   linkedIn: 'linkedIn',
+  people: 'people',
   unique1: 'Unique1',
   unique2: 'Unique2',
   unique3: 'Unique3',

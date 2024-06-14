@@ -19,7 +19,7 @@ const Scope = ({ scopeNumber, scopeTitle, scopeDescription }) => {
         <Div
           type="flex"
           vAlign="center"
-          className={cx('height-px-50', containerWidth < 800 ? '' : 'm-r-temp-7')}>
+          className={cx('height-px-50 min-width-px-300', containerWidth < 800 ? '' : 'm-r-temp-7')}>
           <Heading className="m-r-temp-7 text-theme-one">{scopeNumber}</Heading>
           <Heading type={5}>{scopeTitle}</Heading>
         </Div>

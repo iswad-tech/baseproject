@@ -87,7 +87,7 @@ const Hero = () => {
                 withoutFooter
                 key={idx}
                 type="flex"
-                hAlign="center"
+                hAlign="start"
                 className={cx('text-white of-hidden pos-rel')}
                 style={{ width: parentWidth }}>
                 <AppImage src={item?.src} width={parentWidth} />
@@ -96,37 +96,36 @@ const Hero = () => {
                   vAlign="center"
                   direction="vertical"
                   className="pos-abs width-per-100 height-per-100 max-width-px-700 p-all-temp-14">
-                  <Heading type={1} className="m-b-temp-7">
+                  <Heading type={1} className="m-b-temp-7 text-theme-one">
                     {item?.title}
                   </Heading>
                   <Paragraph className="m-b-temp-7">{item?.text}</Paragraph>
                   <Div className="width-px-300">
-                    <Button>Start Your Project</Button>
+                    <Button className="height-px-50 f-b f-s-px-18">Start Your Project</Button>
                   </Div>
                 </Div>
-
-                {parentWidth < 1200 ? (
-                  <Div className="pos-abs width-per-100" style={{ bottom: '10px', left: 0 }}>
-                    <MobileButtons
-                      compActiveIdx={compActiveIdx}
-                      setMoveToItemWithNum={setMoveToItemWithNum}
-                      setHandleMoveOnClick={setHandleMoveOnClick}
-                    />
-                  </Div>
-                ) : (
-                  <Div className="pos-abs width-per-100" style={{ bottom: 0, left: 0 }}>
-                    <DesktopButtons
-                      compActiveIdx={compActiveIdx}
-                      setMoveToItemWithNum={setMoveToItemWithNum}
-                      setHandleMoveOnClick={setHandleMoveOnClick}
-                    />
-                  </Div>
-                )}
               </DivMinFullHeight>
             ))}
           </ResponsiveSwipeableSlider>
         ) : (
           ''
+        )}
+        {parentWidth < 1200 ? (
+          <Div className="pos-abs text-white width-per-100" style={{ bottom: '10px', left: 0 }}>
+            <MobileButtons
+              compActiveIdx={compActiveIdx}
+              setMoveToItemWithNum={setMoveToItemWithNum}
+              setHandleMoveOnClick={setHandleMoveOnClick}
+            />
+          </Div>
+        ) : (
+          <Div className="pos-abs text-white width-per-100" style={{ bottom: 0, left: 0 }}>
+            <DesktopButtons
+              compActiveIdx={compActiveIdx}
+              setMoveToItemWithNum={setMoveToItemWithNum}
+              setHandleMoveOnClick={setHandleMoveOnClick}
+            />
+          </Div>
         )}
       </Div>
     </>

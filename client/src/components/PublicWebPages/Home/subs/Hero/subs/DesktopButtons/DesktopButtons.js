@@ -17,13 +17,13 @@ const DesktopButtons = ({ compActiveIdx, setMoveToItemWithNum, setHandleMoveOnCl
             vAlign="center"
             className={cx(
               'p-all-temp-7  width-per-20 br-right-solid-1 br-theme-three mouse-hand text-center',
-              compActiveIdx === item?.id ? 'bg-theme-one' : 'bg-theme-two'
+              compActiveIdx === item?.id ? styles.activeBg : styles.deActiveBg
             )}
             onClick={() => {
               setMoveToItemWithNum(item?.id);
               setHandleMoveOnClick(true);
             }}>
-            {item?.title}
+            <Div>{item?.title}</Div>
           </Div>
         ))}
       </Div>

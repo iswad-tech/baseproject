@@ -85,6 +85,7 @@ const MobileView = () => {
                   src={item?.src}
                   title={item?.title}
                   description={item?.description}
+                  icon={item?.icon}
                 />
               </Div>
             ))}
