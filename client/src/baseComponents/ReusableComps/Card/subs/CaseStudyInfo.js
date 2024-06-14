@@ -21,7 +21,7 @@ const CaseStudyInfo = ({ title = '', description = '', src = '' }) => {
         direction={containerWidth < 800 ? 'vertical' : 'horizontal'}
         vAlign={containerWidth < 800 ? 'start' : 'center'}
         className={cx(
-          'width-per-100 bg-white br-rad-3xl box-shadow-type-one',
+          'width-per-100 bg-white br-rad-3xl box-shadow-type-two',
           containerWidth < 800 ? 'p-all-temp-7' : 'p-all-temp-14'
         )}>
         <Div

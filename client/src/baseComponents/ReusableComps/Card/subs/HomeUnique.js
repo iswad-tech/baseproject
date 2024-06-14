@@ -10,14 +10,16 @@ import styles from '../Card.module.scss';
 const HomeUnique = ({ iconType, title, description }) => {
   return (
     <>
-      <Div className="width-per-100 bg-white br-rad-3xl box-shadow-type-one p-all-temp-7 height-px-500">
+      <Div
+        className={cx(
+          'width-per-100 bg-white br-rad-3xl box-shadow-type-two p-all-temp-7 height-px-550 bg-theme-one-on-hover transition-type-one',
+          styles.uniqueCardContainer
+        )}>
         <Div>
           <PngIcon type={iconType} />
         </Div>
-        <Heading type={5} className="m-y-temp-7 height-px-80 two-lines">
-          {title}
-        </Heading>
-        <Paragraph>{description}</Paragraph>
+        <Div className="m-y-temp-7 f-s-px-20 global-font-title height-px-70 two-lines">{title}</Div>
+        <Paragraph className="f-s-px-12">{description}</Paragraph>
       </Div>
     </>
   );

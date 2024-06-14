@@ -16,7 +16,7 @@ export const SLIDESHOWS_DURATION = 20000;
 export const HERO_SERVICES = [
   { id: 0, title: 'MVP Development' },
   { id: 1, title: 'Web Development & Branding' },
-  { id: 2, title: 'Customized Web/MobileDevelopment' },
+  { id: 2, title: 'Customized Web/Mobile Development' },
   { id: 3, title: 'Team Augmentation & Training' },
   { id: 4, title: 'Counseling/Coaching' }
 ];
@@ -59,7 +59,7 @@ export const SERVICES = [
       'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
       'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
     ],
-    icon: 'dashboard',
+    icon: PNG_ICON_TYPES.gear,
     src: Service1
   },
   {
@@ -71,7 +71,7 @@ export const SERVICES = [
       'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
       'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
     ],
-    icon: 'dashboard',
+    icon: PNG_ICON_TYPES.laptop,
     src: Service2
   },
   {
@@ -83,7 +83,7 @@ export const SERVICES = [
       'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
       'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
     ],
-    icon: 'dashboard',
+    icon: PNG_ICON_TYPES.people,
     src: Service3
   },
   {
@@ -95,7 +95,7 @@ export const SERVICES = [
       'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
       'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
     ],
-    icon: 'dashboard',
+    icon: PNG_ICON_TYPES.cup,
     src: Service4
   },
   {
@@ -107,7 +107,7 @@ export const SERVICES = [
       'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
       'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
     ],
-    icon: 'dashboard',
+    icon: PNG_ICON_TYPES.bracket,
     src: Service5
   }
 ];

@@ -12,10 +12,13 @@ import styles from './Insights.module.scss';
 const Insights = () => {
   return (
     <>
-      <Div className="p-x-temp-7">
-        <Heading type={4} className="m-b-temp-14 text-center">
-          Interesting Insights
-        </Heading>
+      <Div className="p-x-temp-7 p-b-temp-10">
+        <Div className="w-per-100">
+          <Heading type={4} className="p-y-temp-10 text-center">
+            Interesting Insights
+          </Heading>
+        </Div>
+
         <Div type="flex" hAlign="center" className="flex--wrap">
           {BLOG_POSTS?.map((item, idx) => (
             <Div key={idx} className="width-px-300 m-x-temp-7 m-b-temp-7">

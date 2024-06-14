@@ -14,16 +14,16 @@ const Services = () => {
 
   return (
     <>
-      <Div type="flex" direction="vertical" hAlign="center">
-        <Heading type={3} className="text-center">
+      <Div type="flex" direction="vertical" hAlign="center" className="">
+        <Heading type={3} className="text-center p-t-temp-10">
           Services for All Your Ideas{' '}
         </Heading>
         <Div className="text-center m-y-temp-7">We offer expert services to help you succeed.</Div>
-        <Div>
+        <Div className="p-b-temp-10">
           <Button>Contact Us</Button>
         </Div>
       </Div>
-      <DivWidthDynamic setContainerWidth={setContainerWidth} className="with-per-100">
+      <DivWidthDynamic setContainerWidth={setContainerWidth} className="with-per-100 p-b-temp-10">
         {containerWidth > 1200 ? (
           <DesktopView />
         ) : (

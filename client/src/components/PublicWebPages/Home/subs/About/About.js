@@ -17,7 +17,7 @@ const About = () => {
         type="flex"
         direction="vertical"
         hAlign="center"
-        className="width-per-100 bg-gray-bright p-x-temp-7 p-y-100">
+        className="width-per-100 bg-gray-bright p-x-temp-7 p-t-temp-15 p-b-temp-10">
         <Div className="max-width-px-700">
           <Heading type={3}>Get to Know a Little Bit About Us</Heading>
           <Paragraph className="m-y-temp-7">
@@ -33,7 +33,7 @@ const About = () => {
             {ABOUT_ACHIEVEMENTS?.map((item, idx) => (
               <Div key={idx} className="m-all-temp-7">
                 <Div className="f-s-large f-b">{item?.value}</Div>
-                <Div className="f-s-small">{item?.label}</Div>
+                <Div className="f-s-large">{item?.label}</Div>
               </Div>
             ))}
           </Div>
