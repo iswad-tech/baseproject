@@ -1093,7 +1093,7 @@ export const CASE_STUDIES = [
   {
     title: 'API Integration Services',
     slug: 'api-integration-services',
-    src: api_integration_IMG,
+    src: api_integration_CARD_IMG,
     isMostPopular: false,
     detailSrc: api_integration_IMG,
     scopes: [
@@ -1302,7 +1302,7 @@ export const CASE_STUDIES = [
   {
     title: 'Data Analysis and Machine Learning',
     slug: 'data-analysis-and-machine-learning',
-    src: data_analysis_machine_learning_IMG,
+    src: data_analysis_machine_learning_CARD_IMG,
     isMostPopular: false,
     detailSrc: data_analysis_machine_learning_IMG,
     scopes: [
