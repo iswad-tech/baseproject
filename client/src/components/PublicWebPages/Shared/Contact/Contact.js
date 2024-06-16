@@ -1,24 +1,115 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import cx from 'classnames';
-import { Div, Heading } from 'basedesign-iswad';
+import { useDispatch } from 'react-redux';
+import { Div, Heading, Form } from 'basedesign-iswad';
 
 import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
 import Icon from '@/baseComponents/ReusableComps/Icon';
 import TextBox from '@/baseComponents/FormComps/TextBox';
 import Select from '@/baseComponents/FormComps/Select';
 import TextArea from '@/baseComponents/FormComps/TextArea';
+import Button from '@/baseComponents/ReusableComps/Button';
 
+import useApiCalls from '@/hooks/useApiCalls';
+import { CONTACT_FORM_API_ROUTE } from '@/constants/apiRoutes';
 import { LIST_OF_ICONS } from '@/constants/devDesignVars';
+import { addAlertItem } from '@/utils/notifications';
 
+import { SUBJECTS } from './constants';
+import { firstNameValidators, lastNameValidators, emailValidators } from './validators';
 import styles from './Contact.module.scss';
 
 const Contact = () => {
+  const dispatch = useDispatch();
+  const containerRef = useRef();
+
   const [containerWidth, setContainerWidth] = useState(0);
+
   const [firstName, setFirstName] = useState('');
+  const [firstNameErrorMessage, setFirstNameErrorMessage] = useState('');
+
   const [lastName, setLastName] = useState('');
+  const [lastNameErrorMessage, setLastNameErrorMessage] = useState('');
+
   const [email, setEmail] = useState('');
+  const [emailErrorMessage, setEmailErrorMessage] = useState('');
+
   const [subject, setSubject] = useState('');
+  const [subjectErrorMessage, setSubjectErrorMessage] = useState('');
+
   const [message, setMessage] = useState('');
+  const [messageErrorMessage, setMessageErrorMessage] = useState('');
+
+  useEffect(() => {
+    if (SUBJECTS?.[0]?.value) {
+      setSubject(SUBJECTS[0].value);
+    }
+  }, [SUBJECTS]);
+
+  const toBeValidatedFields = [
+    {
+      input_name: 'first_name',
+      validators: firstNameValidators,
+      errorMessageHandler: setFirstNameErrorMessage
+    },
+    {
+      input_name: 'last_name',
+      validators: lastNameValidators,
+      errorMessageHandler: setLastNameErrorMessage
+    },
+    {
+      input_name: 'email',
+      validators: emailValidators,
+      errorMessageHandler: setEmailErrorMessage
+    }
+  ];
+
+  // -----------------------------------------------------
+  // -----------------------------------------------------
+  const [sendContactReq, setSendContactReq] = useState(false);
+  const bodyData = {
+    first_name: firstName,
+    last_name: lastName,
+    email,
+    subject,
+    message
+  };
+  const { data, error } = useApiCalls({
+    sendReq: sendContactReq,
+    setSendReq: setSendContactReq,
+    method: 'POST',
+    url: CONTACT_FORM_API_ROUTE,
+    bodyData
+  });
+  useEffect(() => {
+    if (data?.success) {
+      addAlertItem(
+        dispatch,
+        'Thank you! We have received your message and will get back to you soon.',
+        'success'
+      );
+    }
+  }, [data]);
+  // -----------------------------------------------------
+  // -----------------------------------------------------
+
+  const customValidations = () => {
+    let validated = true;
+    if (subject === '0') {
+      setSubjectErrorMessage('Please select a subject');
+      validated = false;
+    }
+    if (!message) {
+      setMessageErrorMessage('Message is a required field');
+      validated = false;
+    }
+    return validated;
+  };
+  const submitHandler = () => {
+    if (customValidations()) {
+      setSendContactReq(true);
+    }
+  };
 
   return (
     <>
@@ -26,7 +117,8 @@ const Contact = () => {
         className={cx(
           'width-per-100',
           containerWidth < 800 ? '' : 'global-bg-grad-one p-all-temp-14'
-        )}>
+        )}
+        ref={(el) => (containerRef.current = el)}>
         <Div
           className={cx(
             'global-container bg-off-white width-per-100 p-all-temp-7',
@@ -74,7 +166,11 @@ const Contact = () => {
               </Div>
             </Div>
             {/* Form */}
-            <Div className="width-per-100">
+            <Form
+              className="width-per-100"
+              onSubmit={submitHandler}
+              toBeValidatedFields={toBeValidatedFields}
+              id="contact_form">
               <Div
                 type="flex"
                 direction={containerWidth < 800 ? 'vertical' : 'horizontal'}
@@ -89,14 +185,22 @@ const Contact = () => {
                     setVal={setFirstName}
                     placeHolder="First Name"
                     hasMarginBottom={false}
+                    errorMessage={firstNameErrorMessage}
+                    errorHandler={setFirstNameErrorMessage}
+                    name="first_name"
+                    id="first_name_contact_form"
                   />
                 </Div>
                 <Div className={cx(containerWidth < 800 ? 'width-per-100' : 'width-per-50')}>
                   <TextBox
-                    val={firstName}
-                    setVal={setFirstName}
+                    val={lastName}
+                    setVal={setLastName}
                     placeHolder="Last Name"
                     hasMarginBottom={false}
+                    errorMessage={lastNameErrorMessage}
+                    errorHandler={setLastNameErrorMessage}
+                    name="last_name"
+                    id="last_name_contact_form"
                   />
                 </Div>
               </Div>
@@ -107,6 +211,10 @@ const Contact = () => {
                   setVal={setEmail}
                   placeHolder="Email"
                   hasMarginBottom={false}
+                  errorMessage={emailErrorMessage}
+                  errorHandler={setEmailErrorMessage}
+                  name="email"
+                  id="email_contact_form"
                 />
               </Div>
 
@@ -115,7 +223,14 @@ const Contact = () => {
                   'm-b-temp-7',
                   containerWidth < 800 ? 'width-per-100' : 'width-per-50'
                 )}>
-                <Select val={subject} setVal={setSubject} labelText={'I would like help with...'} />
+                <Select
+                  options={SUBJECTS}
+                  val={subject}
+                  setVal={setSubject}
+                  labelText={'I would like help with...'}
+                  errorMessage={subjectErrorMessage}
+                  errorHandler={setSubjectErrorMessage}
+                />
               </Div>
 
               <Div className={cx('width-per-100')}>
@@ -124,9 +239,15 @@ const Contact = () => {
                   setVal={setMessage}
                   hasMarginBottom={false}
                   placeHolder="Message"
+                  errorMessage={messageErrorMessage}
+                  errorHandler={setMessageErrorMessage}
                 />
               </Div>
-            </Div>
+
+              <Div className="m-t-temp-7 width-px-200">
+                <Button>Submit</Button>
+              </Div>
+            </Form>
             {/* End */}
           </DivWidthDynamic>
         </Div>

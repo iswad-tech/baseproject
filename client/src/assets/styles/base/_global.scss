@@ -152,7 +152,7 @@ button {
   &error-message {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 4px);
     left: 8px;
     font-size: 10px;
     color: red;

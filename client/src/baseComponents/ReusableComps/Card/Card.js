@@ -13,6 +13,7 @@ import HomeService from './subs/HomeService';
 import HomeUnique from './subs/HomeUnique';
 import AboutQulity from './subs/AboutQulity';
 import AboutTeam from './subs/AboutTeam';
+import ServiceStep from './subs/ServiceStep';
 import styles from './Card.module.scss';
 
 const Card = ({ type, ...props }) => {
@@ -27,6 +28,7 @@ const Card = ({ type, ...props }) => {
       {type === CARD_TYPES.homeUnique && <HomeUnique {...props} />}
       {type === CARD_TYPES.aboutQuality && <AboutQulity {...props} />}
       {type === CARD_TYPES.aboutTeam && <AboutTeam {...props} />}
+      {type === CARD_TYPES.serviceStep && <ServiceStep {...props} />}
     </>
   );
 };

@@ -9,7 +9,7 @@ import { CARD_TYPES } from '@/constants/devDesignVars';
 import { NEED_HELP_ITEMS } from '../../constants';
 import styles from './NeedHelp.module.scss';
 
-const NeedHelp = () => {
+const NeedHelp = ({ contactRef }) => {
   return (
     <>
       <Heading type={2} className="text-center m-b-temp-10">
@@ -23,6 +23,7 @@ const NeedHelp = () => {
               title={item?.title}
               description={item?.description}
               src={item?.src}
+              contactRef={contactRef}
             />
           </Div>
         ))}

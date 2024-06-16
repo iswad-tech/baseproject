@@ -18,9 +18,22 @@ import {
   faAngleRight,
   faCheck,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faLightbulb,
+  faPenRuler,
+  faCogs,
+  faRocket,
+  faComments,
+  faChartBar,
+  faSyncAlt,
+  faPaintBrush,
+  faCode,
+  faMobileAlt,
+  faServer,
+  faDatabase,
+  faCube
 } from '@fortawesome/free-solid-svg-icons';
-import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faSquareInstagram, faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
 
 import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
@@ -61,36 +74,30 @@ function Icon({
     upload: (
       <FontAwesomeIcon icon={faUpload} style={{ color, width, transform: `scale(${scale})` }} />
     ),
-
     'instagram-fill': (
       <FontAwesomeIcon
         icon={faSquareInstagram}
         style={{ color, width, transform: `scale(${scale})` }}
       />
     ),
-
     'circle-plus': (
       <FontAwesomeIcon icon={faCirclePlus} style={{ color, width, transform: `scale(${scale})` }} />
     ),
-
     'circle-minus': (
       <FontAwesomeIcon
         icon={faCircleMinus}
         style={{ color, width, transform: `scale(${scale})` }}
       />
     ),
-
     'circle-check': (
       <FontAwesomeIcon
         icon={faCircleCheck}
         style={{ color, width, transform: `scale(${scale})` }}
       />
     ),
-
     'angle-left': (
       <FontAwesomeIcon icon={faAngleLeft} style={{ color, width, transform: `scale(${scale})` }} />
     ),
-
     'angle-right': (
       <FontAwesomeIcon icon={faAngleRight} style={{ color, width, transform: `scale(${scale})` }} />
     ),
@@ -102,7 +109,41 @@ function Icon({
     ),
     envelope: (
       <FontAwesomeIcon icon={faEnvelope} style={{ color, width, transform: `scale(${scale})` }} />
-    )
+    ),
+    'light-bulb': (
+      <FontAwesomeIcon icon={faLightbulb} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'pen-ruler': (
+      <FontAwesomeIcon icon={faPenRuler} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    cogs: <FontAwesomeIcon icon={faCogs} style={{ color, width, transform: `scale(${scale})` }} />,
+    rocket: (
+      <FontAwesomeIcon icon={faRocket} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    comments: (
+      <FontAwesomeIcon icon={faComments} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'chart-bar': (
+      <FontAwesomeIcon icon={faChartBar} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'sync-alt': (
+      <FontAwesomeIcon icon={faSyncAlt} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'paint-brush': (
+      <FontAwesomeIcon icon={faPaintBrush} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    code: <FontAwesomeIcon icon={faCode} style={{ color, width, transform: `scale(${scale})` }} />,
+    'mobile-alt': (
+      <FontAwesomeIcon icon={faMobileAlt} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    server: (
+      <FontAwesomeIcon icon={faServer} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    database: (
+      <FontAwesomeIcon icon={faDatabase} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    cube: <FontAwesomeIcon icon={faCube} style={{ color, width, transform: `scale(${scale})` }} />,
+    linux: <FontAwesomeIcon icon={faLinux} style={{ color, width, transform: `scale(${scale})` }} />
   };
 
   iconTypes['dashboard'] = (
