@@ -13,10 +13,6 @@ import Description from './subs/Description';
 import styles from './CaseStudyDetail.module.scss';
 
 const CaseStudyDetail = ({ caseStudy }) => {
-  useEffect(() => {
-    console.log(caseStudy);
-  }, [caseStudy]);
-
   return (
     <>
       {caseStudy?.detailSrc ? <Hero src={caseStudy?.detailSrc} title={caseStudy?.title} /> : ''}
