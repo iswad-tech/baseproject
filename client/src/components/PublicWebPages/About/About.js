@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
@@ -12,9 +12,11 @@ import Team from './subs/Team';
 import styles from './About.module.scss';
 
 const About = () => {
+  const contactRef = useRef();
+
   return (
     <>
-      <Hero />
+      <Hero contactRef={contactRef} />
       <Div>
         <KnowUs />
       </Div>
@@ -27,7 +29,7 @@ const About = () => {
       {/* <Div className="widht-per-100 global-container ">
         <Insights />
       </Div> */}
-      <Div>
+      <Div ref={(el) => (contactRef.current = el)}>
         <Contact />
       </Div>
     </>

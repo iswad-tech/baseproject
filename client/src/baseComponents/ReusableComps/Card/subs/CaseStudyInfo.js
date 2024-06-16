@@ -5,12 +5,14 @@ import { Div, Heading } from 'basedesign-iswad';
 import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
 import AppImage from '@/baseComponents/ReusableComps/AppImage';
 import Button from '@/baseComponents/ReusableComps/Button';
+import Anchor from '@/baseComponents/ReusableComps/Anchor';
 
-import { BUTTON_TYPES } from '@/constants/devDesignVars';
+import { AUTO_SCROLL_BEHAVIOR, MEETING_LINK } from '@/constants/vars';
+import { BUTTON_TYPES, ANCHOR_TYPES } from '@/constants/devDesignVars';
 
 import styles from '../Card.module.scss';
 
-const CaseStudyInfo = ({ title = '', description = '', src = '' }) => {
+const CaseStudyInfo = ({ title = '', description = '', src = '', contactRef = null }) => {
   const [containerWidth, setContainerWidth] = useState(0);
 
   return (
@@ -43,10 +45,20 @@ const CaseStudyInfo = ({ title = '', description = '', src = '' }) => {
           <Div className="m-b-temp-14">{description}</Div>
           <Div type="flex" direction={containerWidth < 800 ? 'vertical' : 'horizontal'}>
             <Div className={cx(containerWidth < 800 ? 'm-b-temp-3' : 'm-r-temp-3')}>
-              <Button>Book a Meeting</Button>
+              <Anchor to={MEETING_LINK} internal={false} anchorType={ANCHOR_TYPES.noEffect}>
+                <Button>Book a Meeting</Button>
+              </Anchor>
             </Div>
             <Div>
-              <Button btnType={BUTTON_TYPES.secondary}>Contact Us</Button>
+              <Button
+                btnType={BUTTON_TYPES.secondary}
+                onClick={() => {
+                  if (contactRef?.current) {
+                    contactRef?.current?.scrollIntoView(AUTO_SCROLL_BEHAVIOR);
+                  }
+                }}>
+                Contact Us
+              </Button>
             </Div>
           </Div>
         </Div>

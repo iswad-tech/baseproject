@@ -7,13 +7,17 @@ import AppImage from '@/baseComponents/ReusableComps/AppImage';
 import DivMinFullHeight from '@/baseComponents/ReusableComps/DivMinFullHeight';
 import Button from '@/baseComponents/ReusableComps/Button';
 import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
+import Anchor from '@/baseComponents/ReusableComps/Anchor';
+
+import { MEETING_LINK } from '@/constants/vars';
+import { ANCHOR_TYPES } from '@/constants/devDesignVars';
 
 import { HERO_ITEMS, SLIDESHOWS_DURATION } from '../../constants';
 import MobileButtons from './subs/MobileButtons';
 import DesktopButtons from './subs/DesktopButtons';
 import styles from './Hero.module.scss';
 
-const Hero = () => {
+const Hero = ({ contactRef }) => {
   const parentRef = useRef();
 
   const [parentWidth, setParentWidth] = useState(0);
@@ -101,7 +105,9 @@ const Hero = () => {
                   </Heading>
                   <Paragraph className="m-b-temp-7">{item?.text}</Paragraph>
                   <Div className="width-px-300">
-                    <Button className="height-px-50 f-b f-s-px-18">Start Your Project</Button>
+                    <Anchor to={MEETING_LINK} internal={false} anchorType={ANCHOR_TYPES.noEffect}>
+                      <Button className="height-px-50 f-b f-s-px-18">Start Your Project</Button>
+                    </Anchor>
                   </Div>
                 </Div>
               </DivMinFullHeight>

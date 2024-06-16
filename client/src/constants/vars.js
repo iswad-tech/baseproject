@@ -86,3 +86,5 @@ export const ABOUT_ACHIEVEMENTS = [
   { label: 'Projects on Progress', value: '2' }
   // { label: 'Achievements', value: '2021' }
 ];
+
+export const MEETING_LINK = 'https://calendly.com/mohammad-aqd6/30min';

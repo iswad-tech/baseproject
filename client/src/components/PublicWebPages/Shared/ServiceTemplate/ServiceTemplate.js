@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
@@ -9,11 +9,14 @@ import Steps from './subs/Steps';
 import styles from './ServiceTemplate.module.scss';
 
 const ServiceTemplate = ({ src, title = '', description = '', steps = [] }) => {
+  const contactRef = useRef();
   return (
     <>
-      <Hero src={src} title={title} description={description} />
+      <Hero src={src} title={title} description={description} contactRef={contactRef} />
       <Steps steps={steps} />
-      <Contact />
+      <Div ref={(el) => (contactRef.current = el)}>
+        <Contact />
+      </Div>
     </>
   );
 };
