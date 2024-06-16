@@ -100,6 +100,7 @@ const MobileView = () => {
               type="flex"
               hAlign="center"
               vAlign="center"
+              direction="vertical"
               className={cx(
                 'width-px-20 height-px-20 br-rad-per-50 m-x-temp-2',
                 compActiveIdx === item?.id ? 'bg-theme-one' : 'bg-theme-two'
