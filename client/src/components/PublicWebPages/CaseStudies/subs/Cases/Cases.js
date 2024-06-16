@@ -19,6 +19,7 @@ const Cases = () => {
     const firstItem = (currentPage - 1) * 6;
     const lastItem = currentPage * 6;
     setPageProjects([...CASE_STUDIES?.slice(firstItem, lastItem)]);
+    window.scrollTo(0, 0);
   }, [currentPage, CASE_STUDIES]);
   return (
     <>

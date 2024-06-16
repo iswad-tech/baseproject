@@ -18,7 +18,7 @@ const Qualities = () => {
         </Heading>
         <Div className={cx('global-container', styles.container)}>
           {QUALITIES?.map((item, idx) => (
-            <Div key={idx}>
+            <Div key={idx} className="width-per-100">
               <Card
                 type={CARD_TYPES.aboutQuality}
                 title={item?.title}

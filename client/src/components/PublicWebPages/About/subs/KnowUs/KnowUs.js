@@ -6,6 +6,8 @@ import AppImage from '@/baseComponents/ReusableComps/AppImage';
 import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
 import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 
+import Img from '@/images/js-Images/general/AboutPage/About_Us.jpg';
+
 import { ABOUT_ACHIEVEMENTS } from '@/constants/vars';
 import styles from './KnowUs.module.scss';
 
@@ -26,7 +28,7 @@ const KnowUs = () => {
               lg={6}
               className={cx('', containerWidth >= 800 ? 'p-x-temp-7' : '')}>
               <AppImage
-                src={'https://picsum.photos/300'}
+                src={Img}
                 width={containerWidth}
                 className={cx('', containerWidth >= 800 ? 'm-all-temp-7 br-rad-3xl' : '')}
               />
@@ -34,24 +36,22 @@ const KnowUs = () => {
             <Column xs={12} sm={12} md={6} lg={6}>
               <Div className="p-all-temp-7">
                 <Paragraph className="m-b-temp-7">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book. It has survived not only five centuries, but also the leap into electronic
-                  typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                  with desktop publishing software like Aldus PageMaker including versions of Lorem
-                  Ipsum.
+                  Welcome to ISWAD (Intelligent System Web App Development), where we specialize in
+                  turning visions into reality through cutting-edge technology and strategic
+                  guidance. At ISWAD, we are dedicated to delivering tailored web and mobile app
+                  solutions using agile methodologies. Whether you're a startup or an established
+                  business, our services are designed to meet your unique needs and propel your
+                  growth in the digital landscape. We excel in integrating third-party services
+                  seamlessly into our developments, ensuring that our clients can track progress and
+                  achieve their business goals efficiently.
                 </Paragraph>
                 <Paragraph>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book. It has survived not only five centuries, but also the leap into electronic
-                  typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                  with desktop publishing software like Aldus PageMaker including versions of Lorem
-                  Ipsum.
+                  Our expertise extends beyond conventional development; we leverage data analysis
+                  and AI-driven solutions to empower businesses to thrive in today's competitive
+                  environment. Our target audience includes small to medium-sized businesses and
+                  startups looking for cost-effective and efficient development solutions. At ISWAD,
+                  we're committed to your success, providing the technological backbone that
+                  transforms challenges into opportunities.
                 </Paragraph>
               </Div>
             </Column>

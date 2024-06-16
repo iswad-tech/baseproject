@@ -8,11 +8,12 @@ import AppImage from '@/baseComponents/ReusableComps/AppImage';
 import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 import Button from '@/baseComponents/ReusableComps/Button';
 
+import { AUTO_SCROLL_BEHAVIOR } from '@/constants/vars';
 import HeroImg from '@/images/js-Images/general/AboutPage/Hero.png';
 
 import styles from './Hero.module.scss';
 
-const Hero = () => {
+const Hero = ({ contactRef }) => {
   const [containerWidth, setContainerWidth] = useState(0);
 
   return (
@@ -45,7 +46,11 @@ const Hero = () => {
                 guidance to empower both startups and established businesses.{' '}
               </Paragraph>
               <Div className="width-px-250">
-                <Button className="height-px-50 f-b f-s-px-18">Contact Us</Button>
+                <Button
+                  className="height-px-50 f-b f-s-px-18"
+                  onClick={() => contactRef?.current?.scrollIntoView(AUTO_SCROLL_BEHAVIOR)}>
+                  Contact Us
+                </Button>
               </Div>
             </Div>
           </Div>
