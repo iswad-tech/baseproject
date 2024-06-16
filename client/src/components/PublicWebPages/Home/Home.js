@@ -2,8 +2,8 @@ import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import Contact from '@/components/Shared/Contact';
-import Insights from '@/components/Shared/Insights';
+import Insights from '@/components/PublicWebPages/Shared/Insights';
+import Contact from '@/components/PublicWebPages/Shared/Contact';
 
 import Hero from './subs/Hero';
 import About from './subs/About';
@@ -26,9 +26,9 @@ const Home = () => {
       <Div>
         <Unique />
       </Div>
-      <Div className="widht-per-100 global-container m-y-100">
+      {/* <Div className="widht-per-100 global-container m-y-100">
         <Insights />
-      </Div>
+      </Div> */}
       <Div>
         <Contact />
       </Div>

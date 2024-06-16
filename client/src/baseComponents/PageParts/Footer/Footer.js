@@ -12,7 +12,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <>
-      <Div className="bg-theme-one text-white p-t-32 p-x-16 f-s-small">
+      <Div className="bg-theme-one text-white p-t-32 p-x-16 f-s-regular">
         <Row className="global-container">
           <Column xs={12} sm={12} md={12} lg={3} className="m-b-32">
             <Div>

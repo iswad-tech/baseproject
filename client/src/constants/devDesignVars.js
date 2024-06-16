@@ -5,16 +5,30 @@ export const LIST_OF_ICONS = {
   angleUp: 'angle-up',
   anglesUp: 'angles-up',
   check: 'check',
+  cogs: 'cogs',
+  close: 'close',
+  code: 'code',
+  comments: 'comments',
+  cube: 'cube',
+  dashboard: 'dashboard',
+  database: 'database',
+  envelope: 'envelope',
+  'chart-bar': 'chart-bar',
   'circle-check': 'circle-check',
   'circle-minus': 'circle-minus',
   'circle-plus': 'circle-plus',
-  close: 'close',
-  dashboard: 'dashboard',
-  envelope: 'envelope',
-  instagramFill: 'instagram-fill',
+  'light-bulb': 'light-bulb',
+  linux: 'linux',
+  'mobile-alt': 'mobile-alt',
+  'paint-brush': 'paint-brush',
+  'pen-ruler': 'pen-ruler',
   phone: 'phone',
+  rocket: 'rocket',
   search: 'search',
-  upload: 'upload'
+  server: 'server',
+  'sync-alt': 'sync-alt',
+  upload: 'upload',
+  instagramFill: 'instagram-fill'
 };
 
 export const ANCHOR_TYPES = {
@@ -50,7 +64,8 @@ export const CARD_TYPES = {
   homeService: 'home-service', //This is shown in the Home page for Services section.
   homeUnique: 'home-unique', //This is shown in the Home page for Makes us Unique section.
   aboutQuality: 'about-quality', //This is shown in the About page for Our Qulities section.
-  aboutTeam: 'about-team' //This is shown in the About page for Our Team section.
+  aboutTeam: 'about-team', //This is shown in the About page for Our Team section.
+  serviceStep: 'service-step' //This is shown in the Services page for Steps section.
 };
 
 export const EMAIL_TEMPLATES = {

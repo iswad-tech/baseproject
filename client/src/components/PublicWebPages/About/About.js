@@ -2,8 +2,8 @@ import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import Insights from '@/components/Shared/Insights';
-import Contact from '@/components/Shared/Contact';
+import Insights from '@/components/PublicWebPages/Shared/Insights';
+import Contact from '@/components/PublicWebPages/Shared/Contact';
 
 import Hero from './subs/Hero';
 import KnowUs from './subs/KnowUs';
@@ -24,9 +24,9 @@ const About = () => {
       <Div>
         <Team />
       </Div>
-      <Div className="widht-per-100 global-container ">
+      {/* <Div className="widht-per-100 global-container ">
         <Insights />
-      </Div>
+      </Div> */}
       <Div>
         <Contact />
       </Div>

@@ -54,9 +54,9 @@ export const SERVICES = [
     id: 0,
     title: 'MVP Development',
     description: [
-      'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
-      'Clients can track progress and integrate third-party services seamlessly.',
-      'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
+      'Harnessing agile methodologies, we specialize in crafting bespoke web and mobile applications.',
+      'Our solutions empower clients to seamlessly integrate third-party services and track project progress.',
+      'Leveraging data analysis and AI-driven technologies, we drive efficiency and innovation for businesses.',
       'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
     ],
     icon: PNG_ICON_TYPES.gear,
@@ -64,48 +64,48 @@ export const SERVICES = [
   },
   {
     id: 1,
-    title: 'MVP Development',
+    title: 'Custom Web & Mobile App Development',
     description: [
-      'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
-      'Clients can track progress and integrate third-party services seamlessly.',
-      'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
-      'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
+      'Using agile methodologies, we excel in developing customized web and mobile applications.',
+      'Our approach ensures seamless integration of third-party services and provides transparent project tracking.',
+      'With expertise in data analysis and AI solutions, we empower businesses to thrive in competitive markets.',
+      'Target Audience: Small to medium-sized businesses and startups seeking tailored development solutions.'
     ],
     icon: PNG_ICON_TYPES.laptop,
     src: Service2
   },
   {
     id: 2,
-    title: 'MVP Development',
+    title: 'Coaching & Advisory Services',
     description: [
-      'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
-      'Clients can track progress and integrate third-party services seamlessly.',
-      'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
-      'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
+      'We offer agile coaching and strategic advisory services to optimize web and mobile app development.',
+      'Clients benefit from seamless integration of third-party services and transparent project tracking.',
+      'Our focus on data analysis and AI-driven insights enhances business outcomes and operational efficiency.',
+      'Target Audience: Small to medium-sized businesses and startups seeking strategic development support.'
     ],
     icon: PNG_ICON_TYPES.people,
     src: Service3
   },
   {
     id: 3,
-    title: 'MVP Development',
+    title: 'Website Development & Branding',
     description: [
-      'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
-      'Clients can track progress and integrate third-party services seamlessly.',
-      'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
-      'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
+      'Specializing in agile website development and branding solutions tailored to client needs.',
+      'We ensure seamless integration of third-party services and provide clear project tracking.',
+      'Our expertise in data analysis and AI-driven strategies enhances business performance and growth.',
+      'Target Audience: Small to medium-sized businesses and startups seeking impactful digital presence.'
     ],
     icon: PNG_ICON_TYPES.cup,
     src: Service4
   },
   {
     id: 4,
-    title: 'MVP Development',
+    title: 'Team Augmentation & Training',
     description: [
-      'Utilizing agile methodologies, we deliver tailored web and mobile app solutions.',
-      'Clients can track progress and integrate third-party services seamlessly.',
-      'Our expertise extends to data analysis and AI-driven solutions, enabling businesses to thrive.',
-      'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
+      'We augment teams with skilled professionals and offer training to enhance web and mobile app capabilities.',
+      'Clients benefit from seamless integration of third-party services and robust project tracking mechanisms.',
+      'Our focus on data analysis and AI solutions drives operational excellence and business success.',
+      'Target Audience: Small to medium-sized businesses and startups scaling their development capabilities.'
     ],
     icon: PNG_ICON_TYPES.bracket,
     src: Service5

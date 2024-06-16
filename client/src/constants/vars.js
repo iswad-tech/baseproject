@@ -81,8 +81,8 @@ export const DATE_FORMAT = 'DD MMM, YYYY';
 // ---------------------------------------------------------------------------
 
 export const ABOUT_ACHIEVEMENTS = [
-  { label: 'Achievements', value: '2021' },
-  { label: 'Achievements', value: '2021' },
-  { label: 'Achievements', value: '2021' },
-  { label: 'Achievements', value: '2021' }
+  { label: 'Began to Work', value: '2021' },
+  { label: 'Projects Completed', value: '4' },
+  { label: 'Projects on Progress', value: '2' }
+  // { label: 'Achievements', value: '2021' }
 ];
