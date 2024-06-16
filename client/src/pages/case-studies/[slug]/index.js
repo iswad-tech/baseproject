@@ -18,7 +18,7 @@ const Index = ({ caseStudy }) => {
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
       <Seo>
         <PageContainer
-          pageIdentifier="home"
+          pageIdentifier="case-studies"
           hasHeader={true}
           hasFooter={true}
           hasStickyHeader={false}

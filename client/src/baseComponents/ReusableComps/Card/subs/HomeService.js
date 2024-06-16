@@ -11,7 +11,7 @@ import styles from '../Card.module.scss';
 const HomeService = ({ src, title, description, icon }) => {
   return (
     <>
-      <Div className="width-per-100 bg-white br-rad-3xl of-hidden box-shadow-type-one br-all-solid-2 br-theme-two">
+      <Div className="width-per-100 bg-white br-rad-3xl of-hidden box-shadow-type-one br-all-solid-2 br-theme-two height-px-900">
         <AppImage src={src} heightOverWidthAsprctRatio={0.7} />
         <Div className="p-all-temp-7">
           <Div type="flex" vAlign="center">

@@ -14,9 +14,13 @@ const Unique = () => {
   const [containerWidth, setContainerWidth] = useState(0);
   return (
     <>
-      <Div className="bg-gray-bright width-per-100 p-x-temp-15 p-t-temp-10 p-b-temp-10">
+      <Div
+        className={cx(
+          'bg-gray-bright width-per-100 p-t-temp-10 p-b-temp-10',
+          containerWidth >= 600 ? 'p-x-temp-15' : 'p-x-temp-5'
+        )}>
         <Div className="global-container">
-          <Heading type={3} className="m-b-temp-10">
+          <Heading type={3} className="m-b-temp-15">
             What Makes Us Unique
           </Heading>
           <DivWidthDynamic

@@ -1,4 +1,6 @@
 import MohiImg from '@/images/js-Images/general/AboutPage/Team/Mohi.jpg';
+import LindseyImg from '@/images/js-Images/general/AboutPage/Team/Lindsey.jpg';
+import NezahatImg from '@/images/js-Images/general/AboutPage/Team/Nezahat.jpg';
 
 export const QUALITIES = [
   {
@@ -33,6 +35,18 @@ export const TEAM_MEMBERS = [
     name: 'Mohammad Mohajer',
     role: 'CEO, Founder, Lead Software Developer',
     description: `As the CEO and Founder of ISWAD, I lead our team with a vision to innovate and deliver cutting-edge solutions. With a background in software development, I bring expertise in guiding our projects from inception to execution, ensuring quality and client satisfaction.`
+  },
+  {
+    src: NezahatImg,
+    name: 'Nezahat Korkmaz',
+    role: 'AI Engineer, R&D',
+    description: `Nezahat is a dedicated AI engineer involved in cutting-edge research and development projects. Her expertise includes implementing AI algorithms and frameworks to optimize and enhance our applications' functionality.`
+  },
+  {
+    src: LindseyImg,
+    name: 'Lindsey Lei',
+    role: 'Business Developer',
+    description: `Lindsey brings strategic insights into business development, driving growth initiatives and partnerships. Her role focuses on expanding our market reach and enhancing client relationships through effective business strategies.`
   }
   // {
   //   src: MohiImg,
