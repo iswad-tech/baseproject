@@ -2,15 +2,21 @@ import { LIST_OF_ICONS, PNG_ICON_TYPES } from '@/constants/devDesignVars';
 import { PAGE_ROUTES } from '@/constants/vars';
 
 export const COMPANY_LINKS = [
-  { title: 'About Us', url: PAGE_ROUTES.ABOUT_US }
+  { title: 'Home', url: PAGE_ROUTES.HOME },
+  { title: 'About Us', url: PAGE_ROUTES.ABOUT_US },
+  { title: 'Case Studies', url: PAGE_ROUTES.CASE_STUDIES }
   // { title: 'Our Mission', url: PAGE_ROUTES.OUR_MISSION },
   // { title: 'Careers', url: PAGE_ROUTES.CAREERS },
   // { title: 'Terms & Conditions', url: PAGE_ROUTES.TERMS }
 ];
 
 export const LEARN_MORE_LINKS = [
-  { title: 'Our Services', url: PAGE_ROUTES.OUR_SERVICES },
-  { title: 'Case Studies', url: PAGE_ROUTES.CASE_STUDIES }
+  // { title: 'Our Services', url: PAGE_ROUTES.OUR_SERVICES },
+  { title: 'MVP Development', url: `${PAGE_ROUTES.OUR_SERVICES_MVP_DEVELOPMENT}` },
+  { title: 'App Development', url: `${PAGE_ROUTES.OUR_SERVICES_WEB_APP_DEVELOPMENT}` },
+  { title: 'Counselling', url: `${PAGE_ROUTES.OUR_SERVICES_COUNSELLING}` },
+  { title: 'Branding', url: `${PAGE_ROUTES.OUR_SERVICES_BRANDING}` },
+  { title: 'Team Augmentation', url: `${PAGE_ROUTES.OUR_SERVICES_TEAM_AUGMENTATION}` }
   // { title: 'Blog', url: PAGE_ROUTES.BLOG },
   // { title: 'FAQ', url: PAGE_ROUTES.FAQ }
 ];

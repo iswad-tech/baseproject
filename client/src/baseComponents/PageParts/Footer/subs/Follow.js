@@ -19,7 +19,7 @@ const Follow = () => {
           <Anchor
             key={idx}
             to={item?.url}
-            internal
+            internal={false}
             anchorType={ANCHOR_TYPES.noEffect}
             className="m-r-8">
             <Div type="flex" vAlign="start" key={idx} className="m-b-8">
