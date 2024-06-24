@@ -71,7 +71,9 @@ export const PAGE_ROUTES = {
   CAREERS: 'careers',
   FAQ: 'faq',
   TERMS: 'terms-and-conditions',
-  DASHBOARD: '/test-pages/sample-of-admin-route'
+  DASHBOARD: '/app',
+  ADMIN_BLOGS: '/app/admin-pages/admin-blogs',
+  ADMIN_CREATE_BLOG: '/app/admin-pages/create-blog'
 };
 
 // ---------------------------------------------------------------------------

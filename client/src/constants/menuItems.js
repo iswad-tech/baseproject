@@ -8,7 +8,9 @@ const generalItems = [
     to: PAGE_ROUTES.HOME,
     hasSubMenu: false,
     showInDesktop: false,
-    showInMobile: false
+    showInMobile: false,
+    isInApp: false,
+    isInWeb: true
   },
   {
     identifier: 'our-services',
@@ -17,7 +19,9 @@ const generalItems = [
     hasSubMenu: true,
     showInDesktop: true,
     showInMobile: true,
-    submenuTranslteX: '-100px'
+    submenuTranslteX: '-100px',
+    isInApp: false,
+    isInWeb: true
   },
   {
     identifier: 'about-us',
@@ -25,7 +29,9 @@ const generalItems = [
     to: PAGE_ROUTES.ABOUT_US,
     hasSubMenu: false,
     showInDesktop: true,
-    showInMobile: true
+    showInMobile: true,
+    isInApp: false,
+    isInWeb: true
   },
   {
     identifier: 'case-studies',
@@ -33,7 +39,9 @@ const generalItems = [
     to: PAGE_ROUTES.CASE_STUDIES,
     hasSubMenu: false,
     showInDesktop: true,
-    showInMobile: true
+    showInMobile: true,
+    isInApp: false,
+    isInWeb: true
   }
   // {
   //   identifier: 'blog',

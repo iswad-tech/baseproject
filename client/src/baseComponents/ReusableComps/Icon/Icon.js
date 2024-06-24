@@ -31,7 +31,13 @@ import {
   faMobileAlt,
   faServer,
   faDatabase,
-  faCube
+  faCube,
+  faCircleUser,
+  faGauge,
+  faGear,
+  faRightFromBracket,
+  faNewspaper,
+  faCloudArrowUp
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram, faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
@@ -72,7 +78,10 @@ function Icon({
       <FontAwesomeIcon icon={faClose} style={{ color, width, transform: `scale(${scale})` }} />
     ),
     upload: (
-      <FontAwesomeIcon icon={faUpload} style={{ color, width, transform: `scale(${scale})` }} />
+      <FontAwesomeIcon
+        icon={faCloudArrowUp}
+        style={{ color, width, transform: `scale(${scale})` }}
+      />
     ),
     'instagram-fill': (
       <FontAwesomeIcon
@@ -143,7 +152,25 @@ function Icon({
       <FontAwesomeIcon icon={faDatabase} style={{ color, width, transform: `scale(${scale})` }} />
     ),
     cube: <FontAwesomeIcon icon={faCube} style={{ color, width, transform: `scale(${scale})` }} />,
-    linux: <FontAwesomeIcon icon={faLinux} style={{ color, width, transform: `scale(${scale})` }} />
+    linux: (
+      <FontAwesomeIcon icon={faLinux} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    'circle-user': (
+      <FontAwesomeIcon icon={faCircleUser} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    gauge: (
+      <FontAwesomeIcon icon={faGauge} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    gear: <FontAwesomeIcon icon={faGear} style={{ color, width, transform: `scale(${scale})` }} />,
+    'right-from-bracket': (
+      <FontAwesomeIcon
+        icon={faRightFromBracket}
+        style={{ color, width, transform: `scale(${scale})` }}
+      />
+    ),
+    newspaper: (
+      <FontAwesomeIcon icon={faNewspaper} style={{ color, width, transform: `scale(${scale})` }} />
+    )
   };
 
   iconTypes['dashboard'] = (
