@@ -66,7 +66,7 @@ const Hero = ({ contactRef }) => {
     <>
       <Div
         ref={(el) => (parentRef.current = el)}
-        className={cx('width-per-100 m-l-auto m-r-auto dir-ltr')}>
+        className={cx('width-per-100 m-l-auto m-r-auto dir-ltr pos-rel')}>
         {parentWidth ? (
           <ResponsiveSwipeableSlider
             moveRight={moveRight}
