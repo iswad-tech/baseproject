@@ -2,8 +2,8 @@ from django.contrib import admin
 
 
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'is_draft', 'is_popular']
-    list_editable = ['is_draft', 'is_popular']
+    list_display = ['title', 'slug', 'is_draft', 'is_popular', 'is_featured']
+    list_editable = ['is_draft', 'is_popular', 'is_featured']
     list_per_page = 10
     search_fields = ['title__istartswith', 'slug__istartswith']
 

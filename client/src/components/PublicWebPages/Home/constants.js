@@ -16,9 +16,9 @@ export const SLIDESHOWS_DURATION = 20000;
 export const HERO_SERVICES = [
   { id: 0, title: 'MVP Development' },
   { id: 1, title: 'Web Development & Branding' },
-  { id: 2, title: 'Customized Web/Mobile Development' },
+  { id: 2, title: 'Customized App Development' },
   { id: 3, title: 'Team Augmentation & Training' },
-  { id: 4, title: 'Counseling/Coaching' }
+  { id: 4, title: 'Counseling / Coaching' }
 ];
 
 export const HERO_ITEMS = [
@@ -34,17 +34,17 @@ export const HERO_ITEMS = [
   },
   {
     src: HERO_VARIANT_3,
-    title: 'Customized Web/MobileDevelopment',
+    title: 'Customized App Development',
     text: 'Boost your project with our skilled developers, available for immediate integration into your team. We provide top-tier talent across all tech domains, ideal for enhancing your development capabilities.'
   },
   {
     src: HERO_VARIANT_4,
-    title: 'Team Augmentation and Training',
+    title: 'Team Augmentation & Training',
     text: 'Advance your SaaS ventures with our expert consultancy and coaching. We guide entrepreneurs from idea refinement to actionable strategies, supporting the launch and growth of innovative solutions.'
   },
   {
     src: HERO_VARIANT_5,
-    title: 'Counseling/Coaching',
+    title: 'Counseling / Coaching',
     text: 'Achieve your goals and get the exact product you need by utilizing our top-notch product development services.'
   }
 ];

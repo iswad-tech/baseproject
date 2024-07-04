@@ -30,6 +30,7 @@ export const USER_EVENT_API_ROUTE = '/api/user-event/';
 export const CONTACT_FORM_API_ROUTE = '/api/contact-form/';
 export const WEB_SUBSCRIBER_API_ROUTE = '/api/web-subscriber/';
 export const BLOG_API_ROUTE = '/api/blog/';
+export const BLOG_DETAIL_API_ROUTE = '/api/blog-detail/';
 
 // WEBSOCKET API ROUTES
 export const WEBSOCKET_CHAT_API_ROUTE = `/wss/public-chat/`;

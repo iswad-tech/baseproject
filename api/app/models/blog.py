@@ -25,6 +25,7 @@ class Blog(TimeStampedUUIDModel):
     is_draft = models.BooleanField(default=True)
     published_date = models.DateTimeField(blank=True, null=True)
     is_popular = models.BooleanField(default=False)
+    is_featured = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         if not self.slug:
