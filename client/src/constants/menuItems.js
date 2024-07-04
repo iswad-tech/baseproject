@@ -42,15 +42,17 @@ const generalItems = [
     showInMobile: true,
     isInApp: false,
     isInWeb: true
+  },
+  {
+    identifier: 'blog',
+    title: 'Blog',
+    to: PAGE_ROUTES.BLOG,
+    hasSubMenu: false,
+    showInDesktop: true,
+    showInMobile: true,
+    isInApp: false,
+    isInWeb: true
   }
-  // {
-  //   identifier: 'blog',
-  //   title: 'Blog',
-  //   to: PAGE_ROUTES.BLOG,
-  //   hasSubMenu: false,
-  //   showInDesktop: true,
-  //   showInMobile: true
-  // }
 ];
 
 export const MENU_ITEMS = [...generalItems];

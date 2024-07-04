@@ -8,6 +8,7 @@ services:
       - "80:80"
     volumes:
       - ./api/vol:/vol/static
+      - ./mobile:/mobile
       - ./nginx/htpasswd:/etc/nginx/.htpasswd
     depends_on:
       - client

@@ -1,10 +1,26 @@
 from rest_framework import serializers
+
+from core.models import UserModel, ProfileModel
+from core.serializers import ProfileSerializer
 from app.models import BlogModel, BlogLabelModel
 
 
 class BlogSerializer(serializers.ModelSerializer):
-
+    writer = serializers.SerializerMethodField('get_writer')
     labels = serializers.SerializerMethodField('get_labels')
+
+    def get_writer(self, obj):
+        try:
+            cur_writer = UserModel.objects.filter(id=obj.writer_id).first()
+            if cur_writer:
+                cur_profile = ProfileModel.objects.filter(
+                    id=cur_writer.id).first()
+                if cur_profile:
+                    return ProfileSerializer(cur_profile).data
+                return {}
+            return {}
+        except Exception as e:
+            return {}
 
     def get_labels(self, obj):
         blog_label_qs = BlogLabelModel.objects.filter(blog_id=obj.id)
@@ -22,4 +38,4 @@ class BlogSerializer(serializers.ModelSerializer):
         fields = ['id', 'uuid', 'writer', 'slug', 'title', 'content',
                   'excerpt', 'preview_photo', 'preview_photo_from_url',
                   'published_date', 'is_popular', 'created_at', 'updated_at',
-                  'labels']
+                  'labels', 'is_draft', 'is_featured']

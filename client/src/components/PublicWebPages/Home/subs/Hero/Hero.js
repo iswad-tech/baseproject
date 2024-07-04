@@ -99,8 +99,11 @@ const Hero = ({ contactRef }) => {
                   type="flex"
                   vAlign="center"
                   direction="vertical"
-                  className="pos-abs width-per-100 height-per-100 max-width-px-700 p-all-temp-14">
-                  <Heading type={1} className="m-b-temp-7 text-theme-one">
+                  className={cx(
+                    'pos-abs width-per-100 height-per-100 max-width-px-700',
+                    parentWidth > 800 ? 'p-all-temp-14' : 'p-all-temp-7'
+                  )}>
+                  <Heading type={1} className="m-b-temp-7 text-theme-one global-hyphenated">
                     {item?.title}
                   </Heading>
                   <Paragraph className="m-b-temp-7">{item?.text}</Paragraph>

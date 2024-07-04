@@ -1,30 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
 import Card from '@/baseComponents/ReusableComps/Card';
 import Pagination from '@/baseComponents/ReusableComps/Pagination';
 
+import moment from 'moment-timezone';
 import { CARD_TYPES } from '@/constants/devDesignVars';
+import { APP_DOMAIN_FOR_SERVER_SIDE_PROPS } from 'config';
+import { DATE_FORMAT } from '@/constants/vars';
 
-import { BLOG_POSTS } from '../../constants';
 import styles from './Posts.module.scss';
 
-const Posts = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+const Posts = ({ curBlogs, currentPage, setCurrentPage, numberOfPages }) => {
   return (
     <>
       <Div className="global-grid global-grid--cols--auto p-x-temp-7">
-        {BLOG_POSTS?.map((item, idx) => (
+        {curBlogs?.map((item, idx) => (
           <Div key={idx} className="width-px-300">
             <Card
               type={CARD_TYPES.blogInfo}
-              src={item?.src}
-              writer={item?.writer}
-              postDate={item?.postDate}
+              src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${item?.preview_photo}`}
+              writer={item?.writer?.user?.first_name}
+              postDate={moment(item?.created_at).format(DATE_FORMAT)}
               title={item?.title}
-              description={item?.description}
-              moreInfoUrl={item?.moreInfoUrl}
+              description={item?.excerpt}
+              moreInfoUrl={item?.slug}
             />
           </Div>
         ))}
@@ -33,7 +34,7 @@ const Posts = () => {
         <Pagination
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
-          numberOfTotalPages={10}
+          numberOfTotalPages={numberOfPages}
         />
       </Div>
     </>

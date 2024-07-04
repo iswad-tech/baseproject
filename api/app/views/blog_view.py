@@ -15,7 +15,12 @@ class BlogViewSet(views.APIView):
     def get(self, request, format=None):
         try:
             NUMBER_OF_BLOGS_IN_PAGE = 12
-            is_popular_posts = request.GET.get("is_popular_posts", False)
+            is_popular_posts = bool(int(
+                request.GET.get("is_popular_posts", 0)))
+            is_published = bool(int(
+                request.GET.get("is_published", 1)))
+            is_featured = bool(int(
+                request.GET.get("is_featured", 1)))
             page_number = int(request.GET.get("page_number", 1))
             first_item = (page_number - 1) * NUMBER_OF_BLOGS_IN_PAGE
             last_item = page_number * NUMBER_OF_BLOGS_IN_PAGE - 1
@@ -38,20 +43,27 @@ class BlogViewSet(views.APIView):
                         query_filter &= Q(**{f"plain_text__icontains": value})
                     else:
                         query_filter &= Q(**{f"{field}__icontains": value})
+            if is_published:
+                query_filter &= Q(is_draft=False)
             annotated_blogs = BlogModel.objects.annotate(
                 plain_text=StripHTML(F('content')))
-            if not is_popular_posts:
-                blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).order_by(
-                    "-created_at", "title")[first_item: last_item + 1]
-                blogs_count = annotated_blogs.filter(cat_filter).filter(
-                    tag_filter).filter(query_filter).count()
-            else:
+            if is_popular_posts:
                 blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).filter(is_popular=True).order_by(
                     "-created_at", "title")[first_item: last_item + 1]
                 blogs_count = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(
                     query_filter).filter(is_popular=True).count()
+            elif is_featured:
+                blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).filter(is_featured=True).order_by(
+                    "-created_at", "title")[first_item: last_item + 1]
+                blogs_count = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(
+                    query_filter).filter(is_featured=True).count()
+            else:
+                blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).order_by(
+                    "-created_at", "title")[first_item: last_item + 1]
+                blogs_count = annotated_blogs.filter(cat_filter).filter(
+                    tag_filter).filter(query_filter).count()
             serializer = BlogSerializer(blogs, many=True)
-            return response.Response(status=status.HTTP_200_OK, data={"blogs": serializer.data, "number_of_blogs": blogs_count})
+            return response.Response(status=status.HTTP_200_OK, data={"blogs": serializer.data, "number_of_blogs": blogs_count, "number_of_blogs_in_page": NUMBER_OF_BLOGS_IN_PAGE})
         except Exception as e:
             return response.Response(status=status.HTTP_400_BAD_REQUEST, data={"message": f"{str(e)}"})
 
@@ -73,7 +85,13 @@ class BlogDetailViewSet(views.APIView):
 
     def get(self, request, slug, format=None):
         try:
-            cur_blog = BlogModel.objects.filter(slug=slug).first()
+            is_published = bool(int(
+                request.GET.get("is_published", 1)))
+            if is_published:
+                cur_blog = BlogModel.objects.filter(
+                    slug=slug, is_draft=False).first()
+            else:
+                cur_blog = BlogModel.objects.filter(slug=slug).first()
             if cur_blog:
                 serializer = BlogSerializer(cur_blog)
                 return response.Response(status=status.HTTP_200_OK, data=serializer.data)
