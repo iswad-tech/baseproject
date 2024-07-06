@@ -37,9 +37,9 @@ const LatestRead = ({ featuredBlogs }) => {
               <Div>
                 <Div className="p-all-temp-7">
                   <Div>
-                    {featuredBlogs?.[0]?.writer?.user?.first_name}{' '}
-                    {featuredBlogs?.[0]?.writer?.user?.last_name}|{' '}
-                    {moment(featuredBlogs?.[0]?.created_at).format(DATE_FORMAT)}
+                    {`${featuredBlogs?.[0]?.writer?.user?.first_name} ${
+                      featuredBlogs?.[0]?.writer?.user?.last_name
+                    } | ${moment(featuredBlogs?.[0]?.created_at).format(DATE_FORMAT)}`}
                   </Div>
                   <Heading type={4} className="m-y-temp-7">
                     {featuredBlogs?.[0]?.title}
