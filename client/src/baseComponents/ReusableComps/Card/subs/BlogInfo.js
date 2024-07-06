@@ -37,7 +37,9 @@ const BlogInfo = ({
               anchorType={ANCHOR_TYPES.tertiary}
               internal
               className="f-b"
-              to={isAdminPage ? `/app/admin-pages/admin-blogs/${moreInfoUrl}` : moreInfoUrl}>
+              to={
+                isAdminPage ? `/app/admin-pages/admin-blogs/${moreInfoUrl}` : `/blog/${moreInfoUrl}`
+              }>
               Read More
             </Anchor>
           </Div>
