@@ -27,7 +27,7 @@ const LatestRead = ({ featuredBlogs }) => {
             <Div className="width-per-100 of-hidden global-add-p-x-in-desktop">
               <AppImage
                 src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
-                heightOverWidthAsprctRatio={0.7}
+                heightOverWidthAsprctRatio={0.5}
                 className="global-add-br-rad-in-desktop"
               />
             </Div>

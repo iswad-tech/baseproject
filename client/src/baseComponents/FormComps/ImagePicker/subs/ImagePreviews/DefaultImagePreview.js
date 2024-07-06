@@ -25,7 +25,7 @@ const DefaultImagePreview = ({
           direction="vertical"
           className={cx('ml1 of-hidden width-px-100 height-px-100', styles.previewContainer)}>
           <Close
-            barColor={COLORS.themeOne}
+            barColor={COLORS['theme-one']}
             barHeight="25px"
             iconScale={0.8}
             iconCircleSize="15px"

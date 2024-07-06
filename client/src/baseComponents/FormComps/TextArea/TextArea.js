@@ -32,7 +32,9 @@ const TextArea = ({
             value={val}
             onChange={(e) => {
               setVal(e.target.value);
-              errorHandler('');
+              if (errorHandler) {
+                errorHandler('');
+              }
               if (onChange) {
                 onChange(e);
               }

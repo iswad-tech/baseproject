@@ -20,7 +20,7 @@ class BlogViewSet(views.APIView):
             is_published = bool(int(
                 request.GET.get("is_published", 1)))
             is_featured = bool(int(
-                request.GET.get("is_featured", 1)))
+                request.GET.get("is_featured", 0)))
             page_number = int(request.GET.get("page_number", 1))
             first_item = (page_number - 1) * NUMBER_OF_BLOGS_IN_PAGE
             last_item = page_number * NUMBER_OF_BLOGS_IN_PAGE - 1
@@ -104,7 +104,7 @@ class BlogDetailViewSet(views.APIView):
             cur_blog_qs = BlogModel.objects.filter(slug=slug)
             if cur_blog_qs:
                 obj = update_row_of_schema(request=request, cur_schema_qs=cur_blog_qs, updatable_non_file_nor_date_fields=["title", "excerpt", "content"], date_fields=[
-                    "published_date"], file_fields=["preview_photo"], required_fields=["title", "excerpt", "content", "preview_photo"])
+                    "published_date"], file_fields=["preview_photo"], required_fields=["title", "excerpt", "content"])
                 if obj["success"]:
                     serializer = BlogSerializer(obj["cur_schema"])
                     return response.Response(status=status.HTTP_200_OK, data=serializer.data)

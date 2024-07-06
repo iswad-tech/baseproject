@@ -229,7 +229,7 @@ button {
     display: grid;
     width: 100%;
     gap: #{map-get($spacings, 'temp-7')};
-    place-items: center;
+    // place-items: center;
 
     &--cols--auto {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

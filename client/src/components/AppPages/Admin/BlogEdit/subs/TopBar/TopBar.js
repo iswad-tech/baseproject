@@ -9,10 +9,8 @@ import styles from './TopBar.module.scss';
 const TopBar = () => {
   return (
     <>
-      <Div type="flex" vAlign="center" hAlign="end" className="width-per-100">
-        <Div className="p-all-temp-7">
-          <Back />
-        </Div>
+      <Div type="flex" hAlign="end" vAlign="center">
+        <Back />
       </Div>
     </>
   );
