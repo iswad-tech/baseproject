@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "update-design": "npm uninstall basedesign-iswad && npm install --save basedesign-iswad",
     "build-patch": "grunt bump-only:patch && npm run build",
@@ -15,7 +14,8 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "generate-sitemap": "next-sitemap"
   },
   "author": "Mohammad Mahdi Mohajer",
   "license": "ISC",
