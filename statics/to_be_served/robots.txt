@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iswad.tech
+
+# Sitemaps
+Sitemap: https://iswad.tech/sitemap.xml

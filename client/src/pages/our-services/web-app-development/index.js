@@ -15,7 +15,7 @@ import { IS_STAGING_ENV } from 'config';
 const Index = () => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
-      <Seo>
+      <Seo title={`Web App Development | ISWAD`}>
         <PageContainer
           pageIdentifier="our-services"
           pageSubNavIdentifier="web-app-development"

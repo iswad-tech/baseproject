@@ -17,6 +17,7 @@ const Index = () => {
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
       <Seo>
         <PageContainer
+          title={`Home | ISWAD`}
           pageIdentifier="home"
           hasHeader={true}
           hasFooter={true}

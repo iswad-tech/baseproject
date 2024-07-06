@@ -275,3 +275,4 @@ redeploy-swarm.sh
 backup_db_swarm.sh
 apple-app-site-association
 assetlinks.json
+next-sitemap.config.js

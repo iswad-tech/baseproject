@@ -1,0 +1,63 @@
+const axios = require('axios');
+
+// Function to fetch dynamic blog posts from your API
+async function fetchBlogPosts() {
+  try {
+    const response = await axios.get('https://iswad.tech/api/blog'); // Replace with your actual API endpoint
+    const res = response.data;
+    const posts = res?.blogs || [];
+    return posts.map((post) => ({
+      loc: `https://iswad.tech/blog/${post.slug}`, // Adjust this to match your blog URL structure
+      lastmod: new Date(post.updated_at).toISOString(), // Ensure your API returns the last modified date
+      changefreq: 'daily',
+      priority: 0.7
+    }));
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    return [];
+  }
+}
+
+// Function to fetch case study pages
+async function fetchCaseStudyPages() {
+  try {
+    const caseStudies = [
+      'admin-dashboard-development',
+      'mvp-consultancy-services',
+      'saas-solution-development',
+      'ecommerce-platform-development',
+      'mobile-application-development',
+      'api-integration-services',
+      'data-analysis-machine-learning'
+    ];
+    return caseStudies.map((caseStudy) => ({
+      loc: `https://iswad.tech/case-studies/${caseStudy}`, // Adjust this to match your case study URL structure
+      lastmod: new Date().toISOString(), // Ensure your API returns the last modified date
+      changefreq: 'daily',
+      priority: 0.7
+    }));
+  } catch (error) {
+    console.error('Error fetching case study pages:', error);
+    return [];
+  }
+}
+
+/** @type {import('next-sitemap').IConfig} */
+module.exports = {
+  siteUrl: process.env.SITE_URL || 'https://iswad.tech',
+  generateRobotsTxt: true,
+  exclude: ['/admin/*', '/secret-page', '/app/*'],
+  robotsTxtOptions: {
+    policies: [{ userAgent: '*', allow: '/' }]
+  },
+  additionalPaths: async (config) => {
+    const blogPosts = await fetchBlogPosts();
+    const caseStudyPages = await fetchCaseStudyPages();
+    return [...blogPosts, ...caseStudyPages].map((page) => ({
+      loc: page.loc,
+      lastmod: page.lastmod,
+      changefreq: page.changefreq,
+      priority: page.priority
+    }));
+  }
+};

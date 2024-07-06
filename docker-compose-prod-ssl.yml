@@ -11,6 +11,7 @@ services:
       - "443:443"
     volumes:
       - static-data:/vol/static
+      - ./statics/to_be_served:/to_be_served
       - ./nginx/certbot/conf:/etc/letsencrypt
       - ./nginx/certbot/www:/var/www/certbot
       - ./nginx/htpasswd:/etc/nginx/.htpasswd
