@@ -21,9 +21,7 @@ const BlogPost = ({ blog }) => {
         setContainerWidth={setContainerWidth}
         className={cx(
           'width-per-100',
-          containerWidth >= 800
-            ? 'br-right-solid-2 br-gray-dark height-vh-full of-y-auto scroll-type-one'
-            : 'm-t-temp-7'
+          containerWidth >= 800 ? 'br-right-solid-2 br-gray-dark' : 'm-t-temp-7'
         )}>
         <Div className={cx('max-width-px-800 m-l-auto m-r-auto')}>
           <Div className={cx('m-b-temp-7', containerWidth >= 800 ? 'p-x-temp-7' : '')}>
