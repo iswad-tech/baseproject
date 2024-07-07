@@ -16,7 +16,7 @@ import { IS_STAGING_ENV } from 'config';
 const Index = ({ caseStudy }) => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
-      <Seo title={`${caseStudy} | ISWAD`}>
+      <Seo title={`${caseStudy?.title} | ISWAD`}>
         <PageContainer
           pageIdentifier="case-studies"
           hasHeader={true}

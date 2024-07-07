@@ -21,7 +21,7 @@ const Index = () => {
           hasFooter={true}
           hasStickyHeader={false}
           hasStickyFooter={false}>
-          <Home />
+          <Div>FAQ</Div>
         </PageContainer>
       </Seo>
     </RoleBasedRoute>
