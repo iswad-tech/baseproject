@@ -1,6 +1,6 @@
-import helpImg1 from '@/images/js-Images/general/CaseStudiesPage/need_help_1.png';
-import helpImg2 from '@/images/js-Images/general/CaseStudiesPage/need_help_2.png';
-import helpImg3 from '@/images/js-Images/general/CaseStudiesPage/need_help_3.png';
+import helpImg1 from '@/images/js-Images/general/CaseStudiesPage/ISWAD-need-help-1.png';
+import helpImg2 from '@/images/js-Images/general/CaseStudiesPage/ISWAD-need-help-2.png';
+import helpImg3 from '@/images/js-Images/general/CaseStudiesPage/ISWAD-need-help-3.png';
 
 export const NEED_HELP_ITEMS = [
   {

@@ -7,7 +7,6 @@ import RoleBasedRoute from '@/components/RouteHandlers/RoleBasedRoute';
 import Seo from '@/components/PageWrappers/Seo';
 import PageContainer from '@/components/PageWrappers/PageContainer';
 import Home from '@/components/PublicWebPages/Home';
-import TemporaryLanding from '@/components/PublicWebPages/TemporaryLanding';
 
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV } from 'config';

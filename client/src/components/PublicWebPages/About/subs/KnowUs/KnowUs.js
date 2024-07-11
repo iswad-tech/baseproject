@@ -6,7 +6,7 @@ import AppImage from '@/baseComponents/ReusableComps/AppImage';
 import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
 import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 
-import Img from '@/images/js-Images/general/AboutPage/About_Us.jpg';
+import Img from '@/images/js-Images/general/AboutPage/ISWAD-About-Us.jpg';
 
 import { ABOUT_ACHIEVEMENTS } from '@/constants/vars';
 import styles from './KnowUs.module.scss';

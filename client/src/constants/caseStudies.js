@@ -1,18 +1,18 @@
-import admin_dashboard_IMG from '@/images/js-Images/general/CaseStudiesPage/admin_dashboard_banner.png';
-import Consultancy_services_IMG from '@/images/js-Images/general/CaseStudiesPage/Consultancy_services_banner.png';
-import api_integration_IMG from '@/images/js-Images/general/CaseStudiesPage/api_integration_banner.png';
-import ecommerce_IMG from '@/images/js-Images/general/CaseStudiesPage/ecommerce_banner.png';
-import Saas_IMG from '@/images/js-Images/general/CaseStudiesPage/Saas_banner.png';
-import mobile_app_development_IMG from '@/images/js-Images/general/CaseStudiesPage/mobile_app_development_banner.png';
-import data_analysis_machine_learning_IMG from '@/images/js-Images/general/CaseStudiesPage/data_analysis_machine_learning_banner.png';
+import admin_dashboard_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-admin-dashboard-banner.png';
+import Consultancy_services_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-Consultancy-services-banner.png';
+import api_integration_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-api-integration-banner.png';
+import ecommerce_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-ecommerce-banner.png';
+import Saas_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-Saas-banner.png';
+import mobile_app_development_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-mobile-app-development-banner.png';
+import data_analysis_machine_learning_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-data-analysis-machine-learning-banner.png';
 
-import admin_dashboard_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/admin_dashboard.png';
-import Consultancy_services_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/Consultancy_services.png';
-import api_integration_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/api_integration.png';
-import ecommerce_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ecommerce.png';
-import Saas_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/Saas.png';
-import mobile_app_development_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/mobile_app_development.png';
-import data_analysis_machine_learning_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/data_analysis_machine_learning.png';
+import admin_dashboard_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-admin-dashboard.png';
+import Consultancy_services_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-Consultancy-services.png';
+import api_integration_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-api-integration.png';
+import ecommerce_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-ecommerce.png';
+import Saas_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-Saas.png';
+import mobile_app_development_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-mobile-app-development.png';
+import data_analysis_machine_learning_CARD_IMG from '@/images/js-Images/general/CaseStudiesPage/ISWAD-data-analysis-machine-learning.png';
 
 export const CASE_STUDIES = [
   {

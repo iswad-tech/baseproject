@@ -1,15 +1,15 @@
 import { PNG_ICON_TYPES } from '@/constants/devDesignVars';
-import HERO_VARIANT_1 from '@/images/js-Images/general/HomePage/HeorVariant1.png';
-import HERO_VARIANT_2 from '@/images/js-Images/general/HomePage/HeorVariant2.png';
-import HERO_VARIANT_3 from '@/images/js-Images/general/HomePage/HeorVariant3.png';
-import HERO_VARIANT_4 from '@/images/js-Images/general/HomePage/HeorVariant4.png';
-import HERO_VARIANT_5 from '@/images/js-Images/general/HomePage/HeorVariant5.png';
+import HERO_VARIANT_1 from '@/images/js-Images/general/HomePage/MVP-Development-ISWAD.png';
+import HERO_VARIANT_2 from '@/images/js-Images/general/HomePage/Web-Development-ISWAD.png';
+import HERO_VARIANT_3 from '@/images/js-Images/general/HomePage/App-Development-ISWAD.png';
+import HERO_VARIANT_4 from '@/images/js-Images/general/HomePage/Team-Augmentation-ISWAD.png';
+import HERO_VARIANT_5 from '@/images/js-Images/general/HomePage/Counseling-ISWAD.png';
 
-import Service1 from '@/images/js-Images/general/HomePage/Service1.png';
-import Service2 from '@/images/js-Images/general/HomePage/Service2.png';
-import Service3 from '@/images/js-Images/general/HomePage/Service3.png';
-import Service4 from '@/images/js-Images/general/HomePage/Service4.png';
-import Service5 from '@/images/js-Images/general/HomePage/Service5.png';
+import Service1 from '@/images/js-Images/general/HomePage/Web-Dev-ISWAD.png';
+import Service2 from '@/images/js-Images/general/HomePage/Mobile-Dev-Main-ISWAD.png';
+import Service3 from '@/images/js-Images/general/HomePage/Coaching-Advisory-ISWAD.png';
+import Service4 from '@/images/js-Images/general/HomePage/Project-ISWAD.png';
+import Service5 from '@/images/js-Images/general/HomePage/Team-Augmentation-1-ISWAD.png';
 
 export const SLIDESHOWS_DURATION = 20000;
 

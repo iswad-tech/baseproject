@@ -13,7 +13,7 @@ import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
 import { ANCHOR_TYPES } from '@/constants/devDesignVars';
 import { MEETING_LINK } from '@/constants/vars';
 
-import Logo from '@/images/js-Images/general/Header/WideLogo.png';
+import Logo from '@/images/js-Images/general/Header/ISWAD-WideLogo.png';
 
 import DesktopNav from './DesktopNav';
 import AppUser from '../AppUser';

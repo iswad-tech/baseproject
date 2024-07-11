@@ -4,7 +4,7 @@ import { Div } from 'basedesign-iswad';
 
 import AppImage from '@/baseComponents/ReusableComps/AppImage';
 
-import Favicon from '@/images/js-Images/general/Footer/favicon.png';
+import Favicon from '@/images/js-Images/general/Footer/ISWAD-favicon.png';
 
 import styles from '../Footer.module.scss';
 

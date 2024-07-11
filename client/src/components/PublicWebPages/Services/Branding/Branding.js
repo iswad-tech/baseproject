@@ -4,7 +4,7 @@ import { Div } from 'basedesign-iswad';
 
 import ServiceTemplate from '@/components/PublicWebPages/Shared/ServiceTemplate';
 
-import HeroImg from '@/images/js-Images/general/Services/Branding_Hero.jpg';
+import HeroImg from '@/images/js-Images/general/Services/Branding-ISWAD.jpg';
 
 import { STEPS } from './constants';
 import styles from './Branding.module.scss';

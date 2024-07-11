@@ -9,7 +9,7 @@ import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 import Button from '@/baseComponents/ReusableComps/Button';
 
 import { AUTO_SCROLL_BEHAVIOR } from '@/constants/vars';
-import HeroImg from '@/images/js-Images/general/AboutPage/Hero.png';
+import HeroImg from '@/images/js-Images/general/AboutPage/ISWAD-about.png';
 
 import styles from './Hero.module.scss';
 

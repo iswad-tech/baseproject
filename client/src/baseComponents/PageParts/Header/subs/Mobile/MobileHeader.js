@@ -11,8 +11,8 @@ import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
 import { toggleMobileNav } from '@/reducers/general/mobileNavIsActive';
 
-import Logo from '@/images/js-Images/general/Header/WideLogo.png';
-import Robot from '@/images/js-Images/general/Header/robot.png';
+import Logo from '@/images/js-Images/general/Header/ISWAD-WideLogo.png';
+import Robot from '@/images/js-Images/general/Header/ISWAD-robot.png';
 
 import { HAMBURGER_CONFIG } from '../../constants';
 import MobileNav from './MobileNav';

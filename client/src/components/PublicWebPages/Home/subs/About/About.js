@@ -5,7 +5,7 @@ import { Div, Heading } from 'basedesign-iswad';
 import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 import AppImage from '@/baseComponents/ReusableComps/AppImage';
 
-import AboutImg from '@/images/js-Images/general/HomePage/About.png';
+import AboutImg from '@/images/js-Images/general/HomePage/Web-Dev-1-ISWAD.png';
 
 import { ABOUT_ACHIEVEMENTS } from '@/constants/vars';
 import styles from './About.module.scss';
