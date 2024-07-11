@@ -16,7 +16,10 @@ import { BLOG_DETAIL_API_ROUTE } from '@/constants/apiRoutes';
 const Index = ({ blog }) => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
-      <Seo title={`${blog?.title} | ISWAD`}>
+      <Seo
+        title={`${blog?.page_alt}`}
+        description={blog?.meta_description}
+        keywords={blog?.meta_keywords}>
         <PageContainer
           pageIdentifier="blog"
           hasHeader={true}

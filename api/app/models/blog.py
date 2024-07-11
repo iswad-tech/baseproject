@@ -26,6 +26,11 @@ class Blog(TimeStampedUUIDModel):
     published_date = models.DateTimeField(blank=True, null=True)
     is_popular = models.BooleanField(default=False)
     is_featured = models.BooleanField(default=False)
+    meta_description = models.CharField(
+        default="Stay updated with ISWAD Tech's Blog. Discover insights, tips, and industry trends on MVP development, web app creation, branding, and more. Our expert articles provide valuable knowledge to help your business grow and succeed. Explore innovative ideas and solutions with ISWAD Tech today.", max_length=2048)
+    meta_keywords = models.CharField(
+        default="Tech Blog, Industry Insights, Latest Tech Trends, AI Innovations, Software Development Tips, Tech News, Business Technology, Digital Transformation, Expert Opinions, Innovation Articles", max_length=2048)
+    page_alt = models.CharField(default="Blog | ISWAD", max_length=2048)
 
     def save(self, *args, **kwargs):
         if not self.slug:

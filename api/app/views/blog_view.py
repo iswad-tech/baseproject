@@ -45,23 +45,16 @@ class BlogViewSet(views.APIView):
                         query_filter &= Q(**{f"{field}__icontains": value})
             if is_published:
                 query_filter &= Q(is_draft=False)
+            if is_popular_posts:
+                query_filter &= Q(is_popular=True)
+            if is_featured:
+                query_filter &= Q(is_featured=True)
             annotated_blogs = BlogModel.objects.annotate(
                 plain_text=StripHTML(F('content')))
-            if is_popular_posts:
-                blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).filter(is_popular=True).order_by(
-                    "-created_at", "title")[first_item: last_item + 1]
-                blogs_count = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(
-                    query_filter).filter(is_popular=True).count()
-            elif is_featured:
-                blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).filter(is_featured=True).order_by(
-                    "-created_at", "title")[first_item: last_item + 1]
-                blogs_count = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(
-                    query_filter).filter(is_featured=True).count()
-            else:
-                blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).order_by(
-                    "-created_at", "title")[first_item: last_item + 1]
-                blogs_count = annotated_blogs.filter(cat_filter).filter(
-                    tag_filter).filter(query_filter).count()
+            blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).order_by(
+                "-created_at", "title")[first_item: last_item + 1]
+            blogs_count = annotated_blogs.filter(cat_filter).filter(
+                tag_filter).filter(query_filter).count()
             serializer = BlogSerializer(blogs, many=True)
             return response.Response(status=status.HTTP_200_OK, data={"blogs": serializer.data, "number_of_blogs": blogs_count, "number_of_blogs_in_page": NUMBER_OF_BLOGS_IN_PAGE})
         except Exception as e:
