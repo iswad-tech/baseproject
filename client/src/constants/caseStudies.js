@@ -17,6 +17,10 @@ import data_analysis_machine_learning_CARD_IMG from '@/images/js-Images/general/
 export const CASE_STUDIES = [
   {
     title: 'Admin Dashboard Development',
+    metaDescription:
+      "Explore ISWAD Tech's case study on Admin Dashboard Development. Discover how we created a user-friendly, efficient, and scalable admin dashboard tailored to enhance data management and user experience. Learn about our innovative solutions and the impact on our client's operations.",
+    metaKeyWords:
+      'Admin Dashboard Development, Dashboard Solutions, Custom Dashboards, Data Management, User Experience, Admin Panel Design, Backend Solutions, Dashboard UI/UX, Client Success Story, Efficient Data Handling',
     slug: 'admin-dashboard-development',
     src: admin_dashboard_CARD_IMG,
     isMostPopular: true,
@@ -174,6 +178,10 @@ export const CASE_STUDIES = [
   },
   {
     title: 'MVP Consultancy Services',
+    metaDescription:
+      "Discover how ISWAD Tech's MVP Consultancy Services transformed client ideas into successful products. Our case study showcases tailored strategies, efficient development, and impactful results. Learn about our innovative approach and its significant impact on business growth.",
+    metaKeyWords:
+      'MVP Consultancy Services, Product Development, Startup Solutions, MVP Strategy, Lean Development, Early Stage Product, MVP Success, Product Validation, Client Consultancy, Innovation Services',
     slug: 'mvp-consultancy-services',
     src: Consultancy_services_CARD_IMG,
     isMostPopular: true,
@@ -344,6 +352,10 @@ export const CASE_STUDIES = [
   },
   {
     title: 'SaaS Solution Development',
+    metaDescription:
+      "Explore ISWAD Tech's case study on SaaS Solution Development. Learn how we crafted a scalable, secure, and user-centric SaaS platform that meets diverse business needs. Discover our innovative development approach and its positive impact on client success and growth.",
+    metaKeyWords:
+      'SaaS Solution Development, Software as a Service, SaaS Platforms, Cloud Solutions, Scalable Software, SaaS Development, Client SaaS Success, Software Solutions, SaaS Application, Business Growth',
     slug: 'saas-solution-development',
     src: Saas_CARD_IMG,
     isMostPopular: false,
@@ -519,6 +531,10 @@ export const CASE_STUDIES = [
   },
   {
     title: 'Ecommerce Platform Development',
+    metaDescription:
+      "Explore ISWAD Tech's case study on E-commerce Platform Development. Discover how we built a robust, user-friendly, and scalable e-commerce platform tailored to enhance customer experience and drive sales. Learn about our innovative solutions and their impact on client success.",
+    metaKeyWords:
+      'E-commerce Platform Development, Online Store Solutions, E-commerce Design, Custom E-commerce, Shopping Cart Solutions, Retail Platform, E-commerce Success, Digital Retail, Customer Experience, E-commerce Optimization',
     slug: 'ecommerce-platform-development',
     src: ecommerce_CARD_IMG,
     isMostPopular: false,
@@ -708,6 +724,10 @@ export const CASE_STUDIES = [
   },
   {
     title: 'Mobile Application Development',
+    metaDescription:
+      "Discover ISWAD Tech's case study on Mobile Application Development. Learn how we created a user-friendly, high-performance mobile app tailored to meet client needs and enhance user experience. Explore our innovative development process and the significant impact on client success.",
+    metaKeyWords:
+      'Mobile Application Development, Custom Mobile Apps, iOS Development, Android Development, App Design, Mobile UX/UI, App Success Story, Cross-Platform Apps, Mobile Innovation, Client Mobile Solutions',
     slug: 'mobile-application-development',
     src: mobile_app_development_CARD_IMG,
     isMostPopular: false,
@@ -876,6 +896,10 @@ export const CASE_STUDIES = [
   },
   {
     title: 'API Integration Services',
+    metaDescription:
+      "Explore ISWAD Tech's case study on API Integration Services. Learn how we seamlessly integrated multiple APIs to enhance functionality, streamline operations, and improve user experience. Discover our innovative approach and the positive impact on our client's business efficiency and performance.",
+    metaKeyWords:
+      'API Integration Services, Seamless API Integration, Custom API Solutions, Third-Party APIs, API Development, System Integration, Enhanced Functionality, Client API Success, Data Connectivity, Efficient Integration',
     slug: 'api-integration-services',
     src: api_integration_CARD_IMG,
     isMostPopular: false,
@@ -1049,6 +1073,10 @@ export const CASE_STUDIES = [
   },
   {
     title: 'Data Analysis and Machine Learning',
+    metaDescription:
+      "Explore ISWAD Tech's case study on Data Analysis and Machine Learning. Discover how we leverage advanced analytics and machine learning techniques to derive actionable insights and drive informed decision-making. Learn about our innovative solutions and their transformative impact on business operations and strategy.",
+    metaKeyWords:
+      'Data Analysis, Machine Learning, AI Solutions, Data Insights, Predictive Analytics, ML Algorithms, Client Data Success, Data-Driven Decisions, Advanced Analytics, Business Intelligence',
     slug: 'data-analysis-machine-learning',
     src: data_analysis_machine_learning_CARD_IMG,
     isMostPopular: false,

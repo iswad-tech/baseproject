@@ -15,7 +15,10 @@ import { BLOG_API_ROUTE } from '@/constants/apiRoutes';
 const Index = ({ blogs, featuredBlogs, numberOfBlogs, numberOfBlogsInPage }) => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
-      <Seo title="Blog | ISWAD">
+      <Seo
+        title="Blog | ISWAD"
+        description="Stay updated with ISWAD Tech's Blog. Discover insights, tips, and industry trends on MVP development, web app creation, branding, and more. Our expert articles provide valuable knowledge to help your business grow and succeed. Explore innovative ideas and solutions with ISWAD Tech today."
+        keywords="Tech Blog, Industry Insights, Latest Tech Trends, AI Innovations, Software Development Tips, Tech News, Business Technology, Digital Transformation, Expert Opinions, Innovation Articles">
         <PageContainer
           pageIdentifier="blog"
           hasHeader={true}

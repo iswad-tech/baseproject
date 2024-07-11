@@ -14,7 +14,10 @@ import { IS_STAGING_ENV } from 'config';
 const Index = () => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
-      <Seo title={`Team Augmentation | ISWAD`}>
+      <Seo
+        title={`Team Augmentation | ISWAD`}
+        description="Boost your team's capabilities with ISWAD Tech's Team Augmentation services. Access top talent and expertise to accelerate your projects and achieve your business goals. Flexible and scalable solutions tailored to your needs. Enhance productivity and drive growth with ISWAD Tech."
+        keywords="Team Augmentation, Staff Augmentation, IT Staffing, Remote Team, Dedicated Developers, Tech Talent, Agile Team, IT Outsourcing, Flexible Workforce, On-Demand Talent">
         <PageContainer
           pageIdentifier="our-services"
           pageSubNavIdentifier="team-augmentation"

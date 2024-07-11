@@ -14,7 +14,10 @@ import { IS_STAGING_ENV } from 'config';
 const Index = () => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
-      <Seo title="About Us | ISWAD">
+      <Seo
+        title="About Us | ISWAD"
+        description="Learn about ISWAD Tech, a leading provider of innovative technology solutions. Discover our mission, vision, and values, meet our expert team, and understand our commitment to driving digital transformation and business growth for clients across various industries."
+        keywords="About ISWAD Tech, Our Mission, Our Vision, Company Values, Tech Innovators, Our Team, Tech Leadership, Company History, What We Do, Our Story">
         <PageContainer
           pageIdentifier="about-us"
           hasHeader={true}
