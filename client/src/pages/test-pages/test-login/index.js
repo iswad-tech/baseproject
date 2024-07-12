@@ -14,7 +14,7 @@ import { IS_STAGING_ENV } from 'config';
 
 const Index = () => {
   return (
-    <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
+    <RoleBasedRoute hasAccessRole={['Public']}>
       <Seo>
         <PageContainer
           pageIdentifier="home"

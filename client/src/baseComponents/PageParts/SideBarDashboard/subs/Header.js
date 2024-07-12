@@ -5,8 +5,8 @@ import { Div } from 'basedesign-iswad';
 
 import AppImage from '@/baseComponents/ReusableComps/AppImage';
 
-import Logo from '@/images/js-Images/general/Header/WideLogo.png';
-import Robot from '@/images/js-Images/general/Header/robot.png';
+import Logo from '@/images/js-Images/general/Header/ISWAD-WideLogo.png';
+import Robot from '@/images/js-Images/general/Header/ISWAD-robot.png';
 
 import styles from '../SideBarDashboard.module.scss';
 
