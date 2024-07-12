@@ -91,7 +91,12 @@ const ImgSlider = ({
                 hAlign="center"
                 className={cx('text-white of-hidden pos-rel br-rad-3xl of-hidden')}
                 style={{ width: parentWidth }}>
-                <AppImage src={item?.src} width={parentWidth} heightOverWidthAsprctRatio={1} />
+                <AppImage
+                  src={item?.src}
+                  width={parentWidth}
+                  heightOverWidthAsprctRatio={1}
+                  alt={item?.imgAlt}
+                />
               </Div>
             ))}
           </ResponsiveSwipeableSlider>

@@ -8,7 +8,7 @@ import Text from '@/baseComponents/ReusableComps/Text';
 
 import styles from '../Card.module.scss';
 
-const AboutTeam = ({ src, name, role, description }) => {
+const AboutTeam = ({ src, name, role, description, imgAlt = 'Tema Member ISWAD' }) => {
   const [containerWidth, setContainerWidth] = useState(0);
   return (
     <>
@@ -21,7 +21,12 @@ const AboutTeam = ({ src, name, role, description }) => {
               vAlign="center"
               className="width-per-100 br-rad-per-50 of-hidden br-all-solid-3 br-theme-one max-width-px-200 m-l-auto m-r-auto"
               setContainerWidth={setContainerWidth}>
-              <AppImage src={src} width={containerWidth} heightOverWidthAsprctRatio={1} />
+              <AppImage
+                src={src}
+                width={containerWidth}
+                heightOverWidthAsprctRatio={1}
+                alt={imgAlt}
+              />
             </DivWidthDynamic>
 
             <Div className="m-t-temp-7 f-b one-line">{name}</Div>

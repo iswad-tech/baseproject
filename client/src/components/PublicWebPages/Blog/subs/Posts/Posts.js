@@ -21,6 +21,7 @@ const Posts = ({ curBlogs, currentPage, setCurrentPage, numberOfPages }) => {
             <Card
               type={CARD_TYPES.blogInfo}
               src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${item?.preview_photo}`}
+              imgAlt={item?.img_alt || 'ISWAS Blog'}
               writer={item?.writer?.user?.first_name}
               postDate={moment(item?.created_at).format(DATE_FORMAT)}
               title={item?.title}

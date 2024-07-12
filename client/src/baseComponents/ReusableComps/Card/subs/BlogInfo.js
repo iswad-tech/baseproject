@@ -16,12 +16,13 @@ const BlogInfo = ({
   title,
   description,
   moreInfoUrl,
-  isAdminPage = false
+  isAdminPage = false,
+  imgAlt = 'Blog ISWAD'
 }) => {
   return (
     <>
       <Div className="width-per-100 bg-white br-rad-3xl of-hidden box-shadow-type-one">
-        <AppImage src={src} heightOverWidthAsprctRatio={0.5} />
+        <AppImage src={src} heightOverWidthAsprctRatio={0.5} alt={imgAlt} />
         <Div className="p-all-temp-7">
           <Div>
             {writer} | {postDate}

@@ -23,6 +23,7 @@ const Team = () => {
                 <Card
                   type={CARD_TYPES.aboutTeam}
                   src={item?.src}
+                  imgAlt={item?.imgAlt}
                   name={item?.name}
                   role={item?.role}
                   description={item?.description}

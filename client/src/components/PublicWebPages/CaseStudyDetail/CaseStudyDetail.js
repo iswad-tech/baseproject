@@ -15,7 +15,11 @@ import styles from './CaseStudyDetail.module.scss';
 const CaseStudyDetail = ({ caseStudy }) => {
   return (
     <>
-      {caseStudy?.detailSrc ? <Hero src={caseStudy?.detailSrc} title={caseStudy?.title} /> : ''}
+      {caseStudy?.detailSrc ? (
+        <Hero src={caseStudy?.detailSrc} title={caseStudy?.title} imgAlt={caseStudy?.imgAlt} />
+      ) : (
+        ''
+      )}
       <Description scopes={caseStudy?.scopes} />
       <Div className="m-y-temp-7 width-px-200 m-l-auto m-r-auto">
         <Anchor to={PAGE_ROUTES.CASE_STUDIES} anchorType={ANCHOR_TYPES.noEffect}>

@@ -31,6 +31,7 @@ const KnowUs = () => {
                 src={Img}
                 width={containerWidth}
                 className={cx('', containerWidth >= 800 ? 'm-all-temp-7 br-rad-3xl' : '')}
+                alt="About Us ISWAD"
               />
             </Column>
             <Column xs={12} sm={12} md={6} lg={6}>

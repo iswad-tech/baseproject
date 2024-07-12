@@ -14,6 +14,7 @@ const AppDevelopment = () => {
     <>
       <ServiceTemplate
         src={HeroImg}
+        imgAlt="App Development ISWAD By ISWAD"
         title="Custom Web & Mobile App Development"
         description="Build powerful and scalable web and mobile applications tailored to your business needs."
         steps={STEPS}

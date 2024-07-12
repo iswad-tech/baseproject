@@ -7,14 +7,19 @@ import AppImage from '@/baseComponents/ReusableComps/AppImage';
 
 import styles from './Hero.module.scss';
 
-const Hero = ({ src, title }) => {
+const Hero = ({ src, title, imgAlt = '' }) => {
   const [containerWidth, setContainerWidth] = useState(0);
   return (
     <>
       <DivWidthDynamic
         setContainerWidth={setContainerWidth}
         className={cx('global-container pos-rel', containerWidth > 800 ? 'p-all-temp-7' : '')}>
-        <AppImage src={src} height={500} className={cx(containerWidth > 800 ? 'br-rad-3xl' : '')} />
+        <AppImage
+          src={src}
+          height={500}
+          className={cx(containerWidth > 800 ? 'br-rad-3xl' : '')}
+          alt={imgAlt}
+        />
         <Div
           type="flex"
           hAlign="center"

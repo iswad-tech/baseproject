@@ -59,12 +59,12 @@ const MobileHeader = ({ changesThePage, headerColorType, isAppPage }) => {
                 hAlign="center"
                 vAlign="center"
                 className={cx('pos-rel height-header width-px-100 m-l-16')}>
-                <AppImage src={Logo} objectFit="contain" width={100} />
+                <AppImage src={Logo} objectFit="contain" width={100} alt="ISWAD Logo" />
               </Div>
             </Div>
           ) : (
             <Div type="flex" hAlign="start" vAlign="center" className={cx('pos-rel height-heade')}>
-              <AppImage src={Robot} objectFit="contain" width={40} />
+              <AppImage src={Robot} objectFit="contain" width={40} alt="ISWAD Robo Logo" />
             </Div>
           )}
         </Div>

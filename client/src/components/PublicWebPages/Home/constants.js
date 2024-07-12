@@ -24,26 +24,31 @@ export const HERO_SERVICES = [
 export const HERO_ITEMS = [
   {
     src: HERO_VARIANT_1,
+    imgAlt: 'MVP Development ISWAD by ISWAD',
     title: 'MVP Development',
     text: "With ISWAD fast-track your product's journey from concept to market with our agile MVP Development services."
   },
   {
     src: HERO_VARIANT_2,
+    imgAlt: 'Web Development ISWAD by ISWAD',
     title: 'Web Development & Branding',
     text: 'Get tailored web and mobile applications with our agile development process. We offer comprehensive solutions including progress tracking and third-party integrations, optimized for SMEs and startups.'
   },
   {
     src: HERO_VARIANT_3,
+    imgAlt: 'App Development ISWAD by ISWAD',
     title: 'Customized App Development',
     text: 'Boost your project with our skilled developers, available for immediate integration into your team. We provide top-tier talent across all tech domains, ideal for enhancing your development capabilities.'
   },
   {
     src: HERO_VARIANT_4,
+    imgAlt: 'Team Augmentation ISWAD by ISWAD',
     title: 'Team Augmentation & Training',
     text: 'Advance your SaaS ventures with our expert consultancy and coaching. We guide entrepreneurs from idea refinement to actionable strategies, supporting the launch and growth of innovative solutions.'
   },
   {
     src: HERO_VARIANT_5,
+    imgAlt: 'Counselling ISWAD by ISWAD',
     title: 'Counseling / Coaching',
     text: 'Achieve your goals and get the exact product you need by utilizing our top-notch product development services.'
   }
@@ -60,7 +65,8 @@ export const SERVICES = [
       'Target Audience: Small to medium-sized businesses and startups seeking cost-effective, efficient development solutions.'
     ],
     icon: PNG_ICON_TYPES.gear,
-    src: Service1
+    src: Service1,
+    imgAlt: 'MVP Development ISWAD by ISWAD'
   },
   {
     id: 1,
@@ -72,7 +78,8 @@ export const SERVICES = [
       'Target Audience: Small to medium-sized businesses and startups seeking tailored development solutions.'
     ],
     icon: PNG_ICON_TYPES.laptop,
-    src: Service2
+    src: Service2,
+    imgAlt: 'App Development ISWAD by ISWAD'
   },
   {
     id: 2,
@@ -84,7 +91,8 @@ export const SERVICES = [
       'Target Audience: Small to medium-sized businesses and startups seeking strategic development support.'
     ],
     icon: PNG_ICON_TYPES.people,
-    src: Service3
+    src: Service3,
+    imgAlt: 'Counselling ISWAD by ISWAD'
   },
   {
     id: 3,
@@ -96,7 +104,8 @@ export const SERVICES = [
       'Target Audience: Small to medium-sized businesses and startups seeking impactful digital presence.'
     ],
     icon: PNG_ICON_TYPES.cup,
-    src: Service4
+    src: Service4,
+    imgAlt: 'Branding ISWAD by ISWAD'
   },
   {
     id: 4,
@@ -108,7 +117,8 @@ export const SERVICES = [
       'Target Audience: Small to medium-sized businesses and startups scaling their development capabilities.'
     ],
     icon: PNG_ICON_TYPES.bracket,
-    src: Service5
+    src: Service5,
+    imgAlt: 'Team Augmentation ISWAD by ISWAD'
   }
 ];
 

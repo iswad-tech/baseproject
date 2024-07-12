@@ -17,7 +17,7 @@ const Index = ({ blog }) => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
       <Seo
-        title={`${blog?.page_alt}`}
+        title={`${blog?.page_title}`}
         description={blog?.meta_description}
         keywords={blog?.meta_keywords}>
         <PageContainer

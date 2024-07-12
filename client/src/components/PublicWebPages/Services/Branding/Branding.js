@@ -14,6 +14,7 @@ const Branding = () => {
     <>
       <ServiceTemplate
         src={HeroImg}
+        imgAlt="Branding ISWAD By ISWAD"
         title="Website Development & Branding"
         description="Crafting unique brand identities and building stunning websites that resonate with your audience."
         steps={STEPS}

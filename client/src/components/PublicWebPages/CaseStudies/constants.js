@@ -6,17 +6,20 @@ export const NEED_HELP_ITEMS = [
   {
     title: 'User Help',
     description: 'Get assistance with template selection and customization. ',
-    src: helpImg1
+    src: helpImg1,
+    imgAlt: 'User Help ISWAD'
   },
   {
     title: 'Ordering',
     description:
       'ISWAD offers a variety of templates with pricing details for easy selection and purchase.',
-    src: helpImg2
+    src: helpImg2,
+    imgAlt: 'Ordering ISWAD'
   },
   {
     title: 'Inquiries',
     description: 'Join a team dedicated to providing top-quality templates and customer service.',
-    src: helpImg3
+    src: helpImg3,
+    imgAlt: 'Inquieries ISWAD'
   }
 ];

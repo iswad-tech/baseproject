@@ -94,7 +94,7 @@ const Hero = ({ contactRef }) => {
                 hAlign="start"
                 className={cx('text-white of-hidden pos-rel')}
                 style={{ width: parentWidth }}>
-                <AppImage src={item?.src} width={parentWidth} />
+                <AppImage src={item?.src} width={parentWidth} alt={item?.imgAlt} />
                 <Div
                   type="flex"
                   vAlign="center"

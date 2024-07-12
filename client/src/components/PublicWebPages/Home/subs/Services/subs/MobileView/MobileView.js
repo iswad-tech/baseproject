@@ -83,6 +83,7 @@ const MobileView = () => {
                 <Card
                   type={CARD_TYPES.homeService}
                   src={item?.src}
+                  imgAlt={item?.imgAlt}
                   title={item?.title}
                   description={item?.description}
                   icon={item?.icon}

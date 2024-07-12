@@ -23,6 +23,7 @@ const NeedHelp = ({ contactRef }) => {
               title={item?.title}
               description={item?.description}
               src={item?.src}
+              imgAlt={item?.imgAlt}
               contactRef={contactRef}
             />
           </Div>

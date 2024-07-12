@@ -14,6 +14,7 @@ const Coaching = () => {
     <>
       <ServiceTemplate
         src={HeroImg}
+        imgAlt="Counselling ISWAD By ISWAD"
         title="Coaching & Advisory Services"
         description="Empower your business with expert coaching and advisory services tailored to your needs."
         steps={STEPS}

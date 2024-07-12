@@ -39,4 +39,4 @@ class BlogSerializer(serializers.ModelSerializer):
                   'excerpt', 'preview_photo', 'preview_photo_from_url',
                   'published_date', 'is_popular', 'created_at', 'updated_at',
                   'labels', 'is_draft', 'is_featured', 'meta_description',
-                  'meta_keywords', 'page_alt']
+                  'meta_keywords', 'page_title', 'img_alt']

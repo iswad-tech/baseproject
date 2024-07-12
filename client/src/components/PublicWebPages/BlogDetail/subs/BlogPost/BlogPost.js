@@ -30,6 +30,7 @@ const BlogPost = ({ blog }) => {
               heightOverWidthAsprctRatio={0.5}
               className={cx(containerWidth >= 800 ? 'br-rad-lg' : '')}
               objectFit="cover"
+              alt={blog?.img_alt || 'ISWAS Blog'}
             />
           </Div>
           <Div className="p-x-temp-7">

@@ -23,6 +23,7 @@ export const CASE_STUDIES = [
       'Admin Dashboard Development, Dashboard Solutions, Custom Dashboards, Data Management, User Experience, Admin Panel Design, Backend Solutions, Dashboard UI/UX, Client Success Story, Efficient Data Handling',
     slug: 'admin-dashboard-development',
     src: admin_dashboard_CARD_IMG,
+    imgAlt: 'Admin Dashboard Development ISWAD By ISWAD',
     isMostPopular: true,
     detailSrc: admin_dashboard_IMG,
     scopes: [
@@ -184,6 +185,7 @@ export const CASE_STUDIES = [
       'MVP Consultancy Services, Product Development, Startup Solutions, MVP Strategy, Lean Development, Early Stage Product, MVP Success, Product Validation, Client Consultancy, Innovation Services',
     slug: 'mvp-consultancy-services',
     src: Consultancy_services_CARD_IMG,
+    imgAlt: 'MVP Consultancy ISWAD By ISWAD',
     isMostPopular: true,
     detailSrc: Consultancy_services_IMG,
     scopes: [
@@ -358,6 +360,7 @@ export const CASE_STUDIES = [
       'SaaS Solution Development, Software as a Service, SaaS Platforms, Cloud Solutions, Scalable Software, SaaS Development, Client SaaS Success, Software Solutions, SaaS Application, Business Growth',
     slug: 'saas-solution-development',
     src: Saas_CARD_IMG,
+    imgAlt: 'Saas Solution Development ISWAD By ISWAD',
     isMostPopular: false,
     detailSrc: Saas_IMG,
     scopes: [
@@ -537,6 +540,7 @@ export const CASE_STUDIES = [
       'E-commerce Platform Development, Online Store Solutions, E-commerce Design, Custom E-commerce, Shopping Cart Solutions, Retail Platform, E-commerce Success, Digital Retail, Customer Experience, E-commerce Optimization',
     slug: 'ecommerce-platform-development',
     src: ecommerce_CARD_IMG,
+    imgAlt: 'Ecommerce Platform Development ISWAD By ISWAD',
     isMostPopular: false,
     detailSrc: ecommerce_IMG,
     scopes: [
@@ -730,6 +734,7 @@ export const CASE_STUDIES = [
       'Mobile Application Development, Custom Mobile Apps, iOS Development, Android Development, App Design, Mobile UX/UI, App Success Story, Cross-Platform Apps, Mobile Innovation, Client Mobile Solutions',
     slug: 'mobile-application-development',
     src: mobile_app_development_CARD_IMG,
+    imgAlt: 'Mobile App Development ISWAD By ISWAD',
     isMostPopular: false,
     detailSrc: mobile_app_development_IMG,
     scopes: [
@@ -902,6 +907,7 @@ export const CASE_STUDIES = [
       'API Integration Services, Seamless API Integration, Custom API Solutions, Third-Party APIs, API Development, System Integration, Enhanced Functionality, Client API Success, Data Connectivity, Efficient Integration',
     slug: 'api-integration-services',
     src: api_integration_CARD_IMG,
+    imgAlt: 'API Integration ISWAD By ISWAD',
     isMostPopular: false,
     detailSrc: api_integration_IMG,
     scopes: [
@@ -1079,6 +1085,7 @@ export const CASE_STUDIES = [
       'Data Analysis, Machine Learning, AI Solutions, Data Insights, Predictive Analytics, ML Algorithms, Client Data Success, Data-Driven Decisions, Advanced Analytics, Business Intelligence',
     slug: 'data-analysis-machine-learning',
     src: data_analysis_machine_learning_CARD_IMG,
+    imgAlt: 'Data Analysis ISWAD By ISWAD',
     isMostPopular: false,
     detailSrc: data_analysis_machine_learning_IMG,
     scopes: [

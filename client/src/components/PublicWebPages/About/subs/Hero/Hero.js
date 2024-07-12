@@ -25,7 +25,7 @@ const Hero = ({ contactRef }) => {
           type="flex"
           hAlign="center"
           className={cx('text-white of-hidden pos-rel width-per-100')}>
-          <AppImage src={HeroImg} width={containerWidth} />
+          <AppImage src={HeroImg} width={containerWidth} alt="About ISWAD" />
           <Div
             type="flex"
             hAlign="center"

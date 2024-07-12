@@ -31,6 +31,7 @@ const Cases = () => {
               type={CARD_TYPES.caseStudy}
               title={item?.title}
               src={item?.src}
+              imgAlt={item?.imgAlt}
               slug={item?.slug}
             />
           </Div>

@@ -14,6 +14,7 @@ const TeamAugmentation = () => {
     <>
       <ServiceTemplate
         src={HeroImg}
+        imgAlt="Team Augmentation ISWAD By ISWAD"
         title="Team Augmentation & Training"
         description="Enhance your team's capabilities with our expert augmentation and training services."
         steps={STEPS}

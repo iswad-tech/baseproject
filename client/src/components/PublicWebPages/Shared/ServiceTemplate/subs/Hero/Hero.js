@@ -12,7 +12,7 @@ import { AUTO_SCROLL_BEHAVIOR } from '@/constants/vars';
 
 import styles from './Hero.module.scss';
 
-const Hero = ({ src, title, description, contactRef }) => {
+const Hero = ({ src, title, description, contactRef, imgAlt = 'Services By ISWAD' }) => {
   const [containerWidth, setContainerWidth] = useState(0);
 
   return (
@@ -24,7 +24,7 @@ const Hero = ({ src, title, description, contactRef }) => {
           type="flex"
           hAlign="center"
           className={cx('text-white of-hidden pos-rel width-per-100')}>
-          <AppImage src={src} width={containerWidth} />
+          <AppImage src={src} width={containerWidth} alt={imgAlt} />
           <Div
             type="flex"
             hAlign="center"

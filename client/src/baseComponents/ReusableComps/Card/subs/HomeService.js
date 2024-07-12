@@ -8,11 +8,11 @@ import PngIcon from '@/baseComponents/ReusableComps/PngIcon';
 
 import styles from '../Card.module.scss';
 
-const HomeService = ({ src, title, description, icon }) => {
+const HomeService = ({ src, title, description, icon, imgAlt = 'ISWAD' }) => {
   return (
     <>
       <Div className="width-per-100 bg-white br-rad-3xl of-hidden box-shadow-type-one br-all-solid-2 br-theme-two height-px-900">
-        <AppImage src={src} heightOverWidthAsprctRatio={0.7} />
+        <AppImage src={src} heightOverWidthAsprctRatio={0.7} alt={imgAlt} />
         <Div className="p-all-temp-7">
           <Div type="flex" vAlign="center">
             <Div

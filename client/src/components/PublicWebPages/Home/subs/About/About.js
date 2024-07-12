@@ -26,7 +26,7 @@ const About = () => {
             empower both startups and established businesses.
           </Paragraph>
           <Div>
-            <AppImage src={AboutImg} heightOverWidthAsprctRatio={278 / 846} />
+            <AppImage src={AboutImg} heightOverWidthAsprctRatio={278 / 846} alt={'About ISWAD'} />
           </Div>
 
           <Div type="flex" distributedBetween className="flex--wrap width-per-100">

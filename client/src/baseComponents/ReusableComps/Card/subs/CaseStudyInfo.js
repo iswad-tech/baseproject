@@ -12,7 +12,13 @@ import { BUTTON_TYPES, ANCHOR_TYPES } from '@/constants/devDesignVars';
 
 import styles from '../Card.module.scss';
 
-const CaseStudyInfo = ({ title = '', description = '', src = '', contactRef = null }) => {
+const CaseStudyInfo = ({
+  title = '',
+  description = '',
+  src = '',
+  contactRef = null,
+  imgAlt = 'Case Study By ISWAD'
+}) => {
   const [containerWidth, setContainerWidth] = useState(0);
 
   return (
@@ -36,6 +42,7 @@ const CaseStudyInfo = ({ title = '', description = '', src = '', contactRef = nu
             width={containerWidth < 800 ? containerWidth : (containerWidth * 50) / 100}
             heightOverWidthAsprctRatio={0.7}
             objectFit="cover"
+            alt={imgAlt}
           />
         </Div>
         <Div className={cx(containerWidth < 800 ? 'width-per-100' : 'p-l-temp-7 width-per-50')}>

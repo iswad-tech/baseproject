@@ -29,6 +29,7 @@ const LatestRead = ({ featuredBlogs }) => {
                 src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
                 heightOverWidthAsprctRatio={0.5}
                 className="global-add-br-rad-in-desktop"
+                alt={featuredBlogs?.[0]?.img_alt || 'ISWAS Blog'}
               />
             </Div>
           </Column>

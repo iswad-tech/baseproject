@@ -14,6 +14,7 @@ const MvpDevelopment = () => {
     <>
       <ServiceTemplate
         src={HeroImg}
+        imgAlt="MVP Development ISWAD By ISWAD"
         title="MVP Development"
         description="Turn your idea into a market-ready product with our comprehensive MVP development services."
         steps={STEPS}
