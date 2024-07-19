@@ -12,15 +12,15 @@ import { GOOGLE_AUTH_URL } from '@/constants/vars';
 
 import styles from './GoogleAuth.module.scss';
 
-const GoogleAuth = () => {
+const GoogleAuth = ({ children }) => {
   return (
     <>
-      <Div>
+      <Div className="width-per-100">
         <SocialAuth
           socialAuthTokenApiRoute={GOOGLE_AUTH_TOKEN_API_ROUTE}
           socialAuthHandleTokenApiRoute={GOOGLE_AUTH_HANDLE_TOKEN_API_ROUTE}
           socialAuthUrl={GOOGLE_AUTH_URL}>
-          Continue With Google
+          {children}
         </SocialAuth>
       </Div>
     </>

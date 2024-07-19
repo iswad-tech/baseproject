@@ -13,34 +13,24 @@ import useApiCalls from '@/hooks/useApiCalls';
 import { REGISTER_API_ROUTE, RESEND_ACTIVATE_EMAIL_API_ROUTE } from '@/constants/apiRoutes';
 import { USER_GROUPS } from '@/constants/userGroups';
 import { addAlertItem } from '@/utils/notifications';
+import { PAGE_ROUTES } from '@/constants/vars';
 
+import { validateForm } from './utils';
 import styles from './RegisterComponent.module.scss';
-
-import {
-  firstNameValidators,
-  lastNameValidators,
-  emailValidators,
-  passwordValidators
-} from './utils';
 
 const RegisterComponent = () => {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.isAuthenticated);
 
   const [firstName, setFirstName] = useState('');
-  const [fistNameErrorMessage, setFirstNameErrorMessage] = useState('');
 
   const [lastName, setLastName] = useState('');
-  const [lastNameErrorMessage, setLastNameErrorMessage] = useState('');
 
   const [email, setEmail] = useState('');
-  const [emailErrorMessage, setEmailErrorMessage] = useState('');
 
   const [password, setPassword] = useState('');
-  const [passwordErrorMessage, setPasswordErrorMessage] = useState('');
 
   const [userCaptchaCode, setUserCaptchaCode] = useState('');
-  const [userCaptchaCodeErrorMessage, setUserCaptchaCodeErrorMessage] = useState('');
   const [captchaCode, setCaptchaCode] = useState('');
   const [captchaUUID, setCaptchaUUID] = useState('');
 
@@ -48,32 +38,9 @@ const RegisterComponent = () => {
 
   useEffect(() => {
     if (isAuthenticated?.authenticated) {
-      Router.push('/');
+      Router.push(PAGE_ROUTES.DASHBOARD);
     }
   }, [isAuthenticated]);
-
-  const toBeValidatedFields = [
-    {
-      input_name: 'first_name',
-      validators: firstNameValidators,
-      errorMessageHandler: setFirstNameErrorMessage
-    },
-    {
-      input_name: 'last_name',
-      validators: lastNameValidators,
-      errorMessageHandler: setLastNameErrorMessage
-    },
-    {
-      input_name: 'email',
-      validators: emailValidators,
-      errorMessageHandler: setEmailErrorMessage
-    },
-    {
-      input_name: 'password',
-      validators: passwordValidators,
-      errorMessageHandler: setPasswordErrorMessage
-    }
-  ];
 
   const [sendRegisterReq, setSendRegisterReq] = useState(false);
   const bodyData = {
@@ -81,7 +48,7 @@ const RegisterComponent = () => {
     last_name: lastName,
     email: email.toLowerCase(),
     password,
-    group_names: [USER_GROUPS.SUBSCRIBER],
+    group_names: [USER_GROUPS.CLIENT],
     captcha_uuid: captchaUUID,
     user_captcha_code: userCaptchaCode
   };
@@ -118,102 +85,98 @@ const RegisterComponent = () => {
     }
   }, [resendData]);
 
-  const customValidations = () => {
-    let validated = true;
-    if (!userCaptchaCode) {
-      setUserCaptchaCodeErrorMessage('Captcha is required');
-      validated = false;
-    }
-
-    if (userCaptchaCode !== captchaCode) {
-      setUserCaptchaCodeErrorMessage('Captcha code is incorrect');
-      validated = false;
-    }
-
-    return validated;
-  };
-
-  const handleSubmit = () => {
-    if (customValidations()) {
-      setSendRegisterReq(true);
-    }
-  };
-
   return (
     <>
       {isAuthenticated?.isChecked && (
         <Form
           className="textWhite py1"
-          toBeValidatedFields={toBeValidatedFields}
-          onSubmit={handleSubmit}>
-          <TextBox
-            type="text"
-            name="first_name"
-            isRequired
-            labelText="First Name"
-            placeholder=""
-            val={firstName}
-            setVal={setFirstName}
-            errorMessage={fistNameErrorMessage}
-            errorHandler={setFirstNameErrorMessage}
-            id="loginFirstName"
-          />
-          <TextBox
-            type="text"
-            name="last_name"
-            isRequired
-            labelText="Last Name"
-            placeholder=""
-            val={lastName}
-            setVal={setLastName}
-            errorMessage={lastNameErrorMessage}
-            errorHandler={setLastNameErrorMessage}
-            id="loginLastName"
-          />
-          <TextBox
-            type="text"
-            name="email"
-            isRequired
-            labelText="Email"
-            placeholder=""
-            val={email}
-            setVal={setEmail}
-            errorMessage={emailErrorMessage}
-            errorHandler={setEmailErrorMessage}
-            id="loginEmail"
-          />
-          <TextBox
-            type="password"
-            name="password"
-            placeholder=""
-            labelText="Password"
-            isRequired
-            val={password}
-            setVal={setPassword}
-            errorMessage={passwordErrorMessage}
-            errorHandler={setPasswordErrorMessage}
-            id="loginPassword"
-          />
-          <Captcha
-            userCaptchaCode={userCaptchaCode}
-            setUserCaptchaCode={setUserCaptchaCode}
-            userCaptchaCodeErrorMessage={userCaptchaCodeErrorMessage}
-            setUserCaptchaCodeErrorMessage={setUserCaptchaCodeErrorMessage}
-            captchaCode={captchaCode}
-            setCaptchaCode={setCaptchaCode}
-            setCaptchaUUID={setCaptchaUUID}
-          />
+          onSubmit={() => {
+            if (
+              validateForm(
+                dispatch,
+                firstName,
+                lastName,
+                email,
+                password,
+                userCaptchaCode,
+                captchaCode
+              )
+            ) {
+              setSendRegisterReq(true);
+            }
+          }}>
+          <Div className="m-b-16">
+            <TextBox
+              type="text"
+              name="first_name"
+              isRequired
+              labelText="First Name"
+              placeholder=""
+              val={firstName}
+              setVal={setFirstName}
+              id="registerFirstName"
+              hasMarginBottom={false}
+            />
+          </Div>
+          <Div className="m-b-16">
+            <TextBox
+              type="text"
+              name="last_name"
+              isRequired
+              labelText="Last Name"
+              placeholder=""
+              val={lastName}
+              setVal={setLastName}
+              id="registerLastName"
+              hasMarginBottom={false}
+            />
+          </Div>
+          <Div className="m-b-16">
+            <TextBox
+              type="text"
+              name="email"
+              isRequired
+              labelText="Email"
+              placeholder=""
+              val={email}
+              setVal={setEmail}
+              id="registerEmail"
+              hasMarginBottom={false}
+            />
+          </Div>
+          <Div className="m-b-16">
+            <TextBox
+              type="password"
+              name="password"
+              placeholder=""
+              labelText="Password"
+              isRequired
+              val={password}
+              setVal={setPassword}
+              id="registerPassword"
+              hasMarginBottom={false}
+            />
+          </Div>
+          <Div>
+            <Captcha
+              userCaptchaCode={userCaptchaCode}
+              setUserCaptchaCode={setUserCaptchaCode}
+              captchaCode={captchaCode}
+              setCaptchaCode={setCaptchaCode}
+              setCaptchaUUID={setCaptchaUUID}
+            />
+          </Div>
           <Div type="flex" hAlign="center">
-            <Button id="registerSubmit" className="width-px-200" type="submit">
+            <Button id="registerSubmit" className="width-per-100" type="submit">
               Register
             </Button>
           </Div>
         </Form>
       )}
       {submitted && (
-        <Div type="flex" hAlign="center" className="width-per-100">
+        <Div type="flex" hAlign="center" className="width-per-100 m-t-16">
           <Button
-            className="width-px-200 flex flex--jc--center flex--ai--center"
+            className="width-per-100 flex flex--jc--center flex--ai--center"
             onClick={() => setSendResendEmailReq(true)}>
             <Div className={cx('ml1', styles.iconContainer)}>
               <Icon type="rotate" color="white" />

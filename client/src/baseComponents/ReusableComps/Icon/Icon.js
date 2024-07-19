@@ -37,7 +37,8 @@ import {
   faGear,
   faRightFromBracket,
   faNewspaper,
-  faCloudArrowUp
+  faCloudArrowUp,
+  faEye
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram, faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
@@ -170,7 +171,8 @@ function Icon({
     ),
     newspaper: (
       <FontAwesomeIcon icon={faNewspaper} style={{ color, width, transform: `scale(${scale})` }} />
-    )
+    ),
+    eye: <FontAwesomeIcon icon={faEye} style={{ color, width, transform: `scale(${scale})` }} />
   };
 
   iconTypes['dashboard'] = (

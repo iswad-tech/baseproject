@@ -8,6 +8,7 @@ import DivMinFullHeight from '@/baseComponents/ReusableComps/DivMinFullHeight';
 
 import { USER_GROUPS } from '@/constants/userGroups';
 import { isLoading, isLoaded } from '@/reducers/general/loading';
+import { PAGE_ROUTES } from '@/constants/vars';
 
 import styles from '../RoleBasedRoute.module.scss';
 
@@ -46,16 +47,17 @@ const AllowedGroupRoute = ({ allowedGroup, children }) => {
 
   useEffect(() => {
     if (isChecked && !isAllowedUser) {
-      let currentTime = time;
-      if (time > 0) {
-        setTimeout(() => {
-          currentTime -= 1;
-          setTime(currentTime);
-        }, 1000);
-      }
-      if (time === 0) {
-        Router.push('/test-pages/login');
-      }
+      // let currentTime = time;
+      // if (time > 0) {
+      //   setTimeout(() => {
+      //     currentTime -= 1;
+      //     setTime(currentTime);
+      //   }, 1000);
+      // }
+      // if (time === 0) {
+      //   Router.push(PAGE_ROUTES.LOGIN);
+      // }
+      Router.push(PAGE_ROUTES.LOGIN);
     }
   }, [isChecked, isAllowedUser, time]);
 
@@ -69,10 +71,10 @@ const AllowedGroupRoute = ({ allowedGroup, children }) => {
           hAlign="center"
           vAlign="center"
           className="">
-          <Div className="p4 bgRed textWhite br-rad-px-10">
+          {/* <Div className="p4 bgRed textWhite br-rad-px-10">
             <Paragraph className="mb2"> The content of this page is private</Paragraph>
             <Paragraph>You will be redirected to home page in {time}s</Paragraph>
-          </Div>
+          </Div> */}
         </DivMinFullHeight>
       ) : (
         ''

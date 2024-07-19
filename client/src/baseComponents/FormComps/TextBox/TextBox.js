@@ -5,6 +5,8 @@ import { Div, Input as BaseInput } from 'basedesign-iswad';
 import Label from '@/baseComponents/FormComps/Label';
 import Icon from '@/baseComponents/ReusableComps/Icon';
 
+import { COLORS } from '@/constants/vars';
+
 import styles from './TextBox.module.scss';
 
 const TextBox = ({
@@ -39,7 +41,7 @@ const TextBox = ({
               'width-per-100 p-y-16 p-x-8 br-none',
               hasBoxShadow && 'box-shadow-type-one',
               hasBorderRadius && 'br-rad-px-8',
-              type === 'password' && 'p-x-24',
+              type === 'password' && 'p-r-24',
               styles.input,
               inputFieldClassName
             )}
@@ -75,7 +77,7 @@ const TextBox = ({
                 hAlign="center"
                 vAlign="center"
                 className={cx('mouse-hand width-px-20 height-px-30 pos-abs z-1000')}
-                style={{ top: '28px', left: '4px' }}
+                style={{ top: '28px', right: '4px' }}
                 onClick={() => {
                   if (curType === 'password') {
                     setCurType('text');
@@ -83,7 +85,7 @@ const TextBox = ({
                     setCurType('password');
                   }
                 }}>
-                <Icon type="dashboard" color="black" width={'14'} />
+                <Icon type="eye" color={COLORS['gray-dark']} width={'14'} />
               </Div>
               {curType !== 'password' && <div className={cx(styles.lineThrough)}></div>}
             </>

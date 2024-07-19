@@ -7,13 +7,16 @@ import Router from 'next/router';
 import TextBox from '@/baseComponents/FormComps/TextBox';
 import Button from '@/baseComponents/ReusableComps/Button';
 import SingleCheckBox from '@/baseComponents/FormComps/SingleCheckBox';
+import Anchor from '@/baseComponents/ReusableComps/Anchor';
 
 import useApiCalls from '@/hooks/useApiCalls';
-import { emailValidators, passwordValidators } from './utils';
+import { validateForm } from './utils';
 import { loginUser } from '@/utils/auth';
 import { LOGIN_API_ROUTE } from '@/constants/apiRoutes';
+import { PAGE_ROUTES } from '@/constants/vars';
 
 import styles from './LoginComponent.module.scss';
+import { ANCHOR_TYPES } from '@/constants/devDesignVars';
 
 const LoginComponent = () => {
   const dispatch = useDispatch();
@@ -21,29 +24,14 @@ const LoginComponent = () => {
   const userIPInfo = useSelector((state) => state.userIPInfo);
 
   const [email, setEmail] = useState('');
-  const [emailErrorMessage, setEmailErrorMessage] = useState('');
 
   const [password, setPassword] = useState('');
-  const [passwordErrorMessage, setPasswordErrorMessage] = useState('');
 
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
 
-  const toBeValidatedFields = [
-    {
-      input_name: 'email',
-      validators: emailValidators,
-      errorMessageHandler: setEmailErrorMessage
-    },
-    {
-      input_name: 'password',
-      validators: passwordValidators,
-      errorMessageHandler: setPasswordErrorMessage
-    }
-  ];
-
   useEffect(() => {
     if (isAuthenticated?.authenticated) {
-      Router.push('/');
+      Router.push(PAGE_ROUTES.DASHBOARD);
     }
   }, [isAuthenticated]);
 
@@ -72,40 +60,58 @@ const LoginComponent = () => {
     <>
       {isAuthenticated?.isChecked && (
         <Form
-          className="textWhite py1 flex flex--jc--center flex--dir--col ml-auto mr-auto width-per-100"
-          toBeValidatedFields={toBeValidatedFields}
-          onSubmit={() => setSendLoginReq(true)}>
-          <TextBox
-            type="text"
-            name="email"
-            labelText="Email"
-            placeholder=""
-            isRequired
-            val={email}
-            setVal={setEmail}
-            errorMessage={emailErrorMessage}
-            errorHandler={setEmailErrorMessage}
-            id="loginEmail"
-          />
-          <TextBox
-            type="password"
-            name="password"
-            labelText="Password"
-            placeholder=""
-            isRequired
-            val={password}
-            setVal={setPassword}
-            errorMessage={passwordErrorMessage}
-            errorHandler={setPasswordErrorMessage}
-            id="loginPassword"
-          />
-          <SingleCheckBox
-            labelText="Keep me logged in"
-            selected={keepLoggedIn}
-            setSelected={setKeepLoggedIn}
-          />
-          <Div type="flex" hAlign="center">
-            <Button className="width-px-200" type="submit" id="loginButton">
+          className="width-per-100"
+          onSubmit={() => {
+            if (validateForm(dispatch, email, password)) {
+              setSendLoginReq(true);
+            }
+          }}>
+          <Div className="m-b-16">
+            <TextBox
+              type="text"
+              name="email"
+              labelText="Email"
+              placeholder="Enter Email"
+              isRequired
+              val={email}
+              setVal={setEmail}
+              hasMarginBottom={false}
+              id="loginEmail"
+            />
+          </Div>
+          <Div className="m-b-16">
+            <TextBox
+              type="password"
+              name="password"
+              labelText="Password"
+              placeholder="Enter Password"
+              isRequired
+              val={password}
+              setVal={setPassword}
+              id="loginPassword"
+              hasMarginBottom={false}
+            />
+          </Div>
+          <Div type="flex" distributedBetween>
+            <Div>
+              <SingleCheckBox
+                labelText="Remember me"
+                selected={keepLoggedIn}
+                setSelected={setKeepLoggedIn}
+                hasMarginBottom={false}
+              />
+            </Div>
+            <Div className="fs-px-12 text-theme-one">
+              <Anchor
+                anchorType={ANCHOR_TYPES.noEffect}
+                to={PAGE_ROUTES.FORGOT_PASSWORD}
+                className="text-theme-one">
+                Forgot password?
+              </Anchor>
+            </Div>
+          </Div>
+          <Div type="flex" hAlign="center" className="m-t-8">
+            <Button className="width-per-100" type="submit" id="loginButton">
               Login
             </Button>
           </Div>

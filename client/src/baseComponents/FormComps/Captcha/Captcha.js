@@ -13,8 +13,6 @@ import styles from './Captcha.module.scss';
 const Captcha = ({
   userCaptchaCode,
   setUserCaptchaCode,
-  userCaptchaCodeErrorMessage,
-  setUserCaptchaCodeErrorMessage,
   captchaCode,
   setCaptchaCode,
   setCaptchaUUID
@@ -58,12 +56,10 @@ const Captcha = ({
 
   return (
     <>
-      <Div
-        type="flex"
-        hAlign="center"
-        vAlign="center"
-        className="width-per-100 max-width-px-200 bgWhite height-px-80 textBlack ml-auto mr-auto mb1 captcha">
-        <Div>{captchaCode}</Div>
+      <Div type="flex" hAlign="center" vAlign="center">
+        <Div className="p-all-16 bg-white text-black m-l-auto m-r-auto m-b-8 global-captcha box-shadow-type-one">
+          {captchaCode}
+        </Div>
       </Div>
       <Div type="flex" hAlign="center" vAlign="center" className="text-center fs-px-12 textBlack">
         <Div className="pl1 mouse-hand" onClick={() => setSendUpdateReq(true)}>
@@ -81,8 +77,6 @@ const Captcha = ({
         isRequired
         val={userCaptchaCode}
         setVal={setUserCaptchaCode}
-        errorMessage={userCaptchaCodeErrorMessage}
-        errorHandler={setUserCaptchaCodeErrorMessage}
         id="captchaTextBox"
       />
     </>

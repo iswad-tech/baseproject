@@ -10,6 +10,7 @@ import useApiCalls from '@/hooks/useApiCalls';
 import { ACTIVATE_USER_API_ROUTE } from '@/constants/apiRoutes';
 import { addAlertItem } from '@/utils/notifications';
 import { loginUser } from '@/utils/auth';
+import { PAGE_ROUTES } from '@/constants/vars';
 
 import styles from './ActivateUser.module.scss';
 
@@ -20,7 +21,7 @@ const ActivateUser = () => {
 
   useEffect(() => {
     if (isAuthenticated?.isChecked && isAuthenticated?.authenticated) {
-      Router.push('/');
+      Router.push(PAGE_ROUTES.LOGIN);
     }
   }, [isAuthenticated]);
 
@@ -64,7 +65,7 @@ const ActivateUser = () => {
           'Sorry, we are unable to activate your registration. That might be because your token has been expired.',
           'error'
         );
-        Router.push('/test-pages/register');
+        Router.push(PAGE_ROUTES.REGISTER);
       }
     }
   }, [token]);

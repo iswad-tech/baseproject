@@ -13,7 +13,8 @@ import { IS_STAGING_ENV } from 'config';
 
 const Index = () => {
   return (
-    <RoleBasedRoute hasAccessRole={[USER_GROUPS.APP_ADMIN, USER_GROUPS.BLOG_WRITER]}>
+    <RoleBasedRoute
+      hasAccessRole={[USER_GROUPS.APP_ADMIN, USER_GROUPS.BLOG_WRITER, USER_GROUPS.CLIENT]}>
       <Seo>
         <PageContainer
           pageIdentifier="dashboard"

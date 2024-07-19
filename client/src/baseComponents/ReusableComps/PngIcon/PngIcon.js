@@ -20,6 +20,7 @@ import Quality1 from '@/images/js-Images/icons/png/Quality1.png';
 import Quality2 from '@/images/js-Images/icons/png/Quality2.png';
 import Quality3 from '@/images/js-Images/icons/png/Quality3.png';
 import Quality4 from '@/images/js-Images/icons/png/Quality4.png';
+import Google from '@/images/js-Images/icons/png/google.png';
 
 import styles from './PngIcon.module.scss';
 
@@ -48,6 +49,7 @@ const PngIcon = ({ type, width = 50, height = 50 }) => {
         {type === 'Quality2' && <AppImage src={Quality2} alt="Icon ISWAD" />}
         {type === 'Quality3' && <AppImage src={Quality3} alt="Icon ISWAD" />}
         {type === 'Quality4' && <AppImage src={Quality4} alt="Icon ISWAD" />}
+        {type === 'google' && <AppImage src={Google} alt="Icon Google" />}
       </Div>
     </>
   );

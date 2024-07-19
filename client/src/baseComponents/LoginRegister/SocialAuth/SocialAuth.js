@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 
 import useApiCalls from '@/hooks/useApiCalls';
 import { loginUser } from '@/utils/auth';
+import { USER_GROUPS } from '@/constants/userGroups';
 
 import styles from './SocialAuth.module.scss';
 
@@ -58,7 +59,11 @@ const SocialAuth = ({
     }
   }, [data]);
 
-  const bodyProfileData = { access_token: accessToken, id_token: tokenId };
+  const bodyProfileData = {
+    access_token: accessToken,
+    id_token: tokenId,
+    group_names: [USER_GROUPS.CLIENT]
+  };
 
   const { data: profileData, error: profileError } = useApiCalls({
     sendReq: sendGetProfileReq,

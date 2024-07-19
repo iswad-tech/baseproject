@@ -1,28 +1,21 @@
 import React from 'react';
-import cx from 'classnames';
-import { Div } from 'basedesign-iswad';
 
-import PublicRoute from '@/components/RouteHandlers/PublicRoute';
 import RoleBasedRoute from '@/components/RouteHandlers/RoleBasedRoute';
 import Seo from '@/components/PageWrappers/Seo';
 import PageContainer from '@/components/PageWrappers/PageContainer';
-import Home from '@/components/PublicWebPages/Home';
-import LoginComponent from '@/baseComponents/LoginRegister/LoginComponent';
-
-import { USER_GROUPS } from '@/constants/userGroups';
-import { IS_STAGING_ENV } from 'config';
+import Login from '@/components/AppPages/Login';
 
 const Index = () => {
   return (
     <RoleBasedRoute hasAccessRole={['Public']}>
       <Seo>
         <PageContainer
-          pageIdentifier="home"
-          hasHeader={true}
-          hasFooter={true}
+          pageIdentifier="login"
+          hasHeader={false}
+          hasFooter={false}
           hasStickyHeader={false}
           hasStickyFooter={false}>
-          <LoginComponent />
+          <Login />
         </PageContainer>
       </Seo>
     </RoleBasedRoute>

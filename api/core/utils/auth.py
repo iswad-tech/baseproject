@@ -29,7 +29,10 @@ def isSubscriber(user):
 
 def oauthHandleToken(request, authGetProfileUrl, first_name_key="given_name", last_name_key="family_name"):
     access_token = f"Bearer {request.data.get('access_token')}"
-    headers = {"Content-Type": "application/json", "Authorization": access_token}
+    headers = {"Content-Type": "application/json",
+               "Authorization": access_token}
+    group_names = request.data.get("group_names", [])
+    print(group_names)
     try:
         res = requests.get(authGetProfileUrl, headers=headers)
         user_data = json.loads(res.content)
@@ -43,16 +46,19 @@ def oauthHandleToken(request, authGetProfileUrl, first_name_key="given_name", la
             first_name = user_data.get(first_name_key)
             last_name = user_data.get(last_name_key)
             # Register User
-            cur_user = User(first_name=first_name, last_name=last_name, email=email)
+            cur_user = User(first_name=first_name,
+                            last_name=last_name, email=email)
             cur_user.is_active = True
             cur_user.save()
             # Create profile for the new registered user
             profile = ProfileModel()
             profile.user = cur_user
             profile.save()
-            subscriber_group = Group.objects.filter(name="Subscriber").first()
-            if subscriber_group:
-                subscriber_group.user_set.add(cur_user)
+            for group_name in group_names:
+                print(group_name)
+                user_group = Group.objects.filter(name=group_name).first()
+                if user_group:
+                    user_group.user_set.add(cur_user)
             # Generate access and refresh tokens to login the user
             cur_user_access_token = AccessToken.for_user(cur_user)
             cur_user_refresh_token = RefreshToken.for_user(cur_user)
@@ -74,7 +80,8 @@ def is_access_token_valid(token):
     try:
         access_token = AccessToken(token)
         expiration_timestamp = access_token.payload['exp']
-        expiration_datetime_utc = datetime.fromtimestamp(expiration_timestamp, timezone.utc)
+        expiration_datetime_utc = datetime.fromtimestamp(
+            expiration_timestamp, timezone.utc)
         if expiration_datetime_utc >= datetime.now(timezone.utc):
             return True
         else:
@@ -87,7 +94,8 @@ def is_refresh_token_valid(token):
     try:
         refresh_token = RefreshToken(token)
         expiration_timestamp = refresh_token.payload['exp']
-        expiration_datetime_utc = datetime.fromtimestamp(expiration_timestamp, timezone.utc)
+        expiration_datetime_utc = datetime.fromtimestamp(
+            expiration_timestamp, timezone.utc)
         if expiration_datetime_utc >= datetime.now(timezone.utc):
             return True
         else:

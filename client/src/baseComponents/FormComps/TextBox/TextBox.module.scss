@@ -11,15 +11,15 @@
 .icon {
   position: absolute;
   top: 46px;
-  left: 6px;
+  right: 6px;
 }
 
 .lineThrough {
   position: absolute;
-  top: 35px;
-  left: 12px;
-  height: 18px;
-  background-color: black;
+  top: 33px;
+  right: 13px;
+  height: 20px;
+  background-color: map-get($colors, 'gray-dark');
   width: 2px;
   transform: rotate(45deg);
 }

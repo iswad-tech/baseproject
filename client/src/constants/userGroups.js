@@ -2,5 +2,6 @@ export const USER_GROUPS = {
   APP_ADMIN: 'Admin',
   SUBSCRIBER: 'Subscriber',
   DEVELOPER: 'Developer',
-  BLOG_WRITER: 'BlogWriter'
+  BLOG_WRITER: 'BlogWriter',
+  CLIENT: 'Client'
 };

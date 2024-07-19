@@ -20,7 +20,7 @@ const Alert = () => {
     <>
       <BaseAlert
         className={cx(
-          'AlertContainerZIndex pos-fix pos-fix--rt min-width-per-50 max-width-per-80'
+          'AlertContainerZIndex pos-fix pos-fix--rt min-width-per-50 max-width-per-80 m-l-16'
         )}>
         {notifications.map((notif) => (
           <AlertItem
@@ -36,29 +36,31 @@ const Alert = () => {
             activeClassName={cx(styles.itemIsActive)}>
             <Div className="width-per-100" type="flex" distributedBetween>
               <Div type="flex" vAlign="center" className="p-all-16 width-per-100">
-                <Div
-                  type="flex"
-                  hAlign="center"
-                  vAlign="center"
-                  className={cx(
-                    'width-px-50 height-px-50 br-rad-per-50 br-all-solid-3',
-                    notif?.type === 'success' ? 'br-success-two' : 'br-warning-two'
-                  )}>
-                  <Icon
-                    type={
-                      notif?.type === 'success'
-                        ? LIST_OF_ICONS['check']
-                        : notif?.type === 'error'
-                        ? LIST_OF_ICONS['close']
-                        : LIST_OF_ICONS['close']
-                    }
-                    scale={2}
-                    color={
-                      notif?.type === 'success' ? COLORS['success-two'] : COLORS['warning-two']
-                    }
-                  />
+                <Div className="width-px-50">
+                  <Div
+                    type="flex"
+                    hAlign="center"
+                    vAlign="center"
+                    className={cx(
+                      'width-px-50 height-px-50 br-rad-per-50 br-all-solid-3',
+                      notif?.type === 'success' ? 'br-success-two' : 'br-warning-two'
+                    )}>
+                    <Icon
+                      type={
+                        notif?.type === 'success'
+                          ? LIST_OF_ICONS['check']
+                          : notif?.type === 'error'
+                          ? LIST_OF_ICONS['close']
+                          : LIST_OF_ICONS['close']
+                      }
+                      scale={2}
+                      color={
+                        notif?.type === 'success' ? COLORS['success-two'] : COLORS['warning-two']
+                      }
+                    />
+                  </Div>
                 </Div>
-                <Div className="m-l-16">
+                <Div className="m-l-16 width-per-100">
                   <Div className="global-font-title f-b text-large">
                     {notif?.type === 'success' ? 'Success!' : ''}
                     {notif?.type === 'warning' ? 'Warning!' : ''}

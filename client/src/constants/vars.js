@@ -21,7 +21,7 @@ const GOOGLE_AUTH_BASE_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
 export const GOOGLE_AUTH_SCOPE_PROFILE_URL = 'https://www.googleapis.com/auth/userinfo.profile';
 export const GOOGLE_AUTH_SCOPE_EMAIL_URL = 'https://www.googleapis.com/auth/userinfo.email';
 const GOOGLE_AUTH_SCOPE_OPEN_ID = 'openid';
-const GOOGLE_AUTH_REDIRECT_URL = 'http://localhost/login';
+const GOOGLE_AUTH_REDIRECT_URL = 'https://makeclient.ngrok.io/app/login';
 export const GOOGLE_AUTH_URL = `${GOOGLE_AUTH_BASE_URL}?scope=${GOOGLE_AUTH_SCOPE_PROFILE_URL} ${GOOGLE_AUTH_SCOPE_EMAIL_URL} ${GOOGLE_AUTH_SCOPE_OPEN_ID}&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=${GOOGLE_AUTH_REDIRECT_URL}&client_id=${GOOGLE_AUTH_CLIENT_ID}`;
 
 // ------------------------- Microsoft Auth -------------------------
@@ -67,10 +67,14 @@ export const PAGE_ROUTES = {
   OUR_SERVICES_MVP_DEVELOPMENT: '/our-services/mvp-development',
   OUR_SERVICES_TEAM_AUGMENTATION: '/our-services/team-augmentation',
   OUR_SERVICES_WEB_APP_DEVELOPMENT: '/our-services/web-app-development',
-  OUR_MISSION: 'our-mission',
-  CAREERS: 'careers',
-  FAQ: 'faq',
-  TERMS: 'terms-and-conditions',
+  OUR_MISSION: '/our-mission',
+  CAREERS: '/careers',
+  FAQ: '/faq',
+  TERMS: '/terms-and-conditions',
+  LOGIN: '/app/login',
+  REGISTER: '/app/register',
+  ACTIVATE_USER: '/app/activate-user',
+  FORGOT_PASSWORD: '/app/forgot-password',
   DASHBOARD: '/app',
   ADMIN_BLOGS: '/app/admin-pages/admin-blogs',
   ADMIN_CREATE_BLOG: '/app/admin-pages/create-blog'

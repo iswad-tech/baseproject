@@ -34,7 +34,7 @@ const CheckBox = ({
         {labelText && (
           <Div
             className={cx(
-              'text-gray f-s-small',
+              'text-gray-dark f-s-small',
               direction === 'horizontal' && 'm-r-8',
               direction === 'vertical' && 'm-b-8'
             )}>
@@ -45,11 +45,9 @@ const CheckBox = ({
           type="flex"
           hAlign="center"
           vAlign="start"
-          className={cx(
-            'mouse-hand m-r-8 br-all-solid-2 br-gray width-px-20 height-px-20 box-shadow-type-one br-rad-px-5'
-          )}
+          className={cx('mouse-hand m-r-8 br-all-solid-1 br-gray-dark width-px-20 height-px-20')}
           onClick={onBoxClick}>
-          {checked && <Icon type="dashboard" color={COLORS['theme-one']} />}
+          {checked && <Icon type="check" color={COLORS['gray-dark']} />}
         </Div>
       </Div>
     </>
