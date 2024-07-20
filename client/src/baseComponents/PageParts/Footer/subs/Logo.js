@@ -15,7 +15,7 @@ const Logo = () => {
         <Div className="width-px-50 height-px-50">
           <AppImage src={Favicon} alt="Logo ISWAD" />
         </Div>
-        <Div className="m-l-8">Intelligent System Web App Development</Div>
+        <Div className="m-l-8 m-r-8 max-width-px-250">Intelligent System Web App Development</Div>
       </Div>
     </>
   );

@@ -1,9 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import dynamic from 'next/dynamic';
 
 import { store } from '@/root/src/store';
 
-import BaseTemplate from '@/baseComponents/PageParts/BaseTemplate';
+const BaseTemplate = dynamic(() => import('@/baseComponents/PageParts/BaseTemplate'), {
+  ssr: false
+});
 
 import 'basedesign-iswad/dist/styles.min.css';
 import '@/styles/main.scss';

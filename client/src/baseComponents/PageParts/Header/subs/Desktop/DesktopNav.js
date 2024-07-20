@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import { Div, NavBar, NavItem, SubNavContainer, SubNavItem } from 'basedesign-iswad';
+import { Div, NavBar, NavItem, SubNavItem } from 'basedesign-iswad';
+import dynamic from 'next/dynamic';
 
-import Icon from '@/baseComponents/ReusableComps/Icon';
-import HeightTransitionEffect from '@/baseComponents/ReusableComps/HeightTransitionEffect';
-import Button from '@/baseComponents/ReusableComps/Button';
+const Icon = dynamic(() => import('@/baseComponents/ReusableComps/Icon'));
+const HeightTransitionEffect = dynamic(() =>
+  import('@/baseComponents/ReusableComps/HeightTransitionEffect')
+);
 
 import { MENU_ITEMS, SUB_MENU_ITEMS } from '@/constants/menuItems';
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
-import { AUTO_SCROLL_BEHAVIOR, COLORS } from '@/constants/vars';
+import { AUTO_SCROLL_BEHAVIOR } from '@/constants/vars';
 import { LIST_OF_ICONS } from '@/constants/devDesignVars';
 
 import styles from '../../Header.module.scss';

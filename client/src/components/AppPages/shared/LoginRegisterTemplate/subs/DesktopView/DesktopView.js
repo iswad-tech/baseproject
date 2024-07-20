@@ -13,7 +13,7 @@ const DesktopView = ({ children }) => {
   return (
     <>
       <Div type="flex" className="bg-white box-shadow-type-one width-per-100">
-        <AppImage src={CoverPhoto} objectFit="cover" />
+        <Div className={cx('width-per-50', styles.imgContainer)} />
 
         <Div
           type="flex"

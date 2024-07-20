@@ -27,7 +27,7 @@ const BlogInfo = ({ ...props }) => {
           title="Blog Post Title Here"
           description={`Description of blog post will go here. Description of blog post will go here.
             Description of blog post will go here. Description of blog post will go here.`}
-          moreInfoUrl="/"
+          moreInfoUrl=""
         />
       </Div>
     </>

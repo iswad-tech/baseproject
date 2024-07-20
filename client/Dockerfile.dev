@@ -1,4 +1,4 @@
-FROM node:17.3.0-alpine3.14
+FROM node:18.20.4-alpine3.20
 LABEL Developer = "Moahammad Mahdi Mohajer"
 
 WORKDIR /usr/src/app

@@ -3,16 +3,19 @@ import cx from 'classnames';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Div, MobNav, MobNavItem, MobSubNavItem } from 'basedesign-iswad';
+import dynamic from 'next/dynamic';
 
-import HeightTransitionEffect from '@/baseComponents/ReusableComps/HeightTransitionEffect';
-import Icon from '@/baseComponents/ReusableComps/Icon';
-import AllPageClickable from '@/baseComponents/ReusableComps/AllPageClickable';
+const HeightTransitionEffect = dynamic(() =>
+  import('@/baseComponents/ReusableComps/HeightTransitionEffect')
+);
+const Icon = dynamic(() => import('@/baseComponents/ReusableComps/Icon'));
+const AllPageClickable = dynamic(() => import('@/baseComponents/ReusableComps/AllPageClickable'));
 
 import { MENU_ITEMS, SUB_MENU_ITEMS } from '@/constants/menuItems';
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
 import { hideMobileNav } from '@/reducers/general/mobileNavIsActive';
-import { AUTO_SCROLL_BEHAVIOR, COLORS } from '@/constants/vars';
+import { AUTO_SCROLL_BEHAVIOR } from '@/constants/vars';
 import { LIST_OF_ICONS } from '@/constants/devDesignVars';
 
 import styles from '../../Header.module.scss';
@@ -65,7 +68,7 @@ const MobileNav = ({ changesThePage = true, isAppPage }) => {
                       homePageElements[item.identifier]?.scrollIntoView(AUTO_SCROLL_BEHAVIOR);
                     }
                   } else {
-                    const localHoveredSubMenu = [...hoveredSubMenu];
+                    let localHoveredSubMenu = [...hoveredSubMenu];
                     if (localHoveredSubMenu?.includes(item.identifier)) {
                       localHoveredSubMenu = localHoveredSubMenu.filter(
                         (menu) => menu !== item.identifier

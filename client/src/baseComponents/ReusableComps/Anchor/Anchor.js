@@ -17,7 +17,7 @@ const Anchor = ({
   return (
     <>
       {internal && (
-        <Link href={to} {...props}>
+        <Link href={to} {...props} legacyBehavior>
           <a
             className={cx(
               'mouse-hand',

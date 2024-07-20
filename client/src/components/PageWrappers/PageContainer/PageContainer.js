@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import cx from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
-import { Div } from 'basedesign-iswad';
+import Div from 'basedesign-iswad/dist/components/Div';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
 
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
@@ -13,13 +14,23 @@ import { smDesignSize, lgDesignSize } from '@/constants/vars';
 import Header from '@/baseComponents/PageParts/Header';
 import Footer from '@/baseComponents/PageParts/Footer';
 import DivMinFullHeight from '@/baseComponents/ReusableComps/DivMinFullHeight';
-import SideBarDashboard from '@/baseComponents/PageParts/SideBarDashboard';
-import FooterNavigation from '@/baseComponents/PageParts/FooterNavigation';
-import ScrollToTop from '@/baseComponents/PageParts/ScrollToTop';
-import AdminToolbar from '@/baseComponents/PageParts/AdminToolbar';
-import UserNav from '@/baseComponents/PageParts/UserNav';
 
-import { USER_GROUPS } from '@/constants/userGroups';
+const SideBarDashboard = dynamic(() => import('@/baseComponents/PageParts/SideBarDashboard'), {
+  ssr: false
+});
+const FooterNavigation = dynamic(() => import('@/baseComponents/PageParts/FooterNavigation'), {
+  ssr: false
+});
+const ScrollToTop = dynamic(() => import('@/baseComponents/PageParts/ScrollToTop'), {
+  ssr: false
+});
+const AdminToolbar = dynamic(() => import('@/baseComponents/PageParts/AdminToolbar'), {
+  ssr: false
+});
+const UserNav = dynamic(() => import('@/baseComponents/PageParts/UserNav'), {
+  ssr: false
+});
+
 import { setCurUserGroup } from '@/reducers/general/curUserGroup';
 
 import styles from './PageContainer.module.scss';

@@ -29,8 +29,8 @@ export const GOOGLE_ANALYTICS_ID = !publicRuntimeConfig.PRODUCTION
   ? process.env.GOOGLE_ANALYTICS_ID_DEVELOPMENT
   : process.env.GOOGLE_ANALYTICS_ID_PRODUCTION;
 export const USE_GOOGLE_ANALYTICS = !publicRuntimeConfig.PRODUCTION
-  ? process.env.USE_GOOGLE_ANALYTICS_IN_DEVELOPMENT
-  : process.env.USE_GOOGLE_ANALYTICS_IN_PRODUCTION;
+  ? process.env.USE_GOOGLE_ANALYTICS_IN_DEVELOPMENT === 'true'
+  : process.env.USE_GOOGLE_ANALYTICS_IN_PRODUCTION === 'true';
 export const TINY_CME_API_KEY = !publicRuntimeConfig.PRODUCTION
   ? process.env.TINY_CME_API_KEY_DEVELOPMENT
   : process.env.TINY_CME_API_KEY_PRODUCTION;
@@ -38,12 +38,16 @@ export const IP_INFO_TOKEN = !publicRuntimeConfig.PRODUCTION
   ? process.env.IP_INFO_TOKEN_DEVELOPMENT
   : process.env.IP_INFO_TOKEN_PRODUCTION;
 export const USE_GET_IP_INFO_TOKEN = !publicRuntimeConfig.PRODUCTION
-  ? process.env.USE_GET_IP_INFO_TOKEN_DEVELOPMENT
-  : process.env.USE_GET_IP_INFO_TOKEN_PRODUCTION;
+  ? process.env.USE_GET_IP_INFO_TOKEN_DEVELOPMENT === 'true'
+  : process.env.USE_GET_IP_INFO_TOKEN_PRODUCTION === 'true';
 export const USE_HOTJAR = !publicRuntimeConfig.PRODUCTION
-  ? process.env.USE_HOTJAR_DEVELOPMENT
-  : process.env.USE_HOTJAR_PRODUCTION;
+  ? process.env.USE_HOTJAR_DEVELOPMENT === 'true'
+  : process.env.USE_HOTJAR_PRODUCTION === 'true';
 export const HOTJAR_ID = !publicRuntimeConfig.PRODUCTION
   ? process.env.HOTJAR_ID_DEVELOPMENT
   : process.env.HOTJAR_ID_PRODUCTION;
-export const IS_STAGING_ENV = !publicRuntimeConfig.PRODUCTION ? 0 : process.env.IS_STAGING_ENV;
+export const IS_STAGING_ENV = !publicRuntimeConfig.PRODUCTION
+  ? 0
+  : process.env.IS_STAGING_ENV === 'true'
+  ? 1
+  : 0;

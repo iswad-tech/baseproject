@@ -1,9 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
+import dynamic from 'next/dynamic';
 
 import Anchor from '@/baseComponents/ReusableComps/Anchor';
-import PngIcon from '@/baseComponents/ReusableComps/PngIcon';
+const PngIcon = dynamic(() => import('@/baseComponents/ReusableComps/PngIcon'));
 
 import { ANCHOR_TYPES } from '@/constants/devDesignVars';
 

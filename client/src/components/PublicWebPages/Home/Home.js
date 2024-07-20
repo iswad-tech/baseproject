@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
+import dynamic from 'next/dynamic';
 
-import Insights from '@/components/PublicWebPages/Shared/Insights';
+// import Insights from '@/components/PublicWebPages/Shared/Insights';
 import Contact from '@/components/PublicWebPages/Shared/Contact';
 
 import Hero from './subs/Hero';
@@ -10,7 +11,6 @@ import About from './subs/About';
 import Services from './subs/Services';
 import Unique from './subs/Unique';
 import styles from './Home.module.scss';
-import Anchor from '@/baseComponents/ReusableComps/Anchor';
 
 const Home = () => {
   const contactRef = useRef();

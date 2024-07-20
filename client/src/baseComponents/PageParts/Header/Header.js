@@ -2,14 +2,13 @@ import React from 'react';
 import cx from 'classnames';
 import { useSelector } from 'react-redux';
 import { Div } from 'basedesign-iswad';
+import dynamic from 'next/dynamic';
 
-import { lgDesignSize, smDesignSize } from '@/constants/vars';
-
-import MobileHeader from './subs/Mobile/MobileHeader';
 import DesktopHeader from './subs/Desktop/DesktopHeader';
+const MobileHeader = dynamic(() => import('./subs/Mobile/MobileHeader'));
 import styles from './Header.module.scss';
 
-const Header = ({ hasStickyHeader, changesThePage = true, headerColorType, isAppPage }) => {
+const Header = ({ hasStickyHeader, changesThePage = true, isAppPage }) => {
   const scrollPosition = useSelector((state) => state.scrollPosition);
 
   return (

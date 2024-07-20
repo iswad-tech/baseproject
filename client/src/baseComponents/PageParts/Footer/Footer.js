@@ -1,9 +1,9 @@
 import React from 'react';
-import cx from 'classnames';
 import { Div, Row, Column } from 'basedesign-iswad';
+import dynamic from 'next/dynamic';
 
-import Logo from './subs/Logo';
-import Company from './subs/Company';
+const Logo = dynamic(() => import('./subs/Logo'));
+const Company = dynamic(() => import('./subs/Company'));
 import LearnMore from './subs/LearnMore';
 import Contact from './subs/Contact';
 import Follow from './subs/Follow';

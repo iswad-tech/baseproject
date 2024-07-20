@@ -32,9 +32,11 @@ const AppImage = ({
         <Image
           width={width ? width : containerWidth}
           height={height ? height : containerWidth * heightOverWidthAsprctRatio}
-          objectFit={objectFit}
           {...props}
           onLoad={() => setLoading(false)}
+          style={{
+            objectFit: objectFit
+          }}
         />
 
         {loading && (

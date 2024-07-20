@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import { Div, HamburgerIcon } from 'basedesign-iswad';
+import { Div } from 'basedesign-iswad';
+import dynamic from 'next/dynamic';
+const HamburgerIcon = dynamic(() => import('basedesign-iswad').then((mod) => mod.HamburgerIcon), {
+  ssr: false
+});
 
-import AppImage from '@/baseComponents/ReusableComps/AppImage';
-import Button from '@/baseComponents/ReusableComps/Button';
+const AppImage = dynamic(() => import('@/baseComponents/ReusableComps/AppImage'));
 
 import { setActiveMenu } from '@/reducers/general/activeMenu';
 import { setActiveSubMenu } from '@/reducers/general/activeSubMenu';
@@ -16,7 +19,7 @@ import Robot from '@/images/js-Images/general/Header/ISWAD-robot.png';
 
 import { HAMBURGER_CONFIG } from '../../constants';
 import MobileNav from './MobileNav';
-import AppUser from '../AppUser';
+const AppUser = dynamic(() => import('../AppUser'));
 import styles from '../../Header.module.scss';
 
 const MobileHeader = ({ changesThePage, headerColorType, isAppPage }) => {
