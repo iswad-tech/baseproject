@@ -4,9 +4,7 @@ import dynamic from 'next/dynamic';
 
 import { store } from '@/root/src/store';
 
-const BaseTemplate = dynamic(() => import('@/baseComponents/PageParts/BaseTemplate'), {
-  ssr: false
-});
+import BaseTemplate from '@/baseComponents/PageParts/BaseTemplate';
 
 import 'basedesign-iswad/dist/styles.min.css';
 import '@/styles/main.scss';

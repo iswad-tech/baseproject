@@ -1,15 +1,17 @@
 import React from 'react';
 
+import RoleBasedRoute from '@/components/RouteHandlers/RoleBasedRoute';
 import Seo from '@/components/PageWrappers/Seo';
 import PageContainer from '@/components/PageWrappers/PageContainer';
 import Home from '@/components/PublicWebPages/Home';
 
+import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV } from 'config';
 
 const Index = () => {
   return (
     <>
-      {!IS_STAGING_ENV ? (
+      <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
         <Seo
           title={`Home | ISWAD`}
           description="Discover cutting-edge MVP development with ISWAD Tech. We specialize in creating cost-effective, user-centric web and mobile applications for startups and SMEs. Accelerate your time-to-market, minimize risks, and ensure continuous improvement with our expert solutions. Unlock your business potential today."
@@ -23,9 +25,7 @@ const Index = () => {
             <Home />
           </PageContainer>
         </Seo>
-      ) : (
-        ''
-      )}
+      </RoleBasedRoute>
     </>
   );
 };
