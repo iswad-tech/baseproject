@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import DivWidthDynamic from '../DivWidthDynamic';
 

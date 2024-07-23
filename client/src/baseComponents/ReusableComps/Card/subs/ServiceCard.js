@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { Div, Card, CardHeader, CardBody, CardFooter } from 'basedesign-iswad';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import styles from '../Card.module.scss';
 
