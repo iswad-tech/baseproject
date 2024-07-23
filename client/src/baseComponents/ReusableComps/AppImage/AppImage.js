@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 import DivWidthDynamic from '../DivWidthDynamic';
 
@@ -34,9 +34,10 @@ const AppImage = ({
           height={height ? height : containerWidth * heightOverWidthAsprctRatio}
           {...props}
           onLoad={() => setLoading(false)}
-          style={{
-            objectFit: objectFit
-          }}
+          // style={{
+          //   objectFit: objectFit
+          // }}
+          objectFit={objectFit}
         />
 
         {loading && (

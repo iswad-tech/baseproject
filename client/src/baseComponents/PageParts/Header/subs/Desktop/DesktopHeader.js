@@ -44,7 +44,7 @@ const DesktopHeader = ({ changesThePage, isAppPage }) => {
             hAlign="center"
             vAlign="center"
             className={cx('pos-rel height-header width-px-100')}>
-            <AppImage src={Logo} objectFit="contain" width={100} alt="ISWAD Logo" />
+            <AppImage src={Logo} objectFit="contain" width={100} height={40} alt="ISWAD Logo" />
           </Div>
         ) : (
           ''
