@@ -100,3 +100,19 @@ FACEBOOK_AUTH_CLIENT_SECRET = os.environ.get(
 FACEBOOK_OAUTH_REDIRECT_URI = os.environ.get(
     'FACEBOOK_OAUTH_REDIRECT_URI', 'FACEBOOK_OAUTH_REDIRECT_URI_CODE')
 # -----------------------------------------------------------
+
+# ----------------------- SMTP SERVER -----------------------
+USE_ACTUAL_SMTP_SERVER = os.environ.get(
+    'USE_ACTUAL_SMTP_SERVER', 0)
+if USE_ACTUAL_SMTP_SERVER:
+    from sendgrid import SendGridAPIClient
+    SG_SMTP = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+    USE_REAL_EMAIL_ADDRESSES = os.environ.get("USE_REAL_EMAIL_ADDRESSES", 0)
+    RECEIVER_EMAIL_FOR_TEST = os.environ.get(
+        "RECEIVER_EMAIL_FOR_TEST", "RECEIVER_EMAIL_FOR_TEST")
+    EMAIL_ADDRESSES_FOR_TESTING = os.environ.get(
+        'EMAIL_ADDRESSES_FOR_TESTING', '').split(',')
+
+# ----------------------- GENERAL -----------------------
+CLIENT_URL = os.environ.get(
+    "CLIENT_URL", "CLIENT_URL")

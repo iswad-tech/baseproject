@@ -1,6 +1,8 @@
 from django.conf import settings
 
 from core.utils import PDF
+from core.utils.email_handler import send_email
+from core.helpers.sendgrid_templates import SG_TEMPLATE_IDS
 
 data = [
     ["First name", "Last name", "Age", "City", ],  # 'testing','size'],
@@ -33,7 +35,8 @@ def create_pdf():
     pdf.print_chapter(1, "What is Lorem?", 1, ch1_link)
     pdf.print_chapter(2, "Why Lorem?", 1, ch2_link)
     pdf.add_page()
-    pdf.image(f"{settings.STATIC_ROOT}/app_static_files/test_img.jpg", x=-0.5, w=pdf.w + 1)
+    pdf.image(
+        f"{settings.STATIC_ROOT}/app_static_files/test_img.jpg", x=-0.5, w=pdf.w + 1)
     pdf.cell(0, 10, 'Text Source', ln=True, link=web_url)
     pdf.cell(0, 10, 'Chapter 1', ln=True, link=ch1_link)
     pdf.cell(0, 10, 'Chapter 2', ln=True, link=ch2_link)
@@ -86,3 +89,13 @@ def create_pdf():
     # for i in range(1, 41):
     #     pdf.cell(0, 10, f'This is line {i} :D', ln=True, border=False)
     pdf.output(f"{settings.MEDIA_ROOT}/pdfs/pdf_1.pdf")
+
+
+def send_email_test():
+    pass
+    vote_template_id = SG_TEMPLATE_IDS["VERIFY_YOUR_REGISTRATION"]
+    params = {}
+    params["first_name"] = "Mohammad Mohajer"
+    params["activate_link"] = f"https://makeclient.ngrok.io/app/activate-user?token=1234"
+    send_email(
+        "admin@iswad.tech", params, vote_template_id, "contact_form_sent")

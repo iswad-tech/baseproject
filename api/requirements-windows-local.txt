@@ -39,3 +39,4 @@ exponent_server_sdk
 rsa
 cryptography
 bleach
+sendgrid

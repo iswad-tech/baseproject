@@ -20,7 +20,8 @@ def remove_old_unsuccessful_login_attempts():
 
 
 def get_automatic_payment_for_subscribers():
-    payment_methods = stripe.PaymentMethod.list(customer="cus_MjaTP9lSZXxH5L", type="card")
+    payment_methods = stripe.PaymentMethod.list(
+        customer="cus_MjaTP9lSZXxH5L", type="card")
     print(payment_methods)
     return
 
@@ -29,7 +30,8 @@ def make_automatic_payment_for_subscribers():
     customer_id = "cus_MjaTP9lSZXxH5L"
     payment_method_id = "pm_1M07IXBjlQ77ZngHdlV0wKW9"
     # See all available payment methods
-    payment_methods = stripe.PaymentMethod.list(customer=customer_id, type="card")
+    payment_methods = stripe.PaymentMethod.list(
+        customer=customer_id, type="card")
     print(payment_methods)
     try:
         payment = stripe.PaymentIntent.create(
@@ -46,7 +48,8 @@ def make_automatic_payment_for_subscribers():
 
 def create_charge_for_customer():
     try:
-        charge = stripe.Charge.create(amount=2000, currency="cad", customer="cus_MjaTP9lSZXxH5L")
+        charge = stripe.Charge.create(
+            amount=2000, currency="cad", customer="cus_MjaTP9lSZXxH5L")
         print(charge)
     except stripe.error.CardError as e:
         print(e)
@@ -90,6 +93,10 @@ def create_customer_card():
 
 def create_pdf_test():
     create_pdf()
+
+
+def send_email_test():
+    coreUtils.send_email_test()
 
 
 def send_push_message():
