@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "minify-css": "sass ./src/assets/styles/main.scss ./src/assets/styles/styles.css && minify ./src/assets/styles/styles.css > ./src/assets/styles/styles.min.css",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
