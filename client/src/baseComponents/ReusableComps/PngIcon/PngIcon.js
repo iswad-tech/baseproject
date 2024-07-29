@@ -33,23 +33,57 @@ const PngIcon = ({ type, width = 50, height = 50 }) => {
         hAlign="center"
         className="pos-rel of-hidden"
         style={{ width, height }}>
-        {type === 'facebook' && <AppImage src={FacebookIcon} alt="Icon ISWAD" />}
-        {type === 'instagram' && <AppImage src={InstagramIcon} alt="Icon ISWAD" />}
-        {type === 'linkedIn' && <AppImage src={LinkedInIcon} alt="Icon ISWAD" />}
-        {type === 'gear' && <AppImage src={GearIcon} alt="Icon ISWAD" />}
-        {type === 'laptop' && <AppImage src={LaptopIcon} alt="Icon ISWAD" />}
-        {type === 'people' && <AppImage src={PeopleIcon} alt="Icon ISWAD" />}
-        {type === 'bracket' && <AppImage src={BracketIcon} alt="Icon ISWAD" />}
-        {type === 'cup' && <AppImage src={CupIcon} alt="Icon ISWAD" />}
-        {type === 'Unique1' && <AppImage src={Unique1} alt="Icon ISWAD" />}
-        {type === 'Unique2' && <AppImage src={Unique2} alt="Icon ISWAD" />}
-        {type === 'Unique3' && <AppImage src={Unique3} alt="Icon ISWAD" />}
-        {type === 'Unique4' && <AppImage src={Unique4} alt="Icon ISWAD" />}
-        {type === 'Quality1' && <AppImage src={Quality1} alt="Icon ISWAD" />}
-        {type === 'Quality2' && <AppImage src={Quality2} alt="Icon ISWAD" />}
-        {type === 'Quality3' && <AppImage src={Quality3} alt="Icon ISWAD" />}
-        {type === 'Quality4' && <AppImage src={Quality4} alt="Icon ISWAD" />}
-        {type === 'google' && <AppImage src={Google} alt="Icon Google" />}
+        {type === 'facebook' && (
+          <AppImage src={FacebookIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'instagram' && (
+          <AppImage src={InstagramIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'linkedIn' && (
+          <AppImage src={LinkedInIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'gear' && (
+          <AppImage src={GearIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'laptop' && (
+          <AppImage src={LaptopIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'people' && (
+          <AppImage src={PeopleIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'bracket' && (
+          <AppImage src={BracketIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'cup' && (
+          <AppImage src={CupIcon} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Unique1' && (
+          <AppImage src={Unique1} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Unique2' && (
+          <AppImage src={Unique2} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Unique3' && (
+          <AppImage src={Unique3} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Unique4' && (
+          <AppImage src={Unique4} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Quality1' && (
+          <AppImage src={Quality1} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Quality2' && (
+          <AppImage src={Quality2} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Quality3' && (
+          <AppImage src={Quality3} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'Quality4' && (
+          <AppImage src={Quality4} alt="Icon ISWAD" width={width} height={height} />
+        )}
+        {type === 'google' && (
+          <AppImage src={Google} alt="Icon Google" width={width} height={height} />
+        )}
       </Div>
     </>
   );

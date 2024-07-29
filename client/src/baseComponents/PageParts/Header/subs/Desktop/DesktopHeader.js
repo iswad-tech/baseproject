@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { Div } from 'basedesign-iswad';
 import dynamic from 'next/dynamic';
 
-const AppImage = dynamic(() => import('@/baseComponents/ReusableComps/AppImage'));
+import AppImage from '@/baseComponents/ReusableComps/AppImage';
 import Button from '@/baseComponents/ReusableComps/Button';
 import Anchor from '@/baseComponents/ReusableComps/Anchor';
 
@@ -17,7 +17,7 @@ import { MEETING_LINK } from '@/constants/vars';
 import Logo from '@/images/js-Images/general/Header/ISWAD-WideLogo.png';
 
 import DesktopNav from './DesktopNav';
-const AppUser = dynamic(() => import('../AppUser'));
+import AppUser from '../AppUser';
 import styles from '../../Header.module.scss';
 
 const DesktopHeader = ({ changesThePage, isAppPage }) => {

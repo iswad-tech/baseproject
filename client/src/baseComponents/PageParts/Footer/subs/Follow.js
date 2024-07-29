@@ -29,7 +29,7 @@ const Follow = () => {
                 vAlign="center"
                 hAlign="center"
                 className="width-px-40 height-px-40 br-rad-per-50 of-hidden">
-                <PngIcon type={item?.icon} width={40} />
+                <PngIcon type={item?.icon} width={40} height={40} />
               </Div>
               <Div>{item?.value}</Div>
             </Div>

@@ -14,9 +14,13 @@ const Contact = () => {
       <Div className="global-font-title f-b height-px-30">Contact</Div>
       <Div className={cx(styles.heightForText, '')}>
         {CONTACT?.map((item, idx) => (
-          <Div type="flex" vAlign="center" key={idx} className="m-b-8">
-            <Div>
-              <Icon type={item?.icon} color={'white'} />
+          <Div type="flex" vAlign="center" key={idx} className="m-b-8 height-px-30">
+            <Div
+              type="flex"
+              hAlign="center"
+              vAlign="center"
+              className="width-px-20 height-px-30 m-r-8">
+              <Icon type={item?.icon} color={'white'} width={'20px'} height={'20px'} />
             </Div>
             <Div>{item?.value}</Div>
           </Div>
