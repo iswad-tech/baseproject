@@ -1,4 +1,11 @@
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+});
+
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
+module.exports = withBundleAnalyzer({
   eslint: {
     ignoreDuringBuilds: true
   },
@@ -35,11 +42,30 @@ module.exports = {
     IS_STAGING_ENV: 'false'
   },
 
-  webpack(config) {
+  webpack(config, { dev, isServer }) {
+    // Optimize SVG loading
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack']
     });
+
+    // Optimize and minify CSS
+    if (!dev && !isServer) {
+      config.optimization.minimizer.push(new CssMinimizerPlugin({}));
+    }
+
+    // Use TerserPlugin to minify JavaScript
+    if (!dev) {
+      config.optimization.minimizer.push(
+        new TerserPlugin({
+          terserOptions: {
+            compress: {
+              drop_console: true
+            }
+          }
+        })
+      );
+    }
 
     return config;
   },
@@ -47,4 +73,4 @@ module.exports = {
   images: {
     domains: ['localhost', 'makeclient.ngrok.io', 'picsum.photos', 'img.icons8.com']
   }
-};
+});
