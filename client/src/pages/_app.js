@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import dynamic from 'next/dynamic';
 
 import { store } from '@/root/src/store';
 

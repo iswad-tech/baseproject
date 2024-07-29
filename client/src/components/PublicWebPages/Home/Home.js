@@ -35,7 +35,6 @@ const Home = () => {
       <Div ref={(el) => (contactRef.current = el)}>
         <Contact />
       </Div>
-
       {/* <Anchor to="mohimohajer://register">
         <Div className="p-all-16 m-all-16 bg-red height-px-80">Go to App</Div>
       </Anchor>

@@ -14,7 +14,7 @@ const LearnMore = () => {
       <Div className="global-font-title f-b height-px-30">Learn More</Div>
       <Div className={cx(styles.heightForText)}>
         {LEARN_MORE_LINKS?.map((item, idx) => (
-          <Div key={idx} className="m-b-8">
+          <Div type="flex" vAlign="center" key={idx} className="m-b-8 height-px-30">
             <Anchor
               to={item?.url}
               internal

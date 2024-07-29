@@ -11,19 +11,28 @@ import { ANCHOR_TYPES } from '@/constants/devDesignVars';
 const Company = () => {
   return (
     <>
-      <Div className="global-font-title f-b height-px-30">Company</Div>
-      <Div className={cx('', styles.heightForText)}>
-        {COMPANY_LINKS?.map((item, idx) => (
-          <Div key={idx} className="m-b-8">
-            <Anchor
-              to={item?.url}
-              internal
-              anchorType={ANCHOR_TYPES.noEffect}
-              className={'text-white'}>
-              {item?.title}
-            </Anchor>
-          </Div>
-        ))}
+      <Div
+        type="flex"
+        vAlign="center"
+        className="global-font-title f-b height-px-30 width-per-100 height-px-30">
+        Company
+      </Div>
+      <Div className={cx('width-per-100', styles.heightForText)}>
+        {COMPANY_LINKS?.length
+          ? COMPANY_LINKS?.map((item, idx) => (
+              <Div type="flex" key={idx} className="m-b-8">
+                <Anchor
+                  to={item?.url}
+                  internal
+                  anchorType={ANCHOR_TYPES.noEffect}
+                  className={'text-white'}>
+                  <Div type="flex" vAlign="center" className="height-px-30">
+                    {item?.title}
+                  </Div>
+                </Anchor>
+              </Div>
+            ))
+          : ''}
       </Div>
     </>
   );

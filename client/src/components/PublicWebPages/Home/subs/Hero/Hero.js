@@ -66,7 +66,7 @@ const Hero = ({ contactRef }) => {
     <>
       <Div
         ref={(el) => (parentRef.current = el)}
-        className={cx('width-per-100 m-l-auto m-r-auto dir-ltr pos-rel')}>
+        className={cx('width-per-100 m-l-auto m-r-auto dir-ltr pos-rel', styles.container)}>
         {parentWidth ? (
           <ResponsiveSwipeableSlider
             moveRight={moveRight}
@@ -97,16 +97,19 @@ const Hero = ({ contactRef }) => {
                 <AppImage src={item?.src} width={parentWidth} alt={item?.imgAlt} />
                 <Div
                   type="flex"
-                  vAlign="center"
                   direction="vertical"
+                  hAlign="center"
                   className={cx(
                     'pos-abs width-per-100 height-per-100 max-width-px-700',
-                    parentWidth > 800 ? 'p-all-temp-14' : 'p-all-temp-7'
+                    styles.contentContainer
+                    // parentWidth > 800 ? 'p-all-100' : 'p-y-60 p-x-temp-7'
                   )}>
-                  <Heading type={1} className="m-b-temp-7 text-theme-one global-hyphenated">
+                  <Heading
+                    type={1}
+                    className="m-b-temp-7 text-theme-one global-hyphenated width-per-100 text-center">
                     {item?.title}
                   </Heading>
-                  <Paragraph className="m-b-temp-7">{item?.text}</Paragraph>
+                  <Paragraph className="m-b-temp-7 text-center">{item?.text}</Paragraph>
                   <Div className="width-px-300">
                     <Anchor to={MEETING_LINK} internal={false} anchorType={ANCHOR_TYPES.noEffect}>
                       <Button className="height-px-50 f-b f-s-px-18">Start Your Project</Button>
@@ -119,23 +122,35 @@ const Hero = ({ contactRef }) => {
         ) : (
           ''
         )}
-        {parentWidth < 1200 ? (
-          <Div className="pos-abs text-white width-per-100" style={{ bottom: '10px', left: 0 }}>
+
+        <Div
+          className="pos-abs text-white width-per-100 height-px-75"
+          style={{ bottom: '75px', left: 0 }}>
+          <Div
+            type="flex"
+            vAlign="end"
+            className="height-px-75 width-per-100 p-b-20"
+            showIn={['xs', 'sm', 'md']}>
             <MobileButtons
               compActiveIdx={compActiveIdx}
               setMoveToItemWithNum={setMoveToItemWithNum}
               setHandleMoveOnClick={setHandleMoveOnClick}
             />
           </Div>
-        ) : (
-          <Div className="pos-abs text-white width-per-100" style={{ bottom: 0, left: 0 }}>
+        </Div>
+
+        <Div
+          className="pos-abs text-white width-per-100 height-px-75"
+          style={{ bottom: 0, left: 0 }}
+          showIn={['lg']}>
+          <Div className="height-px-75 width-per-100">
             <DesktopButtons
               compActiveIdx={compActiveIdx}
               setMoveToItemWithNum={setMoveToItemWithNum}
               setHandleMoveOnClick={setHandleMoveOnClick}
             />
           </Div>
-        )}
+        </Div>
       </Div>
     </>
   );
