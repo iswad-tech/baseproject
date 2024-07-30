@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 import dynamic from 'next/dynamic';
 
-// import Insights from '@/components/PublicWebPages/Shared/Insights';
+import Insights from '@/components/PublicWebPages/Shared/Insights';
 import Contact from '@/components/PublicWebPages/Shared/Contact';
 
 import Hero from './subs/Hero';
@@ -12,7 +12,7 @@ import Services from './subs/Services';
 import Unique from './subs/Unique';
 import styles from './Home.module.scss';
 
-const Home = () => {
+const Home = ({ popularBlogs }) => {
   const contactRef = useRef();
 
   return (
@@ -29,9 +29,9 @@ const Home = () => {
       <Div>
         <Unique />
       </Div>
-      {/* <Div className="widht-per-100 global-container m-y-100">
-        <Insights />
-      </Div> */}
+      <Div className="widht-per-100 global-container m-y-100">
+        <Insights popularBlogs={popularBlogs} />
+      </Div>
       <Div ref={(el) => (contactRef.current = el)}>
         <Contact />
       </Div>

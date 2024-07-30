@@ -11,7 +11,7 @@ import Qualities from './subs/Qualities';
 import Team from './subs/Team';
 import styles from './About.module.scss';
 
-const About = () => {
+const About = ({ popularBlogs }) => {
   const contactRef = useRef();
 
   return (
@@ -26,9 +26,9 @@ const About = () => {
       <Div>
         <Team />
       </Div>
-      {/* <Div className="widht-per-100 global-container ">
-        <Insights />
-      </Div> */}
+      <Div className="widht-per-100 global-container ">
+        <Insights popularBlogs={popularBlogs} />
+      </Div>
       <Div ref={(el) => (contactRef.current = el)}>
         <Contact />
       </Div>

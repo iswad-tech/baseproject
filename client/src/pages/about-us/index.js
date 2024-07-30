@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
@@ -8,9 +9,10 @@ import WebPageContainer from '@/components/PageWrappers/WebPageContainer';
 import About from '@/components/PublicWebPages/About';
 
 import { USER_GROUPS } from '@/constants/userGroups';
-import { IS_STAGING_ENV } from 'config';
+import { IS_STAGING_ENV, APP_DOMAIN_FOR_SERVER_SIDE_PROPS } from 'config';
+import { BLOG_API_ROUTE } from '@/constants/apiRoutes';
 
-const Index = () => {
+const Index = ({ popularBlogs }) => {
   return (
     <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
       <Seo
@@ -18,11 +20,34 @@ const Index = () => {
         description="Learn about ISWAD Tech, a leading provider of innovative technology solutions. Discover our mission, vision, and values, meet our expert team, and understand our commitment to driving digital transformation and business growth for clients across various industries."
         keywords="About ISWAD Tech, Our Mission, Our Vision, Company Values, Tech Innovators, Our Team, Tech Leadership, Company History, What We Do, Our Story">
         <WebPageContainer pageIdentifier="about-us">
-          <About />
+          <About popularBlogs={popularBlogs} />
         </WebPageContainer>
       </Seo>
     </RoleBasedRoute>
   );
 };
+
+export async function getServerSideProps(context) {
+  const BlogsApiRoute = `${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}${BLOG_API_ROUTE}`;
+
+  let popularBlogs = [];
+
+  try {
+    const popularBlogsData = await axios.get(BlogsApiRoute, {
+      params: {
+        is_popular_posts: 1
+      }
+    });
+    if (popularBlogsData?.data?.blogs) {
+      popularBlogs = popularBlogsData.data.blogs;
+    }
+    return {
+      props: { popularBlogs }
+    };
+  } catch (err) {
+    console.log(err);
+    return { props: { popularBlogs: [] } };
+  }
+}
 
 export default Index;

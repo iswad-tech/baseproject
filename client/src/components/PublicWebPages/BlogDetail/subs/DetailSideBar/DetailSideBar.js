@@ -20,9 +20,9 @@ const DetailSideBar = ({ blog }) => {
         </Div>
 
         <Div className="m-b-temp-7">
-          <Div className="m-b-16 text-theme-one">Published Date:</Div>
+          <Div className="m-b-16 text-theme-one">Updated At:</Div>
           <Div type="flex" className="text-gray-dark">
-            {moment(blog?.created_at).format(DATE_FORMAT)}
+            {moment(blog?.updated_at).format(DATE_FORMAT)}
           </Div>
         </Div>
 
@@ -30,7 +30,7 @@ const DetailSideBar = ({ blog }) => {
           <Div className="m-b-16 text-theme-one">Category:</Div>
           <Div type="flex">
             {blog?.labels?.categories?.map((item, idx) => (
-              <Div key={idx} className="bg-gray-dark text-white p-all-8 br-rad-sm">
+              <Div key={idx} className="bg-gray-dark text-white p-all-8 br-rad-sm m-r-4 m-b-4">
                 {item}
               </Div>
             ))}
@@ -41,7 +41,7 @@ const DetailSideBar = ({ blog }) => {
           <Div className="m-b-16 text-theme-one">Tags:</Div>
           <Div type="flex">
             {blog?.labels?.tags?.map((item, idx) => (
-              <Div key={idx} className="bg-gray-dark text-white p-all-8 br-rad-sm">
+              <Div key={idx} className="bg-gray-dark text-white p-all-8 br-rad-sm m-r-4 m-b-4">
                 {item}
               </Div>
             ))}

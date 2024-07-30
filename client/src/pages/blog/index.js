@@ -34,7 +34,6 @@ const Index = ({ blogs, featuredBlogs, numberOfBlogs, numberOfBlogsInPage }) => 
 
 export async function getServerSideProps(context) {
   const allBlogsApiRoute = `${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}${BLOG_API_ROUTE}`;
-  const featuredBlogsApiRoute = `${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}${BLOG_API_ROUTE}?is_popular_posts=1`;
 
   let blogs = [];
   let featuredBlogs = [];
@@ -46,7 +45,7 @@ export async function getServerSideProps(context) {
     if (allBlogs?.data?.blogs) {
       blogs = allBlogs.data.blogs;
     }
-    const featuredBlogsData = await axios.get(featuredBlogsApiRoute, {
+    const featuredBlogsData = await axios.get(allBlogsApiRoute, {
       params: {
         is_featured: 1
       }
