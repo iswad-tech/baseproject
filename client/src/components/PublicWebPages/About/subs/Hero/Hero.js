@@ -18,20 +18,50 @@ const Hero = ({ contactRef }) => {
 
   return (
     <>
-      <DivWidthDynamic setContainerWidth={setContainerWidth} className="width-per-100">
-        <DivMinFullHeight
-          divHeightIsConst
-          withoutFooter
+      <Div className={cx('width-per-100 pos-rel of-hidden', styles.container)}>
+        <DivWidthDynamic
+          setContainerWidth={setContainerWidth}
           type="flex"
           hAlign="center"
-          className={cx('text-white of-hidden pos-rel width-per-100')}>
+          className={cx('text-white of-hidden width-per-100', styles.container)}>
           <AppImage src={HeroImg} width={containerWidth} alt="About ISWAD" />
-          <Div
+
+          <Div className={cx('pos-abs width-per-100 height-per-100', styles.contentContainer)}>
+            <Div
+              type="flex"
+              direction="vertical"
+              hAlign="center"
+              vAlign="center"
+              className={cx(
+                'max-width-px-700 m-l-auto m-r-auto height-per-100',
+                styles.contentContainerText
+              )}>
+              <Heading
+                type={1}
+                className="m-b-temp-7 text-theme-one global-hyphenated width-per-100 text-center height-px-80">
+                About Us
+              </Heading>
+              <Paragraph className="m-b-temp-7 text-center">
+                At ISWAD (Intelligent System Web App Development), we're dedicated to transforming
+                visions into reality. Here, we provide cutting-edge technology and strategic
+                guidance to empower both startups and established businesses.
+              </Paragraph>
+              <Div className="width-px-300">
+                <Button
+                  className="height-px-50 f-b f-s-px-18"
+                  onClick={() => contactRef?.current?.scrollIntoView(AUTO_SCROLL_BEHAVIOR)}>
+                  Contact Us
+                </Button>
+              </Div>
+            </Div>
+          </Div>
+
+          {/* <Div
             type="flex"
-            hAlign="center"
+            hAlign="start"
             className={cx(
               'width-per-100 pos-abs pos-abs--lt height-per-100 text-white p-y-temp-14 p-x-temp-7',
-              styles.container
+              styles.textContainer
             )}>
             <Div
               type="flex"
@@ -53,9 +83,9 @@ const Hero = ({ contactRef }) => {
                 </Button>
               </Div>
             </Div>
-          </Div>
-        </DivMinFullHeight>
-      </DivWidthDynamic>
+          </Div> */}
+        </DivWidthDynamic>
+      </Div>
     </>
   );
 };

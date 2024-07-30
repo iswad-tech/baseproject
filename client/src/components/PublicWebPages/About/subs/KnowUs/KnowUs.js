@@ -17,7 +17,7 @@ const KnowUs = () => {
     <>
       <Div className="bg-gray-bright width-per-100 p-t-temp-10">
         <DivWidthDynamic setContainerWidth={setContainerWidth} className="global-container">
-          <Heading type={3} className="text-center p-x-temp-7 p-b-temp-10">
+          <Heading type={3} className="text-center p-x-temp-7 p-b-temp-10 height-px-80">
             Get To Know Us
           </Heading>
           <Row>

@@ -3,10 +3,10 @@ import cx from 'classnames';
 import axios from 'axios';
 import { Div } from 'basedesign-iswad';
 
-import PublicRoute from '@/components/RouteHandlers/PublicRoute';
 import RoleBasedRoute from '@/components/RouteHandlers/RoleBasedRoute';
 import Seo from '@/components/PageWrappers/Seo';
-import PageContainer from '@/components/PageWrappers/PageContainer';
+import WebPageContainer from '@/components/PageWrappers/WebPageContainer';
+
 import Blog from '@/components/PublicWebPages/Blog';
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV, APP_DOMAIN_FOR_SERVER_SIDE_PROPS } from 'config';
@@ -19,19 +19,14 @@ const Index = ({ blogs, featuredBlogs, numberOfBlogs, numberOfBlogsInPage }) => 
         title="Blog | ISWAD"
         description="Stay updated with ISWAD Tech's Blog. Discover insights, tips, and industry trends on MVP development, web app creation, branding, and more. Our expert articles provide valuable knowledge to help your business grow and succeed. Explore innovative ideas and solutions with ISWAD Tech today."
         keywords="Tech Blog, Industry Insights, Latest Tech Trends, AI Innovations, Software Development Tips, Tech News, Business Technology, Digital Transformation, Expert Opinions, Innovation Articles">
-        <PageContainer
-          pageIdentifier="blog"
-          hasHeader={true}
-          hasFooter={true}
-          hasStickyHeader={false}
-          hasStickyFooter={false}>
+        <WebPageContainer pageIdentifier="blog">
           <Blog
             blogs={blogs}
             featuredBlogs={featuredBlogs}
             numberOfBlogs={numberOfBlogs}
             numberOfBlogsInPage={numberOfBlogsInPage}
           />
-        </PageContainer>
+        </WebPageContainer>
       </Seo>
     </RoleBasedRoute>
   );

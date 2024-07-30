@@ -2,10 +2,9 @@ import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
-import PublicRoute from '@/components/RouteHandlers/PublicRoute';
 import RoleBasedRoute from '@/components/RouteHandlers/RoleBasedRoute';
 import Seo from '@/components/PageWrappers/Seo';
-import PageContainer from '@/components/PageWrappers/PageContainer';
+import WebPageContainer from '@/components/PageWrappers/WebPageContainer';
 import CaseStudyDetail from '@/components/PublicWebPages/CaseStudyDetail';
 
 import { CASE_STUDIES } from '@/constants/caseStudies';
@@ -20,18 +19,13 @@ const Index = ({ caseStudy }) => {
         title={`${caseStudy?.title} | ISWAD`}
         description={caseStudy?.metaDescription}
         keywords={caseStudy?.metaKeyWords}>
-        <PageContainer
-          pageIdentifier="case-studies"
-          hasHeader={true}
-          hasFooter={true}
-          hasStickyHeader={false}
-          hasStickyFooter={false}>
+        <WebPageContainer pageIdentifier="case-studies">
           {Object.keys(caseStudy)?.length ? (
             <CaseStudyDetail caseStudy={caseStudy} />
           ) : (
             <Div>Not Found</Div>
           )}
-        </PageContainer>
+        </WebPageContainer>
       </Seo>
     </RoleBasedRoute>
   );

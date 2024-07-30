@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cx from 'classnames';
 import axios from 'axios';
 import { Div } from 'basedesign-iswad';
 
-import PublicRoute from '@/components/RouteHandlers/PublicRoute';
 import RoleBasedRoute from '@/components/RouteHandlers/RoleBasedRoute';
 import Seo from '@/components/PageWrappers/Seo';
-import PageContainer from '@/components/PageWrappers/PageContainer';
+import WebPageContainer from '@/components/PageWrappers/WebPageContainer';
 import BlogDetail from '@/components/PublicWebPages/BlogDetail';
 import NotFound from '@/components/PublicWebPages/NotFound';
+
 import { USER_GROUPS } from '@/constants/userGroups';
 import { IS_STAGING_ENV, APP_DOMAIN_FOR_SERVER_SIDE_PROPS } from 'config';
 import { BLOG_DETAIL_API_ROUTE } from '@/constants/apiRoutes';
@@ -20,14 +20,9 @@ const Index = ({ blog }) => {
         title={`${blog?.page_title}`}
         description={blog?.meta_description}
         keywords={blog?.meta_keywords}>
-        <PageContainer
-          pageIdentifier="blog"
-          hasHeader={true}
-          hasFooter={true}
-          hasStickyHeader={false}
-          hasStickyFooter={false}>
+        <WebPageContainer pageIdentifier="blog">
           {blog?.id ? <BlogDetail blog={blog} /> : <NotFound />}
-        </PageContainer>
+        </WebPageContainer>
       </Seo>
     </RoleBasedRoute>
   );

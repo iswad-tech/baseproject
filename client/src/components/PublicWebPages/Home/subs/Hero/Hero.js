@@ -102,7 +102,6 @@ const Hero = ({ contactRef }) => {
                   className={cx(
                     'pos-abs width-per-100 height-per-100 max-width-px-700',
                     styles.contentContainer
-                    // parentWidth > 800 ? 'p-all-100' : 'p-y-60 p-x-temp-7'
                   )}>
                   <Heading
                     type={1}
