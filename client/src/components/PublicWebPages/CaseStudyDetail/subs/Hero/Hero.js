@@ -11,26 +11,29 @@ const Hero = ({ src, title, imgAlt = '' }) => {
   const [containerWidth, setContainerWidth] = useState(0);
   return (
     <>
-      <DivWidthDynamic
-        setContainerWidth={setContainerWidth}
-        className={cx('global-container pos-rel', containerWidth > 800 ? 'p-all-temp-7' : '')}>
-        <AppImage
-          src={src}
-          height={500}
-          className={cx(containerWidth > 800 ? 'br-rad-3xl' : '')}
-          alt={imgAlt}
-        />
-        <Div
-          type="flex"
-          hAlign="center"
-          vAlign="center"
-          className={cx(
-            'pos-abs global-font-title f-s-px-28 br-rad-px-20 f-b pos-abs--center height-px-100',
-            styles.titleContainer
-          )}>
-          {title}
-        </Div>
-      </DivWidthDynamic>
+      <Div className="width-per-100 pos-rel" style={{ height: '560px' }}>
+        <DivWidthDynamic
+          setContainerWidth={setContainerWidth}
+          className={cx('global-container', containerWidth > 800 ? 'p-all-30' : '')}>
+          <AppImage
+            src={src}
+            height={500}
+            width={containerWidth}
+            className={cx(containerWidth > 800 ? 'br-rad-3xl' : '')}
+            alt={imgAlt}
+          />
+          <Div
+            type="flex"
+            hAlign="center"
+            vAlign="center"
+            className={cx(
+              'pos-abs global-font-title f-s-px-28 br-rad-px-20 f-b pos-abs--center height-px-150',
+              styles.titleContainer
+            )}>
+            {title}
+          </Div>
+        </DivWidthDynamic>
+      </Div>
     </>
   );
 };

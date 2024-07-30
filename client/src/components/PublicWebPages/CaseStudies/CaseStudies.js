@@ -13,19 +13,18 @@ const CaseStudies = () => {
   const contactRef = useRef();
   return (
     <>
-      <Div>
-        <Heading type={1} className="m-y-100 p-x-temp-7 text-center">
-          Find a Project That Suits Your Needs
-        </Heading>
-        <Div className="m-y-100 global-container p-x-temp-7">
-          <Cases />
-        </Div>
-        <Div className="m-y-100 m-t-100 global-container p-x-temp-7">
-          <NeedHelp contactRef={contactRef} />
-        </Div>
-        <Div className="m-t-100" ref={(el) => (contactRef.current = el)}>
-          <Contact />
-        </Div>
+      <Heading type={1} className="m-t-100 height-px-200 width-per-100 text-center p-x-16">
+        Find a Project That Suits Your Needs
+      </Heading>
+
+      <Div className="global-container p-x-temp-7">
+        <Cases />
+      </Div>
+      <Div className="m-y-100 m-t-100 global-container p-x-temp-7">
+        <NeedHelp contactRef={contactRef} />
+      </Div>
+      <Div className="m-t-100" ref={(el) => (contactRef.current = el)}>
+        <Contact />
       </Div>
     </>
   );

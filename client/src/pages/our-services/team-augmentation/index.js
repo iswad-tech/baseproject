@@ -17,7 +17,7 @@ const Index = () => {
         title={`Team Augmentation | ISWAD`}
         description="Boost your team's capabilities with ISWAD Tech's Team Augmentation services. Access top talent and expertise to accelerate your projects and achieve your business goals. Flexible and scalable solutions tailored to your needs. Enhance productivity and drive growth with ISWAD Tech."
         keywords="Team Augmentation, Staff Augmentation, IT Staffing, Remote Team, Dedicated Developers, Tech Talent, Agile Team, IT Outsourcing, Flexible Workforce, On-Demand Talent">
-        <WebPageContainer pageIdentifier="our-services">
+        <WebPageContainer pageIdentifier="our-services" pageSubNavIdentifier="team-augmentation">
           <TeamAugmentation />
         </WebPageContainer>
       </Seo>

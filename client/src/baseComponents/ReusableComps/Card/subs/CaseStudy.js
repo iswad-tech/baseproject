@@ -16,11 +16,18 @@ const CaseStudy = ({ title = '', src = '', slug = '/', imgAlt = 'Case Study By I
     <>
       <Div className="width-per-100 bg-white br-rad-3xl of-hidden p-all-temp-7 box-shadow-type-two">
         <Div className="text-black  f-s-px-28 two-lines m-b-temp-7">{title}</Div>
-        <Div className="m-all-temp-2">
-          <AppImage src={src} objectFit="cover" className="br-rad-px-20" alt={imgAlt} />
+        <Div className="m-b-temp-2 width-px-250 height-px-250">
+          <AppImage
+            src={src}
+            objectFit="cover"
+            className="br-rad-px-20"
+            width={250}
+            height={250}
+            alt={imgAlt}
+          />
         </Div>
 
-        <Div>
+        <Div className="">
           <Button onClick={() => router.push(`${PAGE_ROUTES.CASE_STUDIES}/${slug}`)}>View</Button>
         </Div>
       </Div>

@@ -25,7 +25,6 @@ const Hero = ({ contactRef }) => {
           hAlign="center"
           className={cx('text-white of-hidden width-per-100', styles.container)}>
           <AppImage src={HeroImg} width={containerWidth} alt="About ISWAD" />
-
           <Div className={cx('pos-abs width-per-100 height-per-100', styles.contentContainer)}>
             <Div
               type="flex"
@@ -55,35 +54,6 @@ const Hero = ({ contactRef }) => {
               </Div>
             </Div>
           </Div>
-
-          {/* <Div
-            type="flex"
-            hAlign="start"
-            className={cx(
-              'width-per-100 pos-abs pos-abs--lt height-per-100 text-white p-y-temp-14 p-x-temp-7',
-              styles.textContainer
-            )}>
-            <Div
-              type="flex"
-              hAlign="center"
-              vAlign="center"
-              direction="vertical"
-              className="max-width-px-700 width-per-100">
-              <Heading className="text-theme-one">About Us</Heading>
-              <Paragraph className="text-center m-y-temp-7">
-                At ISWAD (Intelligent System Web App Development), we're dedicated to transforming
-                visions into reality. Here, we provide cutting-edge technology and strategic
-                guidance to empower both startups and established businesses.{' '}
-              </Paragraph>
-              <Div className="width-px-250">
-                <Button
-                  className="height-px-50 f-b f-s-px-18"
-                  onClick={() => contactRef?.current?.scrollIntoView(AUTO_SCROLL_BEHAVIOR)}>
-                  Contact Us
-                </Button>
-              </Div>
-            </Div>
-          </Div> */}
         </DivWidthDynamic>
       </Div>
     </>

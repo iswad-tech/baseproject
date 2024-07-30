@@ -95,6 +95,7 @@ const Hero = ({ contactRef }) => {
                 className={cx('text-white of-hidden pos-rel')}
                 style={{ width: parentWidth }}>
                 <AppImage src={item?.src} width={parentWidth} alt={item?.imgAlt} />
+
                 <Div
                   type="flex"
                   direction="vertical"

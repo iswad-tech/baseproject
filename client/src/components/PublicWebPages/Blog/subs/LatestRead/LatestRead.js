@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cx from 'classnames';
 import { Div, Heading, Row, Column } from 'basedesign-iswad';
 
 import Anchor from '@/baseComponents/ReusableComps/Anchor';
 import AppImage from '@/baseComponents/ReusableComps/AppImage';
+import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
 
 import moment from '@/utils/moment';
 import { ANCHOR_TYPES } from '@/constants/devDesignVars';
@@ -14,26 +15,35 @@ import styles from './LatestRead.module.scss';
 import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 
 const LatestRead = ({ featuredBlogs }) => {
+  const [containerWidth, setContainerWidth] = useState(0);
   return (
     <>
       <Div className="">
         <Heading
           type={2}
-          className={cx('p-all-temp-7 text-primary m-b-temp-7 global-centralized-in-sm-design')}>
+          className={cx(
+            'p-all-temp-7 text-primary global-centralized-in-sm-design height-px-150 width-per-100'
+          )}>
           Featured Post
         </Heading>
         <Row className="global-row-reverse-in-desktop">
-          <Column xs={12} sm={12} md={6} lg={6}>
-            <Div className="width-per-100 of-hidden global-add-p-x-in-desktop">
-              <AppImage
-                src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
-                heightOverWidthAsprctRatio={0.5}
-                className="global-add-br-rad-in-desktop"
-                alt={featuredBlogs?.[0]?.img_alt || 'ISWAS Blog'}
-              />
+          <Column xs={12} sm={12} md={12} lg={6}>
+            <Div className="width-per-100 min-height-px-200">
+              <DivWidthDynamic
+                setContainerWidth={setContainerWidth}
+                className="width-per-100 of-hidden global-add-p-x-in-desktop"
+                style={{ height: containerWidth * 0.5 }}>
+                <AppImage
+                  src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
+                  width={containerWidth}
+                  heightOverWidthAsprctRatio={0.5}
+                  className="global-add-br-rad-in-desktop"
+                  alt={featuredBlogs?.[0]?.img_alt || 'ISWAS Blog'}
+                />
+              </DivWidthDynamic>
             </Div>
           </Column>
-          <Column xs={12} sm={12} md={6} lg={6}>
+          <Column xs={12} sm={12} md={12} lg={6}>
             <Div type="flex" direction="vertical" distributedBetween className="p-x-temp-7">
               <Div>
                 <Div className="p-all-temp-7">

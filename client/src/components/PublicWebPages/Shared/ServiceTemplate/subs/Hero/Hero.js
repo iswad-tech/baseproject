@@ -17,30 +17,31 @@ const Hero = ({ src, title, description, contactRef, imgAlt = 'Services By ISWAD
 
   return (
     <>
-      <DivWidthDynamic setContainerWidth={setContainerWidth} className="width-per-100">
-        <DivMinFullHeight
-          divHeightIsConst
-          withoutFooter
+      <Div className={cx('width-per-100 of-hidden', styles.container)}>
+        <DivWidthDynamic
+          setContainerWidth={setContainerWidth}
           type="flex"
           hAlign="center"
-          className={cx('text-white of-hidden pos-rel width-per-100')}>
+          className={cx('text-white of-hidden pos-rel width-per-100', styles.container)}>
           <AppImage src={src} width={containerWidth} alt={imgAlt} />
-          <Div
-            type="flex"
-            hAlign="center"
-            className={cx(
-              'width-per-100 pos-abs pos-abs--lt height-per-100 text-white p-y-temp-14 p-x-temp-7',
-              styles.container
-            )}>
+
+          <Div className={cx('pos-abs width-per-100 height-per-100', styles.contentContainer)}>
             <Div
               type="flex"
+              direction="vertical"
               hAlign="center"
               vAlign="center"
-              direction="vertical"
-              className="max-width-px-700 width-per-100">
-              <Heading className="text-theme-one text-center">{title}</Heading>
-              <Paragraph className="text-center m-y-temp-7">{description}</Paragraph>
-              <Div className="width-px-250">
+              className={cx(
+                'max-width-px-700 m-l-auto m-r-auto height-per-100',
+                styles.contentContainerText
+              )}>
+              <Heading
+                type={1}
+                className="m-b-temp-7 text-theme-one global-hyphenated width-per-100 text-center height-px-160 of-hidden">
+                {title}
+              </Heading>
+              <Paragraph className="m-b-temp-7 text-center">{description}</Paragraph>
+              <Div className="width-px-300">
                 <Button
                   className="height-px-50 f-b f-s-px-18"
                   onClick={() => contactRef?.current?.scrollIntoView(AUTO_SCROLL_BEHAVIOR)}>
@@ -49,8 +50,8 @@ const Hero = ({ src, title, description, contactRef, imgAlt = 'Services By ISWAD
               </Div>
             </Div>
           </Div>
-        </DivMinFullHeight>
-      </DivWidthDynamic>
+        </DivWidthDynamic>
+      </Div>
     </>
   );
 };

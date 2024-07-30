@@ -6,8 +6,6 @@ import AppImage from '@/baseComponents/ReusableComps/AppImage';
 import DivConvertTextToHtml from '@/baseComponents/ReusableComps/DivConvertTextToHtml';
 import DivWidthDynamic from '@/baseComponents/ReusableComps/DivWidthDynamic';
 
-import moment from '@/utils/moment';
-import { DATE_FORMAT } from '@/constants/vars';
 import { APP_DOMAIN_FOR_SERVER_SIDE_PROPS } from 'config';
 
 import styles from './BlogPost.module.scss';

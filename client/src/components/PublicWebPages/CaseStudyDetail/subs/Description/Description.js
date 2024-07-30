@@ -8,15 +8,21 @@ import styles from './Description.module.scss';
 const Description = ({ scopes }) => {
   return (
     <>
-      {scopes?.map((item, idx) => (
-        <Div key={idx}>
-          <Scope
-            scopeNumber={item?.scopeNumber}
-            scopeTitle={item?.scopeTitle}
-            scopeDescription={item?.scopeDescription}
-          />
-        </Div>
-      ))}
+      {scopes?.length
+        ? scopes?.map((item, idx) => (
+            <Div key={idx}>
+              <Scope
+                scopeNumber={item?.scopeNumber}
+                scopeTitle={item?.scopeTitle}
+                scopeDescription={item?.scopeDescription}
+              />
+            </Div>
+          ))
+        : [1, 2, 3, 4, 5]?.map((item, idx) => (
+            <Div key={idx}>
+              <Scope scopeNumber={item} scopeTitle={''} scopeDescription={''} />
+            </Div>
+          ))}
     </>
   );
 };
