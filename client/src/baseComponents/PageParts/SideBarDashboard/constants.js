@@ -11,4 +11,14 @@ const otherAdminItems = [
   }
 ];
 
-export const OTHER_ITEMS = [...otherAdminItems];
+const otherClientItems = [
+  {
+    identifier: 'settings',
+    title: 'Settigns',
+    to: PAGE_ROUTES.DASHBOARD,
+    icon: 'gear',
+    allowedGroups: [USER_GROUPS.CLIENT]
+  }
+];
+
+export const OTHER_ITEMS = [...otherAdminItems, ...otherClientItems];

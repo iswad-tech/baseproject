@@ -38,7 +38,11 @@ import {
   faRightFromBracket,
   faNewspaper,
   faCloudArrowUp,
-  faEye
+  faEye,
+  faBook,
+  faFolderOpen,
+  faCalendarAlt,
+  faCreditCard
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram, faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
@@ -271,6 +275,30 @@ function Icon({
     eye: (
       <FontAwesomeIcon
         icon={faEye}
+        style={{ color, width, height, transform: `scale(${scale})` }}
+      />
+    ),
+    book: (
+      <FontAwesomeIcon
+        icon={faBook}
+        style={{ color, width, height, transform: `scale(${scale})` }}
+      />
+    ),
+    'folder-open': (
+      <FontAwesomeIcon
+        icon={faFolderOpen}
+        style={{ color, width, height, transform: `scale(${scale})` }}
+      />
+    ),
+    'calendar-alt': (
+      <FontAwesomeIcon
+        icon={faCalendarAlt}
+        style={{ color, width, height, transform: `scale(${scale})` }}
+      />
+    ),
+    'credit-card': (
+      <FontAwesomeIcon
+        icon={faCreditCard}
         style={{ color, width, height, transform: `scale(${scale})` }}
       />
     )
