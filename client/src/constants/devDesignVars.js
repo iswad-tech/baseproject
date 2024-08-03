@@ -9,6 +9,7 @@ export const LIST_OF_ICONS = {
   'credit-card': 'credit-card',
   check: 'check',
   cogs: 'cogs',
+  clock: 'clock',
   close: 'close',
   code: 'code',
   comments: 'comments',
@@ -38,7 +39,8 @@ export const LIST_OF_ICONS = {
   server: 'server',
   'sync-alt': 'sync-alt',
   upload: 'upload',
-  instagramFill: 'instagram-fill'
+  instagramFill: 'instagram-fill',
+  'money-bill': 'money-bill'
 };
 
 export const ANCHOR_TYPES = {
@@ -75,7 +77,8 @@ export const CARD_TYPES = {
   homeUnique: 'home-unique', //This is shown in the Home page for Makes us Unique section.
   aboutQuality: 'about-quality', //This is shown in the About page for Our Qulities section.
   aboutTeam: 'about-team', //This is shown in the About page for Our Team section.
-  serviceStep: 'service-step' //This is shown in the Services page for Steps section.
+  serviceStep: 'service-step', //This is shown in the Services page for Steps section.
+  clientCourse: 'client-course' //This is shown in the Courses page for Clients.
 };
 
 export const EMAIL_TEMPLATES = {

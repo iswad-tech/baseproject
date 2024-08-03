@@ -17,7 +17,7 @@ const Index = () => {
 
   const { slug } = router.query;
   return (
-    <RoleBasedRoute hasAccessRole={IS_STAGING_ENV ? [USER_GROUPS.APP_ADMIN] : ['Public']}>
+    <RoleBasedRoute hasAccessRole={[USER_GROUPS.APP_ADMIN, USER_GROUPS.BLOG_WRITER]}>
       <Seo>
         <PageContainer
           pageIdentifier="admin-blogs"

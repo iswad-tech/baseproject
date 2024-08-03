@@ -1,4 +1,4 @@
-from . import contact_form, web_subscriber, blog, uploaded_media
+from . import contact_form, web_subscriber, blog, uploaded_media, course
 
 ContactFormModel = contact_form.ContactForm
 
@@ -9,3 +9,5 @@ UploadedMediaModel = uploaded_media.UploadedMedia
 BlogModel = blog.Blog
 LabelModel = blog.Label
 BlogLabelModel = blog.BlogLabel
+
+CourseModel = course.Course

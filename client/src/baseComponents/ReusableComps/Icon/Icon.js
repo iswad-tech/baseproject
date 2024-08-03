@@ -42,7 +42,9 @@ import {
   faBook,
   faFolderOpen,
   faCalendarAlt,
-  faCreditCard
+  faCreditCard,
+  faClock,
+  faMoneyBill
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram, faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
@@ -299,6 +301,18 @@ function Icon({
     'credit-card': (
       <FontAwesomeIcon
         icon={faCreditCard}
+        style={{ color, width, height, transform: `scale(${scale})` }}
+      />
+    ),
+    clock: (
+      <FontAwesomeIcon
+        icon={faClock}
+        style={{ color, width, height, transform: `scale(${scale})` }}
+      />
+    ),
+    'money-bill': (
+      <FontAwesomeIcon
+        icon={faMoneyBill}
         style={{ color, width, height, transform: `scale(${scale})` }}
       />
     )

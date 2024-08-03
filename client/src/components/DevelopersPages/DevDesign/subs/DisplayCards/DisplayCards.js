@@ -14,6 +14,7 @@ import HomeUnique from './subs/HomeUnique';
 import AboutQulity from './subs/AboutQulity';
 import AboutTeam from './subs/AboutTeam';
 import ServiceStep from './subs/ServiceStep';
+import ClientCourse from './subs/ClientCourse';
 import styles from '../../DevDesign.module.scss';
 
 function DisplayCards() {
@@ -63,6 +64,10 @@ function DisplayCards() {
 
           if (CARD_TYPES[item] === CARD_TYPES.serviceStep) {
             return <ServiceStep key={idx} />;
+          }
+
+          if (CARD_TYPES[item] === CARD_TYPES.clientCourse) {
+            return <ClientCourse key={idx} />;
           }
         })}
       </Div>

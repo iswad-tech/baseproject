@@ -72,13 +72,21 @@ export const PAGE_ROUTES = {
   CAREERS: '/careers',
   FAQ: '/faq',
   TERMS: '/terms-and-conditions',
+  // APP PAGES
   LOGIN: '/app/login',
   REGISTER: '/app/register',
   ACTIVATE_USER: '/app/activate-user',
   FORGOT_PASSWORD: '/app/forgot-password',
   DASHBOARD: '/app',
+  // ADMIN PAGES
   ADMIN_BLOGS: '/app/admin-pages/admin-blogs',
-  ADMIN_CREATE_BLOG: '/app/admin-pages/create-blog'
+  ADMIN_CREATE_BLOG: '/app/admin-pages/create-blog',
+  ADMIN_COURSES: '/app/admin-pages/admin-courses',
+  ADMIN_CREATE_COURSE: '/app/admin-pages/create-course',
+  // CLIENT PAGES
+  CLIENT_COURSES: '/app/client-pages/courses',
+  CLIENT_PROJECTS: '/app/client-pages/projects',
+  CLIENT_SESSIONS: '/app/client-pages/sessions'
 };
 
 // ---------------------------------------------------------------------------
