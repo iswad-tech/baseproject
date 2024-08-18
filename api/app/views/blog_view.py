@@ -5,8 +5,8 @@ import json
 from core.permissions import *
 from core.pagination import PaginationType1
 from core.utils.helpers import add_row_to_schema, update_row_of_schema, delete_row_of_schema, StripHTML
-from app.models import BlogModel
-from app.serializers import BlogSerializer
+from app.models import BlogModel, LabelModel
+from app.serializers import BlogSerializer, LabelSerializer
 
 
 class BlogViewSet(views.APIView):
@@ -33,11 +33,11 @@ class BlogViewSet(views.APIView):
                 if value:
                     if field == "tag":
                         tag_filter &= Q(
-                            **{f"blog_label_blog__label__title__icontains": value}) & Q(
+                            **{f"blog_label_blog__label__uuid__icontains": value}) & Q(
                             **{f"blog_label_blog__label__label_type": "TAG"})
                     elif field == "category":
                         cat_filter &= Q(
-                            **{f"blog_label_blog__label__title__icontains": value}) & Q(
+                            **{f"blog_label_blog__label__uuid__icontains": value}) & Q(
                             **{f"blog_label_blog__label__label_type": "CATEGORY"})
                     elif field == "content":
                         query_filter &= Q(**{f"plain_text__icontains": value})
@@ -116,5 +116,23 @@ class BlogDetailViewSet(views.APIView):
                     return response.Response(status=status.HTTP_200_OK, data={"success": True})
                 return response.Response(status=status.HTTP_400_BAD_REQUEST, data={"message": obj["message"]})
             return response.Response(status=status.HTTP_404_NOT_FOUND, data={"message": f"No blug found with slug {slug}"})
+        except Exception as e:
+            return response.Response(status=status.HTTP_400_BAD_REQUEST, data={"message": f"{str(e)}"})
+
+
+class LabelViewSet(views.APIView):
+    permission_classes = [IsBlogWriterOrReadOnly]
+
+    def get(self, request, format=None):
+        try:
+            type = request.GET.get("type", "tag")
+            if type == "tag":
+                labels = LabelModel.objects.filter(
+                    label_type="TAG").order_by("title")
+            if type == "category":
+                labels = LabelModel.objects.filter(
+                    label_type="CATEGORY").order_by("title")
+            serializer = LabelSerializer(labels, many=True)
+            return response.Response(status=status.HTTP_200_OK, data={"labels": serializer.data})
         except Exception as e:
             return response.Response(status=status.HTTP_400_BAD_REQUEST, data={"message": f"{str(e)}"})

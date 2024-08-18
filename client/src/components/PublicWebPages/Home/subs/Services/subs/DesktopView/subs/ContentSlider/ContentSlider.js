@@ -47,7 +47,7 @@ const ContentSlider = ({
             <List list={item?.description} />
           </HeightTransitionEffect>
           {compActiveIdx === item?.id ? (
-            <Div className="pos-abs bg-red width-per-100" style={{ bottom: 0, left: 0 }}>
+            <Div className="pos-abs width-per-100" style={{ bottom: 0, left: 0 }}>
               <PercentageBar percentage={percentage} />
             </Div>
           ) : (

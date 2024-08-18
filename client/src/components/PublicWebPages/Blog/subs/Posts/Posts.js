@@ -27,6 +27,7 @@ const Posts = ({ curBlogs, currentPage, setCurrentPage, numberOfPages }) => {
               title={item?.title}
               description={item?.excerpt}
               moreInfoUrl={item?.slug}
+              labels={item?.labels}
             />
           </Div>
         ))}

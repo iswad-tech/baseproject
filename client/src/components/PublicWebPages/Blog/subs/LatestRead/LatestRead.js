@@ -16,6 +16,7 @@ import Paragraph from '@/baseComponents/ReusableComps/Paragraph';
 
 const LatestRead = ({ featuredBlogs }) => {
   const [containerWidth, setContainerWidth] = useState(0);
+
   return (
     <>
       <Div className="">
@@ -33,13 +34,19 @@ const LatestRead = ({ featuredBlogs }) => {
                 setContainerWidth={setContainerWidth}
                 className="width-per-100 of-hidden global-add-p-x-in-desktop"
                 style={{ height: containerWidth * 0.5 }}>
-                <AppImage
-                  src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
-                  width={containerWidth}
-                  heightOverWidthAsprctRatio={0.5}
-                  className="global-add-br-rad-in-desktop"
-                  alt={featuredBlogs?.[0]?.img_alt || 'ISWAS Blog'}
-                />
+                <Anchor
+                  anchorType={ANCHOR_TYPES.noEffect}
+                  internal
+                  className="f-b"
+                  to={`blog/${featuredBlogs?.[0]?.slug}`}>
+                  <AppImage
+                    src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
+                    width={containerWidth}
+                    heightOverWidthAsprctRatio={1080 / 1920}
+                    className="global-add-br-rad-in-desktop"
+                    alt={featuredBlogs?.[0]?.img_alt || 'ISWAS Blog'}
+                  />
+                </Anchor>
               </DivWidthDynamic>
             </Div>
           </Column>
@@ -52,9 +59,15 @@ const LatestRead = ({ featuredBlogs }) => {
                       featuredBlogs?.[0]?.writer?.user?.last_name
                     } | ${moment(featuredBlogs?.[0]?.created_at).format(DATE_FORMAT)}`}
                   </Div>
-                  <Heading type={4} className="m-y-temp-7">
-                    {featuredBlogs?.[0]?.title}
-                  </Heading>
+                  <Anchor
+                    anchorType={ANCHOR_TYPES.noEffect}
+                    internal
+                    className="f-b"
+                    to={`blog/${featuredBlogs?.[0]?.slug}`}>
+                    <Heading type={4} className="m-y-temp-7 text-black">
+                      {featuredBlogs?.[0]?.title}
+                    </Heading>
+                  </Anchor>
                 </Div>
                 <Paragraph className="m-b-temp-7">{featuredBlogs?.[0]?.excerpt}</Paragraph>
               </Div>

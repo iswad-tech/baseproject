@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from core.models import UserModel, ProfileModel
 from core.serializers import ProfileSerializer
-from app.models import BlogModel, BlogLabelModel
+from app.models import BlogModel, BlogLabelModel, LabelModel
 
 
 class BlogSerializer(serializers.ModelSerializer):
@@ -40,3 +40,10 @@ class BlogSerializer(serializers.ModelSerializer):
                   'published_date', 'is_popular', 'created_at', 'updated_at',
                   'labels', 'is_draft', 'is_featured', 'meta_description',
                   'meta_keywords', 'page_title', 'img_alt']
+
+
+class LabelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LabelModel
+        fields = ['id', 'uuid', 'title', 'label_type',
+                  'created_at', 'updated_at']

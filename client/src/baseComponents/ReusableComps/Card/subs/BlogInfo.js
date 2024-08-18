@@ -17,21 +17,47 @@ const BlogInfo = ({
   description,
   moreInfoUrl,
   isAdminPage = false,
-  imgAlt = 'Blog ISWAD'
+  imgAlt = 'Blog ISWAD',
+  labels = { categories: [], tags: [] }
 }) => {
   return (
     <>
       <Div className="width-per-100 bg-white br-rad-3xl of-hidden box-shadow-type-one">
-        <AppImage src={src} heightOverWidthAsprctRatio={0.5} alt={imgAlt} />
+        <Anchor
+          anchorType={ANCHOR_TYPES.noEffect}
+          internal
+          className="f-b"
+          to={isAdminPage ? `/app/admin-pages/admin-blogs/${moreInfoUrl}` : `/blog/${moreInfoUrl}`}>
+          <AppImage src={src} heightOverWidthAsprctRatio={1080 / 1920} alt={imgAlt} />
+        </Anchor>
         <Div className="p-all-temp-7">
           <Div>
             {writer} | {postDate}
           </Div>
-          <Heading type={5} className="text-black m-y-temp-7 one-line">
-            {title}
-          </Heading>
 
-          <Paragraph className="m-b-temp-7 three-lines">{description}</Paragraph>
+          <Anchor
+            anchorType={ANCHOR_TYPES.noEffect}
+            internal
+            className="f-b"
+            to={
+              isAdminPage ? `/app/admin-pages/admin-blogs/${moreInfoUrl}` : `/blog/${moreInfoUrl}`
+            }>
+            <Heading type={5} className="text-black m-y-temp-7 one-line">
+              {title}
+            </Heading>
+          </Anchor>
+
+          <Paragraph className="m-b-16 three-lines">{description}</Paragraph>
+
+          <Div type="flex" className="m-b-16 flex--wrap f-s-regular height-px-40 of-hidden">
+            {labels?.tags?.map((item, idx) => (
+              <Div
+                key={idx}
+                className="text-gray-dark br-rad-sm m-r-4 m-b-4 br-rad-sm one-line text-center f-b">
+                #{item}
+              </Div>
+            ))}
+          </Div>
 
           <Div>
             <Anchor

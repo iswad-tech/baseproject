@@ -10,6 +10,7 @@ urlpatterns = [
 
     path('blog/', views.BlogViewSet),
     path('blog-detail/<str:slug>/', views.BlogDetailViewSet),
+    path('label/', views.LabelViewSet),
 
     path('course/', views.CourseViewSet),
     path('course-detail/<str:slug>/', views.CourseDetailViewSet),
