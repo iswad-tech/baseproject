@@ -23,7 +23,7 @@ const RadioButton = ({
           hAlign="center"
           vAlign="center"
           className={cx(
-            'width-px-20 height-px-20 br-rad-per-50 box-shadow-type-one bg-white mouse-hand',
+            'width-px-20 height-px-20 br-rad-per-50 bg-white mouse-hand br-all-solid-1 br-gray-dark',
             labelText && 'm-r-8'
           )}
           onClick={onRadioButtonClick}>

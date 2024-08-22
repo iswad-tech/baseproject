@@ -21,7 +21,14 @@ const FormRadioButton = ({
     <>
       <>
         <Div className={cx('pos-rel', className)}>
-          {labelText && <Label labelText={labelText} isRequired={isRequired} />}
+          {labelText && (
+            <Label
+              labelText={labelText}
+              isRequired={isRequired}
+              isSmall={false}
+              className="m-b-temp-7"
+            />
+          )}
           <Div className={cx(styles.radioButtonContainer)}>
             {options.map((item, idx) => (
               <RadioButton

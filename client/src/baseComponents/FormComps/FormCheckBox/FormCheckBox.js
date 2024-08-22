@@ -31,19 +31,25 @@ const FormCheckBox = ({
 
   useEffect(() => {
     if (selectedOptions) {
-      errorHandler('');
+      if (errorHandler) {
+        errorHandler('');
+      }
     }
   }, [selectedOptions]);
 
   return (
     <>
       <Div className={cx('pos-rel', hasMarginBottom && 'm-b-32', className)}>
-        {labelText && <Label labelText={labelText} isRequired={isRequired} />}
-        <Div type="flex" vAlign="center" className={cx('width-per-100 flex--wrap')}>
+        {labelText && <Label isSmall={false} labelText={labelText} isRequired={isRequired} />}
+        <Div
+          type="flex"
+          direction="vertical"
+          vAlign="center"
+          className={cx('width-per-100 flex--wrap m-t-temp-7')}>
           {options.map((item, idx) => (
             <CheckBox
               checked={selectedOptions.some((curOption) => curOption === item.value)}
-              className={'m-r-80'}
+              className={''}
               labelText={item.shownText}
               key={idx}
               onBoxClick={() => boxClickHandler(item)}

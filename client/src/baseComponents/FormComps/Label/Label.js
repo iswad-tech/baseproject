@@ -4,10 +4,10 @@ import { Div, Label as BaseLabel } from 'basedesign-iswad';
 
 import styles from './Label.module.scss';
 
-const Label = ({ labelText, isRequired, className }) => {
+const Label = ({ labelText, isRequired, isSmall = false, className }) => {
   return (
     <>
-      <Div className={cx('text-gray-dark f-s-small m-b-4', className)}>
+      <Div className={cx('text-gray-dark m-b-4', isSmall ? 'f-s-small' : 'f-s-regular', className)}>
         <BaseLabel className={cx(isRequired && 'required')}>{labelText}</BaseLabel>
       </Div>
     </>

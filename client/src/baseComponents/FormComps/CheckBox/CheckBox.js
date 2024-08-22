@@ -14,7 +14,7 @@ const CheckBox = ({
   direction = 'horizontal',
   hAlign = 'start',
   vAlign = 'center',
-  distributedBetween = true,
+  distributedBetween = false,
   checked = false,
   className,
   onBoxClick,
@@ -31,16 +31,6 @@ const CheckBox = ({
         vAlign={vAlign}
         distributedBetween={distributedBetween}
         className={cx('pos-rel', hasMarginBottom && 'm-b-16', className)}>
-        {labelText && (
-          <Div
-            className={cx(
-              'text-gray-dark f-s-small',
-              direction === 'horizontal' && 'm-r-8',
-              direction === 'vertical' && 'm-b-8'
-            )}>
-            <Label className={cx(isRequired && 'required', '')}>{labelText}</Label>
-          </Div>
-        )}
         <Div
           type="flex"
           hAlign="center"
@@ -49,6 +39,16 @@ const CheckBox = ({
           onClick={onBoxClick}>
           {checked && <Icon type="check" color={COLORS['gray-dark']} />}
         </Div>
+        {labelText && (
+          <Div
+            className={cx(
+              'text-gray-dark f-s-regular',
+              direction === 'horizontal' && 'm-r-8',
+              direction === 'vertical' && 'm-b-8'
+            )}>
+            <Label className={cx(isRequired && 'required', '')}>{labelText}</Label>
+          </Div>
+        )}
       </Div>
     </>
   );
