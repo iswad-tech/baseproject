@@ -34,7 +34,14 @@ const UserNav = dynamic(() => import('@/baseComponents/PageParts/UserNav'), {
 import { setCurUserGroup } from '@/reducers/general/curUserGroup';
 
 import styles from './PageContainer.module.scss';
-import { USE_GOOGLE_ANALYTICS, GOOGLE_ANALYTICS_ID, USE_HOTJAR, HOTJAR_ID } from 'config';
+import {
+  USE_GOOGLE_ANALYTICS,
+  GOOGLE_ANALYTICS_ID,
+  USE_HOTJAR,
+  HOTJAR_ID,
+  USE_GOOGLE_ADDS,
+  GOOGLE_ADDS_ID
+} from 'config';
 
 const PageContainer = ({
   pageIdentifier = '',
@@ -115,6 +122,24 @@ const PageContainer = ({
 
           gtag('config', '${GOOGLE_ANALYTICS_ID}');
         `}
+          </Script>
+        </>
+      )}
+
+      {USE_GOOGLE_ADDS && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADDS_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-ads" strategy="afterInteractive">
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${GOOGLE_ADDS_ID}');
+          `}
           </Script>
         </>
       )}

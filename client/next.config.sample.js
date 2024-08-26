@@ -39,7 +39,8 @@ module.exports = withBundleAnalyzer({
     USE_HOTJAR_PRODUCTION: 'false',
     HOTJAR_ID_DEVELOPMENT: 'HOTJAR_ID_DEVELOPMENT',
     HOTJAR_ID_PRODUCTION: 'HOTJAR_ID_PRODUCTION',
-    IS_STAGING_ENV: 'false'
+    IS_STAGING_ENV: 'false',
+    GOOGLE_ADDS_ID: 'GOOGLE_ADDS_ID'
   },
 
   webpack(config, { dev, isServer }) {
