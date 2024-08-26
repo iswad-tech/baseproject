@@ -51,5 +51,3 @@ export const IS_STAGING_ENV = !publicRuntimeConfig.PRODUCTION
   : process.env.IS_STAGING_ENV === 'true'
   ? 1
   : 0;
-export const GOOGLE_ADDS_ID = process.env.GOOGLE_ADDS_ID;
-export const USE_GOOGLE_ADDS = process.env.USE_GOOGLE_ADDS === 'true';

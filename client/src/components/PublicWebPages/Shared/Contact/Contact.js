@@ -107,6 +107,14 @@ const Contact = () => {
   };
   const submitHandler = () => {
     if (customValidations()) {
+      try {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-16679291614/4ukwCPbUus0ZEN6Vp5E-',
+          event_callback: callback
+        });
+      } catch (err) {
+        console.log(err);
+      }
       setSendContactReq(true);
     }
   };

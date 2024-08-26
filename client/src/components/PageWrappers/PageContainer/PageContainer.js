@@ -34,14 +34,7 @@ const UserNav = dynamic(() => import('@/baseComponents/PageParts/UserNav'), {
 import { setCurUserGroup } from '@/reducers/general/curUserGroup';
 
 import styles from './PageContainer.module.scss';
-import {
-  USE_GOOGLE_ANALYTICS,
-  GOOGLE_ANALYTICS_ID,
-  USE_HOTJAR,
-  HOTJAR_ID,
-  USE_GOOGLE_ADDS,
-  GOOGLE_ADDS_ID
-} from 'config';
+import { USE_GOOGLE_ANALYTICS, GOOGLE_ANALYTICS_ID, USE_HOTJAR, HOTJAR_ID } from 'config';
 
 const PageContainer = ({
   pageIdentifier = '',
@@ -110,52 +103,38 @@ const PageContainer = ({
     <>
       {USE_GOOGLE_ANALYTICS && (
         <>
+          {/* Google Analytics */}
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
             strategy="afterInteractive"
           />
           <Script id="google-analytics" strategy="afterInteractive">
             {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-          gtag('config', '${GOOGLE_ANALYTICS_ID}');
-        `}
-          </Script>
-        </>
-      )}
-
-      {USE_GOOGLE_ADDS && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADDS_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-ads" strategy="afterInteractive">
-            {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '${GOOGLE_ADDS_ID}');
-          `}
+        gtag('config', '${GOOGLE_ANALYTICS_ID}');
+        
+        gtag('config', 'AW-16679291614');
+      `}
           </Script>
         </>
       )}
 
       {USE_HOTJAR && (
-        <Script>
+        <Script id="hotjar" strategy="afterInteractive">
           {`(function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:${HOTJAR_ID},hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:${HOTJAR_ID},hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
         </Script>
       )}
+
       <Div className={cx(isAppPage ? 'bg-cyan' : 'bg-white')}>
         <Div
           type="flex"
