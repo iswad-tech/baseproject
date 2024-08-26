@@ -92,7 +92,6 @@ const Contact = () => {
   }, [data]);
   // -----------------------------------------------------
   // -----------------------------------------------------
-
   const customValidations = () => {
     let validated = true;
     if (subject === '0') {
@@ -108,6 +107,9 @@ const Contact = () => {
   const submitHandler = () => {
     if (customValidations()) {
       try {
+        const callback = () => {
+          console.log('Event is tracked');
+        };
         window.gtag('event', 'conversion', {
           send_to: 'AW-16679291614/4ukwCPbUus0ZEN6Vp5E-',
           event_callback: callback
