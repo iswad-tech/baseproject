@@ -81,6 +81,16 @@ const StayInTheLoop = () => {
             btnText="Subscribe"
             onBtnClick={() => {
               if (customValidation()) {
+                try {
+                  window.gtag('event', 'conversion', {
+                    send_to: 'AW-16679291614/VAizCPnUus0ZEN6Vp5E-',
+                    event_callback: () => {
+                      console.log('Event is tracked');
+                    }
+                  });
+                } catch (err) {
+                  console.log(err);
+                }
                 setSendSubscriberReq(true);
               }
             }}

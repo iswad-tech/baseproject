@@ -112,7 +112,22 @@ const Hero = ({ contactRef }) => {
                   <Paragraph className="m-b-temp-7 text-center">{item?.text}</Paragraph>
                   <Div className="width-px-300">
                     <Anchor to={MEETING_LINK} internal={false} anchorType={ANCHOR_TYPES.noEffect}>
-                      <Button className="height-px-50 f-b f-s-px-18">Start Your Project</Button>
+                      <Button
+                        onClick={() => {
+                          try {
+                            window.gtag('event', 'conversion', {
+                              send_to: 'AW-16679291614/7FEqCOLSus0ZEN6Vp5E-',
+                              event_callback: () => {
+                                console.log('Event is tracked');
+                              }
+                            });
+                          } catch (err) {
+                            console.log(err);
+                          }
+                        }}
+                        className="height-px-50 f-b f-s-px-18">
+                        Start Your Project
+                      </Button>
                     </Anchor>
                   </Div>
                 </Div>
