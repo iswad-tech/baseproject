@@ -52,7 +52,7 @@ class BlogViewSet(views.APIView):
             annotated_blogs = BlogModel.objects.annotate(
                 plain_text=StripHTML(F('content')))
             blogs = annotated_blogs.filter(cat_filter).filter(tag_filter).filter(query_filter).order_by(
-                "-created_at", "title")[first_item: last_item + 1]
+                "-updated_at", "title")[first_item: last_item + 1]
             blogs_count = annotated_blogs.filter(cat_filter).filter(
                 tag_filter).filter(query_filter).count()
             serializer = BlogSerializer(blogs, many=True)
