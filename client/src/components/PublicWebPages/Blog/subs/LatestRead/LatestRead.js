@@ -57,7 +57,7 @@ const LatestRead = ({ featuredBlogs }) => {
                   <Div>
                     {`${featuredBlogs?.[0]?.writer?.user?.first_name} ${
                       featuredBlogs?.[0]?.writer?.user?.last_name
-                    } | ${moment(featuredBlogs?.[0]?.created_at).format(DATE_FORMAT)}`}
+                    } | ${moment(featuredBlogs?.[0]?.updated_at).format(DATE_FORMAT)}`}
                   </Div>
                   <Anchor
                     anchorType={ANCHOR_TYPES.noEffect}

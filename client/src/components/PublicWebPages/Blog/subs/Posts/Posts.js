@@ -23,7 +23,7 @@ const Posts = ({ curBlogs, currentPage, setCurrentPage, numberOfPages }) => {
               src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${item?.preview_photo}`}
               imgAlt={item?.img_alt || 'ISWAS Blog'}
               writer={item?.writer?.user?.first_name}
-              postDate={moment(item?.created_at).format(DATE_FORMAT)}
+              postDate={moment(item?.updated_at).format(DATE_FORMAT)}
               title={item?.title}
               description={item?.excerpt}
               moreInfoUrl={item?.slug}
