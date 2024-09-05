@@ -244,8 +244,6 @@ const BaseTemplate = ({ children }) => {
       dispatch(setCurUserGroup(USER_GROUPS.APP_ADMIN));
     } else if (profile?.user?.groups?.includes(USER_GROUPS.BLOG_WRITER)) {
       dispatch(setCurUserGroup(USER_GROUPS.BLOG_WRITER));
-    } else if (profile?.user?.groups?.includes(USER_GROUPS.CLIENT)) {
-      dispatch(setCurUserGroup(USER_GROUPS.CLIENT));
     }
   }, [profile]);
 

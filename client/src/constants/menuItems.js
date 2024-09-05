@@ -13,37 +13,6 @@ const generalItems = [
     isInWeb: true
   },
   {
-    identifier: 'our-services',
-    title: 'Our Services',
-    to: '/',
-    hasSubMenu: true,
-    showInDesktop: true,
-    showInMobile: true,
-    submenuTranslteX: '-100px',
-    isInApp: false,
-    isInWeb: true
-  },
-  {
-    identifier: 'about-us',
-    title: 'About Us',
-    to: PAGE_ROUTES.ABOUT_US,
-    hasSubMenu: false,
-    showInDesktop: true,
-    showInMobile: true,
-    isInApp: false,
-    isInWeb: true
-  },
-  {
-    identifier: 'case-studies',
-    title: 'Case Studies',
-    to: PAGE_ROUTES.CASE_STUDIES,
-    hasSubMenu: false,
-    showInDesktop: true,
-    showInMobile: true,
-    isInApp: false,
-    isInWeb: true
-  },
-  {
     identifier: 'blog',
     title: 'Blog',
     to: PAGE_ROUTES.BLOG,
