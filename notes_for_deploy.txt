@@ -79,6 +79,8 @@ Then use `CELERY_FLOWER_PASSWORD` you defined in the env variables.
 Create the following subfolders: <br>
 ./nginx/certbot/conf/
 ./nginx/certbot/www/
+./volume_data/django_static
+./volume_data/pg_data
 
 Then go to /var/www/app and run
 docker-compose -f docker-compose-createSSL.yml up --build -d

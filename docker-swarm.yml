@@ -47,7 +47,7 @@ services:
       - /var/www/app/config/envFiles/django/prod/.env
     command: ./docker-entrypoint-prod.sh
     volumes:
-      - static-data:/usr/src/app/vol
+      - /var/www/app/volume_data/django_static:/usr/src/app/vol
     networks:
       - mynetwork
     deploy:
@@ -59,7 +59,7 @@ services:
     env_file:
       - /var/www/app/config/envFiles/django/prod/.env
     volumes:
-      - static-data:/usr/src/app/vol
+      - /var/www/app/volume_data/django_static:/usr/src/app/vol
     command: celery -A config worker -l info
     networks:
       - mynetwork
@@ -72,7 +72,7 @@ services:
     env_file:
       - /var/www/app/config/envFiles/django/prod/.env
     volumes:
-      - static-data:/usr/src/app/vol
+      - /var/www/app/volume_data/django_static:/usr/src/app/vol
     command: celery -A config beat -l info
     networks:
       - mynetwork
@@ -85,7 +85,7 @@ services:
     env_file:
       - /var/www/app/config/envFiles/django/prod/.env
     volumes:
-      - static-data:/usr/src/app/vol
+      - /var/www/app/volume_data/django_static:/usr/src/app/vol
     command: celery -A config flower --url_prefix=/flower --basic_auth=${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}
     networks:
       - mynetwork
@@ -111,7 +111,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - /var/www/app/volume_data/pg_data:/var/lib/postgresql/data
       - /var/www/app/db_backups:/db_backups
     networks:
       - mynetwork
@@ -133,7 +133,3 @@ services:
 networks:
   mynetwork:
     driver: overlay
-
-volumes:
-  pgdata:
-  static-data:
