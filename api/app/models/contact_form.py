@@ -9,7 +9,6 @@ class ContactForm(TimeStampedUUIDModel):
     last_name = models.CharField(max_length=256, default="")
     email = models.CharField(max_length=256, default="")
     subject = models.CharField(max_length=256, default="")
-    phone_number = models.CharField(max_length=256, default="")
     message = models.TextField(default="")
 
     def __str__(self):
