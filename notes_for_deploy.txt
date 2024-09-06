@@ -104,5 +104,15 @@ utils/shellScripting/constants/constants.sh
 utils/shellScripting/constants/env.sh
 Then using automation.sh you can push it to the server
 
-After Reboot
+Add the followings to cron job:
+0 4 * * * /var/www/app/backup_db_swarm.sh
+0 6 * * * /var/www/app/redeploy-swarm.sh
+0 7 * * * docker system prune -a --volumes -f
+
+Create the following folders on the home directory of the USER_NAME:
+cron_commands.log (A file) => sudo touch cron_commands.log => sudo chown USER_NAME:USER_NAME cron_commands.log
+db_backups (A folder) => sudo mkdir db_backups => sudo chown USER_NAME:USER_NAME db_backups
+media_backups (A folder) => sudo mkdir media_backups => sudo chown USER_NAME:USER_NAME media_backups
+
+After Reboot if the volume is not automatically mounted, run the following command:
 sudo mount -t glusterfs IP_ADDRESS:/app-volume /var/www/app
