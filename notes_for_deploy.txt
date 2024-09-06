@@ -183,3 +183,12 @@ Then create a load balancer in digital ocean and connect all the swarm nodes to 
 Then you need to change the A record in DNS settings to point out to the load balancer
 
 Then restart the application again using swarm
+
+In order to check how app is distributed across all nodes, run the following command:
+docker stack services app --format "{{.Name}}" | xargs -I {} docker service ps {} --filter "desired-state=running"
+
+And in order to see what apps are running in the current node, run the following:
+docker node ps self --filter "desired-state=running"
+
+You can do Force update for all services: 
+for service in $(docker service ls --format "{{.Name}}"); do docker service update --force $service; done
