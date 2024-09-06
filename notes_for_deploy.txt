@@ -1,0 +1,84 @@
+Create the volume for shared folder:
+sudo gluster volume create app-volume IP_ADDRESS:/gluster/brick1 force
+
+Start the volume:
+sudo gluster volume start app-volume
+
+Check the status of volume:
+sudo gluster volume info
+
+Mount the volume:
+sudo mount -t glusterfs IP_ADDRESS:/app-volume /var/www/app
+
+In order to automatically mount the volume after reboot go to /etc/fstab and add:
+sudo nano /etc/fstab
+IP_ADDRESS:/app-volume /var/www/app glusterfs defaults,_netdev 0 0
+
+sudo chown iswad:iswad /var/www/app
+git clone SSH_REPO_URL .
+
+Create the following subfolders:
+./api/vol/static/
+./api/vol/media/
+
+Go to /var/www/app and run
+./automation.sh --> 10
+
+Update following files:
+.env
+config/envFiles/django/prod/.env
+config/envFiles/postgres/prod/.env
+client/next.config.js
+redis/redis.conf => requirepass should be equal to redis pass in django env file
+init-letsencrypt.sh => Other than domain change the USER_NAME as well
+use_backup_db.sh => change DB_USER and DB_NAME
+utils/shellScripting/constants/env.sh
+redeploy-swarm.sh => Change USER_NAME
+backup_db_swarm.sh => Change DB_NAME, DB_USER, and USER_NAME
+nginx/default-swarm.conf => Change APP_URL
+backup_db.sh => Change DB_NAME and DB_USER
+
+Go to /var/www/app folder and run
+sudo chmod +x ./init-letsencrypt.sh
+sudo chmod +x ./backup_db.sh
+sudo chmod +x ./use_backup_db.sh
+sudo chmod +x ./redeploy-swarm.sh
+sudo chmod +x ./backup_db_swarm.sh
+
+sudo apt-get install apache2-utils
+
+Then go to /var/www/app/nginx folder and run
+htpasswd -c htpasswd CELERY_FLOWER_USER
+Then use `CELERY_FLOWER_PASSWORD` you defined in the env variables.
+
+Create the following subfolders: <br>
+./nginx/certbot/conf/
+./nginx/certbot/www/
+
+Then go to /var/www/app and run
+docker-compose -f docker-compose-createSSL.yml up --build -d
+
+Add A records to the DNS settings of relevant domain pointing to the server IP address.
+Note: www also must be referring to the server ip address
+
+Then run:
+sudo ./init-letsencrypt.sh
+
+Now the app should work perfectly
+
+In order to use docker swarm which us highly recommended:
+remove existing containers and images by following command:
+docker container rm -f $(docker container ls -a -q)
+docker image rm -f $(docker image ls -a -q)
+docker-compose -f docker-compose-prod-ssl.yml down
+Create 3 repos for clent, api, and nginx on docker hub
+Then run:
+docker login -u DOCKER_HUB_USER_NAME
+
+Run:
+docker swarm init --advertise-addr IP_ADDRESS
+
+in your local update
+utils/shellScripting/constants/constants.sh
+utils/shellScripting/constants/env.sh
+Then using automation.sh you can push it to the server
