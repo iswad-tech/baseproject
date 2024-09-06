@@ -45,7 +45,7 @@ services:
     image: ${API_REPO}:${API_VERSION}
     env_file:
       - /var/www/app/config/envFiles/django/prod/.env
-    command: /var/www/app/docker-entrypoint-prod.sh
+    command: ./docker-entrypoint-prod.sh
     volumes:
       - static-data:/usr/src/app/vol
     networks:
