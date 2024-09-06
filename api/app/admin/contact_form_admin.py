@@ -3,7 +3,7 @@ from django.contrib import admin
 
 class ContactFormAdmin(admin.ModelAdmin):
     list_display = ['first_name', 'last_name',
-                    'email', 'subject']
+                    'email', 'subject', 'phone_number']
     list_per_page = 10
     search_fields = ['email__istartswith']
     list_filter = ['subject']
