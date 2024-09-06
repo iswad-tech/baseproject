@@ -8,10 +8,10 @@ services:
       - "443:443"
     volumes:
       - static-data:/vol/static
-      - ./statics/to_be_served:/to_be_served
-      - ./nginx/certbot/conf:/etc/letsencrypt
-      - ./nginx/certbot/www:/var/www/certbot
-      - ./nginx/htpasswd:/etc/nginx/.htpasswd
+      - /var/www/app/statics/to_be_served:/to_be_served
+      - /var/www/app/nginx/certbot/conf:/etc/letsencrypt
+      - /var/www/app/nginx/certbot/www:/var/www/certbot
+      - /var/www/app/nginx/htpasswd:/etc/nginx/.htpasswd
     networks:
       - mynetwork
     deploy:
@@ -21,8 +21,8 @@ services:
   certbot:
     image: certbot/certbot
     volumes:
-      - ./nginx/certbot/conf:/etc/letsencrypt
-      - ./nginx/certbot/www:/var/www/certbot
+      - /var/www/app/nginx/certbot/conf:/etc/letsencrypt
+      - /var/www/app/nginx/certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
     networks:
       - mynetwork
@@ -44,8 +44,8 @@ services:
   api:
     image: ${API_REPO}:${API_VERSION}
     env_file:
-      - ./config/envFiles/django/prod/.env
-    command: ./docker-entrypoint-prod.sh
+      - /var/www/app/config/envFiles/django/prod/.env
+    command: /var/www/app/docker-entrypoint-prod.sh
     volumes:
       - static-data:/usr/src/app/vol
     networks:
@@ -57,7 +57,7 @@ services:
   celery:
     image: ${API_REPO}:${API_VERSION}
     env_file:
-      - ./config/envFiles/django/prod/.env
+      - /var/www/app/config/envFiles/django/prod/.env
     volumes:
       - static-data:/usr/src/app/vol
     command: celery -A config worker -l info
@@ -70,7 +70,7 @@ services:
   celery-beat:
     image: ${API_REPO}:${API_VERSION}
     env_file:
-      - ./config/envFiles/django/prod/.env
+      - /var/www/app/config/envFiles/django/prod/.env
     volumes:
       - static-data:/usr/src/app/vol
     command: celery -A config beat -l info
@@ -83,7 +83,7 @@ services:
   celery-flower:
     image: ${API_REPO}:${API_VERSION}
     env_file:
-      - ./config/envFiles/django/prod/.env
+      - /var/www/app/config/envFiles/django/prod/.env
     volumes:
       - static-data:/usr/src/app/vol
     command: celery -A config flower --url_prefix=/flower --basic_auth=${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}
@@ -96,7 +96,7 @@ services:
   channels:
     image: ${API_REPO}:${API_VERSION}
     env_file:
-      - ./config/envFiles/django/prod/.env
+      - /var/www/app/config/envFiles/django/prod/.env
     command: daphne -b 0.0.0.0 -p 8001 config.asgi:application
     networks:
       - mynetwork
@@ -107,12 +107,12 @@ services:
   db:
     image: postgres:13-alpine
     env_file:
-      - ./config/envFiles/postgres/prod/.env
+      - /var/www/app/config/envFiles/postgres/prod/.env
     ports:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./db_backups:/db_backups
+      - /var/www/app/db_backups:/db_backups
     networks:
       - mynetwork
     deploy:
@@ -122,7 +122,7 @@ services:
   redis:
     image: redis:7.0.4-alpine3.16
     volumes:
-      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - /var/www/app/redis/redis.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
     networks:
       - mynetwork

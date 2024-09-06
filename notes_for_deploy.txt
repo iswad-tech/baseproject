@@ -1,3 +1,7 @@
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
 Create the volume for shared folder:
 sudo gluster volume create app-volume IP_ADDRESS:/gluster/brick1 force
 
@@ -116,3 +120,66 @@ media_backups (A folder) => sudo mkdir media_backups => sudo chown USER_NAME:USE
 
 After Reboot if the volume is not automatically mounted, run the following command:
 sudo mount -t glusterfs IP_ADDRESS:/app-volume /var/www/app
+
+-----------------------------------------------------------
+Adding new nodes:
+Run the following commands in the new node:
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
+On existing GlusterFS node, run the following command to peer the new node:
+sudo gluster peer probe IP_ADDRESS
+
+Check the status:
+sudo gluster peer status
+
+Then Run the following command on the GlusterFS node::
+sudo gluster volume add-brick app-volume replica NEW_REPLICA_COUNT NEW_NODE_IP_ADDRESS_1:/gluster/brick1 NEW_NODE_IP_ADDRESS_2:/gluster/brick1 force
+
+For examle: sudo gluster volume add-brick app-volume replica 3 NEW_NODE_IP_ADDRESS_1:/gluster/brick1 NEW_NODE_IP_ADDRESS_2:/gluster/brick1 force
+
+After adding the new brick, you should mount the volume across the new nodes:
+sudo mount -t glusterfs MANAGERIP_ADDRESS:/app-volume /var/www/app
+
+In order to automatically mount the volume after reboot go to /etc/fstab and add:
+sudo nano /etc/fstab
+IP_ADDRESS:/app-volume /var/www/app glusterfs defaults,_netdev 0 0
+Then run:
+sudo nano /etc/systemd/system/mount-glusterfs.service
+Add the following content to it: (between two lines)
+-----------------------------------
+[Unit]
+Description=Mount GlusterFS Volume
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/mount -a
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+------------------------------------
+Then run:
+sudo systemctl enable mount-glusterfs.service
+
+Then in order to add manager node to docker swarm run the following command in the main manager node:
+docker swarm join-token manager
+
+Copy the output and paste it to the new manager nodes
+
+In order to add worker nodes, run the following command in the main manager node:
+docker swarm join-token worker
+
+Copy the output and paste it to the new worker nodes
+
+Run docker node ls to see the status of nodes
+
+Then create a load balancer in digital ocean and connect all the swarm nodes to it
+
+Then you need to change the A record in DNS settings to point out to the load balancer
+
+Then restart the application again using swarm
