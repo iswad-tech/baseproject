@@ -13,6 +13,27 @@ sudo mount -t glusterfs IP_ADDRESS:/app-volume /var/www/app
 In order to automatically mount the volume after reboot go to /etc/fstab and add:
 sudo nano /etc/fstab
 IP_ADDRESS:/app-volume /var/www/app glusterfs defaults,_netdev 0 0
+Then run:
+sudo nano /etc/systemd/system/mount-glusterfs.service
+Add the following content to it: (between two lines)
+-----------------------------------
+[Unit]
+Description=Mount GlusterFS Volume
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/mount -a
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+------------------------------------
+Then run:
+sudo systemctl enable mount-glusterfs.service
+
 
 sudo chown iswad:iswad /var/www/app
 git clone SSH_REPO_URL .
