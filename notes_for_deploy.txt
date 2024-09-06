@@ -82,3 +82,5 @@ in your local update
 utils/shellScripting/constants/constants.sh
 utils/shellScripting/constants/env.sh
 Then using automation.sh you can push it to the server
+
+sudo mount -t glusterfs 167.99.179.204:/app-volume /var/www/app
