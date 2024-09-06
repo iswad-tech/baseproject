@@ -35,7 +35,7 @@ Then run:
 sudo systemctl enable mount-glusterfs.service
 
 
-sudo chown iswad:iswad /var/www/app
+sudo chown USER_NAME:USER_NAME /var/www/app
 git clone SSH_REPO_URL .
 
 Create the following subfolders:
