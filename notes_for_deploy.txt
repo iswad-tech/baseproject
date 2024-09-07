@@ -98,6 +98,12 @@ remove existing containers and images by following command:
 docker container rm -f $(docker container ls -a -q)
 docker image rm -f $(docker image ls -a -q)
 docker-compose -f docker-compose-prod-ssl.yml down
+docker volume prune -f
+docker builder prune -a -f 
+docker network prune -f
+You can remove local volumes:
+docker volume ls
+docker volume rm <volume_name>
 Create 3 repos for clent, api, and nginx on docker hub
 Then run:
 docker login -u DOCKER_HUB_USER_NAME
@@ -194,3 +200,7 @@ docker node ps self --filter "desired-state=running"
 
 You can do Force update for all services: 
 for service in $(docker service ls --format "{{.Name}}"); do docker service update --force $service; done
+
+Consider if the backend is not running properly clear all the local volumes of docker and restart the app 
+and login to api service and run python manage.py migrate
+
