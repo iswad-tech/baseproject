@@ -204,3 +204,6 @@ for service in $(docker service ls --format "{{.Name}}"); do docker service upda
 Consider if the backend is not running properly clear all the local volumes of docker and restart the app 
 and login to api service and run python manage.py migrate
 
+In order ro make backup of the db:
+First find on which node the db is located and on that node run:
+docker exec $DB_CONTAINER_ID pg_dump DB_NAME -U DB_USER > /var/www/app/db_backups/db_backup_$(date +%Y-%m-%d_%H-%M-%S).sql
