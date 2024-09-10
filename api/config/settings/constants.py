@@ -116,3 +116,13 @@ if USE_ACTUAL_SMTP_SERVER:
 # ----------------------- GENERAL -----------------------
 CLIENT_URL = os.environ.get(
     "CLIENT_URL", "CLIENT_URL")
+
+# ----------------------- STORAGE -----------------------
+STORAGE_ACCESS_KEY = os.environ.get(
+    "STORAGE_ACCESS_KEY", "STORAGE_ACCESS_KEY")
+STORAGE_SECRET_KEY = os.environ.get(
+    "STORAGE_SECRET_KEY", "STORAGE_SECRET_KEY")
+STORAGE_END_POINT_URL = os.environ.get(
+    "STORAGE_END_POINT_URL", "STORAGE_END_POINT_URL")
+STORAGE_END_POINT_CDN_URL = os.environ.get(
+    "STORAGE_END_POINT_CDN_URL", "STORAGE_END_POINT_CDN_URL")

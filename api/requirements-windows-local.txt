@@ -40,3 +40,4 @@ rsa
 cryptography
 bleach
 sendgrid
+boto3

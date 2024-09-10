@@ -34,3 +34,4 @@ cryptography
 daphne
 bleach
 sendgrid
+boto3
