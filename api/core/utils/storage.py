@@ -12,14 +12,19 @@ REGION = 'nyc3'  # Change this to your region (e.g., "nyc3", "ams3", "sgp1")
 session = boto3.session.Session()
 
 # Create the S3 client for DigitalOcean Spaces
-client = session.client(
-    's3',
-    region_name=REGION,
-    endpoint_url=END_POINT_URL,
-    aws_access_key_id=ACCESS_KEY,
-    aws_secret_access_key=SECRET_KEY,
-    config=Config(signature_version='s3v4')
-)
+
+
+def connect_to_storage():
+    client = session.client(
+        's3',
+        region_name=REGION,
+        endpoint_url=END_POINT_URL,
+        aws_access_key_id=ACCESS_KEY,
+        aws_secret_access_key=SECRET_KEY,
+        config=Config(signature_version='s3v4')
+    )
+    return client
+
 
 # Upload the file
 file_path = os.path.join(settings.STATIC_ROOT,
@@ -29,6 +34,7 @@ file_path = os.path.join(settings.STATIC_ROOT,
 def upload_file_to_cloud(file_path=file_path, storage_space_name="images", file_key="nested/test_img.svg", file_type="private"):
     """file_type can be public-read or private"""
     try:
+        client = connect_to_storage()
         client.upload_file(
             Filename=file_path,
             Bucket=storage_space_name,
@@ -43,6 +49,7 @@ def upload_file_to_cloud(file_path=file_path, storage_space_name="images", file_
 
 def get_signed_url_of_file_from_cloud(storage_space_name="images", file_key="nested/test_img.svg"):
     try:
+        client = connect_to_storage()
         # Generate a signed URL for the file
         signed_url = client.generate_presigned_url(
             'get_object',
@@ -70,6 +77,7 @@ def get_url_from_cloud(storage_space_name="images", file_key="nested/test_img.sv
 
 def delete_file_from_cloud(storage_space_name="images", file_key="nested/test_img.svg"):
     try:
+        client = connect_to_storage()
         client.delete_object(
             Bucket=storage_space_name,
             Key=file_key
