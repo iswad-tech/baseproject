@@ -1,0 +1,15 @@
+psql "sslmode=require host=<HOST> port=25061 dbname=<DB_NAME> user=doadmin password=<PASSWORD>"
+
+-- Grant usage on the schema
+GRANT USAGE ON SCHEMA public TO mydbuser;
+
+-- Grant privileges to create tables
+GRANT CREATE ON SCHEMA public TO mydbuser;
+
+-- Grant all privileges on the database
+GRANT ALL PRIVILEGES ON DATABASE mydatabase TO mydbuser;
+
+-- Set default privileges for future tables
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO mydbuser;
+
+ALTER DATABASE mydatabase OWNER TO mydbuser;
