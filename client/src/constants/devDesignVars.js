@@ -38,6 +38,7 @@ export const LIST_OF_ICONS = {
   search: 'search',
   server: 'server',
   'sync-alt': 'sync-alt',
+  trash: 'trash',
   upload: 'upload',
   instagramFill: 'instagram-fill',
   'money-bill': 'money-bill'
@@ -63,7 +64,7 @@ export const ALERT_TYPES = {
 };
 
 export const MODAL_TYPES = {
-  dataSubmittedSuccessfully: 'data-submitted-successfully',
+  'data-submitted': 'data-submitted',
   'prompt-message': 'prompt-message'
 };
 

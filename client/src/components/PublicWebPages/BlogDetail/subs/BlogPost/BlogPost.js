@@ -24,7 +24,8 @@ const BlogPost = ({ blog }) => {
         <Div className={cx('max-width-px-800 m-l-auto m-r-auto')}>
           <Div className={cx('m-b-temp-7', containerWidth >= 800 ? 'p-x-temp-7' : '')}>
             <AppImage
-              src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${blog?.preview_photo}`}
+              // src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${blog?.preview_photo}`}
+              src={blog?.preview_photo}
               heightOverWidthAsprctRatio={1080 / 1920}
               className={cx(containerWidth >= 800 ? 'br-rad-lg' : '')}
               objectFit="cover"

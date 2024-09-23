@@ -20,7 +20,8 @@ const Posts = ({ curBlogs, currentPage, setCurrentPage, numberOfPages }) => {
           <Div key={idx} className="width-px-300">
             <Card
               type={CARD_TYPES.blogInfo}
-              src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${item?.preview_photo}`}
+              // src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${item?.preview_photo}`}
+              src={item?.preview_photo}
               imgAlt={item?.img_alt || 'ISWAS Blog'}
               writer={item?.writer?.user?.first_name}
               postDate={moment(item?.updated_at).format(DATE_FORMAT)}

@@ -53,6 +53,7 @@ Update following files:
 .env
 config/envFiles/django/prod/.env
 config/envFiles/postgres/prod/.env
+config/envFiles/pgbouncer/prod/.env
 client/next.config.js
 redis/redis.conf => requirepass should be equal to redis pass in django env file
 init-letsencrypt.sh => Other than domain change the USER_NAME as well

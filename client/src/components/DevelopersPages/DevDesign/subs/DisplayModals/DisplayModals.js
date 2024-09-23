@@ -5,6 +5,7 @@ import { Div } from 'basedesign-iswad';
 import { MODAL_TYPES } from '@/constants/devDesignVars';
 
 import PromptMessage from './subs/PromptMessage';
+import DataSubmitted from './subs/DataSubmitted';
 import styles from '../../DevDesign.module.scss';
 
 const DisplayModals = () => {
@@ -21,6 +22,13 @@ const DisplayModals = () => {
             return (
               <Div key={idx}>
                 <PromptMessage />
+              </Div>
+            );
+          }
+          if (MODAL_TYPES[item] === MODAL_TYPES['data-submitted']) {
+            return (
+              <Div key={idx}>
+                <DataSubmitted />
               </Div>
             );
           }

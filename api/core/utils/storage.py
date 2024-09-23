@@ -27,20 +27,28 @@ def connect_to_storage():
 
 
 # Upload the file
-file_path = os.path.join(settings.STATIC_ROOT,
-                         "admin/img/calendar-icons.svg")
+file = os.path.join(settings.STATIC_ROOT,
+                    "admin/img/calendar-icons.svg")
 
 
-def upload_file_to_cloud(file_path=file_path, storage_space_name="images", file_key="nested/test_img.svg", file_type="private"):
+def upload_file_to_cloud(file=file, storage_space_name="images", file_key="nested/test_img.svg", file_type="private", is_from_client=False):
     """file_type can be public-read or private"""
     try:
         client = connect_to_storage()
-        client.upload_file(
-            Filename=file_path,
-            Bucket=storage_space_name,
-            Key=file_key,
-            ExtraArgs={'ACL': file_type}
-        )
+        if is_from_client:
+            client.upload_fileobj(
+                Fileobj=file,
+                Bucket=storage_space_name,
+                Key=file_key,
+                ExtraArgs={'ACL': file_type}
+            )
+        else:
+            client.upload_file(
+                Filename=file,
+                Bucket=storage_space_name,
+                Key=file_key,
+                ExtraArgs={'ACL': file_type}
+            )
         return True
     except Exception as e:
         print(e)

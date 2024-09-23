@@ -11,6 +11,7 @@ import { MODAL_TYPES } from '@/constants/devDesignVars';
 
 import { HAS_CCELEBERATION_BG_TYPES } from './constans';
 import PromptMessage from './subs/PromptMessage';
+import DataSubmitted from './subs/DataSubmitted';
 import styles from './Modal.module.scss';
 
 const Modal = () => {
@@ -51,6 +52,7 @@ const Modal = () => {
               direction="vertical"
               hAlign="start"
               className={cx('of-y-auto scroll-type-one p-all-16', styles.mainContentContainer)}>
+              {modalType === MODAL_TYPES['data-submitted'] && <DataSubmitted {...modalProps} />}
               {modalType === MODAL_TYPES['prompt-message'] && <PromptMessage {...modalProps} />}
             </Div>
           </Div>

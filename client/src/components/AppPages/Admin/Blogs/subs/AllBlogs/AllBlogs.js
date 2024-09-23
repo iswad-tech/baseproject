@@ -57,10 +57,12 @@ const AllBlogs = () => {
           <Div key={idx} className="width-px-300">
             <Card
               type={CARD_TYPES.blogInfo}
-              src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${item?.preview_photo}`}
+              // src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${item?.preview_photo}`}
+              src={item?.preview_photo}
               writer={item?.writer?.user?.first_name}
               postDate={moment(item?.created_at).format(DATE_FORMAT)}
               title={item?.title}
+              slug={item?.slug}
               description={item?.excerpt}
               moreInfoUrl={item?.slug}
               isAdminPage

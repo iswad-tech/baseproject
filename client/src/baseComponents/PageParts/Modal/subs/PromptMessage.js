@@ -14,7 +14,7 @@ import styles from '../Modal.module.scss';
 const PromptMessage = () => {
   const dispatch = useDispatch();
 
-  const { message } = useSelector((state) => state.modalProps);
+  const { message, setActionIsConfirmed } = useSelector((state) => state.modalProps);
 
   useEffect(() => {
     dispatch(setModalHeader('Confirm Action'));
@@ -23,10 +23,29 @@ const PromptMessage = () => {
   return (
     <>
       <Paragraph className="m-b-16">{message}</Paragraph>
-
-      <Button className={'width-px-150'} onClick={() => clearModal(dispatch)}>
-        OK
-      </Button>
+      <Div type="flex">
+        <Div className="m-r-20">
+          <Button
+            className={'width-px-150'}
+            onClick={() => {
+              if (setActionIsConfirmed) {
+                setActionIsConfirmed(true);
+              }
+              clearModal(dispatch);
+            }}>
+            Yes
+          </Button>
+        </Div>
+        <Div>
+          <Button
+            className={'width-px-150'}
+            onClick={() => {
+              clearModal(dispatch);
+            }}>
+            No
+          </Button>
+        </Div>
+      </Div>
     </>
   );
 };

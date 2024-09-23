@@ -17,10 +17,9 @@ class Blog(TimeStampedUUIDModel):
     title = models.CharField(null=True, blank=True, max_length=2048)
     content = models.TextField(null=True, blank=True)
     excerpt = models.CharField(null=True, blank=True, max_length=2048)
-    preview_photo = models.FileField(upload_to='blogs/', null=True, blank=True,
-                                     validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png'])])
-    preview_photo_from_url = models.CharField(
-        null=True, blank=True, max_length=2048)
+    # preview_photo = models.FileField(upload_to='blogs/', null=True, blank=True,
+    #                                  validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png'])])
+    preview_photo = models.CharField(null=True, blank=True, max_length=2048)
     slug = models.SlugField(unique=True, blank=True, max_length=2048)
     is_draft = models.BooleanField(default=True)
     published_date = models.DateTimeField(blank=True, null=True)

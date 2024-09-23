@@ -52,6 +52,7 @@ services:
       - static-data:/usr/src/app/vol
     depends_on:
       - db
+      - pgbouncer
 
   celery:
     restart: always
@@ -65,6 +66,7 @@ services:
     command: celery -A config worker -l info
     depends_on:
       - db
+      - pgbouncer
       - redis
 
   celery-beat:
@@ -79,6 +81,7 @@ services:
     command: celery -A config beat -l info
     depends_on:
       - db
+      - pgbouncer
       - redis
 
   celery-flower:
@@ -93,6 +96,7 @@ services:
     command: celery -A config flower --url_prefix=/flower --basic_auth=${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}
     depends_on:
       - db
+      - pgbouncer
       - redis
 
   channels:
@@ -105,6 +109,7 @@ services:
     command: daphne -b 0.0.0.0 -p 8001 config.asgi:application
     depends_on:
       - db
+      - pgbouncer
       - redis
 
   db:
@@ -117,6 +122,15 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./db_backups:/db_backups
+
+  pgbouncer:
+    image: edoburu/pgbouncer:v1.23.1-p2
+    ports:
+      - "6432:6432"
+    env_file:
+      - ./config/envFiles/pgbouncer/prod/.env
+    depends_on:
+      - db
 
   redis:
     image: redis:7.0.4-alpine3.16

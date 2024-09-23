@@ -62,8 +62,10 @@ class BlogViewSet(views.APIView):
 
     def post(self, request, format=None):
         try:
-            obj = add_row_to_schema(model=BlogModel, request=request, acceptable_not_date_fields=["title", "excerpt", "content", "preview_photo"], date_fields=[
-                                    "published_date"], required_fields=["title", "excerpt", "content", "preview_photo"])
+            file_fields_for_cloud = {"preview_photo": {
+                "storage_space_name": "blogs", "file_type": "public-read"}}
+            obj = add_row_to_schema(model=BlogModel, request=request, acceptable_not_date_fields=["title", "excerpt", "content"], date_fields=[
+                                    "published_date"], file_fields_for_cloud=file_fields_for_cloud, required_fields=["title", "excerpt", "content", "preview_photo"])
             if obj["success"]:
                 serializer = BlogSerializer(obj["cur_row"])
                 return response.Response(status=status.HTTP_201_CREATED, data=serializer.data)
@@ -95,9 +97,11 @@ class BlogDetailViewSet(views.APIView):
     def put(self, request, slug, format=None):
         try:
             cur_blog_qs = BlogModel.objects.filter(slug=slug)
+            file_fields_for_cloud = {"preview_photo": {
+                "storage_space_name": "blogs", "file_type": "public-read"}}
             if cur_blog_qs:
                 obj = update_row_of_schema(request=request, cur_schema_qs=cur_blog_qs, updatable_non_file_nor_date_fields=["title", "excerpt", "content"], date_fields=[
-                    "published_date"], file_fields=["preview_photo"], required_fields=["title", "excerpt", "content"])
+                    "published_date"], file_fields_for_cloud=file_fields_for_cloud, required_fields=["title", "excerpt", "content"])
                 if obj["success"]:
                     serializer = BlogSerializer(obj["cur_schema"])
                     return response.Response(status=status.HTTP_200_OK, data=serializer.data)
@@ -110,8 +114,10 @@ class BlogDetailViewSet(views.APIView):
         try:
             cur_blog = BlogModel.objects.filter(slug=slug).first()
             if cur_blog:
+                file_fields_for_cloud = {"preview_photo": {
+                    "storage_space_name": "blogs"}}
                 obj = delete_row_of_schema(
-                    cur_schema=cur_blog, removable_file_fields=["preview_photo"])
+                    cur_schema=cur_blog, removable_file_fields=["preview_photo"], file_fields_for_cloud=file_fields_for_cloud)
                 if obj["success"]:
                     return response.Response(status=status.HTTP_200_OK, data={"success": True})
                 return response.Response(status=status.HTTP_400_BAD_REQUEST, data={"message": obj["message"]})

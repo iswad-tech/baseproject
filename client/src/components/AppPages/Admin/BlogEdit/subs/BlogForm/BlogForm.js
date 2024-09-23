@@ -157,7 +157,7 @@ const BlogForm = ({ slug }) => {
             hasResizer={false}
             initialSrc={initialPhoto}
             setInitialSrc={setInitialPhoto}
-            initialSrcComesFromOurServer
+            initialSrcComesFromOurServer={false}
             maxWidth={800}
           />
         </Div>

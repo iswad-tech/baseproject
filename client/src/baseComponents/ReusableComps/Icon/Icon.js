@@ -44,7 +44,8 @@ import {
   faCalendarAlt,
   faCreditCard,
   faClock,
-  faMoneyBill
+  faMoneyBill,
+  faTrash
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram, faLinux } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons';
@@ -313,6 +314,12 @@ function Icon({
     'money-bill': (
       <FontAwesomeIcon
         icon={faMoneyBill}
+        style={{ color, width, height, transform: `scale(${scale})` }}
+      />
+    ),
+    trash: (
+      <FontAwesomeIcon
+        icon={faTrash}
         style={{ color, width, height, transform: `scale(${scale})` }}
       />
     )

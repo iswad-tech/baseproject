@@ -40,7 +40,8 @@ const LatestRead = ({ featuredBlogs }) => {
                   className="f-b"
                   to={`blog/${featuredBlogs?.[0]?.slug}`}>
                   <AppImage
-                    src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
+                    // src={`${APP_DOMAIN_FOR_SERVER_SIDE_PROPS}/${featuredBlogs?.[0]?.preview_photo}`}
+                    src={featuredBlogs?.[0]?.preview_photo}
                     width={containerWidth}
                     heightOverWidthAsprctRatio={1080 / 1920}
                     className="global-add-br-rad-in-desktop"
