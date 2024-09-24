@@ -82,6 +82,8 @@ Create the following subfolders: <br>
 ./nginx/certbot/www/
 ./volume_data/django_static
 ./volume_data/pg_data
+./volume_data/redis_cache_data
+./volume_data/redis_celery_data
 
 Then go to /var/www/app and run
 docker-compose -f docker-compose-createSSL.yml up --build -d
