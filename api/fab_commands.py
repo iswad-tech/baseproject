@@ -113,3 +113,7 @@ def is_refresh_token_valid():
     res = coreUtils.is_refresh_token_valid(
         token="TEST_TOKEN")
     print(res)
+
+
+def test_cache():
+    coreUtils.test_cache()

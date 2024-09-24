@@ -41,3 +41,4 @@ cryptography
 bleach
 sendgrid
 boto3
+django-redis

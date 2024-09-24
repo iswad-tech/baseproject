@@ -1,3 +1,4 @@
+from django.core.cache import cache
 from django.conf import settings
 from django.db.models import Func, Q
 from django.contrib.auth.models import Group
@@ -281,6 +282,16 @@ def delete_row_of_schema(cur_schema, removable_file_fields=[], file_fields_for_c
 
 def strip_html_tags(text):
     return bleach.clean(text, tags=[], strip=True)
+
+
+def test_cache():
+    cache.set('my_key', 'my_value', timeout=60)
+    value = cache.get('my_key')
+    if value == 'my_value':
+        print("Cache is working! Retrieved value:", value)
+    else:
+        print("Cache test failed. Value retrieved:", value)
+    cache.delete('my_key')
 
 
 class StripHTML(Func):
