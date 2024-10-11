@@ -63,7 +63,7 @@ class BlogViewSet(views.APIView):
     def post(self, request, format=None):
         try:
             file_fields_for_cloud = {"preview_photo": {
-                "storage_space_name": "blogs", "file_type": "public-read"}}
+                "storage_space_name": "blogs", "file_type": "public-read", "file_key_pre_txt": ""}}
             obj = add_row_to_schema(model=BlogModel, request=request, acceptable_not_date_fields=["title", "excerpt", "content"], date_fields=[
                                     "published_date"], file_fields_for_cloud=file_fields_for_cloud, required_fields=["title", "excerpt", "content", "preview_photo"])
             if obj["success"]:
@@ -98,7 +98,7 @@ class BlogDetailViewSet(views.APIView):
         try:
             cur_blog_qs = BlogModel.objects.filter(slug=slug)
             file_fields_for_cloud = {"preview_photo": {
-                "storage_space_name": "blogs", "file_type": "public-read"}}
+                "storage_space_name": "blogs", "file_type": "public-read", "file_key_pre_txt": ""}}
             if cur_blog_qs:
                 obj = update_row_of_schema(request=request, cur_schema_qs=cur_blog_qs, updatable_non_file_nor_date_fields=["title", "excerpt", "content"], date_fields=[
                     "published_date"], file_fields_for_cloud=file_fields_for_cloud, required_fields=["title", "excerpt", "content"])
