@@ -149,7 +149,8 @@ def add_row_to_schema(model, request, acceptable_not_date_fields, date_fields=[]
                     if file:
                         rand_str_1 = code_generator()
                         rand_str_2 = code_generator()
-                        file_key = f"{rand_str_1}_{rand_str_2}_{file}"
+                        file_key_pre_txt = file_fields_for_cloud[attr]["file_key_pre_txt"]
+                        file_key = f"{file_key_pre_txt}{rand_str_1}_{rand_str_2}_{file}"
                         storage_space_name = file_fields_for_cloud[attr]["storage_space_name"]
                         upload_file_to_cloud(file=file, storage_space_name=storage_space_name, file_key=file_key,
                                              file_type=file_fields_for_cloud[attr]["file_type"], is_from_client=True)
@@ -240,7 +241,8 @@ def update_row_of_schema(request, cur_schema_qs, updatable_non_file_nor_date_fie
                                 if file:
                                     rand_str_1 = code_generator()
                                     rand_str_2 = code_generator()
-                                    new_file_key = f"{rand_str_1}_{rand_str_2}_{file}"
+                                    file_key_pre_txt = file_fields_for_cloud[attr]["file_key_pre_txt"]
+                                    new_file_key = f"{file_key_pre_txt}{rand_str_1}_{rand_str_2}_{file}"
                                     storage_space_name = file_fields_for_cloud[attr]["storage_space_name"]
                                     upload_file_to_cloud(file=file, storage_space_name=storage_space_name, file_key=new_file_key,
                                                          file_type=file_fields_for_cloud[attr]["file_type"], is_from_client=True)
