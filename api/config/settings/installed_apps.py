@@ -13,7 +13,7 @@ THIRD_PARTY_APPS = [
     'django_filters',
     'django_countries',
     'phonenumber_field',
-    'debug_toolbar',
+    # 'debug_toolbar',
     'djoser',
     'rest_framework_swagger',
     'rest_framework_simplejwt.token_blacklist',

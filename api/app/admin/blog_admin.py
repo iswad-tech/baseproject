@@ -2,6 +2,7 @@ from django.contrib import admin
 
 
 class BlogAdmin(admin.ModelAdmin):
+    autocomplete_fields = ['writer']
     list_display = ['title', 'slug', 'is_draft', 'is_popular', 'is_featured']
     list_editable = ['is_draft', 'is_popular', 'is_featured']
     list_per_page = 10

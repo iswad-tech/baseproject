@@ -8,7 +8,7 @@ from rest_framework_swagger.views import get_swagger_view
 schema_view = get_swagger_view(title='Base API')
 
 urlpatterns = [
-    path('__debug__/', include('debug_toolbar.urls')),
+    # path('__debug__/', include('debug_toolbar.urls')),
     path(settings.ADMIN_URL, admin.site.urls),
     path('api/auth/', include('djoser.urls')),
     path('api/auth/', include('djoser.urls.jwt')),
