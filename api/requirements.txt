@@ -35,4 +35,4 @@ daphne
 bleach
 sendgrid
 boto3
-django-redis
+social-auth-app-django

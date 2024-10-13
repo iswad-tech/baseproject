@@ -6,6 +6,7 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'social_django',
 ]
 
 THIRD_PARTY_APPS = [
