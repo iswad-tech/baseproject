@@ -41,4 +41,5 @@ cryptography
 bleach
 sendgrid
 boto3
+django_redis
 social-auth-app-django
