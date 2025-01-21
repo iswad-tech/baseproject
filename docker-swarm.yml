@@ -115,8 +115,8 @@ services:
     image: postgres:13-alpine
     env_file:
       - /var/www/app/config/envFiles/postgres/prod/.env
-    ports:
-      - "5432:5432"
+    # ports:
+    #   - "5432:5432"
     volumes:
       - /var/www/app/volume_data/pg_data:/var/lib/postgresql/data
       - /var/www/app/db_backups:/db_backups
@@ -131,8 +131,8 @@ services:
     image: edoburu/pgbouncer:v1.23.1-p2
     env_file:
       - ./config/envFiles/pgbouncer/prod/.env
-    ports:
-      - "6432:6432"
+    # ports:
+    #   - "6432:6432"
     networks:
       - mynetwork
     deploy:
